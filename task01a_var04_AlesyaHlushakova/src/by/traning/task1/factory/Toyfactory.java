@@ -1,7 +1,7 @@
 package by.traning.task1.factory;
 
-import by.traning.task1.entities.*;
-import by.traning.task1.entities.enums.*;
+import by.traning.task1.entity.*;
+import by.traning.task1.util.*;
 
 import java.util.ArrayList;
 import java.util.Random;

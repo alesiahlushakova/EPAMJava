@@ -1,0 +1,2 @@
+type=VEHICLE name=Monster price=170 size=LARGE age=CHILD VEHICLE_TYPE=TRUCK
+type=DOLL name=MND-198 price=200 size=SMALL age=TEENAGER DOLL_TYPE=PORCELIAN
