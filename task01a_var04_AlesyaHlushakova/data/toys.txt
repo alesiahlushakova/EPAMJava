@@ -1,1 +1,0 @@
-type=BALL name=alenka price=25 size=SMALL age=TEENAGER BALL_TYPE=TENNIS
