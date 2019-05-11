@@ -14,6 +14,14 @@ import by.traning.task1.util.TypeToy;
  * class to validate inputs.
  */
 public class ToyValidator {
+    public  static boolean isValidPrice(String toy) {
+        toy = toy.toUpperCase();
+        int price = Integer.parseInt(toy);
+        if (price>0) {
+            return true;
+        }
+        return false;
+    }
     /**
      * method to detect if toy is valid.
      * @param toy validating toy

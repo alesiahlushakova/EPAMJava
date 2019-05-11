@@ -15,16 +15,11 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class ToyFinderTest {
-    @BeforeClass
-    static void initTest() throws InvalidDataException {
 
-    }
     @Test
     public void testFindByPrice() throws StorageException, NonValidValueException, InvalidDataException {
         ToyReader toyReader = new ToyReader();
-        ToyStorageInitializer toyStorageInitializer = new ToyStorageInitializer();
-        toyStorageInitializer.init(toyReader.read("data\\toys1.txt"));
-        ToyStorage toyStorage = ToyStorage.getInstance();
+        ToyStorage toyStorage=(new ToyStorageInitializer()).init(toyReader.read(".\\.\\data\\toys1.txt"));
         int expected = 170;
         int actual = new ToyFinder().findByPrice(new GameRoomMaker().makeGameRoom(400),100,200).getFirst().getPrice();
         Assert.assertEquals(expected, actual);

@@ -31,7 +31,7 @@ public class Ball extends Toy {
     public  Ball(String name, int price, Size size, Age age, BallType type) {
         super(name, price, size, age);
         this.ballType = type;
-        LOG.info("Ball created"+this.toString());
+        LOG.info("Ball created: "+this.toString());
     }
 
     /**
@@ -54,7 +54,7 @@ public class Ball extends Toy {
      */
     @Override
     public String toString() {
-        return super.toString() + "; Ball type: " + ballType;
+        return super.toString() + "; Ball type: " + ballType+"\n";
     }
 
     @Override

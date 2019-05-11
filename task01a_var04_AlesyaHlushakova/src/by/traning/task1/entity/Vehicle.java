@@ -31,7 +31,7 @@ public class Vehicle extends Toy {
     public Vehicle(String name, int price, Size size, Age age, VehicleType type){
         super(name, price, size, age);
         this.vehicleType = type;
-        LOG.info("Vehicle created"+this.toString());
+        LOG.info("Vehicle created: "+this.toString());
     }
     /**
      * method to get  vehicle toy type.

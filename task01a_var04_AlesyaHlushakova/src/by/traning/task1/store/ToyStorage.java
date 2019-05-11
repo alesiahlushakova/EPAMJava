@@ -10,6 +10,15 @@ import java.util.LinkedList;
  * class - storage for toys.
  */
 public class ToyStorage {
+
+
+    /**
+     * toy id.
+     */
+    private static int currId = 1;
+
+
+
     /**
      * list of toys.
      */
@@ -31,6 +40,33 @@ public class ToyStorage {
     }
 
     /**
+     * get list of toys in storage.
+     * @return toy list
+     */
+    public LinkedList<Toy> getToys() {
+        return toys;
+    }
+
+    /**
+     * sets toys in storage.
+     * @param toys list
+     */
+    public void setToys(LinkedList<Toy> toys) {
+        this.toys = toys;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public static int getCurrId() {
+        return currId;
+    }
+
+    public static void setCurrId(int currId) {
+        ToyStorage.currId = currId;
+    }
+    /**
      * singleton realization.
      * @return if game room is single
      */
@@ -43,8 +79,10 @@ public class ToyStorage {
      * @param toy toy to add
      */
     public  void  addToy(final Toy toy) {
+        toy.setId(currId);
         toys.addLast(toy);
         totalPrice += toy.getPrice();
+        currId++;
     }
 
     /**
@@ -54,6 +92,7 @@ public class ToyStorage {
      */
     public Toy takeToy() throws StorageException {
         if (!toys.isEmpty()) {
+            currId--;
             return toys.removeFirst();
 
         } else {
@@ -85,3 +124,4 @@ public class ToyStorage {
         return toys.isEmpty();
     }
 }
+

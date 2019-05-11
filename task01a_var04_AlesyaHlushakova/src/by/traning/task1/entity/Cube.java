@@ -30,7 +30,7 @@ public class Cube extends Toy {
     public Cube(String name, int price, Size size, Age age, CubeType type) {
         super(name, price, size, age);
         this.cubeType = type;
-        LOG.info("Cube created"+this.toString());
+        LOG.info("Cube created: "+this.toString());
     }
     /**
      * @return type of cube toy
@@ -52,7 +52,7 @@ public class Cube extends Toy {
      */
     @Override
     public String toString() {
-        return super.toString() + "; Cube type: " + cubeType;
+        return super.toString() + "; Cube type: " + cubeType + "\n";
     }
 
     @Override

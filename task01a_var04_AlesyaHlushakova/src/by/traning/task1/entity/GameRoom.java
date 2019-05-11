@@ -1,10 +1,12 @@
 package by.traning.task1.entity;
+import by.traning.task1.exception.InvalidDataException;
 import by.traning.task1.exception.NonValidValueException;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 
 import java.util.LinkedList;
 import java.util.Objects;
+import java.util.Optional;
 
 /**
  * @author  AlesyaHlushakova
@@ -57,7 +59,18 @@ public class GameRoom {
         toys.addLast(toy);
         this.totalToyPrice += toy.getPrice();
     }
-
+    public Toy  getById(int id)  throws InvalidDataException {
+        for ( Toy toy: toys) {
+            if (toy.getId() == id) {
+                return toy;
+            }
+        }
+        throw new  InvalidDataException("Can not get by ID");
+    }
+    /**
+     * gets total price
+     * @return
+     */
     public int getPrice() {
         return totalToyPrice;
     }

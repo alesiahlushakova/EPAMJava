@@ -49,8 +49,8 @@ public class Main {
 
         ToyReader toyReader = new ToyReader();
         ToyStorageInitializer toyStorageInitializer = new ToyStorageInitializer();
-        toyStorageInitializer.init(toyReader.read("data\\toys1.txt"));
-        ToyStorage toyStorage = ToyStorage.getInstance();
+
+       ToyStorage toyStorage=toyStorageInitializer.init(toyReader.read("data\\toys1.txt"));
         int expected = 170;
         int actual = new ToyFinder().findByPrice(new GameRoomMaker().makeGameRoom(400),100,200).getFirst().getPrice();
     }

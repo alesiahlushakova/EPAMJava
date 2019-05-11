@@ -13,9 +13,24 @@ public abstract class Toy {
      * toy name.
      */
     private String name;
+    /**
+     * toy size.
+     */
     private Size size;
+    /**
+     * toy age.
+     */
     private  Age age;
+    /**
+     * toy price.
+     */
     private  int price;
+
+
+    /**
+     * id for storage.
+     */
+    private int id;
     /**
      * constructor for toy.
      * @param name name of toy
@@ -23,7 +38,7 @@ public abstract class Toy {
      * @param size toy sizes
      * @param age age limit
      */
-    public Toy(String name, int price, Size size, Age age) {
+    public Toy(final String name, final int price, final Size size, final Age age) {
         this.name = name;
         this.price = price;
         this.age = age;
@@ -43,7 +58,7 @@ public abstract class Toy {
      * @param name of toy
      * @return
      */
-    public void setName(String name) {
+    public void setName(final String name) {
          this.name = name;
     }
 
@@ -59,7 +74,7 @@ public abstract class Toy {
      * method to set price of toy.
      * @param price toy price
      */
-    public void setPrice(int price) {
+    public void setPrice(final int price) {
         this.price = price;
     }
 
@@ -76,12 +91,12 @@ public abstract class Toy {
      * @param age restriction
      * @return
      */
-    public void setAge(Age age) {
+    public void setAge(final Age age) {
         this.age = age;
     }
 
     /**
-     * getter for size
+     * getter for size.
      * @return size
      */
     public Size getSize() {
@@ -89,11 +104,26 @@ public abstract class Toy {
     }
 
     /**
+     * getter for tiy id.
+     * @return toy id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * setter for toy id.
+     * @param id id of toy
+     */
+    public void setId(final int id) {
+        this.id = id;
+    }
+    /**
      *
      * @param size
      * @return
      */
-    public void setSize(Size size) {
+    public void setSize(final Size size) {
         this.size = size;
     }
 
@@ -113,14 +143,19 @@ public abstract class Toy {
      * @return is equal
      */
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Toy toy = (Toy) o;
-        return price == toy.price &&
-                Objects.equals(name, toy.name) &&
-                size == toy.size &&
-                age == toy.age;
+        return price == toy.price
+                && Objects.equals(name, toy.name)
+                && size == toy.size
+                && age == toy.age;
+
     }
 
     /**

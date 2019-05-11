@@ -20,10 +20,10 @@ public class ToyParser {
             if (ToyValidator.isValidToyType((toyTypeStr))) {
                 return TypeToy.valueOf(toyTypeStr);
             } else {
-                throw new InvalidDataException("Not valid toy type");
+                throw new InvalidDataException("Not valid toy type while parsing file");
             }
         } else {
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -34,7 +34,7 @@ public class ToyParser {
             scanner.useDelimiter("=| ");
             return scanner.next();
         }else{
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -43,9 +43,14 @@ public class ToyParser {
             int index = source.indexOf(ToyTags.PRICE) + ToyTags.PRICE.length();
             Scanner scanner = new Scanner(source.substring(index));
             scanner.useDelimiter("=| ");
-            return Integer.parseInt(scanner.next());
-        }else{
-            throw new InvalidDataException("Not valid toy");
+            String priceStr = scanner.next();
+            if (ToyValidator.isValidPrice(priceStr)) {
+                return Integer.parseInt(scanner.next());
+            } else{
+                throw new InvalidDataException("Not valid price while parsing file");
+            }
+        } else{
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -59,10 +64,10 @@ public class ToyParser {
                 return Age.valueOf(ageStr);
             }
             else{
-                throw new InvalidDataException("Age restriction not valid");
+                throw new InvalidDataException("Age restriction not valid while parsing file");
             }
         }else {
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -76,10 +81,10 @@ public class ToyParser {
                 return Size.valueOf(sizeStr);
             }
             else{
-                throw new InvalidDataException("Size not valid");
+                throw new InvalidDataException("Size not valid while parsing file");
             }
         }else {
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -93,10 +98,10 @@ public class ToyParser {
                 return BallType.valueOf(ballType);
             }
             else{
-                throw new InvalidDataException("Ball type not valid");
+                throw new InvalidDataException("Ball type not valid while parsing file");
             }
         }else {
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -110,10 +115,10 @@ public class ToyParser {
                 return CubeType.valueOf(cubeType);
             }
             else{
-                throw new InvalidDataException("Cube type not valid");
+                throw new InvalidDataException("Cube type not valid while parsing file");
             }
         }else {
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -127,10 +132,10 @@ public class ToyParser {
                 return DollType.valueOf(dollType);
             }
             else{
-                throw new InvalidDataException("Doll type not valid");
+                throw new InvalidDataException("Doll type not valid while parsing file");
             }
         }else {
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 
@@ -144,10 +149,10 @@ public class ToyParser {
                 return VehicleType.valueOf(vehicleType);
             }
             else{
-                throw new InvalidDataException("Vehicle type not valid");
+                throw new InvalidDataException("Vehicle type not valid while parsing file");
             }
         }else {
-            throw new InvalidDataException("Not valid toy");
+            throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
 }
