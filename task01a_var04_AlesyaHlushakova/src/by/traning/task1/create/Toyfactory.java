@@ -1,4 +1,4 @@
-package by.traning.task1.factory;
+package by.traning.task1.create;
 
 import by.traning.task1.entity.*;
 import by.traning.task1.util.*;

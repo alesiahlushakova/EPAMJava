@@ -45,7 +45,7 @@ public class ToyParser {
             scanner.useDelimiter("=| ");
             String priceStr = scanner.next();
             if (ToyValidator.isValidPrice(priceStr)) {
-                return Integer.parseInt(scanner.next());
+                return Integer.parseInt(priceStr);
             } else{
                 throw new InvalidDataException("Not valid price while parsing file");
             }

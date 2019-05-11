@@ -16,6 +16,7 @@ import java.util.LinkedList;
  * class sorts toys.
  */
 public class ToySorter {
+
     private static final Logger LOGGER = LogManager.getLogger(ToySorter.class);
 
     /**

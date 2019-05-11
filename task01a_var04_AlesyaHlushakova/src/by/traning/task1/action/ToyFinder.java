@@ -53,6 +53,13 @@ public class ToyFinder {
         }
     }
 
+    /**
+     * method finds toy by name.
+     * @param gameRoom storage
+     * @param name name of toy
+     * @return list of toys with certain name
+     * @throws NonValidValueException
+     */
     public LinkedList<Toy> findByName(final GameRoom gameRoom, final String name)
             throws NonValidValueException {
         if (!name.isEmpty()) {

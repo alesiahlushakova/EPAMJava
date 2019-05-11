@@ -4,6 +4,7 @@ import by.traning.task1.exception.InvalidDataException;
 import by.traning.task1.runner.ToyStorageInitializer;
 import by.traning.task1.store.ToyStorage;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.LinkedList;
