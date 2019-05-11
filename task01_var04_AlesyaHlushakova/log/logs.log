@@ -1,0 +1,5 @@
+19:46:54.023 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+19:46:54.043 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+
+19:46:54.078 [main] INFO  by.training.task1.entity.GameRoom - GameRoom created[]
+19:51:42.169 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
