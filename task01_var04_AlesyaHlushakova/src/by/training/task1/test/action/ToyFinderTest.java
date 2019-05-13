@@ -11,11 +11,12 @@ import by.training.task1.store.ToyStorage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import static org.testng.Assert.*;
 
 public class ToyFinderTest {
-
+    private static final Logger LOGGER = LogManager.getLogger(ToyFinderTest.class);
     @Test
     public void testFindByPrice() throws StorageException, NonValidValueException, InvalidDataException {
         ToyReader toyReader = new ToyReader();
@@ -25,5 +26,6 @@ public class ToyFinderTest {
                 100,200).getFirst().getPrice();
         Assert.assertEquals(expected, actual);
     }
+
 
 }

@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * @author Alesya Hlushakova
  * class - storage for toys.
  */
-public class ToyStorage {
+public class ToyStorage{
 
 
     /**

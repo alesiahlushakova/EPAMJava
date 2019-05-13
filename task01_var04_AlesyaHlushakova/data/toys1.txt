@@ -1,2 +1,6 @@
+type=BALL name=Bolick price=20 size=SMALL age=BABY BALL_TYPE=TENNIS
+type=DOLL name=Mashka price=15 size=MEDIUM age=CHILD DOLL_TYPE=BARBIE
+type=CUBE name=Borya price=230 size=LARGE age=TEENAGER CUBE_TYPE=CLASSIC
+type=VEHICLE name=Winston3000 price=299 size=SMALL age=TEENAGER VEHICLE_TYPE=TRUCK
 type=VEHICLE name=Monster price=170 size=LARGE age=CHILD VEHICLE_TYPE=TRUCK
 type=DOLL name=MND-198 price=200 size=SMALL age=TEENAGER DOLL_TYPE=PORCELIAN
