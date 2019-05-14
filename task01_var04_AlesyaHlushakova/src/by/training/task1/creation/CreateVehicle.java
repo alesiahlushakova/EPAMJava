@@ -14,6 +14,13 @@ public class CreateVehicle extends ToyFactoryAbstract {
      */
     private ToyParser toyParser;
     /**
+     * constructor for vehicles.
+     * @param toyParser parser
+     */
+    public CreateVehicle(ToyParser toyParser) {
+        this.toyParser = toyParser;
+    }
+    /**
      * method creates vehicle toys.
      * @return vehicle
      * @throws InvalidDataException invalid input

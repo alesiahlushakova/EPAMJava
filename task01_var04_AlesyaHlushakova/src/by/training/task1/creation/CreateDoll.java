@@ -14,6 +14,13 @@ public class CreateDoll extends ToyFactoryAbstract{
      */
     private ToyParser toyParser;
     /**
+     * constructor for dolls.
+     * @param toyParser parser
+     */
+    public CreateDoll(ToyParser toyParser) {
+        this.toyParser = toyParser;
+    }
+    /**
      * method creates doll toys.
      * @return doll
      * @throws InvalidDataException invalid input

@@ -30,24 +30,27 @@ public class ToyStorageInitializer {
         ToyStorage storage = ToyStorage.getInstance();
         TypeToy typeToy;
         ToyParser toyParser;
-        ToyCreator toyCreator;
         while (!strings.isEmpty()) {
             toyParser = new ToyParser((strings.removeFirst()));
-            toyCreator = new ToyCreator((toyParser));
+         //   toyCreator = new ToyCreator((toyParser));
             try {
                 typeToy = toyParser.takeToyType();
                 switch (typeToy) {
                     case BALL:
-                        storage.addToy(toyCreator.createBall());
+                        CreateBall createBall = new CreateBall(toyParser);
+                        storage.addToy(createBall.createToy());
                         break;
                     case CUBE:
-                        storage.addToy(toyCreator.createCube());
+                        CreateCube createCube = new CreateCube(toyParser);
+                        storage.addToy(createCube.createToy());
                         break;
                     case DOLL:
-                        storage.addToy(toyCreator.createDoll());
+                        CreateDoll dollCreator = new CreateDoll(toyParser);
+                        storage.addToy(dollCreator.createToy());
                         break;
                     case VEHICLE:
-                        storage.addToy(toyCreator.createVehicle());
+                        CreateVehicle vehicleCreator = new CreateVehicle(toyParser);
+                        storage.addToy(vehicleCreator.createToy());
                         break;
                     default:
                         throw new InvalidDataException();

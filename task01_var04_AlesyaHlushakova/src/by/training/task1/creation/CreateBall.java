@@ -17,6 +17,10 @@ public class CreateBall extends ToyFactoryAbstract{
      */
     private ToyParser toyParser;
 
+    /**
+     * constructor for ball creator.
+     * @param toyParser parser
+     */
     public CreateBall(ToyParser toyParser) {
         this.toyParser = toyParser;
     }
