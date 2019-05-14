@@ -1,17 +1,15 @@
-package by.training.task1.test.entity;
+package test.entity;
 
 import by.training.task1.entity.Cube;
 import by.training.task1.entity.GameRoom;
 import by.training.task1.entity.Toy;
-import by.training.task1.util.Age;
-import by.training.task1.util.CubeType;
-import by.training.task1.util.Size;
+import by.training.task1.uconst.Age;
+import by.training.task1.uconst.CubeType;
+import by.training.task1.uconst.Size;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.LinkedList;
-
-import static org.testng.Assert.*;
 
 public class GameRoomTest {
     @Test

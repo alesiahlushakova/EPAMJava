@@ -1,20 +1,14 @@
-package by.training.task1.test.parse;
+package by.training.task1.test.parser;
 
 import by.training.task1.exception.InvalidDataException;
-import by.training.task1.parse.ToyParser;
-import by.training.task1.util.Age;
-import by.training.task1.util.Size;
-import by.training.task1.util.ToyTags;
-import by.training.task1.util.TypeToy;
+import by.training.task1.parser.ToyParser;
+import by.training.task1.uconst.Age;
+import by.training.task1.uconst.Size;
+import by.training.task1.uconst.TypeToy;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.LinkedList;
-import java.util.SplittableRandom;
-
-import static org.testng.Assert.*;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

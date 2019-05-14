@@ -1,19 +1,17 @@
 package by.training.task1.test.action;
 
-import by.training.task1.action.GameRoomMaker;
+import by.training.task1.creation.GameRoomMaker;
 import by.training.task1.action.ToyFinder;
 import by.training.task1.exception.InvalidDataException;
 import by.training.task1.exception.NonValidValueException;
 import by.training.task1.exception.StorageException;
-import by.training.task1.read.ToyReader;
-import by.training.task1.runner.ToyStorageInitializer;
-import by.training.task1.store.ToyStorage;
+import by.training.task1.reader.ToyReader;
+import by.training.task1.creation.ToyStorageInitializer;
+import by.training.task1.storage.ToyStorage;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import static org.testng.Assert.*;
 
 public class ToyFinderTest {
     private static final Logger LOGGER = LogManager.getLogger(ToyFinderTest.class);
