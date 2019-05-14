@@ -90,15 +90,6 @@ public class ToyStorage{
      * @return taken toy
      * @throws StorageException exception while removing toy
      */
-    public Toy takeToy() throws StorageException {
-        if (!toys.isEmpty()) {
-            currId--;
-            return toys.removeFirst();
-
-        } else {
-            throw new StorageException("ToyStorage is empty");
-        }
-    }
     public Toy getToy(int index) throws StorageException {
         if(!toys.isEmpty() || index >= 0 || index < countOfToys()) {
             return toys.get(index);
@@ -107,13 +98,6 @@ public class ToyStorage{
         }
     }
 
-    /**
-     * calculates total toy price.
-     * @return total price
-     */
-    public  int countOfPrices() {
-        return this.totalPrice;
-    }
 
     /**
      * method counts amount of toys.

@@ -7,14 +7,28 @@ import by.training.task1.validation.ToyValidator;
 import java.util.Scanner;
 
 /**
- * TODO map parser
- * пары ключ-значение
+ * @author AlesyaHLushakova
+ * class parses data from .txt files.
  */
 public class ToyParser {
+    /**
+     * source string.
+     */
     private String source;
 
-    public ToyParser(String source) { this.source = source.toUpperCase();}
+    /**
+     * constructor for parser.
+     * @param source source string
+     */
+    public ToyParser(String source) {
+        this.source = source.toUpperCase();
+    }
 
+    /**
+     * method takes toy type.
+     * @return type of toy
+     * @throws InvalidDataException incorrect input data
+     */
     public TypeToy takeToyType() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.TYPE) + ToyTags.TYPE.length();
@@ -31,6 +45,11 @@ public class ToyParser {
         }
     }
 
+    /**
+     * method takes toy name.
+     * @return name of toy
+     * @throws InvalidDataException incorrect input data
+     */
     public String takeToyName() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.NAME) + ToyTags.NAME.length();
@@ -42,6 +61,11 @@ public class ToyParser {
         }
     }
 
+    /**
+     * method takes toy price.
+     * @return price of toy
+     * @throws InvalidDataException incorrect input data
+     */
     public int takeToyPrice() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.PRICE) + ToyTags.PRICE.length();
@@ -58,6 +82,11 @@ public class ToyParser {
         }
     }
 
+    /**
+     * method takes toy Age.
+     * @return age of toy
+     * @throws InvalidDataException incorrect input data
+     */
     public Age takeToyAge() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.AGE) + ToyTags.AGE.length();
@@ -74,7 +103,11 @@ public class ToyParser {
             throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
-
+    /**
+     * method takes toy size.
+     * @return size of toy
+     * @throws InvalidDataException incorrect input data
+     */
     public Size takeToySize() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.SIZE) + ToyTags.SIZE.length();
@@ -91,7 +124,11 @@ public class ToyParser {
             throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
-
+    /**
+     * method takes ball type.
+     * @return type of ball
+     * @throws InvalidDataException incorrect input data
+     */
     public BallType takeBallType() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.BALL_TYPE) + ToyTags.BALL_TYPE.length();
@@ -108,7 +145,11 @@ public class ToyParser {
             throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
-
+    /**
+     * method takes cube type.
+     * @return type of cube
+     * @throws InvalidDataException incorrect input data
+     */
     public CubeType takeCubeType() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.CUBE_TYPE) + ToyTags.CUBE_TYPE.length();
@@ -125,7 +166,11 @@ public class ToyParser {
             throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
-
+    /**
+     * method takes doll type.
+     * @return type of doll
+     * @throws InvalidDataException incorrect input data
+     */
     public DollType takeDollType() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.DOLL_TYPE) + ToyTags.DOLL_TYPE.length();
@@ -142,7 +187,11 @@ public class ToyParser {
             throw new InvalidDataException("Not valid toy while parsing file");
         }
     }
-
+    /**
+     * method takes vehicle type.
+     * @return type of vehicle
+     * @throws InvalidDataException incorrect input data
+     */
     public VehicleType takeVehicleType() throws InvalidDataException {
         if(ToyValidator.isValidToy(this.source)) {
             int index = source.indexOf(ToyTags.VEHICLE_TYPE) + ToyTags.VEHICLE_TYPE.length();
@@ -152,7 +201,7 @@ public class ToyParser {
             if(ToyValidator.isValidVehicleType(vehicleType)){
                 return VehicleType.valueOf(vehicleType);
             }
-            else{
+            else {
                 throw new InvalidDataException("Vehicle type not valid while parsing file");
             }
         }else {

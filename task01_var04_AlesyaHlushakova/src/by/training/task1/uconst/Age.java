@@ -5,17 +5,6 @@ package by.training.task1.uconst;
  * enum for age restrictions.
  */
 public enum Age {
-    BABY(2), CHILD(10), TEENAGER(16);
-    private int limit;
-    Age(final int limit) {
-        this.limit = limit;
-    }
+    BABY, CHILD, TEENAGER;
 
-    /**
-     *
-     * @return age limit
-     */
-    public int getLimit() {
-        return limit;
-    }
 }
