@@ -1,11 +1,11 @@
-package by.training.task1.create;
+package by.training.task1.creation;
 
 import by.training.task1.entity.Ball;
 import by.training.task1.entity.Cube;
 import by.training.task1.entity.Doll;
 import by.training.task1.entity.Vehicle;
 import by.training.task1.exception.InvalidDataException;
-import by.training.task1.parse.ToyParser;
+import by.training.task1.parser.ToyParser;
 
 /**
  * @author AlesyHlushkova

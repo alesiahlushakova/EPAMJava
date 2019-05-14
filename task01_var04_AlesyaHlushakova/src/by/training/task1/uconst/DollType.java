@@ -1,9 +1,9 @@
-package by.training.task1.util;
+package by.training.task1.uconst;
 
 /**
  * @author AlesyaHlushakova
  * enum for doll toy types.
  */
 public enum DollType {
-    MATRYOSKA, PORCELIAN, REBORN, BARBIE, BRATZ
+    MATRYOSHKA, PORCELIAN, REBORN, BARBIE, BRATZ
 }

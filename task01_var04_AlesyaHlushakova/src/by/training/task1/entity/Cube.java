@@ -1,8 +1,8 @@
 package by.training.task1.entity;
 
-import by.training.task1.util.Age;
-import by.training.task1.util.CubeType;
-import by.training.task1.util.Size;
+import by.training.task1.uconst.Age;
+import by.training.task1.uconst.CubeType;
+import by.training.task1.uconst.Size;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 import java.util.Objects;
@@ -57,18 +57,15 @@ public class Cube extends Toy {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+        if (this == o) return true;
+        if (!(o instanceof Cube)) return false;
+        if (!super.equals(o)) return false;
         Cube cube = (Cube) o;
         return cubeType == cube.cubeType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cubeType);
+        return Objects.hash(super.hashCode(), cubeType);
     }
 }

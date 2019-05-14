@@ -1,9 +1,8 @@
-package by.training.task1.runner;
-import by.training.task1.create.ToyCreator;
+package by.training.task1.creation;
 import by.training.task1.exception.InvalidDataException;
-import by.training.task1.parse.ToyParser;
-import by.training.task1.store.ToyStorage;
-import by.training.task1.util.TypeToy;
+import by.training.task1.parser.ToyParser;
+import by.training.task1.storage.ToyStorage;
+import by.training.task1.uconst.TypeToy;
 import org.apache.logging.log4j.Level;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
@@ -27,8 +26,7 @@ public class ToyStorageInitializer {
      * @return tpy storage
      * @throws InvalidDataException invalid input data
      */
-    public ToyStorage init(final LinkedList<String> strings)
-            throws InvalidDataException {
+    public ToyStorage init(final LinkedList<String> strings) {
         ToyStorage storage = ToyStorage.getInstance();
         TypeToy typeToy;
         ToyParser toyParser;
@@ -57,7 +55,6 @@ public class ToyStorageInitializer {
 
             } catch (InvalidDataException e) {
                 LOGGER.log(Level.ERROR, "String contains not valid toy", e);
-                throw new InvalidDataException("There is mo such toy");
             }
         }
         return storage;

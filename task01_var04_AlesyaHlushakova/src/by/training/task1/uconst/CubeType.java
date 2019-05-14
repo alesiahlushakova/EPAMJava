@@ -1,4 +1,4 @@
-package by.training.task1.util;
+package by.training.task1.uconst;
 /**
  * @author AlesyaHlushakova
  * enum for cube toy types.

@@ -1,4 +1,4 @@
-package by.training.task1.create;
+package by.training.task1.creation;
 
 import by.training.task1.entity.Toy;
 import by.training.task1.exception.InvalidDataException;

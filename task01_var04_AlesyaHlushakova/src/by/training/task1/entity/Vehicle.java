@@ -1,7 +1,7 @@
 package by.training.task1.entity;
-import by.training.task1.util.Age;
-import by.training.task1.util.Size;
-import by.training.task1.util.VehicleType;
+import by.training.task1.uconst.Age;
+import by.training.task1.uconst.Size;
+import by.training.task1.uconst.VehicleType;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 
@@ -58,14 +58,16 @@ public class Vehicle extends Toy {
         return super.toString() + "; Vehicle type: " + vehicleType;
     }
 
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        Vehicle vehicle = (Vehicle) object;
-        return java.util.Objects.equals(vehicleType, vehicle.vehicleType);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vehicle)) return false;
+        if (!super.equals(o)) return false;
+        Vehicle vehicle = (Vehicle) o;
+        return vehicleType == vehicle.vehicleType;
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), vehicleType);
     }

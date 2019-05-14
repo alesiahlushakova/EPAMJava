@@ -3,14 +3,14 @@
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
         <classes>
-            <class name="by.training.task1.test.valid.ToyValidatorTest" />
+            <class name="test.validation.ToyValidatorTest" />
         </classes>
     </test>
 
     <test name="Regression1">
         <classes>
-            <class name="by.training.task1.test.parse.ToyParserTest"/>
-            <class name="by.training.task1.test.read.ToyReaderTest"/>
+            <class name="test.parser.ToyParserTest"/>
+            <class name="test.reader.ToyReaderTest"/>
         </classes>
     </test>
 </suite>

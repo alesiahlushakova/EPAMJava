@@ -1,8 +1,8 @@
 package by.training.task1.entity;
 
-import by.training.task1.util.Age;
-import by.training.task1.util.DollType;
-import by.training.task1.util.Size;
+import by.training.task1.uconst.Age;
+import by.training.task1.uconst.DollType;
+import by.training.task1.uconst.Size;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 import java.util.Objects;
@@ -61,13 +61,14 @@ public class Doll extends Toy {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Doll)) return false;
+        if (!super.equals(o)) return false;
         Doll doll = (Doll) o;
         return dollType == doll.dollType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(dollType);
+        return Objects.hash(super.hashCode(), dollType);
     }
 }

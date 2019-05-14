@@ -1,7 +1,7 @@
-package by.training.task1.create;
+package by.training.task1.creation;
 
 import by.training.task1.entity.*;
-import by.training.task1.util.*;
+import by.training.task1.uconst.*;
 
 import java.util.ArrayList;
 import java.util.Random;

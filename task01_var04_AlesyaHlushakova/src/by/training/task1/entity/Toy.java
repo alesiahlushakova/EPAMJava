@@ -1,7 +1,7 @@
 package by.training.task1.entity;
 
-import by.training.task1.util.Age;
-import by.training.task1.util.Size;
+import by.training.task1.uconst.Age;
+import by.training.task1.uconst.Size;
 
 import java.util.Objects;
 

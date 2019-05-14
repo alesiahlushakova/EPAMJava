@@ -1,7 +1,7 @@
 type=BALL name=Borya price=230 size=SMALL age=BABY BALL_TYPE=TENNIS
-type=CUBE name=Borya price=30 size=LARGE age=TEENAGER CUBE_TYPE=CLASSIC
 type=VEHICLE name=Winston3000 price=299 size=SMALL age=TEENAGER VEHICLE_TYPE=TRUCKakjakhsk
 xshsdjgdsjhsdgjgdsjgdsjhdsgjsdgsukdsfdsjg
 type=VEHICLE name=Monster pugyxsjgsrice=170 size=LARGE age=CHILD VEHICLE_TYPE=TRUCK
 type=DOLL name=MND-198 price=210 size=SMALLl age=TEENAGER DOLL_TYPE=PORCELIAN
-type=DOLL name=Mashka price=15 size=MEDIUM age=CHILD DOLL_TYPE=BARBIE
+type=CUBE name=Borya price=30 size=LARGE age=TEENAGER CUBE_TYPE=CLASSIC
+type=DOLL name=Mashka price=-15 size=MEDIUM age=CHILD DOLL_TYPE=BARBIE

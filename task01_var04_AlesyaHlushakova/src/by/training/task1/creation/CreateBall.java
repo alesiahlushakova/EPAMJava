@@ -1,8 +1,11 @@
-package by.training.task1.create;
+package by.training.task1.creation;
 
 import by.training.task1.entity.Ball;
 import by.training.task1.exception.InvalidDataException;
-import by.training.task1.parse.ToyParser;
+import by.training.task1.parser.ToyParser;
+/**
+ * TODO generics
+ */
 
 /**
  * @author Alesya hlushakova
@@ -13,6 +16,10 @@ public class CreateBall extends ToyFactoryAbstract{
      * declare toy parser.
      */
     private ToyParser toyParser;
+
+    public CreateBall(ToyParser toyParser) {
+        this.toyParser = toyParser;
+    }
 
 
     /**

@@ -19,9 +19,14 @@ public class ToyFinder {
     public static final Logger LOGGER = LogManager.getLogger(ToyFinder.class);
     public  Toy findById(final GameRoom gameRoom, int id) throws InvalidDataException {
         try {
-            LinkedList<Toy> result = gameRoom.getToys();
-            return gameRoom.getById(id);
-        }
+            LinkedList<Toy> result = new LinkedList<>();
+            for(int i = 0; i<gameRoom.calcSize(); i++) {
+                if (gameRoom.getByIndex(i).getId() == id) {
+                    return gameRoom.getByIndex(i);
+                }
+            }
+                    throw new InvalidDataException("Problem with id");
+            }
         catch (InvalidDataException e) {
             LOGGER.warn("Not found by id");
         }
@@ -38,13 +43,13 @@ public class ToyFinder {
      */
     public LinkedList<Toy> findByPrice(final GameRoom gameRoom,
                                        final int minPrice, final int maxPrice)
-            throws NonValidValueException {
+            throws NonValidValueException, InvalidDataException {
         if (minPrice >=0 && maxPrice >= 0 && minPrice <= maxPrice) {
             LinkedList<Toy> result = new LinkedList<>();
-            List<Toy> toys = gameRoom.getToys();
-            for (Toy toy: toys) {
-                if (toy.getPrice() >= minPrice && toy.getPrice() <= maxPrice) {
-                    result.add(toy);
+            List<Toy> toys = new LinkedList<>();
+            for(int i = 0; i<gameRoom.calcSize(); i++) {
+                if (gameRoom.getByIndex(i).getPrice() >= minPrice && gameRoom.getByIndex(i).getPrice() <= maxPrice) {
+                    result.add(gameRoom.getByIndex(i));
                 }
             }
             return result;
@@ -61,13 +66,12 @@ public class ToyFinder {
      * @throws NonValidValueException
      */
     public LinkedList<Toy> findByName(final GameRoom gameRoom, final String name)
-            throws NonValidValueException {
+            throws NonValidValueException, InvalidDataException {
         if (!name.isEmpty()) {
             LinkedList<Toy> result = new LinkedList<>();
-            List<Toy> toys = gameRoom.getToys();
-            for (Toy toy: toys) {
-                if (name.equalsIgnoreCase(toy.getName() )) {
-                    result.add(toy);
+            for(int i = 0; i<gameRoom.calcSize(); i++) {
+                if (name.equalsIgnoreCase(gameRoom.getByIndex(i).getName())) {
+                    result.add(gameRoom.getByIndex(i));
                 }
             }
             return result;

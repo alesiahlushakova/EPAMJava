@@ -3,6 +3,7 @@ import by.training.task1.comparator.ToyNameComparator;
 import by.training.task1.comparator.ToyPriceComparator;
 import by.training.task1.entity.GameRoom;
 import by.training.task1.entity.Toy;
+import by.training.task1.exception.InvalidDataException;
 import by.training.task1.exception.NonValidValueException;
 import org.apache.logging.log4j.Level;
 import  org.apache.logging.log4j.LogManager;
@@ -23,42 +24,58 @@ public class ToySorter {
      * sort by name.
      * @param gameRoom game room
      */
-    public void sortByName(final GameRoom gameRoom) {
-        LinkedList<Toy> toys = gameRoom.getToys();
-        Collections.sort(toys, new ToyNameComparator());
-        try {
-            gameRoom.setToys(toys);
-        } catch (NonValidValueException e) {
-            LOGGER.log(Level.ERROR, "Unable to set toys to game room", e);
+    public static void sortByName(final GameRoom gameRoom) throws InvalidDataException {
+        LinkedList<Toy> toys= new LinkedList<>();
+        for(int i = 0; i<gameRoom.calcSize(); i++) {
+            toys.add(gameRoom.getByIndex(i));
         }
+        Collections.sort(toys, new ToyNameComparator());
+        for(int i = 0; i<gameRoom.calcSize(); ) {
+            gameRoom.removeByIndex(i);
+        }
+            for(int i= 0; i<toys.size(); i++) {
+                gameRoom.addToy(toys.get(i));
+            }
     }
 
     /**
      * sort by price.
      * @param gameRoom game room
      */
-    public void sortByPrice(final GameRoom gameRoom) {
-        LinkedList<Toy> toys = gameRoom.getToys();
+    public static void sortByPrice(final GameRoom gameRoom) throws InvalidDataException {
+        LinkedList<Toy> toys = new LinkedList<>();
+        for(int i = 0; i<gameRoom.calcSize(); i++) {
+            toys.add(gameRoom.getByIndex(i));
+        }
         Collections.sort(toys, new ToyPriceComparator());
-        try {
-            gameRoom.setToys(toys);
-        } catch (NonValidValueException e) {
-            LOGGER.log(Level.ERROR, "Unable to set toys to game room", e);
+        for(int i = 0; i<gameRoom.calcSize(); ) {
+            gameRoom.removeByIndex(i);
+        }
+        for(int i= 0; i<toys.size(); i++) {
+            gameRoom.addToy(toys.get(i));
         }
     }
 
     /**
-     * sort by na,e then by price.
+     * sort by name then by price.
      * @param gameRoom game room
      */
-    public void sortByNameThenPrice(final GameRoom gameRoom) {
-        LinkedList<Toy> toys = gameRoom.getToys();
+    public static void sortByNameThenPrice(final GameRoom gameRoom) throws InvalidDataException {
+        LinkedList<Toy> toys = new LinkedList<>();
+        for(int i = 0; i<gameRoom.calcSize(); i++) {
+            toys.add(gameRoom.getByIndex(i));
+        }
         Collections.sort(toys, new ToyNameComparator().
                 thenComparing(new ToyPriceComparator()));
-        try {
-            gameRoom.setToys(toys);
-        } catch (NonValidValueException e) {
-            LOGGER.log(Level.ERROR, "Unable to set toys to game room", e);
+     //   try {
+        for(int i = 0; i<gameRoom.calcSize(); ) {
+            gameRoom.removeByIndex(i);
         }
+        for(int i= 0; i<toys.size(); i++) {
+            gameRoom.addToy(toys.get(i));
+        }
+//        } catch (InvalidDataException e) {
+//            LOGGER.log(Level.ERROR, "Unable to set toys to game room", e);
+//        }
     }
 }

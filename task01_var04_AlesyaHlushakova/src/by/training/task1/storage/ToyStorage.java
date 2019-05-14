@@ -1,4 +1,4 @@
-package by.training.task1.store;
+package by.training.task1.storage;
 
 import by.training.task1.entity.Toy;
 import by.training.task1.exception.StorageException;
@@ -97,6 +97,13 @@ public class ToyStorage{
 
         } else {
             throw new StorageException("ToyStorage is empty");
+        }
+    }
+    public Toy getToy(int index) throws StorageException {
+        if(!toys.isEmpty() || index >= 0 || index < countOfToys()) {
+            return toys.get(index);
+        } else {
+            throw new StorageException("Wrong index or storage is empty");
         }
     }
 

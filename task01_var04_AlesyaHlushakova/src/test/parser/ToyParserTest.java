@@ -1,4 +1,4 @@
-package by.training.task1.test.parser;
+package test.parser;
 
 import by.training.task1.exception.InvalidDataException;
 import by.training.task1.parser.ToyParser;

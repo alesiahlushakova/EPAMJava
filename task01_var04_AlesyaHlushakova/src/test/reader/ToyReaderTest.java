@@ -1,7 +1,7 @@
-package by.training.task1.test.reader;
+package test.reader;
 
 import by.training.task1.reader.ToyReader;
-import by.training.task1.test.parser.ToyParserTest;
+import test.parser.ToyParserTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;

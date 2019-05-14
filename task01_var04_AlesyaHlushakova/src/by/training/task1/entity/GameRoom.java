@@ -4,6 +4,7 @@ import by.training.task1.exception.NonValidValueException;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Optional;
@@ -43,15 +44,6 @@ public class GameRoom {
     }
 
     /**
-     * getters and setters for game room.
-     * @return toys in game room
-     */
-    public LinkedList<Toy> getToys() {
-        return toys;
-    }
-
-
-    /**
      *adds toy to storage.
      * @param toy toy to add
      */
@@ -59,6 +51,13 @@ public class GameRoom {
         toys.addLast(toy);
         this.totalToyPrice += toy.getPrice();
     }
+
+    /**
+     * method gets toy by id.
+     * @param id toy id
+     * @return toy object
+     * @throws InvalidDataException non-validation toy data
+     */
     public Toy  getById(int id)  throws InvalidDataException {
         for ( Toy toy: toys) {
             if (toy.getId() == id) {
@@ -67,12 +66,8 @@ public class GameRoom {
         }
         throw new  InvalidDataException("Can not get by ID");
     }
-    /**
-     * gets total price
-     * @return
-     */
-    public int getPrice() {
-        return totalToyPrice;
+    public Toy getByIndex(int i) {
+        return toys.get(i);
     }
     /**
      * removes toy from storage.
@@ -97,31 +92,8 @@ public class GameRoom {
         }
     }
 
-    public void setToys(LinkedList<Toy> toys) throws NonValidValueException {
-        if (this.toys.containsAll(toys) && toys.containsAll((this.toys))) {
-            this.toys = toys;
-        }
-        else {
-            throw new NonValidValueException("Contain of game room can not be changed with method setToys");
-        }
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        GameRoom gameRoom = (GameRoom) o;
-        return totalToyPrice == gameRoom.totalToyPrice &&
-                Objects.equals(toys, gameRoom.toys);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(toys, totalToyPrice);
+    public int calcSize() {
+        return toys.size();
     }
 
 

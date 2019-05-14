@@ -1,9 +1,9 @@
-package by.training.task1.action;
+package by.training.task1.creation;
 
 import by.training.task1.entity.GameRoom;
 import by.training.task1.entity.Toy;
 import by.training.task1.exception.StorageException;
-import by.training.task1.store.ToyStorage;
+import by.training.task1.storage.ToyStorage;
 
 import java.util.LinkedList;
 
@@ -24,10 +24,10 @@ public class GameRoomMaker {
         LinkedList<Toy> list = new LinkedList<>(storage.getToys());
         for (int i = 0; i < storage.getToys().size();  i++) {
             if (list.get(i).getPrice() < allocatedMoney) {
-                gameRoom.addToy(storage.takeToy());
+                gameRoom.addToy(storage.getToy(i));
                 allocatedMoney -=list.get(i).getPrice();
             } else {
-                throw new StorageException("Storage does not have enough money");
+                //throw new StorageException("Storage does not have enough money");
             }
         }
         return gameRoom;

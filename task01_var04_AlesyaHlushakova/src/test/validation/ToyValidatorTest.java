@@ -1,4 +1,4 @@
-package by.training.task1.test.validation;
+package test.validation;
 
 import by.training.task1.validation.ToyValidator;
 import org.testng.Assert;
@@ -9,25 +9,47 @@ public class ToyValidatorTest {
     @Test
     public void testIsValidToy() {
         Assert.assertTrue(ToyValidator.isValidToy(testStr));
-
-        Assert.assertTrue(ToyValidator.isValidBall(testStr));
-        Assert.assertFalse(ToyValidator.isValidCube(testStr));
-        Assert.assertFalse(ToyValidator.isValidVehicle(testStr));
     }
     @Test
     public void testIsValidDoll() {
         Assert.assertFalse(ToyValidator.isValidDoll(testStr));
     }
     @Test
-    public void isValidToy1() {
+    public void testIsValidBall() {
+        Assert.assertTrue(ToyValidator.isValidBall(testStr));
+    }
+    @Test
+    public void testIsValidCube() {
+        Assert.assertFalse(ToyValidator.isValidCube(testStr));
+    }
+    @Test
+    public void testIsValidVehicle() {
+        Assert.assertFalse(ToyValidator.isValidVehicle(testStr));
+    }
+    @Test
+    public void testIsValidAge() {
         Assert.assertTrue(ToyValidator.isValidAge("teenager"));
-        Assert.assertFalse(ToyValidator.isValidAge("infant"));
+    }
+    @Test
+    public void testIsValidToyType() {
         Assert.assertTrue(ToyValidator.isValidToyType("ball"));
-        Assert.assertFalse(ToyValidator.isValidToyType("cow"));
+    }
+    @Test
+    public void testIsValidDollType() {
         Assert.assertTrue(ToyValidator.isValidDollType("barbie"));
+    }
+    @Test
+    public void testIsValidBallType() {
         Assert.assertTrue(ToyValidator.isValidBallType("tennis"));
+    }
+    @Test
+    public void testIsValidCubeType() {
         Assert.assertTrue(ToyValidator.isValidCubeType("mirror"));
+    }
+    @Test
+    public void testIsValidVehicleType() {
         Assert.assertTrue(ToyValidator.isValidVehicleType("truck"));
     }
+
 
 }

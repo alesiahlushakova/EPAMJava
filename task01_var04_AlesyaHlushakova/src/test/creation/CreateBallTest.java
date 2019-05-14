@@ -1,15 +1,15 @@
-package by.training.task1.creation;
+package test.creation;
 
+import by.training.task1.creation.CreateBall;
 import by.training.task1.entity.Ball;
 import by.training.task1.exception.InvalidDataException;
 import by.training.task1.parser.ToyParser;
 import by.training.task1.uconst.Age;
 import by.training.task1.uconst.BallType;
 import by.training.task1.uconst.Size;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class CreateBallTest {
 
