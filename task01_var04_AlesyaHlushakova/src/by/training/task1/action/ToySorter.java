@@ -1,4 +1,5 @@
 package by.training.task1.action;
+import by.training.task1.comparator.ComparatorOptions;
 import by.training.task1.comparator.ToyNameComparator;
 import by.training.task1.comparator.ToyPriceComparator;
 import by.training.task1.storage.GameRoom;
@@ -19,15 +20,30 @@ public class ToySorter {
     private static final Logger LOGGER = LogManager.getLogger(ToySorter.class);
 
     /**
-     * sort by name.
+     * sort by param.
+     * @param type sort type
      * @param gameRoom game room
      */
-    public static void sortByName(final GameRoom gameRoom) throws InvalidDataException {
+    public static void sort(final GameRoom gameRoom, ComparatorOptions type) throws InvalidDataException {
         LinkedList<Toy> toys= new LinkedList<>();
         for(int i = 0; i<gameRoom.calcSize(); i++) {
             toys.add(gameRoom.getByIndex(i));
         }
-        Collections.sort(toys, new ToyNameComparator());
+        switch (type) {
+            case NAME:
+                Collections.sort(toys, new ToyNameComparator());
+                break;
+            case PRICE:
+                Collections.sort(toys, new ToyPriceComparator());
+                break;
+            case NAMETHENPRICE:
+                Collections.sort(toys, new ToyNameComparator().
+                        thenComparing(new ToyPriceComparator()));
+                break;
+                default:
+                    throw new InvalidDataException("not valid param");
+        }
+
         for(int i = 0; i<gameRoom.calcSize(); ) {
             gameRoom.removeByIndex(i);
         }
@@ -36,41 +52,5 @@ public class ToySorter {
             }
     }
 
-    /**
-     * sort by price.
-     * @param gameRoom game room
-     */
-    public static void sortByPrice(final GameRoom gameRoom) throws InvalidDataException {
-        LinkedList<Toy> toys = new LinkedList<>();
-        for(int i = 0; i<gameRoom.calcSize(); i++) {
-            toys.add(gameRoom.getByIndex(i));
-        }
-        Collections.sort(toys, new ToyPriceComparator());
-        for(int i = 0; i<gameRoom.calcSize(); ) {
-            gameRoom.removeByIndex(i);
-        }
-        for(int i= 0; i<toys.size(); i++) {
-            gameRoom.addToy(toys.get(i));
-        }
-    }
 
-    /**
-     * sort by name then by price.
-     * @param gameRoom game room
-     */
-    public static void sortByNameThenPrice(final GameRoom gameRoom) {
-        LinkedList<Toy> toys = new LinkedList<>();
-        for(int i = 0; i<gameRoom.calcSize(); i++) {
-            toys.add(gameRoom.getByIndex(i));
-        }
-        Collections.sort(toys, new ToyNameComparator().
-                thenComparing(new ToyPriceComparator()));
-     //   try {
-        for(int i = 0; i<gameRoom.calcSize(); ) {
-            gameRoom.removeByIndex(i);
-        }
-        for(int i= 0; i<toys.size(); i++) {
-            gameRoom.addToy(toys.get(i));
-        }
-    }
 }

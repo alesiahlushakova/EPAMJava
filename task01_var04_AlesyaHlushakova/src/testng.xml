@@ -7,7 +7,7 @@
         </classes>
     </test>
 
-    <test name="Regression1">
+    <test name="WorkWithTxt">
         <classes>
             <class name="test.parser.ToyParserTest"/>
             <class name="test.reader.ToyReaderTest"/>

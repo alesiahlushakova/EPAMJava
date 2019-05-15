@@ -32,7 +32,15 @@ public class ToyFinderTest {
 
     }
     @Test
-    public void testFindByPrice() throws StorageException, NonValidValueException, InvalidDataException {
+    public void testFindByPrice() throws NonValidValueException, InvalidDataException {
+        LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
+                new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE)
+        ));
+        LinkedList<Toy> actual = new ToyFinder().findByPrice(gameRoom,10,20);
+        Assert.assertEquals(actual,expected);
+    }
+    @Test
+    public void testFindByPrice1() throws StorageException, NonValidValueException, InvalidDataException {
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
                 new Cube("BORYA", 30, Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
                 new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE)

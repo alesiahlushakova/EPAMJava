@@ -2667,3 +2667,305 @@ by.training.task1.exception.InvalidDataException: Not valid toy while parsing fi
 	at org.testng.TestNG.run(TestNG.java:1018) [testng-6.9.6.jar:?]
 	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73) [testng-plugin.jar:?]
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123) [testng-plugin.jar:?]
+20:13:00.998 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:13:01.103 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:13:01.159 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:13:01.161 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:13:01.226 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:13:01.228 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:13:01.239 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:13:01.354 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.354 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.354 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.355 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:13:01.356 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:13:01.356 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:13:01.370 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:13:01.404 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.404 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.404 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.405 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:13:01.405 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:13:01.405 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:13:01.406 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:13:01.406 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.406 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.406 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:13:01.407 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:13:01.407 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:13:01.408 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:16:56.466 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:16:56.533 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:16:56.537 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:16:56.542 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:16:56.544 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:16:56.550 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:16:56.564 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:16:56.572 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:16:56.573 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:16:56.573 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:16:56.589 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:16:56.589 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:16:56.589 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:16:56.594 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:16:56.594 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:16:56.595 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:17:25.651 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:17:25.670 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:17:25.674 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:17:25.676 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:17:25.680 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:17:25.682 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:17:25.689 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:17:25.691 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.691 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.691 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.692 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:17:25.693 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:17:25.693 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:17:25.697 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:17:25.701 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.702 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.702 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.703 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:17:25.703 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:17:25.703 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:17:25.705 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:17:25.705 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.705 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.705 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:17:25.706 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:17:25.707 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:17:25.708 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:20:42.567 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:20:42.578 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:20:42.582 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:20:42.585 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:20:42.589 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:20:42.591 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:20:42.593 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:20:42.595 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:20:42.596 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:20:42.596 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:20:42.601 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:20:42.601 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:20:42.601 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:20:42.618 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:20:42.618 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:20:42.619 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:21:02.325 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:21:02.367 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:21:02.384 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:21:02.386 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:21:02.391 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:21:02.394 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:21:02.401 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:21:02.406 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.407 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.407 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.407 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:21:02.408 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:21:02.408 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:21:02.413 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:21:02.421 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.422 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.422 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.422 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:21:02.422 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:21:02.422 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:21:02.431 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:21:02.431 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.431 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.431 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:21:02.435 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:21:02.435 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:21:02.435 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:22:08.605 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:22:08.676 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:22:08.684 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:22:08.685 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:22:08.720 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:22:08.721 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:22:08.724 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:22:08.730 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:22:08.730 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:22:30.761 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:22:30.770 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:22:30.775 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:22:30.778 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:22:30.782 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:22:30.784 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:22:30.788 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:22:30.799 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:22:40.560 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:22:40.568 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:22:40.573 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:22:40.574 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:22:40.579 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:22:40.580 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:22:40.582 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:22:40.590 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:22:40.590 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:22:40.591 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:22:40.592 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:32:45.276 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:32:45.284 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:32:45.288 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:32:45.290 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:32:45.294 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:32:45.295 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:32:45.321 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:32:45.338 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.339 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.339 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.339 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:32:45.339 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:32:45.339 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:32:45.344 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:32:45.348 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.348 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.348 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.349 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:32:45.349 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:32:45.349 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:32:45.350 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:32:45.350 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.350 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.351 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:32:45.351 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:32:45.351 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:32:45.351 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:47:08.569 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:47:08.583 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:47:08.586 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: WINSTON3000; age restrictions: TEENAGER; size: SMALL; price: 299; Vehicle type: TRUCK
+20:47:08.588 [main] INFO  by.training.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+20:47:08.592 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 210; Doll type: PORCELIAN
+
+20:47:08.594 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:47:08.603 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:47:08.608 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.608 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.608 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.609 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:47:08.610 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:47:08.611 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:47:08.617 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:47:08.620 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.620 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.620 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.621 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:47:08.621 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+
+20:47:08.621 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:47:08.622 [main] INFO  by.training.task1.storage.GameRoom - GameRoom created[]
+20:47:08.622 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.622 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.634 [main] INFO  by.training.task1.storage.GameRoom - Toy removed
+20:47:08.635 [main] INFO  by.training.task1.entity.Doll - Doll created: Toy name: MASHKA; age restrictions: CHILD; size: MEDIUM; price: 15; Doll type: BARBIE
+
+20:47:08.636 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: BORYA; age restrictions: TEENAGER; size: LARGE; price: 30; Cube type: CLASSIC
+
+20:47:08.638 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
+

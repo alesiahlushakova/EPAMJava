@@ -1,5 +1,6 @@
 package test.action;
 
+import by.training.task1.comparator.ComparatorOptions;
 import by.training.task1.action.ToySorter;
 import by.training.task1.creation.GameRoomCreator;
 import by.training.task1.creation.ToyStorageInitializer;
@@ -28,7 +29,7 @@ public class ToySorterTest {
     public void testSortByName() throws InvalidDataException, StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
         GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
-        ToySorter.sortByName(gameRoom);
+        ToySorter.sort(gameRoom,ComparatorOptions.NAME);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
             actual.add(gameRoom.getByIndex(i));
@@ -47,7 +48,7 @@ public class ToySorterTest {
     public void testSortByPrice() throws InvalidDataException, StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
         GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
-        ToySorter.sortByPrice(gameRoom);
+        ToySorter.sort(gameRoom, ComparatorOptions.PRICE);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
             actual.add(gameRoom.getByIndex(i));
@@ -65,7 +66,7 @@ public class ToySorterTest {
     public void testSortByNameThenPrice() throws InvalidDataException, StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
         GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
-        ToySorter.sortByNameThenPrice(gameRoom);
+        ToySorter.sort(gameRoom, ComparatorOptions.NAMETHENPRICE);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
             actual.add(gameRoom.getByIndex(i));
