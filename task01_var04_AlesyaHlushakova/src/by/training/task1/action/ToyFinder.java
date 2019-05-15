@@ -1,13 +1,13 @@
 package by.training.task1.action;
 
-import by.training.task1.entity.GameRoom;
+import by.training.task1.storage.GameRoom;
 import by.training.task1.entity.Toy;
 import by.training.task1.exception.InvalidDataException;
 import by.training.task1.exception.NonValidValueException;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
+
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 
@@ -17,6 +17,14 @@ import  org.apache.logging.log4j.Logger;
  */
 public class ToyFinder {
     public static final Logger LOGGER = LogManager.getLogger(ToyFinder.class);
+
+    /**
+     * method finds toy by id.
+     * @param gameRoom current game room
+     * @param id  toy id
+     * @return toy
+     * @throws InvalidDataException wrong input
+     */
     public  Toy findById(final GameRoom gameRoom, int id) throws InvalidDataException {
         try {
             LinkedList<Toy> result = new LinkedList<>();

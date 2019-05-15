@@ -1,12 +1,13 @@
 package test.action;
 
 import by.training.task1.action.ToySorter;
-import by.training.task1.creation.GameRoomMaker;
+import by.training.task1.creation.GameRoomCreator;
 import by.training.task1.creation.ToyStorageInitializer;
 import by.training.task1.entity.*;
 import by.training.task1.exception.InvalidDataException;
 import by.training.task1.exception.StorageException;
 import by.training.task1.reader.ToyReader;
+import by.training.task1.storage.GameRoom;
 import by.training.task1.storage.ToyStorage;
 import by.training.task1.uconst.*;
 import org.testng.Assert;
@@ -15,8 +16,6 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-
-import static org.testng.Assert.*;
 
 public class ToySorterTest {
     @BeforeClass
@@ -28,7 +27,7 @@ public class ToySorterTest {
     @Test
     public void testSortByName() throws InvalidDataException, StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
-        GameRoom gameRoom = new GameRoomMaker().makeGameRoom(400);
+        GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
         ToySorter.sortByName(gameRoom);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
@@ -47,7 +46,7 @@ public class ToySorterTest {
     @Test
     public void testSortByPrice() throws InvalidDataException, StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
-        GameRoom gameRoom = new GameRoomMaker().makeGameRoom(400);
+        GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
         ToySorter.sortByPrice(gameRoom);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
@@ -65,7 +64,7 @@ public class ToySorterTest {
     @Test
     public void testSortByNameThenPrice() throws InvalidDataException, StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
-        GameRoom gameRoom = new GameRoomMaker().makeGameRoom(400);
+        GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
         ToySorter.sortByNameThenPrice(gameRoom);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {

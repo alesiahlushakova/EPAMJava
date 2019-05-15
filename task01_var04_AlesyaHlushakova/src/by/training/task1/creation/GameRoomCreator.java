@@ -1,6 +1,6 @@
 package by.training.task1.creation;
 
-import by.training.task1.entity.GameRoom;
+import by.training.task1.storage.GameRoom;
 import by.training.task1.entity.Toy;
 import by.training.task1.exception.StorageException;
 import by.training.task1.storage.ToyStorage;
@@ -11,7 +11,7 @@ import java.util.LinkedList;
  * @author  AlesyaHlushakova
  * class makes game room with the help of toy storage.
  */
-public class GameRoomMaker {
+public class GameRoomCreator {
     /**
      * constructor for class
      * @param allocatedMoney money given for the game room

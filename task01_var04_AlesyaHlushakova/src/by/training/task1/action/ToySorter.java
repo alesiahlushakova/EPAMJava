@@ -1,11 +1,9 @@
 package by.training.task1.action;
 import by.training.task1.comparator.ToyNameComparator;
 import by.training.task1.comparator.ToyPriceComparator;
-import by.training.task1.entity.GameRoom;
+import by.training.task1.storage.GameRoom;
 import by.training.task1.entity.Toy;
 import by.training.task1.exception.InvalidDataException;
-import by.training.task1.exception.NonValidValueException;
-import org.apache.logging.log4j.Level;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 
@@ -60,7 +58,7 @@ public class ToySorter {
      * sort by name then by price.
      * @param gameRoom game room
      */
-    public static void sortByNameThenPrice(final GameRoom gameRoom) throws InvalidDataException {
+    public static void sortByNameThenPrice(final GameRoom gameRoom) {
         LinkedList<Toy> toys = new LinkedList<>();
         for(int i = 0; i<gameRoom.calcSize(); i++) {
             toys.add(gameRoom.getByIndex(i));
@@ -74,8 +72,5 @@ public class ToySorter {
         for(int i= 0; i<toys.size(); i++) {
             gameRoom.addToy(toys.get(i));
         }
-//        } catch (InvalidDataException e) {
-//            LOGGER.log(Level.ERROR, "Unable to set toys to game room", e);
-//        }
     }
 }
