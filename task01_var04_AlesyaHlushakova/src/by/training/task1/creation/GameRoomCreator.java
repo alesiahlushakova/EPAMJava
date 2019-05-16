@@ -26,9 +26,6 @@ public class GameRoomCreator {
             if (list.get(i).getPrice() < allocatedMoney) {
                 gameRoom.addToy(storage.takeToy(i));
                 allocatedMoney -= list.get(i).getPrice();
-            } else {
-                throw new StorageException(
-                        "Storage does not have enough money");
             }
         }
         return gameRoom;
