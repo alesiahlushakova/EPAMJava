@@ -5,6 +5,17 @@ package by.training.task1.uconst;
  * enum for age restrictions.
  */
 public enum Age {
-    BABY, CHILD, TEENAGER;
+    /**
+     * baby group.
+     */
+    BABY,
+    /**
+     * child group.
+     */
+    CHILD,
+    /**
+     * teen group.
+     */
+    TEENAGER;
 
 }

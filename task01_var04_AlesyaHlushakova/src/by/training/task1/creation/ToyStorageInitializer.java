@@ -49,7 +49,8 @@ public class ToyStorageInitializer {
                         storage.addToy(dollCreator.createToy());
                         break;
                     case VEHICLE:
-                        CreateVehicle vehicleCreator = new CreateVehicle(toyParser);
+                        CreateVehicle vehicleCreator =
+                                new CreateVehicle(toyParser);
                         storage.addToy(vehicleCreator.createToy());
                         break;
                     default:

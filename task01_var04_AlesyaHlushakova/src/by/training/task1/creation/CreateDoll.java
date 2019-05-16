@@ -8,7 +8,7 @@ import by.training.task1.parser.ToyParser;
  * @author Alesya hlushakova
  * class creates doll toys.
  */
-public class CreateDoll extends ToyFactoryAbstract{
+public class CreateDoll extends ToyFactoryAbstract {
     /**
      * declare toy parser.
      */
@@ -17,7 +17,7 @@ public class CreateDoll extends ToyFactoryAbstract{
      * constructor for dolls.
      * @param toyParser parser
      */
-    public CreateDoll(ToyParser toyParser) {
+    public CreateDoll(final ToyParser toyParser) {
         this.toyParser = toyParser;
     }
     /**

@@ -26,7 +26,7 @@ public class ToyStorageInitializerTest {
         ToyStorage storage = initializer.init(reader.read(".\\.\\data\\toysInit.txt"));
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < storage.countOfToys(); i++) {
-            actual.add(storage.getToy(i));
+            actual.add(storage.takeToy(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
                 new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS),

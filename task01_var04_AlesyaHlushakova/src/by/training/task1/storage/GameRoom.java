@@ -1,7 +1,5 @@
 package by.training.task1.storage;
 import by.training.task1.entity.Toy;
-import by.training.task1.exception.InvalidDataException;
-import by.training.task1.exception.NonValidValueException;
 import  org.apache.logging.log4j.LogManager;
 import  org.apache.logging.log4j.Logger;
 
@@ -12,24 +10,38 @@ import java.util.*;
  * storage for toy objects.
  */
 public class GameRoom {
-    public static final Logger LOG=
+    /**
+     * logger intro.
+     */
+    public static final Logger LOG =
             LogManager.getLogger(GameRoom.class.getName());
     /**
      * linked list that stores all created toys.
      */
     private LinkedList<Toy> toys;
-    public int totalToyPrice;
+
+    /**
+     * total price.
+     */
+    private int totalToyPrice;
+    /**
+     * method calculates toy prices.
+     * @return total price
+     */
+    public int getTotalToyPrice() {
+        return totalToyPrice;
+    }
 
     /**
      * constructs game room with already existing devices.
-     * @param toys
+     * @param toys toys
      */
-    public GameRoom(LinkedList<Toy> toys) {
+    public GameRoom(final LinkedList<Toy> toys) {
         this.toys = toys;
-        for(Toy toy : toys) {
+        for (Toy toy : toys) {
             this.totalToyPrice += toy.getPrice();
         }
-        LOG.info("GameRoom created"+this.toys + "\n");
+        LOG.info("GameRoom created" + this.toys + "\n");
     }
 
     /**
@@ -38,14 +50,14 @@ public class GameRoom {
     public GameRoom() {
         this.toys = new LinkedList<Toy>();
         this.totalToyPrice = 0;
-        LOG.info("GameRoom created"+this.toys);
+        LOG.info("GameRoom created" + this.toys);
     }
 
     /**
      *adds toy to storage.
      * @param toy toy to add
      */
-    public void addToy(Toy toy) {
+    public void addToy(final Toy toy) {
         toys.addLast(toy);
         this.totalToyPrice += toy.getPrice();
     }
@@ -54,16 +66,15 @@ public class GameRoom {
      * method gets toy by index.
      * @param i toy id
      * @return toy object
-     * @throws InvalidDataException non-validation toy data
      */
-    public Toy getByIndex(int i) {
+    public Toy takeByIndex(final int i) {
         return toys.get(i);
     }
     /**
      * removes toy from storage.
      * @param i index to remove
      */
-    public void removeByIndex(int i) {
+    public void removeByIndex(final int i) {
 
         toys.remove(i);
         LOG.info("Toy removed");
@@ -72,11 +83,12 @@ public class GameRoom {
      * removes toy by name.
      * @param name name of toy to delete
      */
-    public void removeByName(String name) {
+    public void removeByName(final String name) {
         for (Toy toy : toys) {
             if (toy.getName() == name) {
                 toys.remove(toy);
-                LOG.debug("Toy removed"+toy+"\n Current toys in game room"+toys);
+                LOG.debug("Toy removed"
+                        + toy + "\n Current toys in game room" + toys);
             }
         }
     }

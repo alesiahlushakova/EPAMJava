@@ -16,18 +16,23 @@ import java.util.LinkedList;
  * class sorts toys.
  */
 public class ToySorter {
-
+    /**
+     * logger intro.
+     */
     private static final Logger LOGGER = LogManager.getLogger(ToySorter.class);
 
     /**
      * sort by param.
      * @param type sort type
      * @param gameRoom game room
+     * @throws InvalidDataException invalid data
      */
-    public static void sort(final GameRoom gameRoom, ComparatorOptions type) throws InvalidDataException {
-        LinkedList<Toy> toys= new LinkedList<>();
-        for(int i = 0; i<gameRoom.calcSize(); i++) {
-            toys.add(gameRoom.getByIndex(i));
+    public static void sort(final GameRoom gameRoom,
+                            final ComparatorOptions type)
+            throws InvalidDataException {
+        LinkedList<Toy> toys = new LinkedList<>();
+        for (int i = 0; i < gameRoom.calcSize(); i++) {
+            toys.add(gameRoom.takeByIndex(i));
         }
         switch (type) {
             case NAME:
@@ -44,10 +49,10 @@ public class ToySorter {
                     throw new InvalidDataException("not valid param");
         }
 
-        for(int i = 0; i<gameRoom.calcSize(); ) {
+        for (int i = 0; i < gameRoom.calcSize();) {
             gameRoom.removeByIndex(i);
         }
-            for(int i= 0; i<toys.size(); i++) {
+            for (int i = 0; i < toys.size(); i++) {
                 gameRoom.addToy(toys.get(i));
             }
     }

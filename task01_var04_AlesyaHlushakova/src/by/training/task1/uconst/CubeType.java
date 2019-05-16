@@ -4,5 +4,20 @@ package by.training.task1.uconst;
  * enum for cube toy types.
  */
 public enum CubeType {
-    CLASSIC, MIRROR, SQUARE, CUBOID
+    /**
+     * classic cube.
+     */
+    CLASSIC,
+    /**
+     * mirror cube.
+     */
+    MIRROR,
+    /**
+     * square cube.
+     */
+    SQUARE,
+    /**
+     * cuboid cube.
+     */
+    CUBOID
 }

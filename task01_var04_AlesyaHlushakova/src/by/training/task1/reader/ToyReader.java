@@ -23,13 +23,13 @@ public class ToyReader {
      * @param path source string
      * @return list of valid strings
      */
-    public LinkedList<String> read(String path){
+    public LinkedList<String> read(final String path) {
         File file = new File(path);
         LinkedList<String> strings = new LinkedList<>();
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
-            while (scanner.hasNextLine()){
+            while (scanner.hasNextLine()) {
                 strings.add(scanner.nextLine());
             }
             return strings;

@@ -18,7 +18,7 @@ public class CreateCube extends ToyFactoryAbstract {
      * constructor for cubes.
      * @param toyParser parser
      */
-    public CreateCube(ToyParser toyParser) {
+    public CreateCube(final ToyParser toyParser) {
         this.toyParser = toyParser;
     }
 

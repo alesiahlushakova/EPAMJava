@@ -17,7 +17,7 @@ public class CreateVehicle extends ToyFactoryAbstract {
      * constructor for vehicles.
      * @param toyParser parser
      */
-    public CreateVehicle(ToyParser toyParser) {
+    public CreateVehicle(final ToyParser toyParser) {
         this.toyParser = toyParser;
     }
     /**

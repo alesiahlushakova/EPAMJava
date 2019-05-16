@@ -4,23 +4,35 @@ package by.training.task1.exception;
  * @author Alesya Hlushakova
  * class for exceptions while working with storage of toys.
  */
-public class StorageException extends Exception{
+public class StorageException extends Exception {
+    /**
+     * empty constrictor.
+     */
     public StorageException() {
     }
 
-    public StorageException(String message) {
+    /**
+     * method throws exception.
+     * @param message exception message
+     */
+    public StorageException(final String message) {
         super(message);
     }
 
-    public StorageException(String message, Throwable cause) {
+    /**
+     * method throws exception.
+     * @param message message
+     * @param cause cause of exception
+     */
+    public StorageException(final String message, final Throwable cause) {
         super(message, cause);
     }
 
-    public StorageException(Throwable cause) {
+    /**
+     * method throws exception.
+     * @param cause cause
+     */
+    public StorageException(final Throwable cause) {
         super(cause);
-    }
-
-    public StorageException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
     }
 }

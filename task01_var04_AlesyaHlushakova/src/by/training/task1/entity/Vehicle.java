@@ -12,7 +12,10 @@ import java.util.Objects;
  * @author AlesyaHlushakova
  */
 public class Vehicle extends Toy {
-    public static final Logger LOG=
+    /**
+     * logger introduction to class.
+     */
+    public static final Logger LOG =
             LogManager.getLogger(Vehicle.class.getName());
     /**
      * defines type of vehicle.
@@ -22,16 +25,17 @@ public class Vehicle extends Toy {
     /**
      * constructor fot vehicle toy.
      * constructor for vehicles
-     * @param name
-     * @param price
-     * @param size
-     * @param age
-     * @param type
+     * @param name toy name
+     * @param price toy price
+     * @param size toy size
+     * @param age toy age
+     * @param type toy type
      */
-    public Vehicle(String name, int price, Size size, Age age, VehicleType type){
+    public Vehicle(final String name, final int price,
+                   final Size size, final Age age, final VehicleType type) {
         super(name, price, size, age);
         this.vehicleType = type;
-        LOG.info("Vehicle created: "+this.toString());
+        LOG.info("Vehicle created: " + this.toString());
     }
     /**
      * method to get  vehicle toy type.
@@ -45,7 +49,7 @@ public class Vehicle extends Toy {
      * method to set vehicle toy type.
      * @param type vehicle type
      */
-    public void setVehicleType(VehicleType type) {
+    public void setVehicleType(final VehicleType type) {
         this.vehicleType = type;
     }
 
@@ -58,15 +62,30 @@ public class Vehicle extends Toy {
         return super.toString() + "; Vehicle type: " + vehicleType;
     }
 
+    /**
+     * method overrides equals.
+     * @param o comparable object
+     * @return is equal
+     */
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Vehicle)) return false;
-        if (!super.equals(o)) return false;
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Vehicle)) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         Vehicle vehicle = (Vehicle) o;
         return vehicleType == vehicle.vehicleType;
     }
 
+    /**
+     * method overrides hash code.
+     * @return hash cide
+     */
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), vehicleType);

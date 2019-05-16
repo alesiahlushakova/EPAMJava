@@ -16,6 +16,9 @@ import  org.apache.logging.log4j.Logger;
  * class finds toy by parameters
  */
 public class ToyFinder {
+    /**
+     * logger intro.
+     */
     public static final Logger LOGGER = LogManager.getLogger(ToyFinder.class);
 
     /**
@@ -25,17 +28,16 @@ public class ToyFinder {
      * @return toy
      * @throws InvalidDataException wrong input
      */
-    public  Toy findById(final GameRoom gameRoom, int id) throws InvalidDataException {
+    public  Toy findById(final GameRoom gameRoom, final int id)
+            throws InvalidDataException {
         try {
             LinkedList<Toy> result = new LinkedList<>();
-            for(int i = 0; i<gameRoom.calcSize(); i++) {
-                if (gameRoom.getByIndex(i).getId() == id) {
-                    return gameRoom.getByIndex(i);
+            for (int i = 0; i < gameRoom.calcSize(); i++) {
+                if (gameRoom.takeByIndex(i).getId() == id) {
+                    return gameRoom.takeByIndex(i);
                 }
-            }
-                    throw new InvalidDataException("Problem with id");
-            }
-        catch (InvalidDataException e) {
+            }  throw new InvalidDataException("Problem with id");
+            } catch (InvalidDataException e) {
             LOGGER.warn("Not found by id");
         }
         throw new InvalidDataException("Error in finding by id");
@@ -51,13 +53,15 @@ public class ToyFinder {
      */
     public LinkedList<Toy> findByPrice(final GameRoom gameRoom,
                                        final int minPrice, final int maxPrice)
-            throws NonValidValueException, InvalidDataException {
-        if (minPrice >=0 && maxPrice >= 0 && minPrice <= maxPrice) {
+            throws NonValidValueException {
+        if (minPrice >= 0 && maxPrice >= 0
+                && minPrice <= maxPrice) {
             LinkedList<Toy> result = new LinkedList<>();
             List<Toy> toys = new LinkedList<>();
-            for(int i = 0; i<gameRoom.calcSize(); i++) {
-                if (gameRoom.getByIndex(i).getPrice() >= minPrice && gameRoom.getByIndex(i).getPrice() <= maxPrice) {
-                    result.add(gameRoom.getByIndex(i));
+            for (int i = 0; i < gameRoom.calcSize(); i++) {
+                if (gameRoom.takeByIndex(i).getPrice() >= minPrice
+                        && gameRoom.takeByIndex(i).getPrice() <= maxPrice) {
+                    result.add(gameRoom.takeByIndex(i));
                 }
             }
             return result;
@@ -71,15 +75,16 @@ public class ToyFinder {
      * @param gameRoom storage
      * @param name name of toy
      * @return list of toys with certain name
-     * @throws NonValidValueException
+     * @throws NonValidValueException wrong input
      */
-    public LinkedList<Toy> findByName(final GameRoom gameRoom, final String name)
-            throws NonValidValueException, InvalidDataException {
+    public LinkedList<Toy> findByName(final GameRoom gameRoom,
+                                      final String name)
+            throws NonValidValueException {
         if (!name.isEmpty()) {
             LinkedList<Toy> result = new LinkedList<>();
-            for(int i = 0; i<gameRoom.calcSize(); i++) {
-                if (name.equalsIgnoreCase(gameRoom.getByIndex(i).getName())) {
-                    result.add(gameRoom.getByIndex(i));
+            for (int i = 0; i < gameRoom.calcSize(); i++) {
+                if (name.equalsIgnoreCase(gameRoom.takeByIndex(i).getName())) {
+                    result.add(gameRoom.takeByIndex(i));
                 }
             }
             return result;

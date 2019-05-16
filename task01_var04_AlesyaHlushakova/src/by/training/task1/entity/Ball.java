@@ -12,8 +12,10 @@ import java.util.Objects;
  * @version 1.0
  */
 public class Ball extends Toy {
-
-    public static final Logger LOG=
+    /**
+     * logger intro.
+     */
+    public static final Logger LOG =
             LogManager.getLogger(Ball.class.getName());
     /**
      * describes type of ball toy.
@@ -21,17 +23,18 @@ public class Ball extends Toy {
     private BallType ballType;
 
     /**
-     * constructor for ball toy
+     * constructor for ball toy.
      * @param name name of ball
      * @param price price of ball
      * @param size ball size
      * @param age age restriction
      * @param type type of ball
      */
-    public  Ball(String name, int price, Size size, Age age, BallType type) {
+    public  Ball(final String name, final int price,
+                 final Size size, final Age age, final BallType type) {
         super(name, price, size, age);
         this.ballType = type;
-        LOG.info("Ball created: "+this.toString());
+        LOG.info("Ball created: " + this.toString());
     }
 
     /**
@@ -44,7 +47,7 @@ public class Ball extends Toy {
     /**
      * @param type ball type
      */
-    public void setBallType(BallType type) {
+    public void setBallType(final BallType type) {
         this.ballType = type;
     }
 
@@ -54,14 +57,20 @@ public class Ball extends Toy {
      */
     @Override
     public String toString() {
-        return super.toString() + "; Ball type: " + ballType+"\n";
+        return super.toString() + "; Ball type: " + ballType + "\n";
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Ball)) return false;
-        if (!super.equals(o)) return false;
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Ball)) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         Ball ball = (Ball) o;
         return ballType == ball.ballType;
     }

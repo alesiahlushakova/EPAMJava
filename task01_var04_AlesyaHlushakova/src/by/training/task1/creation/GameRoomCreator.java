@@ -13,7 +13,7 @@ import java.util.LinkedList;
  */
 public class GameRoomCreator {
     /**
-     * constructor for class
+     * constructor for class.
      * @param allocatedMoney money given for the game room
      * @return game room
      * @throws StorageException exception while working with toy storage
@@ -24,10 +24,11 @@ public class GameRoomCreator {
         LinkedList<Toy> list = new LinkedList<>(storage.getToys());
         for (int i = 0; i < storage.getToys().size();  i++) {
             if (list.get(i).getPrice() < allocatedMoney) {
-                gameRoom.addToy(storage.getToy(i));
-                allocatedMoney -=list.get(i).getPrice();
+                gameRoom.addToy(storage.takeToy(i));
+                allocatedMoney -= list.get(i).getPrice();
             } else {
-                //throw new StorageException("Storage does not have enough money");
+                throw new StorageException(
+                        "Storage does not have enough money");
             }
         }
         return gameRoom;

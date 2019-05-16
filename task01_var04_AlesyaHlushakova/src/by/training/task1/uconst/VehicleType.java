@@ -5,5 +5,28 @@ package by.training.task1.uconst;
  * enum for vehicle toy types.
  */
 public enum VehicleType {
-    CAR, TRAIN, TRUCK, TROLLEY, BUS, MOTORCYCLE
+    /**
+     * car vehicle.
+     */
+    CAR,
+    /**
+     * train vehicle.
+     */
+    TRAIN,
+    /**
+     * truck vehicle.
+     */
+    TRUCK,
+    /**
+     * trolley vehicle.
+     */
+    TROLLEY,
+    /**
+     * bus vehicle.
+     */
+    BUS,
+    /**
+     * motorcycle.
+     */
+    MOTORCYCLE
 }

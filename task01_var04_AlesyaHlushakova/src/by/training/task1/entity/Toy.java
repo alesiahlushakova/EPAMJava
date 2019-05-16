@@ -39,7 +39,8 @@ public abstract class Toy {
      * @param size toy sizes
      * @param age age limit
      */
-    public Toy(final String name, final int price, final Size size, final Age age) {
+    public Toy(final String name, final int price,
+               final Size size, final Age age) {
         this.name = name;
         this.price = price;
         this.age = age;
@@ -121,7 +122,7 @@ public abstract class Toy {
     }
     /**
      *
-     * @param size
+     * @param size toy size
      * @return
      */
     public void setSize(final Size size) {

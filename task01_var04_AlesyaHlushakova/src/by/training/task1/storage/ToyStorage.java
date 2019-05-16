@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * @author Alesya Hlushakova
  * class - storage for toys.
  */
-public class ToyStorage{
+public final class ToyStorage {
 
 
     /**
@@ -51,19 +51,23 @@ public class ToyStorage{
      * sets toys in storage.
      * @param toys list
      */
-    public void setToys(LinkedList<Toy> toys) {
+    public void setToys(final LinkedList<Toy> toys) {
         this.toys = toys;
     }
 
     /**
      *
-     * @return
+     * @return id
      */
     public static int getCurrId() {
         return currId;
     }
 
-    public static void setCurrId(int currId) {
+    /**
+     * sets id.
+     * @param currId id
+     */
+    public static void setCurrId(final int currId) {
         ToyStorage.currId = currId;
     }
     /**
@@ -88,10 +92,11 @@ public class ToyStorage{
     /**
      * takes toy from the storage.
      * @return taken toy
+     * @param index index
      * @throws StorageException exception while removing toy
      */
-    public Toy getToy(int index) throws StorageException {
-        if(!toys.isEmpty() || index >= 0 || index < countOfToys()) {
+    public Toy takeToy(final int index) throws StorageException {
+        if (!toys.isEmpty() || index >= 0 || index < countOfToys()) {
             return toys.get(index);
         } else {
             throw new StorageException("Wrong index or storage is empty");

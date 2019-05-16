@@ -12,7 +12,10 @@ import java.util.Objects;
  * class cube toy.
  */
 public class Cube extends Toy {
-    public static final Logger LOG=
+    /**
+     * logger intro.
+     */
+    public static final Logger LOG =
             LogManager.getLogger(Cube.class.getName());
     /**
      * describes type of cube.
@@ -27,10 +30,11 @@ public class Cube extends Toy {
      * @param age age restriction
      * @param type type of toy
      */
-    public Cube(String name, int price, Size size, Age age, CubeType type) {
+    public Cube(final String name, final int price,
+                final Size size, final Age age, final CubeType type) {
         super(name, price, size, age);
         this.cubeType = type;
-        LOG.info("Cube created: "+this.toString());
+        LOG.info("Cube created: " + this.toString());
     }
     /**
      * @return type of cube toy
@@ -40,9 +44,9 @@ public class Cube extends Toy {
     }
 
     /**
-     * @param type
+     * @param type cube type
      */
-    public void setCubeType(CubeType type) {
+    public void setCubeType(final CubeType type) {
         this.cubeType = type;
     }
 
@@ -55,15 +59,30 @@ public class Cube extends Toy {
         return super.toString() + "; Cube type: " + cubeType + "\n";
     }
 
+    /**
+     * method overrides equals.
+     * @param o comparable object
+     * @return is equal
+     */
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Cube)) return false;
-        if (!super.equals(o)) return false;
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Cube)) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         Cube cube = (Cube) o;
         return cubeType == cube.cubeType;
     }
 
+    /**
+     * method overrides hash code.
+     * @return hash code
+     */
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), cubeType);

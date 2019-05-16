@@ -32,7 +32,7 @@ public class ToySorterTest {
         ToySorter.sort(gameRoom,ComparatorOptions.NAME);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
-            actual.add(gameRoom.getByIndex(i));
+            actual.add(gameRoom.takeByIndex(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
                 new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS),
@@ -51,7 +51,7 @@ public class ToySorterTest {
         ToySorter.sort(gameRoom, ComparatorOptions.PRICE);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
-            actual.add(gameRoom.getByIndex(i));
+            actual.add(gameRoom.takeByIndex(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
                 new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE),
@@ -69,7 +69,7 @@ public class ToySorterTest {
         ToySorter.sort(gameRoom, ComparatorOptions.NAMETHENPRICE);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
-            actual.add(gameRoom.getByIndex(i));
+            actual.add(gameRoom.takeByIndex(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
                 new Cube("BORYA", 30, Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),

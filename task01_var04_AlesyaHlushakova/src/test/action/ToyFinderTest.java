@@ -21,18 +21,27 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class ToyFinderTest {
-    private static final Logger LOGGER = LogManager.getLogger(ToyFinderTest.class);
+    private static final Logger LOGGER =
+            LogManager.getLogger(ToyFinderTest.class);
 
     GameRoom gameRoom;
     @BeforeClass
     void setBefore() throws StorageException {
             ToyReader toyReader = new ToyReader();
-            ToyStorage toyStorage=(new ToyStorageInitializer()).init(toyReader.read(".\\.\\data\\toys1.txt"));
+            ToyStorage toyStorage=(new ToyStorageInitializer()).
+                    init(toyReader.read(".\\.\\data\\toys1.txt"));
             gameRoom = new GameRoomCreator().makeGameRoom(400);
 
     }
+
+    /**
+     * finds toy in certain interval.
+     * @throws NonValidValueException
+     * @throws InvalidDataException
+     */
     @Test
-    public void testFindByPrice() throws NonValidValueException, InvalidDataException {
+    public void testFindByPrice()
+            throws NonValidValueException {
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
                 new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE)
         ));
@@ -45,7 +54,7 @@ public class ToyFinderTest {
                 new Cube("BORYA", 30, Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
                 new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE)
         ));
-        LinkedList<Toy> actual = new ToyFinder().findByPrice(gameRoom,10,100);
+        LinkedList<Toy> actual = new ToyFinder().findByPrice(gameRoom, 10, 100);
         Assert.assertEquals(actual,expected);
     }
     @Test
@@ -57,7 +66,7 @@ public class ToyFinderTest {
     @Test
     public void testFindByName() throws StorageException, NonValidValueException, InvalidDataException {
         String  expected = "BORYA";
-        Ball borya =new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS);
+        Ball borya = new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS);
         Toy actual = new ToyFinder().findByName(gameRoom, expected).getFirst();
         Ball actualBall = (Ball) actual;
         Assert.assertEquals(borya,actualBall);

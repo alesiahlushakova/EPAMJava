@@ -1,19 +1,21 @@
 package by.training.task1.exception;
 
+/**
+ * @author AlesyaHlushakova
+ * class for non valid values exception.
+ */
 public class NonValidValueException extends Exception {
-
+    /**
+     * empty constructor.
+     */
     public NonValidValueException() {
     }
 
-    public NonValidValueException(String message) {
+    /**
+     * method throws exception.
+     * @param message exception message
+     */
+    public NonValidValueException(final String message) {
         super(message);
-    }
-
-    public NonValidValueException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public NonValidValueException(Throwable cause) {
-        super(cause);
     }
 }

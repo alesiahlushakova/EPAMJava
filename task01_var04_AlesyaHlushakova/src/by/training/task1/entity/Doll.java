@@ -12,7 +12,10 @@ import java.util.Objects;
  * @author AlesyaHlushakova
  */
 public class Doll extends Toy {
-    public static final Logger LOG=
+    /**
+     * logger intro.
+     */
+    public static final Logger LOG =
             LogManager.getLogger(Doll.class.getName());
     /**
      * defines type of a doll.
@@ -20,17 +23,18 @@ public class Doll extends Toy {
     private DollType dollType;
 
     /**
-     *constructor for doll class
+     *constructor for doll class.
      * @param name name of doll
      * @param price price of doll usage
      * @param size doll size
      * @param age age restriction
      * @param type dool type
      */
-    public Doll(String name, int price, Size size, Age age, DollType type){
+    public Doll(final String name, final int price,
+                final Size size, final Age age, final DollType type) {
         super(name, price, size, age);
         this.dollType = type;
-        LOG.info("Doll created: "+this.toString());
+        LOG.info("Doll created: " + this.toString());
     }
 
     /**
@@ -42,10 +46,10 @@ public class Doll extends Toy {
     }
 
     /**
-     * setter to set doll
+     * setter to set doll.
      * @param type type of doll
      */
-    public void setDollType(DollType type) {
+    public void setDollType(final DollType type) {
         this.dollType = type;
     }
 
@@ -58,15 +62,30 @@ public class Doll extends Toy {
         return super.toString() + "; Doll type: " + dollType + "\n";
     }
 
+    /**
+     * method overrides equals.
+     * @param o comparable object
+     * @return is equal
+     */
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Doll)) return false;
-        if (!super.equals(o)) return false;
+    public boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Doll)) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
         Doll doll = (Doll) o;
         return dollType == doll.dollType;
     }
 
+    /**
+     * method overrides hashcode.
+     * @return hash code
+     */
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), dollType);
