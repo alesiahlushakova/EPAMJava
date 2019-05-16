@@ -2969,3 +2969,7 @@ by.training.task1.exception.InvalidDataException: Not valid toy while parsing fi
 
 20:47:08.638 [main] INFO  by.training.task1.entity.Ball - Ball created: Toy name: BORYA; age restrictions: BABY; size: SMALL; price: 230; Ball type: TENNIS
 
+11:05:48.853 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: rubick; age restrictions: BABY; size: SMALL; price: 19; Cube type: CLASSIC
+
+11:05:48.857 [main] INFO  by.training.task1.entity.Cube - Cube created: Toy name: rubick; age restrictions: BABY; size: SMALL; price: 19; Cube type: CLASSIC
+

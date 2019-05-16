@@ -80,7 +80,7 @@ public class ToyValidator {
      * @return is toy validation
      * @param ageStr string with age restriction
      */
-    public static boolean isValidAge(final String ageStr) {
+    public static boolean isValidAge(String ageStr) {
         Age[] ages = Age.values();
         for (Age age : ages) {
             if (age.toString().equalsIgnoreCase(ageStr)) {
@@ -94,7 +94,7 @@ public class ToyValidator {
      * @param ballTypeStr ball type
      * @return is toy validation
      */
-    public static boolean isValidBallType(final String ballTypeStr) {
+    public static boolean isValidBallType(String ballTypeStr) {
         BallType[] ballTypes = BallType.values();
         for (BallType ballType : ballTypes) {
             if (ballType.toString().equalsIgnoreCase(ballTypeStr)) {
@@ -108,7 +108,7 @@ public class ToyValidator {
      * @return is toy validation
      * @param cubeTypeStr cube toy type
      */
-    public static boolean isValidCubeType(final String cubeTypeStr) {
+    public static boolean isValidCubeType(String cubeTypeStr) {
         CubeType[] cubeTypes = CubeType.values();
         for (CubeType cubeType : cubeTypes) {
             if (cubeType.toString().equalsIgnoreCase(cubeTypeStr)) {
@@ -122,7 +122,7 @@ public class ToyValidator {
      * @param  dollTypeStr doll type
      * @return is toy validation
      */
-    public static boolean isValidDollType(final String dollTypeStr) {
+    public static boolean isValidDollType(String dollTypeStr) {
         DollType[] dollTypes = DollType.values();
         for (DollType dollType : dollTypes) {
             if (dollType.toString().equalsIgnoreCase(dollTypeStr)) {
@@ -136,7 +136,7 @@ public class ToyValidator {
      * @param vehicleTypeStr validating vehicle type
      * @return is toy validation
      */
-    public static boolean isValidVehicleType(final String vehicleTypeStr) {
+    public static boolean isValidVehicleType(String vehicleTypeStr) {
         VehicleType[] vehicleTypes = VehicleType.values();
         for (VehicleType vehicleType : vehicleTypes) {
             if (vehicleType.toString().equalsIgnoreCase(vehicleTypeStr)) {
@@ -150,7 +150,7 @@ public class ToyValidator {
      * @param sizeStr validating size
      * @return is toy validation
      */
-    public static boolean isValidSize(final String sizeStr) {
+    public static boolean isValidSize(String sizeStr) {
         Size[] sizes = Size.values();
         for (Size size : sizes) {
             if (size.toString().equalsIgnoreCase(sizeStr)) {
@@ -165,7 +165,7 @@ public class ToyValidator {
      * @param typToyStr toy type
      * @return is toy size validation
      */
-    public static boolean isValidToyType(final String typToyStr) {
+    public static boolean isValidToyType(String typToyStr) {
         TypeToy[] typeToys = TypeToy.values();
         for (TypeToy typeSweet : typeToys) {
             if (typeSweet.toString().equalsIgnoreCase(typToyStr)) {

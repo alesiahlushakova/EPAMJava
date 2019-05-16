@@ -60,6 +60,11 @@ public class Ball extends Toy {
         return super.toString() + "; Ball type: " + ballType + "\n";
     }
 
+    /**
+     * method overrides equals.
+     * @param o comparable object
+     * @return is equal
+     */
     @Override
     public boolean equals(final Object o) {
         if (this == o) {
@@ -75,6 +80,10 @@ public class Ball extends Toy {
         return ballType == ball.ballType;
     }
 
+    /**
+     * method overrides hash code.
+     * @return hash code
+     */
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), ballType);

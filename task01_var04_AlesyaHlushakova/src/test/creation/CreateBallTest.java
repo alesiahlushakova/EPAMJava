@@ -11,16 +11,29 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
+/**
+ * @author AlesyaHlushakova
+ */
 public class CreateBallTest {
-
+    /**
+     * test ball creation.
+     * @throws InvalidDataException exception
+     */
     @Test
     public void testCreateToy() throws InvalidDataException {
-        String ball = "type=BALL name=alenka price=25 size=SMALL age=TEENAGER BALL_TYPE=TENNIS";
+        String ball = "type=BALL name=alenka"
+                + " price=25 size=SMALL age=TEENAGER BALL_TYPE=TENNIS";
         ToyParser toyParser = new ToyParser(ball);
         CreateBall creator = new CreateBall(toyParser);
-        Ball expected = new Ball("ALENKA",25, Size.SMALL, Age.TEENAGER, BallType.TENNIS);
-        assertEquals(creator.createToy(),expected);
+        Ball expected = new Ball("ALENKA", 25,
+                Size.SMALL, Age.TEENAGER, BallType.TENNIS);
+        assertEquals(creator.createToy(), expected);
     }
+
+    /**
+     * tests exception.
+     * @throws InvalidDataException exception
+     */
     @Test (expectedExceptions = InvalidDataException.class)
     public void testCreateToyException() throws InvalidDataException {
         String ball = "type=BALL name=alenka price=25 size=SMALL age=TEENAGER ";

@@ -4,13 +4,20 @@ import by.training.task1.comparator.ComparatorOptions;
 import by.training.task1.action.ToySorter;
 import by.training.task1.creation.GameRoomCreator;
 import by.training.task1.creation.ToyStorageInitializer;
-import by.training.task1.entity.*;
+import by.training.task1.entity.Cube;
+import by.training.task1.entity.Ball;
+import by.training.task1.entity.Doll;
+import by.training.task1.entity.Toy;
 import by.training.task1.exception.InvalidDataException;
 import by.training.task1.exception.StorageException;
 import by.training.task1.reader.ToyReader;
 import by.training.task1.storage.GameRoom;
 import by.training.task1.storage.ToyStorage;
-import by.training.task1.uconst.*;
+import by.training.task1.uconst.Age;
+import by.training.task1.uconst.Size;
+import by.training.task1.uconst.BallType;
+import by.training.task1.uconst.CubeType;
+import by.training.task1.uconst.DollType;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -18,34 +25,56 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.LinkedList;
 
+/**
+ * @author AlesyaHlushakova
+ */
 public class ToySorterTest {
+    /**
+     * sets data.
+     * @throws InvalidDataException exception
+     */
     @BeforeClass
             public void setBefore() throws InvalidDataException {
         ToyReader toyReader = new ToyReader();
-        ToyStorage toyStorage = (new ToyStorageInitializer()).init(toyReader.read(".\\.\\data\\toys1.txt"));
+        ToyStorage toyStorage = (new ToyStorageInitializer()).
+                init(toyReader.read(".\\.\\data\\toys1.txt"));
     }
 
+    /**
+     * test method.
+     * @throws InvalidDataException exception
+     * @throws StorageException exception
+     */
     @Test
     public void testSortByName() throws InvalidDataException, StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
         GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
-        ToySorter.sort(gameRoom,ComparatorOptions.NAME);
+        ToySorter.sort(gameRoom, ComparatorOptions.NAME);
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < gameRoom.calcSize(); i++) {
             actual.add(gameRoom.takeByIndex(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
-                new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS),
-                new Cube("BORYA", 30, Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
-                new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE)
+                new Ball("BORYA", 230,
+                        Size.SMALL, Age.BABY, BallType.TENNIS),
+                new Cube("BORYA", 30,
+                        Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
+                new Doll("MASHKA", 15,
+                        Size.MEDIUM, Age.CHILD, DollType.BARBIE)
         ));
         Assert.assertEquals(actual, expected);
 
 
     }
 
+    /**
+     * sort test.
+     * @throws InvalidDataException exception
+     * @throws StorageException exception
+     */
     @Test
-    public void testSortByPrice() throws InvalidDataException, StorageException {
+    public void testSortByPrice() throws InvalidDataException,
+            StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
         GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
         ToySorter.sort(gameRoom, ComparatorOptions.PRICE);
@@ -54,16 +83,25 @@ public class ToySorterTest {
             actual.add(gameRoom.takeByIndex(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
-                new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE),
-                new Cube("BORYA", 30, Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
-                new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS)
+                new Doll("MASHKA", 15,
+                        Size.MEDIUM, Age.CHILD, DollType.BARBIE),
+                new Cube("BORYA", 30,
+                        Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
+                new Ball("BORYA", 230,
+                        Size.SMALL, Age.BABY, BallType.TENNIS)
         ));
         Assert.assertEquals(actual, expected);
 
     }
 
+    /**
+     * sort test.
+     * @throws InvalidDataException exception
+     * @throws StorageException exception
+     */
     @Test
-    public void testSortByNameThenPrice() throws InvalidDataException, StorageException {
+    public void testSortByNameThenPrice() throws InvalidDataException,
+            StorageException {
         ToyStorage toyStorage = ToyStorage.getInstance();
         GameRoom gameRoom = new GameRoomCreator().makeGameRoom(400);
         ToySorter.sort(gameRoom, ComparatorOptions.NAMETHENPRICE);
@@ -72,9 +110,12 @@ public class ToySorterTest {
             actual.add(gameRoom.takeByIndex(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
-                new Cube("BORYA", 30, Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
-                new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS),
-                new Doll("MASHKA", 15, Size.MEDIUM, Age.CHILD, DollType.BARBIE)
+                new Cube("BORYA", 30,
+                        Size.LARGE, Age.TEENAGER, CubeType.CLASSIC),
+                new Ball("BORYA", 230,
+                        Size.SMALL, Age.BABY, BallType.TENNIS),
+                new Doll("MASHKA", 15,
+                        Size.MEDIUM, Age.CHILD, DollType.BARBIE)
         ));
         Assert.assertEquals(actual, expected);
 

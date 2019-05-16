@@ -17,22 +17,31 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.LinkedList;
 
+/**
+ * @author AlesyaHlushakova
+ */
 public class ToyStorageInitializerTest {
-
+    /**
+     * tests initializer.
+     * @throws StorageException exception
+     */
     @Test
     public void testInit() throws StorageException {
         ToyReader reader = new ToyReader();
         ToyStorageInitializer initializer = new ToyStorageInitializer();
-        ToyStorage storage = initializer.init(reader.read(".\\.\\data\\toysInit.txt"));
+        ToyStorage storage = initializer.init(reader.
+                read(".\\.\\data\\toysInit.txt"));
         LinkedList<Toy> actual = new LinkedList<>();
         for (int i = 0; i < storage.countOfToys(); i++) {
             actual.add(storage.takeToy(i));
         }
         LinkedList<Toy> expected = new LinkedList<>(Arrays.asList(
-                new Ball("BORYA", 230, Size.SMALL, Age.BABY, BallType.TENNIS),
-                new Cube("BORYA", 30, Size.LARGE, Age.TEENAGER, CubeType.CLASSIC)
+                new Ball("BORYA", 230,
+                        Size.SMALL, Age.BABY, BallType.TENNIS),
+                new Cube("BORYA", 30,
+                        Size.LARGE, Age.TEENAGER, CubeType.CLASSIC)
         ));
-        Assert.assertEquals(actual,expected);
+        Assert.assertEquals(actual, expected);
 
     }
 }
