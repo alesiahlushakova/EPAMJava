@@ -4,40 +4,67 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * @author AlesyaHlushakova
+ * class with text components.
+ */
 public class Particle implements  Component {
+    /**
+     * value.
+     */
     private String value;
-    private ParticleType type;
 
-    private Particle(String value, ParticleType type) {
+
+    /**
+     * constructor
+     * @param value value
+     */
+    private Particle(String value) {
         this.value = value;
-        this.type = type;
     }
 
+    /**
+     * word
+     * @param value
+     * @return
+     */
     public static Particle word(String value) {
-        return new Particle(value, ParticleType.WORD);
+        return new Particle(value);
     }
 
-    public static Particle expression(String value) {
-        return new Particle(value, ParticleType.EXPRESSION);
-    }
 
+    /**
+     * method overrides add component.
+     * @param component component
+     */
     @Override
     public void add(Component component) {
     }
 
+    /**
+     * gets children.
+     * @return list
+     */
     @Override
     public List<Component> getChildren() {
         return Collections.emptyList();
     }
 
+    /**
+     * gets value of string.
+     * @return value
+     */
     public String getValue() {
         return value;
     }
 
-    public ParticleType getType() {
-        return type;
-    }
 
+
+    /**
+     * method overrides equals
+     * @param o comparable object
+     * @return is equal
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -47,15 +74,22 @@ public class Particle implements  Component {
             return false;
         }
         Particle lexeme = (Particle) o;
-        return Objects.equals(value, lexeme.value) &&
-                type == lexeme.type;
+        return Objects.equals(value, lexeme.value);
     }
 
+    /**
+     * method overrides hash code.
+     * @return hash
+     */
     @Override
     public int hashCode() {
-        return Objects.hash(value, type);
+        return Objects.hash(value);
     }
 
+    /**
+     * overrides toString.
+     * @return value
+     */
     @Override
     public String toString() {
         return value;

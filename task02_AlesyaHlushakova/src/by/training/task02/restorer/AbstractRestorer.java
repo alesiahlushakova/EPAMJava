@@ -5,9 +5,21 @@ import by.training.task02.composite.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Alesyahlushakova
+ * abstract text restorer.
+ */
 public abstract class AbstractRestorer implements Restorer {
+    /**
+     * successor.
+     */
     private Restorer successor;
 
+    /**
+     * method restores each child.
+     * @param component component
+     * @return text
+     */
     protected List<String> restoreEachChild(Component component) {
         List<String> restoredComponents = new ArrayList<>();
         List<Component> children = component.getChildren();
@@ -18,6 +30,10 @@ public abstract class AbstractRestorer implements Restorer {
         return restoredComponents;
     }
 
+    /**
+     * method sets successor.
+     * @param successor successor
+     */
     public void setSuccessor(Restorer successor) {
         this.successor = successor;
     }

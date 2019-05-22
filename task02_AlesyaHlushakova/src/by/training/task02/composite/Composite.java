@@ -4,40 +4,73 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * @author AlesyaHlushakova
+ * class composite.
+ */
 public class Composite implements Component{
+    /**
+     * component list.
+     */
     private List<Component> components;
 
+    /**
+     * empty constructor.
+     */
     public Composite() {
         components = new ArrayList<>();
     }
 
+    /**
+     * adds component.
+     * @param component component
+     */
     @Override
     public void add(Component component) {
         components.add(component);
     }
 
+    /**
+     * gets children.
+     * @return children
+     */
     @Override
     public List<Component> getChildren() {
         return components;
     }
 
+    /**
+     * method overrides equals.
+     * @param o comparable object
+     * @return is equal
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (o == null || getClass()
+                != o.getClass()) {
             return false;
         }
         Composite composite = (Composite) o;
-        return Objects.equals(components, composite.components);
+        return Objects.equals(components,
+                composite.components);
     }
 
+    /**
+     * method overrides hash code
+     * @return hash
+     */
     @Override
     public int hashCode() {
         return Objects.hash(components);
     }
 
+    /**
+     * method overrides toString.
+     * @return component
+     */
     @Override
     public String toString() {
         return components.toString();

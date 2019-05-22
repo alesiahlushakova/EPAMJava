@@ -9,9 +9,22 @@ import java.nio.file.Paths;
 import java.util.StringJoiner;
 import java.util.stream.Stream;
 
+/**
+ * @author AlesyaHlushakova
+ * file reader.
+ */
 public class FileReader {
+    /**
+     * line delimiter.
+     */
     private static final String LINE_DELIMITER = "\n";
 
+    /**
+     * method reads from file.
+     * @param source source string
+     * @return string
+     * @throws FileException exception while working with file
+     */
     public String read(String source) throws FileException {
         Path path = Paths.get(source);
         StringJoiner stringJoiner = new StringJoiner(LINE_DELIMITER);

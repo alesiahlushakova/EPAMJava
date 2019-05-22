@@ -1,0 +1,283 @@
+15:34:26.335 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+13:34:53.877 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:01:45.408 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:01:45.418 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:01:45.418 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+15:18:21.094 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:18:21.094 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:18:21.103 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+15:19:36.127 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:19:36.127 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:19:36.127 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+15:20:15.597 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:20:15.607 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:20:15.617 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+15:20:29.018 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:20:29.018 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:20:29.018 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+15:21:08.128 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:21:08.128 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:21:08.138 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+15:21:20.086 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:21:20.096 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:21:20.096 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+15:36:53.683 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:36:53.683 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:36:53.693 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:37:43.391 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:37:43.401 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:37:43.401 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:38:10.406 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:38:10.406 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:38:10.406 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:40:06.617 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:40:06.617 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:40:06.627 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:41:41.567 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:41:41.577 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:41:41.587 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:43:30.686 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:43:30.696 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:43:30.696 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:43:54.248 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:43:54.258 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:43:54.258 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:49:23.046 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:49:23.046 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:49:23.046 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+15:59:43.645 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+15:59:43.645 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+15:59:43.675 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+16:00:29.497 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+16:00:29.497 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+16:00:29.507 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+16:01:01.770 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+16:01:01.780 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+16:01:01.780 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+18:50:47.039 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+18:50:47.059 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+18:50:47.069 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+16:28:22.813 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: Monster; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+16:28:22.858 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+16:46:01.914 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: Monster; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+16:46:01.917 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+16:46:44.640 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: Monster; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+16:46:44.647 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+16:49:20.324 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: Monster; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+16:49:20.333 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+22:39:58.092 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+22:39:58.092 [main] ERROR by.traning.task1.runner.ToyStorageInitializer - String contains not valid toy
+by.traning.task1.exception.InvalidDataException: null
+	at by.traning.task1.runner.ToyStorageInitializer.init(ToyStorageInitializer.java:54) [task01a_var04_AlesyaHlushakova/:?]
+	at by.traning.task1.test.by.training.task1.runner.ToyStorageInitializerTest.testInit(ToyStorageInitializerTest.java:21) [task01a_var04_AlesyaHlushakova/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:773) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:623) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1018) [testng-6.9.6.jar:?]
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73) [testng-plugin.jar:?]
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123) [testng-plugin.jar:?]
+22:40:28.949 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+22:40:28.949 [main] ERROR by.traning.task1.runner.ToyStorageInitializer - String contains not valid toy
+by.traning.task1.exception.InvalidDataException: null
+	at by.traning.task1.runner.ToyStorageInitializer.init(ToyStorageInitializer.java:54) [task01a_var04_AlesyaHlushakova/:?]
+	at by.traning.task1.test.by.training.task1.runner.ToyStorageInitializerTest.testInit(ToyStorageInitializerTest.java:20) [task01a_var04_AlesyaHlushakova/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:773) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:623) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1018) [testng-6.9.6.jar:?]
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73) [testng-plugin.jar:?]
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123) [testng-plugin.jar:?]
+22:41:04.196 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 17; Vehicle type: TRUCK
+22:41:04.196 [main] ERROR by.traning.task1.runner.ToyStorageInitializer - String contains not valid toy
+by.traning.task1.exception.InvalidDataException: null
+	at by.traning.task1.runner.ToyStorageInitializer.init(ToyStorageInitializer.java:54) [task01a_var04_AlesyaHlushakova/:?]
+	at by.traning.task1.test.by.training.task1.runner.ToyStorageInitializerTest.testInit(ToyStorageInitializerTest.java:20) [task01a_var04_AlesyaHlushakova/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:773) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:623) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1018) [testng-6.9.6.jar:?]
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73) [testng-plugin.jar:?]
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123) [testng-plugin.jar:?]
+22:45:25.786 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+22:45:40.659 [main] ERROR by.traning.task1.runner.ToyStorageInitializer - String contains not valid toy
+by.traning.task1.exception.InvalidDataException: null
+	at by.traning.task1.runner.ToyStorageInitializer.init(ToyStorageInitializer.java:54) [task01a_var04_AlesyaHlushakova/:?]
+	at by.traning.task1.test.by.training.task1.runner.ToyStorageInitializerTest.testInit(ToyStorageInitializerTest.java:20) [task01a_var04_AlesyaHlushakova/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821) [testng-6.9.6.jar:?]
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124) [testng-6.9.6.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:773) [testng-6.9.6.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:623) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-6.9.6.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110) [testng-6.9.6.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1018) [testng-6.9.6.jar:?]
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:73) [testng-plugin.jar:?]
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123) [testng-plugin.jar:?]
+22:46:00.179 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+22:47:31.905 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+22:48:04.571 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+23:02:22.718 [main] INFO  by.traning.task1.entity.Cube - Cube createdToy name: rubick; age restrictions: BABY; size: SMALL; price: 19; Cube type: CLASSIC
+23:02:22.718 [main] INFO  by.traning.task1.entity.Cube - Cube createdToy name: myCube; age restrictions: CHILD; size: MEDIUM; price: 120; Cube type: CUBOID
+23:02:22.718 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: rubick; age restrictions: BABY; size: SMALL; price: 19; Cube type: CLASSIC, Toy name: myCube; age restrictions: CHILD; size: MEDIUM; price: 120; Cube type: CUBOID]
+
+23:18:36.768 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+23:18:36.768 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+23:18:36.778 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+23:19:54.379 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+23:19:54.389 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+23:19:54.389 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+23:20:53.759 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+23:20:53.769 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+23:20:59.730 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+23:22:11.772 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+23:22:11.792 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+23:22:28.912 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+23:23:10.765 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+23:23:10.775 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+23:23:10.775 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+23:23:51.315 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+23:23:51.345 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+23:24:10.338 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+00:04:06.710 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+00:04:06.710 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+00:04:06.720 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+00:04:06.779 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+00:04:06.779 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+00:04:06.779 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+00:05:59.035 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+00:05:59.045 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+00:05:59.065 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+00:05:59.165 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+00:05:59.165 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+00:05:59.990 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+00:06:27.559 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG
+00:06:27.564 [main] INFO  by.traning.task1.entity.Ball - Ball createdToy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG
+00:06:27.566 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: lesya; age restrictions: BABY; size: LARGE; price: 100; Ball type: PINGPONG, Toy name: sanya; age restrictions: BABY; size: LARGE; price: 300; Ball type: PINGPONG]
+
+00:06:38.430 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+00:06:38.440 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+00:06:58.914 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:00:19.510 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:00:19.525 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:00:19.528 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:02:17.993 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:02:18.003 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:02:18.006 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:03:06.115 [main] FATAL by.traning.task1.read.ToyReader - java.io.FileNotFoundException: ..\data\toys1.txt (Системе не удается найти указанный путь)
+14:03:37.625 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:03:37.632 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:03:37.636 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:05:57.975 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:05:58.001 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:06:56.844 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:11:27.340 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:11:27.347 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:12:01.589 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:13:09.399 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:13:09.407 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:13:09.410 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:13:20.746 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:13:20.759 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:14:11.676 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:14:36.244 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:14:36.252 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:14:41.245 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:47:41.509 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:47:41.519 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:48:03.625 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:50:15.856 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:50:15.863 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:50:24.962 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:52:45.155 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:52:45.163 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:52:45.170 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+14:58:30.151 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle createdToy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+14:58:30.158 [main] INFO  by.traning.task1.entity.Doll - Doll createdToy name: MND-198; age restrictions: TEENAGER; size: SMALL; price: 200; Doll type: PORCELIAN
+14:58:30.161 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[]
+17:37:40.004 [main] INFO  by.traning.task1.entity.Vehicle - Vehicle created: Toy name: MONSTER; age restrictions: CHILD; size: LARGE; price: 170; Vehicle type: TRUCK
+18:23:27.434 [main] INFO  by.traning.task1.entity.Cube - Cube created: Toy name: rubick; age restrictions: BABY; size: SMALL; price: 19; Cube type: CLASSIC
+
+18:23:27.438 [main] INFO  by.traning.task1.entity.Cube - Cube created: Toy name: myCube; age restrictions: CHILD; size: MEDIUM; price: 120; Cube type: CUBOID
+
+18:23:27.441 [main] INFO  by.traning.task1.entity.GameRoom - GameRoom created[Toy name: rubick; age restrictions: BABY; size: SMALL; price: 19; Cube type: CLASSIC
+, Toy name: myCube; age restrictions: CHILD; size: MEDIUM; price: 120; Cube type: CUBOID
+]
+
