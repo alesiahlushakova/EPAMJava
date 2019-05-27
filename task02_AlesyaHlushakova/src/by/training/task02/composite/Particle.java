@@ -16,19 +16,19 @@ public class Particle implements  Component {
 
 
     /**
-     * constructor
+     * constructor.
      * @param value value
      */
-    private Particle(String value) {
+    private Particle(final String value) {
         this.value = value;
     }
 
     /**
-     * word
-     * @param value
-     * @return
+     * word.
+     * @param value value
+     * @return particle
      */
-    public static Particle word(String value) {
+    public static Particle word(final String value) {
         return new Particle(value);
     }
 
@@ -38,7 +38,7 @@ public class Particle implements  Component {
      * @param component component
      */
     @Override
-    public void add(Component component) {
+    public void add(final Component component) {
     }
 
     /**
@@ -61,12 +61,12 @@ public class Particle implements  Component {
 
 
     /**
-     * method overrides equals
+     * method overrides equals.
      * @param o comparable object
      * @return is equal
      */
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) {
             return true;
         }
@@ -95,3 +95,5 @@ public class Particle implements  Component {
         return value;
     }
 }
+
+

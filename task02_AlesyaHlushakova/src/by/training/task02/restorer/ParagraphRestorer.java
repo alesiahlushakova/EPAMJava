@@ -14,7 +14,8 @@ public class ParagraphRestorer extends AbstractRestorer {
     /**
      * logger intro.
      */
-    private static final Logger LOGGER = LogManager.getLogger(ParagraphRestorer.class);
+    private static final Logger LOGGER = LogManager.
+            getLogger(ParagraphRestorer.class);
     /**
      * sentence delimiter.
      */
@@ -30,14 +31,13 @@ public class ParagraphRestorer extends AbstractRestorer {
      * @return restored paragraph
      */
     @Override
-    public String restore(Component element) {
+    public String restore(final Component element) {
         StringJoiner stringJoiner = new StringJoiner(SENTENCE_DELIMITER);
         List<String> restoredParagraphs = restoreEachChild(element);
         restoredParagraphs.forEach(stringJoiner::add);
-        ;
 
         LOGGER.info(String.format("Paragraph was restored successfully:\n%s",
-                stringJoiner.toString() + PARAGRAPH_TERMINAL_ELEMENT   ));
+                stringJoiner.toString() + PARAGRAPH_TERMINAL_ELEMENT));
         return stringJoiner.toString() + PARAGRAPH_TERMINAL_ELEMENT;
     }
 }

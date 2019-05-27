@@ -1,6 +1,11 @@
 package by.training.task02.builder;
 
-import by.training.task02.restorer.*;
+import by.training.task02.restorer.AbstractRestorer;
+import by.training.task02.restorer.ParagraphRestorer;
+import by.training.task02.restorer.SentenceRestorer;
+import by.training.task02.restorer.LexemeRestorer;
+import by.training.task02.restorer.TextRestorer;
+import by.training.task02.restorer.Restorer;
 
 /**
  * @author AlesyaHlushakova

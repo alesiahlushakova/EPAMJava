@@ -19,8 +19,9 @@ public abstract class AbstractSorter implements Sorter {
      * @param comparator comparator
      * @return component
      */
-    protected Component sortLexemesInSentence(Component sentence,
-                                              Comparator<Particle> comparator) {
+    protected Component sortLexemesInSentence(final Component sentence,
+                                              final Comparator<Particle>
+                                                      comparator) {
         List<Component> children = sentence.getChildren();
         List<Particle> sortedLexemes = children
                 .stream()

@@ -20,7 +20,7 @@ public abstract class AbstractRestorer implements Restorer {
      * @param component component
      * @return text
      */
-    protected List<String> restoreEachChild(Component component) {
+    protected List<String> restoreEachChild(final Component component) {
         List<String> restoredComponents = new ArrayList<>();
         List<Component> children = component.getChildren();
         for (Component child : children) {
@@ -34,7 +34,7 @@ public abstract class AbstractRestorer implements Restorer {
      * method sets successor.
      * @param successor successor
      */
-    public void setSuccessor(Restorer successor) {
+    public void setSuccessor(final Restorer successor) {
         this.successor = successor;
     }
 }

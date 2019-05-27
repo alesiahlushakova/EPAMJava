@@ -10,11 +10,12 @@ import java.util.List;
 /**
  * @author Alesyahlushakova
  */
-public class WordsByLendthSorter extends AbstractSorter {
+public class WordsByLengthSorter extends AbstractSorter {
     /**
      * comparator.
      */
-    private static final Comparator<Particle> LEXEME_LENGTH_COMPARATOR = Comparator
+    private static final Comparator<Particle> LEXEME_LENGTH_COMPARATOR =
+            Comparator
             .comparing(lexeme -> lexeme.getValue().length());
 
     /**
@@ -23,7 +24,7 @@ public class WordsByLendthSorter extends AbstractSorter {
      * @return component
      */
     @Override
-    public Component sort(Component text) {
+    public Component sort(final Component text) {
         Component sortedText = new Composite();
         List<Component> paragraphs = text.getChildren();
         for (Component paragraph : paragraphs) {
@@ -38,11 +39,12 @@ public class WordsByLendthSorter extends AbstractSorter {
      * @param paragraph paragraph
      * @return component
      */
-    private Component sortSentences(Component paragraph) {
+    private Component sortSentences(final Component paragraph) {
         List<Component> sentences = paragraph.getChildren();
         Component sortedParagraph = new Composite();
         for (Component sentence : sentences) {
-            Component sortedSentence = sortLexemesInSentence(sentence, LEXEME_LENGTH_COMPARATOR);
+            Component sortedSentence = sortLexemesInSentence(sentence,
+                    LEXEME_LENGTH_COMPARATOR);
             sortedParagraph.add(sortedSentence);
         }
         return sortedParagraph;

@@ -16,19 +16,20 @@ public class TextRestorer extends AbstractRestorer {
     /**
      * logger intro.
      */
-    private static final Logger LOGGER = LogManager.getLogger(TextRestorer.class);
+    private static final Logger LOGGER = LogManager.
+            getLogger(TextRestorer.class);
     /**
      * paragraph delimiter.
      */
     private static final String PARAGRAPH_DELIMITER = "\n";
 
     /**
-     * method restores text
+     * method restores text.
      * @param component component
      * @return restored text
      */
     @Override
-    public String restore(Component component) {
+    public String restore(final Component component) {
         StringJoiner stringJoiner = new StringJoiner(PARAGRAPH_DELIMITER);
         List<String> restoredParagraphs = restoreEachChild(component);
         restoredParagraphs.forEach(stringJoiner::add);

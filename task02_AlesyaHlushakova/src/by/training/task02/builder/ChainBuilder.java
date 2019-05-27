@@ -1,6 +1,10 @@
 package by.training.task02.builder;
 
-import by.training.task02.parser.*;
+import by.training.task02.parser.SentenceParser;
+import by.training.task02.parser.LexemeParser;
+import by.training.task02.parser.ParagraphParser;
+import by.training.task02.parser.AbstractParser;
+import by.training.task02.parser.TextParser;
 
 /**
  * @author AlesyaHlushakova

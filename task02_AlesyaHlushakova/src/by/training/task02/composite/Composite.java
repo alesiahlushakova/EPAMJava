@@ -8,7 +8,7 @@ import java.util.Objects;
  * @author AlesyaHlushakova
  * class composite.
  */
-public class Composite implements Component{
+public class Composite implements Component {
     /**
      * component list.
      */
@@ -26,7 +26,7 @@ public class Composite implements Component{
      * @param component component
      */
     @Override
-    public void add(Component component) {
+    public void add(final Component component) {
         components.add(component);
     }
 
@@ -45,7 +45,7 @@ public class Composite implements Component{
      * @return is equal
      */
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) {
             return true;
         }
@@ -59,7 +59,7 @@ public class Composite implements Component{
     }
 
     /**
-     * method overrides hash code
+     * method overrides hash code.
      * @return hash
      */
     @Override

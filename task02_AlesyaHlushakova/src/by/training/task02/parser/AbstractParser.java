@@ -7,7 +7,7 @@ import by.training.task02.composite.Composite;
  * @author AlesyaHlushakova
  * abstract parser class.
  */
-public abstract class AbstractParser implements  Parser{
+public abstract class AbstractParser implements  Parser {
     /**
      * successor.
      */
@@ -18,7 +18,7 @@ public abstract class AbstractParser implements  Parser{
      * @param parts components.
      * @return component
      */
-    protected Component parseEach(String[] parts) {
+    protected Component parseEach(final String[] parts) {
         Component composite = new Composite();
         for (String part : parts) {
             Component component = successor.parse(part);
@@ -31,7 +31,7 @@ public abstract class AbstractParser implements  Parser{
      * sets successor.
      * @param successor successor
      */
-    public void setSuccessor(Parser successor) {
+    public void setSuccessor(final Parser successor) {
         this.successor = successor;
     }
 }

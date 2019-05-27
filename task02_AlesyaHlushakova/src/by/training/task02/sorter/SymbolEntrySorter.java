@@ -5,15 +5,31 @@ import by.training.task02.composite.Particle;
 
 import java.util.Comparator;
 
+/**
+ * @author AlesyaHlushakova
+ * sorter.
+ */
 public class SymbolEntrySorter extends AbstractSorter {
+    /**
+     * sorting symbol.
+     */
     private final char symbol;
 
-    public SymbolEntrySorter(char symbol) {
+    /**
+     * constructor.
+     * @param symbol symbol
+     */
+    public SymbolEntrySorter(final char symbol) {
         this.symbol = symbol;
     }
 
+    /**
+     * sorting method.
+     * @param sentence
+     * @return
+     */
     @Override
-    public Component sort(Component sentence) {
+    public Component sort(final Component sentence) {
         Comparator<Particle> symbolEntryCountComparator = Comparator
                 .comparing(this::countNumberOfEntries)
                 .thenComparing(lexeme -> lexeme.getValue().toLowerCase());
@@ -25,7 +41,7 @@ public class SymbolEntrySorter extends AbstractSorter {
      * @param lexeme lexeme
      * @return number
      */
-    private long countNumberOfEntries(Particle lexeme) {
+    private long countNumberOfEntries(final Particle lexeme) {
         String value = lexeme.getValue();
         return value
                 .chars()

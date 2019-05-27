@@ -14,7 +14,8 @@ public class SentenceRestorer extends AbstractRestorer {
     /**
      * logger intro.
      */
-    private static final Logger LOGGER = LogManager.getLogger(SentenceRestorer.class);
+    private static final Logger LOGGER = LogManager.
+            getLogger(SentenceRestorer.class);
     /**
      * lexeme delimiter.
      */
@@ -26,11 +27,12 @@ public class SentenceRestorer extends AbstractRestorer {
      * @return sentence
      */
     @Override
-    public String restore(Component element) {
+    public String restore(final Component element) {
         StringJoiner stringJoiner = new StringJoiner(LEXEME_DELIMITER);
         List<String> restoredParagraphs = restoreEachChild(element);
         restoredParagraphs.forEach(stringJoiner::add);
-        LOGGER.info(String.format("Sentence was restored successfully:\n%s", stringJoiner.toString()));
+        LOGGER.info(String.format("Sentence was restored successfully:\n%s",
+                stringJoiner.toString()));
         return stringJoiner.toString();
     }
 }

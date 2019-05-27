@@ -9,12 +9,13 @@ import  org.apache.logging.log4j.Logger;
  * @author AlesyaHlushakova
  * lexeme parser class.
  */
-public class LexemeParser extends AbstractParser{
+public class LexemeParser extends AbstractParser {
     /**
      * logger intro.
      */
-    private static final Logger LOGGER = LogManager.getLogger(AbstractParser.class);
-    private static final String EXPRESSION_PATTERN = "[a-z0-9_-]$";
+    private static final Logger LOGGER = LogManager.
+            getLogger(LexemeParser.class);
+
 
     /**
      * parses lexeme.
@@ -22,9 +23,9 @@ public class LexemeParser extends AbstractParser{
      * @return component
      */
     @Override
-    public Component parse(String text) {
+    public Component parse(final String text) {
         Component lexeme;
-        boolean isExpression = text.matches(EXPRESSION_PATTERN);
+
         lexeme = Particle.word(text);
         LOGGER.info("Lexeme was parsed" + lexeme);
         return lexeme;

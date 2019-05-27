@@ -13,7 +13,8 @@ public class SentenceQuantitySorter implements Sorter {
     /**
      * comparator.
      */
-    private final Comparator<Component> SENTENCE_QUANTITY_COMPARATOR = Comparator
+    private final Comparator<Component> SENTENCE_QUANTITY_COMPARATOR
+            = Comparator
             .comparing(component -> component.getChildren().size());
 
     /**
@@ -22,7 +23,7 @@ public class SentenceQuantitySorter implements Sorter {
      * @return component
      */
     @Override
-    public Component sort(Component text) {
+    public Component sort(final Component text) {
         List<Component> paragraphs = text.getChildren();
         paragraphs.sort(SENTENCE_QUANTITY_COMPARATOR);
         Component sortedText = new Composite();

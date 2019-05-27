@@ -9,7 +9,7 @@ import java.util.List;
 public interface Component {
     /**
      * method adds components.
-     * @param component
+     * @param component component
      */
     void add(Component component);
 
