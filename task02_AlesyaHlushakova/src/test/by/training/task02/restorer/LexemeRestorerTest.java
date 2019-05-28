@@ -28,7 +28,7 @@ public class LexemeRestorerTest {
      * tests restorer.
      */
     @Test (description = "should return word value when word supplied")
-    public void restoreShouldReturnWordValueWhenWordSupplied() {
+    public void lexemeRestorer() {
         String restoredWord = restorer.restore(WORD);
         Assert.assertEquals(restoredWord, WORD_STRING);
     }

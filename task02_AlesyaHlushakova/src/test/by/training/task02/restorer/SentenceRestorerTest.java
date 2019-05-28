@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
  * @author Alesyahlushakova
  * sentence restorer tests.
  */
-public class SentenceRestorer {
+public class SentenceRestorerTest {
     /**
      * sentence.
      */
@@ -27,7 +27,7 @@ public class SentenceRestorer {
      * sentence restorer test.
      */
     @Test (description = "should return restored sentence")
-    public void restoreShouldReturnRestoredSentenceWithoutPunctuationWhenCorrectSentenceSupplied() {
+    public void sentenceRestorer() {
         AbstractRestorer lexemeRestorer = mock(AbstractRestorer.class);
 
         when(lexemeRestorer.restore(Particle.word("Lorem"))).

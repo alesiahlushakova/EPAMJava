@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
  * @author Alesyahlushakova
  * paragraph restorer tests.
  */
-public class ParagraphRestorer {
+public class ParagraphRestorerTest {
     /**
      * paragraph string.
      */
@@ -25,7 +25,7 @@ public class ParagraphRestorer {
      */
     @Test (description = "should return sentences split"
             + " by dot when different sentences supplied")
-    public void restoreShouldReturnSentencesSplitByDotWhenDifferentSentencesSupplied() {
+    public void paragraphRestorer() {
         AbstractRestorer sentenceRestorer = mock(AbstractRestorer.class);
         Component firstSentence = new Composite();
         firstSentence.add(Particle.word("Nam"));

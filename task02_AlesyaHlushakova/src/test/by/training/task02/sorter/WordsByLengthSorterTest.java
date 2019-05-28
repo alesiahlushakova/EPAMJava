@@ -17,7 +17,7 @@ public class WordsByLengthSorterTest {
      */
     @Test (description = "should sort words by length"
             + " when text composite supplied")
-    public void sortShouldSortWordsByLengthWhenTextCompositeSupplied() {
+    public void sort() {
         Component firstSentence = new Composite();
         firstSentence.add(Particle.word("Hydrogen"));
         firstSentence.add(Particle.word("two"));

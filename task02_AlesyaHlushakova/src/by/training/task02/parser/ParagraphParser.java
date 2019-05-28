@@ -5,6 +5,8 @@ import by.training.task02.composite.Component;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.regex.Pattern;
+
 /**
  * @author AlesyaHlushakova
  * paragraph parser.
@@ -27,7 +29,8 @@ public class ParagraphParser extends AbstractParser {
      */
     @Override
     public Component parse(final String text) {
-        String[] sentences = text.split(SENTENCE_DELIMITER);
+        Pattern pattern = Pattern.compile(SENTENCE_DELIMITER);
+        String[] sentences = pattern.split(text);
         LOGGER.info("Paragraph was parsed" + parseEach(sentences));
         return parseEach(sentences);
     }

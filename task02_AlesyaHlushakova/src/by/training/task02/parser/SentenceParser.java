@@ -4,6 +4,8 @@ import by.training.task02.composite.Component;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.regex.Pattern;
+
 /**
  * @author AlesyaHlushakova
  * sentence parser.
@@ -17,7 +19,8 @@ public class SentenceParser extends AbstractParser {
     /**
      * lexeme delimiter.
      */
-    private static String LEXEME_DELIMITER = ",? ";
+    private static final
+    String LEXEME_DELIMITER = ",? ";
 
     /**
      * method parses sentences.
@@ -26,7 +29,8 @@ public class SentenceParser extends AbstractParser {
      */
     @Override
     public Component parse(final String text) {
-        String[] lexemes = text.split(LEXEME_DELIMITER);
+        Pattern pattern = Pattern.compile(LEXEME_DELIMITER);
+        String[] lexemes = pattern.split(text);
         LOGGER.info("Sentence was parsed");
         return parseEach(lexemes);
     }

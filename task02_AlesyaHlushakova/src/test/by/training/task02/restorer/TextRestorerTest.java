@@ -26,7 +26,7 @@ public class TextRestorerTest {
      */
     @Test (description = "should return paragraph split by "
             + "new line symbol when paragraph component supplied")
-    public void restoreShouldReturnParagraphsSpiltByNewLineSymbolWhenParagraphComponentSupplied() {
+    public void textRestorer() {
         AbstractRestorer paragraphRestorer = mock(AbstractRestorer.class);
         Component firstParagraph = new Composite();
         Component firstSentence = new Composite();

@@ -22,7 +22,7 @@ public class SymbolEntrySorterTest {
      */
     @Test (description = "should sort lexemes in "
             + "natural order when sentence supplied")
-    public void sortShouldSortLexemesInNaturalOrderWhenSentenceSupplied() {
+    public void sort() {
         Component sentence = new Composite();
         sentence.add(Particle.word("bbaaaa"));
         sentence.add(Particle.word("cdb"));

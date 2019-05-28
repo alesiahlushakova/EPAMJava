@@ -26,7 +26,7 @@ public class LexemeParserTest {
      * lexeme parser test.
      */
     @Test(description = "should return word lexeme when word string supplied")
-    public void parseShouldReturnWordLexemeWhenWordStringSupplied() {
+    public void lexemeParserTest() {
 
         Component parsedLexeme = lexemeParser.parse(WORD);
         Assert.assertEquals(parsedLexeme.toString(), WORD);

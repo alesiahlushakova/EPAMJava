@@ -5,6 +5,8 @@ import by.training.task02.composite.Component;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.regex.Pattern;
+
 /**
  * @author AlesyaHlushakova
  * text parser class.
@@ -26,7 +28,8 @@ public class TextParser extends AbstractParser {
      */
     @Override
     public Component parse(final String text) {
-        String[] paragraphs = text.split(PARAGRAPH_DELIMITER);
+        Pattern pattern = Pattern.compile(PARAGRAPH_DELIMITER);
+        String[] paragraphs = pattern.split(text);
         LOGGER.info("Text was parsed" + parseEach(paragraphs));
         return parseEach(paragraphs);
     }

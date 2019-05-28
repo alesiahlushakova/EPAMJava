@@ -25,7 +25,7 @@ public class SentenceParserTest {
      */
     @Test (description = "should return sentence component"
             + " when correct sentence supplied")
-    public void parseShouldReturnSentenceComponentWhenCorrectSentenceSupplied() {
+    public void sentenceParser() {
         AbstractParser lexemeParser = mock(AbstractParser.class);
 
         when(lexemeParser.parse("Lorem")).thenReturn(Particle.word("Lorem"));

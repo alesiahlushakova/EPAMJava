@@ -17,7 +17,7 @@ public class SentenceQuantitySorterTest {
      * sentence quantity sorter test.
      */
     @Test (description = "should sort in natural order correct text supplied")
-    public void sortShouldSortInNaturalOrderWhenCorrectTextSupplied() {
+    public void sort() {
         Component firstSentence = new Composite();
         firstSentence.add(Particle.word("One"));
         firstSentence.add(Particle.word("two"));

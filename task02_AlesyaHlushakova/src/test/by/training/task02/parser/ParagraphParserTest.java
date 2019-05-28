@@ -31,7 +31,7 @@ public class ParagraphParserTest {
      */
     @Test (description = "should return paragraph composite"
             + " when correct paragraph supplied")
-    public void parseShouldReturnParagraphCompositeWhenCorrectParagraphSupplied() {
+    public void paragraphParser() {
         AbstractParser sentenceParser = mock(AbstractParser.class);
 
         Component firstSentence = new Composite();

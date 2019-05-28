@@ -28,7 +28,7 @@ public class TextParserTest {
      * text parser test.
      */
     @Test (description = "should return text composite correct text supplied")
-    public void parseShouldReturnTextCompositeWhenCorrectTextSupplied() {
+    public void textParser() {
         AbstractParser paragraphParser = mock(AbstractParser.class);
         Component firstParagraph = new Composite();
         Component firstSentence = new Composite();
