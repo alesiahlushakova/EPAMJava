@@ -34,6 +34,14 @@ public class Particle implements  Component {
 
 
     /**
+     * method overrides removing of component.
+     * @param component component
+     */
+    @Override
+    public void remove(final Component component) {
+    }
+
+    /**
      * method overrides add component.
      * @param component component
      */

@@ -22,6 +22,15 @@ public class Composite implements Component {
     }
 
     /**
+     * removes component.
+     * @param component component
+     */
+    @Override
+    public void remove(final Component component) {
+        components.remove(component);
+    }
+
+    /**
      * adds component.
      * @param component component
      */

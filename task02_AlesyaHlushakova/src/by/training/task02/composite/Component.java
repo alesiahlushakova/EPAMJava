@@ -14,6 +14,12 @@ public interface Component {
     void add(Component component);
 
     /**
+     * method removes component.
+     * @param component component
+     */
+    void remove(Component component);
+
+    /**
      * method gets children.
      * @return list of children
      */
