@@ -5,6 +5,20 @@ import by.training.task03.exception.MatrixException;
 public class Matrix {
     private  static Matrix instance;
     private Matrix() {}
+
+    private  Matrix(int matrixSize) {
+        a = new int[matrixSize][matrixSize];
+    }
+    public static Matrix setInstance(int matrixSize) {
+        if (instance == null) {
+            synchronized (Matrix.class) {
+                if (instance == null) {
+                    instance = new Matrix(matrixSize);
+                }
+            }
+        }
+        return instance;
+    }
     public static Matrix getInstance() {
         if (instance == null) {
             synchronized (Matrix.class) {
@@ -37,8 +51,9 @@ public class Matrix {
     public void setElement(int i, int j, int value) throws MatrixException {
         if (checkRange(i, j)) {
             a[i][j] = value;
+        } else {
+            throw new MatrixException();
         }
-        throw new MatrixException();
     }
     @Override
     public String toString() {

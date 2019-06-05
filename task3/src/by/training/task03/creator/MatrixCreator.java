@@ -24,13 +24,14 @@ public class MatrixCreator {
             }
         }
     }
- public void fillFromFile(Matrix t, String f) {
-     int v = t.getVerticalSize();
-     int h = t.getHorizontalSize();
+ public void fillFromFile(final String f) {
      File file = new File(f);
      Scanner scanner = null;
      try {
          scanner = new Scanner(file);
+         Matrix t = Matrix.setInstance(scanner.nextInt());
+         int v = t.getVerticalSize();
+         int h = t.getHorizontalSize();
          for (int row=0; row<h; row++){
              for (int col=0; col<v; col++){
                  int number = scanner.nextInt();
@@ -46,7 +47,7 @@ public class MatrixCreator {
          System.err.println("Error reading from file");
      }
      catch (MatrixException e) {
-         System.err.println("Error reading from file");
+         System.err.println("Error");
      }
  }
 

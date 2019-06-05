@@ -66,4 +66,5 @@ public class FileReaderTest {
             throws FileException {
         fileReader.read(INCORRECT_PATH);
     }
+
 }
