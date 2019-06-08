@@ -1,0 +1,2016 @@
+17:12:40.676 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 5x5
+6 2 3 4 5 
+1 0 3 4 5 
+1 2 0 4 5 
+1 2 3 0 5 
+1 2 3 4 0 
+
+17:12:40.779 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 5x5
+6 2 3 4 5 
+1 0 3 4 5 
+1 2 0 4 5 
+1 2 3 0 5 
+1 2 3 4 0 
+
+17:12:40.882 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 0 4 5 
+1 2 3 0 5 
+1 2 3 4 0 
+
+17:12:40.984 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 6 4 5 
+1 2 3 0 5 
+1 2 3 4 0 
+
+17:12:41.086 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 6 4 5 
+1 2 3 0 5 
+1 2 3 4 0 
+
+17:12:41.589 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 6 4 5 
+1 2 3 6 5 
+1 2 3 4 0 
+
+17:12:41.690 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 6 4 5 
+1 2 3 6 5 
+1 2 3 4 6 
+
+17:12:41.791 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 6 4 5 
+1 2 3 6 5 
+1 2 3 4 6 
+
+17:12:41.892 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 6 4 5 
+1 2 3 6 5 
+1 2 3 4 6 
+
+17:12:41.992 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 5x5
+6 2 3 4 5 
+1 6 3 4 5 
+1 2 6 4 5 
+1 2 3 6 5 
+1 2 3 4 6 
+
+17:36:32.068 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.172 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.275 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.380 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.492 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.599 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.714 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.822 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:32.923 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.035 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.136 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.237 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.338 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.439 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.540 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.641 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.742 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.842 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:33.943 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:34.045 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:34.145 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:34.245 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:36:34.346 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 0 
+
+17:36:34.446 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:34.547 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:34.647 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:34.748 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:34.848 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:34.949 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.051 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.152 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.252 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.352 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.453 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.554 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.654 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.755 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.856 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:35.956 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:36:36.057 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:02.305 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:02.410 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:02.513 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:02.622 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:02.731 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:02.843 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:02.944 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.046 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.149 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.251 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.352 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.460 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.563 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.666 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.768 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.869 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:03.970 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:04.070 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:04.171 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:04.271 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:04.372 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:41:04.473 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 0 
+
+17:41:04.573 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:04.674 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:04.774 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:04.875 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:04.975 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.076 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.176 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.276 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.377 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.478 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.578 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.678 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.779 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.880 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:05.980 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:06.080 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:06.181 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:41:06.282 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:22.054 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.159 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.261 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.367 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.490 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.596 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.701 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.819 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:22.942 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.055 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.156 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.257 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.357 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.459 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.560 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.660 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.760 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.861 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:23.962 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:24.063 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:24.163 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:24.263 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+17:42:24.364 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 0 
+
+17:42:24.464 [Thread 4] INFO  by.training.task03.action.FillDiagonal - Thread 4
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:24.565 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:24.665 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:24.767 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:24.868 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:24.969 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.071 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.171 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.273 [Thread 2] INFO  by.training.task03.action.FillDiagonal - Thread 2
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.373 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.474 [Thread 5] INFO  by.training.task03.action.FillDiagonal - Thread 5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.574 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.675 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.776 [Thread 1] INFO  by.training.task03.action.FillDiagonal - Thread 1
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.876 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:25.977 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+17:42:26.077 [Thread 3] INFO  by.training.task03.action.FillDiagonal - Thread 3
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+18:04:46.012 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.116 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 1 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.229 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+2 2 3 4 5 6 8 9 
+1 1 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.331 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+2 2 3 4 5 6 8 9 
+1 2 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.444 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+4 2 3 4 5 6 8 9 
+1 2 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.557 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+6 2 3 4 5 6 8 9 
+1 2 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.666 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+3 2 3 4 5 6 8 9 
+1 2 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.775 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 2 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.893 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 2 3 4 5 1 3 8 
+1 2 1 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:46.994 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 2 3 4 5 1 3 8 
+1 2 2 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.094 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 4 3 4 5 1 3 8 
+1 2 2 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.194 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 4 3 4 5 1 3 8 
+1 2 4 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.295 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 4 3 4 5 1 3 8 
+1 2 4 4 5 2 2 2 
+1 2 3 4 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.395 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 4 3 4 5 1 3 8 
+1 2 4 4 5 2 2 2 
+1 2 3 4 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.496 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 4 3 4 5 1 3 8 
+1 2 4 4 5 2 2 2 
+1 2 3 4 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.597 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 4 4 5 2 2 2 
+1 2 3 4 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.698 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 3 3 4 5 1 3 8 
+1 2 4 4 5 2 2 2 
+1 2 3 4 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.798 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 3 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 4 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:47.898 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 4 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:48.000 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 1 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:48.104 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 2 5 7 6 3 
+1 2 3 4 4 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:48.204 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 2 5 7 6 3 
+1 2 3 4 2 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:48.304 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 2 5 7 6 3 
+1 2 3 4 2 3 7 7 
+8 5 6 7 2 2 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:04:48.405 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 2 5 7 6 3 
+1 2 3 4 2 3 7 7 
+8 5 6 7 2 2 4 5 
+9 3 4 5 6 1 4 3 
+7 4 5 6 2 9 6 0 
+
+18:04:48.506 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 3 4 5 2 2 2 
+1 2 3 2 5 7 6 3 
+1 2 3 4 2 3 7 7 
+8 5 6 7 2 2 4 5 
+9 3 4 5 6 1 4 3 
+7 4 5 6 2 9 6 4 
+
+18:04:48.607 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 2 5 7 6 3 
+1 2 3 4 2 3 7 7 
+8 5 6 7 2 2 4 5 
+9 3 4 5 6 1 4 3 
+7 4 5 6 2 9 6 4 
+
+18:04:48.707 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 2 3 7 7 
+8 5 6 7 2 2 4 5 
+9 3 4 5 6 1 4 3 
+7 4 5 6 2 9 6 4 
+
+18:04:48.808 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 2 4 5 
+9 3 4 5 6 1 4 3 
+7 4 5 6 2 9 6 4 
+
+18:04:48.908 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 4 3 
+7 4 5 6 2 9 6 4 
+
+18:04:49.009 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 4 
+
+18:04:49.109 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 6 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+18:04:49.210 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 6 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+18:04:49.310 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 3 3 7 7 
+8 5 6 7 2 6 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+18:04:49.410 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 3 3 7 7 
+8 5 6 7 2 3 4 5 
+9 3 4 5 6 1 6 3 
+7 4 5 6 2 9 6 6 
+
+18:04:49.511 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 3 3 7 7 
+8 5 6 7 2 3 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 6 
+
+18:04:49.612 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 6 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 3 3 7 7 
+8 5 6 7 2 3 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 3 
+
+18:04:49.713 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 3 3 7 7 
+8 5 6 7 2 3 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 3 
+
+18:04:49.813 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 3 3 7 7 
+8 5 6 7 2 3 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 3 
+
+18:04:49.914 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 5 3 7 7 
+8 5 6 7 2 3 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 3 
+
+18:04:50.015 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 5 3 7 7 
+8 5 6 7 2 5 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 3 
+
+18:04:50.116 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 5 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 3 
+
+18:04:50.216 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 1 4 5 
+9 3 4 5 6 1 3 3 
+7 4 5 6 2 9 6 3 
+
+18:04:50.316 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 1 4 5 
+9 3 4 5 6 1 1 3 
+7 4 5 6 2 9 6 3 
+
+18:04:50.417 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 1 4 5 
+9 3 4 5 6 1 2 3 
+7 4 5 6 2 9 6 3 
+
+18:04:50.518 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 1 4 5 
+9 3 4 5 6 1 2 3 
+7 4 5 6 2 9 6 2 
+
+18:04:50.620 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 1 4 5 
+9 3 4 5 6 1 5 3 
+7 4 5 6 2 9 6 2 
+
+18:04:50.721 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 1 4 5 
+9 3 4 5 6 1 5 3 
+7 4 5 6 2 9 6 5 
+
+18:04:50.821 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+5 2 3 4 5 6 8 9 
+1 5 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 5 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 1 4 5 
+9 3 4 5 6 1 5 3 
+7 4 5 6 2 9 6 1 
+
+18:06:24.662 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 0 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:06:24.766 [Thread5] INFO  by.training.task03.service.FillDiagonalThread - Thread5
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 0 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:06:24.877 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 0 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:06:24.981 [Thread2] INFO  by.training.task03.service.FillDiagonalThread - Thread2
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 0 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:06:25.105 [Thread0] INFO  by.training.task03.service.FillDiagonalThread - Thread0
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 0 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:06:25.207 [Thread3] INFO  by.training.task03.service.FillDiagonalThread - Thread3
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 0 3 
+7 4 5 6 2 9 6 0 
+
+18:06:25.310 [Thread4] INFO  by.training.task03.service.FillDiagonalThread - Thread4
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 5 3 
+7 4 5 6 2 9 6 0 
+
+18:06:25.411 [Thread1] INFO  by.training.task03.service.FillDiagonalThread - Thread1
+Matrix : 8x8
+1 2 3 4 5 6 8 9 
+1 6 3 4 5 1 3 8 
+1 2 5 4 5 2 2 2 
+1 2 3 3 5 7 6 3 
+1 2 3 4 1 3 7 7 
+8 5 6 7 2 4 4 5 
+9 3 4 5 6 1 5 3 
+7 4 5 6 2 9 6 2 
+
