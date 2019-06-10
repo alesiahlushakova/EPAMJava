@@ -8,7 +8,6 @@ interface Command {
     /**
      * executed task.
      * @param request request
-     * @return response
      */
-    String execute(String request);
+    void execute(String request);
 }

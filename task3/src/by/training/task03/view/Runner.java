@@ -23,7 +23,7 @@ public final class Runner {
          */
         Controller controller = new Controller();
         while (true) {
-            System.out.println("Write option: \n "
+            System.out.println("Write option:(use space after commands) \n "
                     + "1.FILL_FROM_FILE  \n 2.WRITE_TO_FILE"
                     + "  \n 3.FILL_DIAGONAL (fill"
                     + " from file first)");

@@ -20,6 +20,7 @@ final class CommandProvider {
         repository.put(CommandName.FILL_FROM_FILE, new FillFromFile());
         repository.put(CommandName.FILL_DIAGONAL, new FillDiagonal());
         repository.put(CommandName.WRITE_TO_FILE, new WriteToFile());
+        repository.put(CommandName.WRONG_INPUT, new WrongInput());
     }
 
     /**
@@ -35,7 +36,7 @@ final class CommandProvider {
             commandName = CommandName.valueOf(name.toUpperCase());
             command = repository.get(commandName);
         } catch (IllegalArgumentException | NullPointerException e) {
-
+            command = repository.get(CommandName.WRONG_INPUT);
         }
         return command;
     }

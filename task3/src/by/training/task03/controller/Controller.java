@@ -17,9 +17,8 @@ public class Controller {
     /**
      * execution method.
      * @param request request
-     * @return response
      */
-    public String executeTask(final String request) {
+    public void executeTask(final String request) {
         String commandName;
         Command executionCommand;
 
@@ -27,9 +26,9 @@ public class Controller {
         executionCommand = provider.getCommand(commandName);
 
         String response;
-        response = executionCommand.execute(request);
+        executionCommand.execute(request);
 
-        return response;
+
     }
 
 

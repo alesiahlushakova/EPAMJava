@@ -16,5 +16,9 @@ public enum  CommandName {
     /**
      * writes matrix.
      */
-    WRITE_TO_FILE
+    WRITE_TO_FILE,
+    /**
+     * wrong input.
+     */
+    WRONG_INPUT
 }
