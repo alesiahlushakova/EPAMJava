@@ -13,7 +13,7 @@ public interface MatrixService {
      * fills matrix.
      * @param f file
      */
-    void fillFromFile(final String f);
+    void fillFromFile(String f);
 
     /**
      * fills diagonal with numbers.
@@ -26,6 +26,6 @@ public interface MatrixService {
      * @throws IOException exception
      * @throws MatrixException exception
      */
-    void writeToFile(final String source) throws
+    void writeToFile(String source) throws
             IOException, MatrixException;
 }

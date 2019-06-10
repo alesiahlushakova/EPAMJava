@@ -1,4 +1,4 @@
-package by.training.task03.service;
+package by.training.task03.service.reader;
 
 import by.training.task03.exception.MatrixException;
 
@@ -9,6 +9,10 @@ import java.nio.file.Paths;
 import java.util.StringJoiner;
 import java.util.stream.Stream;
 
+/**
+ * @author AlesyaHlushakova
+ * class reads numbers that fill each thread.
+ */
 public class ThreadReader {
 
     /**

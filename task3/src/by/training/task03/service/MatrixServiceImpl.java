@@ -31,21 +31,19 @@ public class MatrixServiceImpl implements MatrixService {
             Matrix t = Matrix.setInstance(scanner.nextInt());
             int v = t.getVerticalSize();
             int h = t.getHorizontalSize();
-            for (int row=0; row<h; row++){
-                for (int col=0; col<v; col++){
+            for (int row = 0; row < h; row++) {
+                for (int col = 0; col < v; col++) {
                     int number = scanner.nextInt();
                     if (row == col && number != 0) {
-                        throw new MatrixException("Zero should be on diagonal. ");
+                        throw new MatrixException(
+                                "Zero should be on diagonal. ");
                     }
                     t.setElement(row, col, number);
                 }
             }
-
-        }
-        catch (FileNotFoundException ex) {
+        } catch (FileNotFoundException ex) {
             LOGGER.error("Error reading from file");
-        }
-        catch (MatrixException e) {
+        }  catch (MatrixException e) {
             LOGGER.error("Error");
         }
     }
@@ -65,10 +63,12 @@ public class MatrixServiceImpl implements MatrixService {
      * @throws MatrixException matrix exception
      */
     @Override
-    public  void writeToFile (String filePathName) throws IOException, MatrixException {
+    public  void writeToFile(final String filePathName)
+            throws IOException, MatrixException {
         Matrix array = Matrix.getInstance();
-        BufferedWriter writer = new BufferedWriter(new FileWriter(new File(filePathName)));
-        writer.write(Matrix.getInstance().getHorizontalSize()+"\n");
+        BufferedWriter writer = new BufferedWriter(
+                new FileWriter(new File(filePathName)));
+        writer.write(Matrix.getInstance().getHorizontalSize() + "\n");
         for (int i = 0; i < array.getHorizontalSize(); i++) {
             for (int j = 0; j < array.getVerticalSize(); j++) {
                 writer.write(String.valueOf(array.getElement(i, j)));

@@ -1,6 +1,6 @@
 package by.training.task03.exception;
 
-import by.training.task03.entity.Matrix;
+
 
 /**
  * @author AlesyaHlushakova

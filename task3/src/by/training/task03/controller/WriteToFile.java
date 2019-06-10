@@ -2,7 +2,7 @@ package by.training.task03.controller;
 
 import by.training.task03.exception.MatrixException;
 import by.training.task03.service.MatrixServiceImpl;
-import org.testng.annotations.BeforeClass;
+
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ public class WriteToFile implements Command {
      * @return response
      */
     @Override
-    public String execute(String request) {
+    public String execute(final String request) {
         try {
             MatrixServiceImpl matrixService = new MatrixServiceImpl();
             matrixService.writeToFile("data\\writtenMatrix.txt");

@@ -11,7 +11,7 @@ final class CommandProvider {
     /**
      * map for commands.
      */
-    private final Map<CommandName,Command> repository = new HashMap<>();
+    private final Map<CommandName, Command> repository = new HashMap<>();
 
     /**
      * constructor.
@@ -27,7 +27,7 @@ final class CommandProvider {
      * @param name command name
      * @return command
      */
-    Command getCommand(String name) {
+    Command getCommand(final String name) {
         CommandName commandName = null;
         Command command = null;
 

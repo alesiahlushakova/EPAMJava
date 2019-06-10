@@ -21,13 +21,13 @@ public class Matrix {
     /**
      * private constructor.
      */
-    private Matrix() {}
+    private Matrix() { }
 
     /**
      * constructor.
      * @param matrixSize size
      */
-    private  Matrix(int matrixSize) {
+    private  Matrix(final int matrixSize) {
         a = new int[matrixSize][matrixSize];
     }
 
@@ -36,7 +36,7 @@ public class Matrix {
      * @param matrixSize size
      * @return matrix
      */
-    public static Matrix setInstance(int matrixSize) {
+    public static Matrix setInstance(final int matrixSize) {
                     locker = new ReentrantLock();
                     instance = new Matrix(matrixSize);
 
@@ -75,7 +75,7 @@ public class Matrix {
      * @param m m
      * @throws MatrixException exception
      */
-    public Matrix(int n, int m) throws MatrixException {
+    public Matrix(final int n, final int m) throws MatrixException {
         if ((n < 1) || (m < 1)) {
             throw new MatrixException();
         }
@@ -117,7 +117,7 @@ public class Matrix {
      * @return element
      * @throws MatrixException exception
      */
-    public int getElement(int i, int j) throws MatrixException {
+    public int getElement(final int i, final int j) throws MatrixException {
         if (checkRange(i, j)) {
             return a[i][j];
         }
@@ -131,7 +131,8 @@ public class Matrix {
      * @param value implemented value
      * @throws MatrixException exception
      */
-    public void setElement(int i, int j, int value) throws MatrixException {
+    public void setElement(final int i, final int j, final int value)
+            throws MatrixException {
         if (checkRange(i, j)) {
             a[i][j] = value;
         } else {
@@ -145,7 +146,8 @@ public class Matrix {
      */
     @Override
     public String toString() {
-        StringBuilder s = new StringBuilder("\nMatrix : " + a.length + "x" + a[0].length + "\n");
+        StringBuilder s = new StringBuilder(
+                "\nMatrix : " + a.length + "x" + a[0].length + "\n");
         for (int[] row : a) {
             for (int value : row) {
                 s.append(value + " ");
@@ -161,8 +163,8 @@ public class Matrix {
      * @param j j
      * @return is valid
      */
-    private boolean checkRange(int i, int j) {
-        if ( i < 0 || i > a.length - 1 || j < 0 || j > a[0].length - 1) {
+    private boolean checkRange(final int i, final int j) {
+        if (i < 0 || i > a.length - 1 || j < 0 || j > a[0].length - 1) {
             return false;
         } else {
             return true;
