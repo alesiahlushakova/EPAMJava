@@ -1,12 +1,15 @@
 package by.training.task03.service;
 import by.training.task03.entity.Matrix;
 import by.training.task03.exception.MatrixException;
+import by.training.task03.service.reader.ThreadReader;
+import by.training.task03.service.thread.FillDiagonalThread;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author AlesyaHlushakova
@@ -54,6 +57,24 @@ public class MatrixServiceImpl implements MatrixService {
      */
     @Override
     public void fillDiagonal() {
+        try {
+            ThreadReader threadReader = new ThreadReader();
+            String source = threadReader.read("data\\numbers.txt");
+            Scanner scanner = new Scanner(source);
+            int threadNumber = scanner.nextInt();
+            ReentrantLock locker = new ReentrantLock();
+            for (int i = 0; i < threadNumber; i++) {
+                Thread thread = new Thread(
+                        new FillDiagonalThread(locker, scanner.nextInt()));
+                thread.setName("Thread" + i);
+                thread.start();
+            }
+            scanner.close();
+        } catch (MatrixException e) {
+            LOGGER.error(e.getMessage());
+        }
+
+        LOGGER.info("Matrix diagonal filled");
 
     }
 

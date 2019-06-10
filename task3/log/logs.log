@@ -2197,3 +2197,5 @@ Matrix : 8x8
 20:27:40.888 [main] INFO  by.training.task03.controller.FillFromFile - Matrix filled
 20:28:11.763 [main] ERROR by.training.task03.service.MatrixServiceImpl - Error reading from file
 20:28:11.766 [main] INFO  by.training.task03.controller.FillFromFile - Matrix filled
+21:36:50.710 [main] INFO  by.training.task03.controller.FillFromFile - Matrix filled
+21:36:59.699 [main] INFO  by.training.task03.service.MatrixServiceImpl - Matrix diagonal filled
