@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.InputMismatchException;
 import java.util.StringJoiner;
 import java.util.stream.Stream;
 
@@ -31,7 +32,7 @@ public class ThreadReader {
         StringJoiner stringJoiner = new StringJoiner(LINE_DELIMITER);
         try (Stream<String> lines = Files.lines(path)) {
             lines.forEach(stringJoiner::add);
-        } catch (IOException e) {
+        } catch (IOException | InputMismatchException e) {
 
             throw new MatrixException("Error while reading from file" + e);
 

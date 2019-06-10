@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -41,7 +42,7 @@ public class MatrixServiceImpl implements MatrixService {
                     t.setElement(row, col, number);
                 }
             }
-        } catch (FileNotFoundException ex) {
+        } catch (FileNotFoundException | InputMismatchException ex) {
             LOGGER.error("Error reading from file");
         }  catch (MatrixException e) {
             LOGGER.error("Error");

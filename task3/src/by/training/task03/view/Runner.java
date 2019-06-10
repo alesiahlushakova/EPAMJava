@@ -22,13 +22,20 @@ public final class Runner {
          * controller.
          */
         Controller controller = new Controller();
+
+        Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Write option:(use space after commands) \n "
+                    + "0.EXIT \n "
                     + "1.FILL_FROM_FILE  \n 2.WRITE_TO_FILE"
+                    + "(fill from file first)"
                     + "  \n 3.FILL_DIAGONAL (fill"
                     + " from file first)");
-            Scanner scanner = new Scanner(System.in);
+
             String option = scanner.nextLine();
+            if ("EXIT ".equals(option)) {
+                return;
+            }
                     controller.executeTask(option);
 
             }
