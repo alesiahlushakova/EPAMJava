@@ -30,9 +30,9 @@ public class MedicinesParserFactory {
      * @return concrete medicines builder
      * @throws ParserNotFoundException
      */
-    public MedicinsAbstractParser getParser(String name)
+    public MedicinesAbstractParser getParser(String name)
             throws ParserNotFoundException {
-        MedicinsAbstractParser parser = null;
+        MedicinesAbstractParser parser = null;
         switch (name.toUpperCase()) {
             case SAX:
                 parser = new MedicinesSAXParser();

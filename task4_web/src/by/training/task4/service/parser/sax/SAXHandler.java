@@ -95,7 +95,7 @@ public class SAXHandler extends DefaultHandler {
                 break;
             case VERSION:
                 currentVersion = new Version();
-                currentVersion.setTradeName(attrs.getValue(0));
+                currentVersion.setAnalog(attrs.getValue(0));
                 break;
             case CERTIFICATE:
                 currentCertificate = new Certificate();

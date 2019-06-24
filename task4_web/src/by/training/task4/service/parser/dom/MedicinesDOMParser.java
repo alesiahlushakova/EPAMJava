@@ -19,7 +19,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import by.training.task4.exception.*;
 import by.training.task4.model.*;
 import by.training.task4.model.Package;
-import by.training.task4.service.factory.MedicinsAbstractParser;
+import by.training.task4.service.factory.MedicinesAbstractParser;
 import by.training.task4.service.parser.Attributes;
 import by.training.task4.service.parser.Elements;
 import by.training.task4.service.validator.XMLValidator;
@@ -35,13 +35,13 @@ import by.training.task4.service.factory.MedicineFactory;
 
 /**
  * Class MedicinesDOMParser extends abstract class
- * {@link MedicinsAbstractParser}, serves for building set of Medicine objects
+ * {@link MedicinesAbstractParser}, serves for building set of Medicine objects
  * based on XML-document by parser it using DOM-parser for XML
  *
  *
  * @author AlesyaHlushakova
  */
-public class MedicinesDOMParser extends MedicinsAbstractParser {
+public class MedicinesDOMParser extends MedicinesAbstractParser {
     
 
 
@@ -207,7 +207,7 @@ public class MedicinesDOMParser extends MedicinsAbstractParser {
     private Version buildVersion(Element versionElement)
             throws VersionException {
         Version currentVersion = new Version();
-        currentVersion.setTradeName(versionElement.getAttribute(
+        currentVersion.setAnalog(versionElement.getAttribute(
                 Attributes.ANALOG.getValue()));
         currentVersion.setProducer(versionElement.getElementsByTagName(
                 Elements.PRODUCER.getValue()).item(0).getTextContent());

@@ -7,7 +7,7 @@ package by.training.task4.service.parser.sax;
 import java.io.*;
 
 
-import by.training.task4.service.factory.MedicinsAbstractParser;
+import by.training.task4.service.factory.MedicinesAbstractParser;
 import by.training.task4.service.validator.XMLValidator;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -16,13 +16,13 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
  * Class MedicinesDOMParser extends abstract class
- * {@link MedicinsAbstractParser}, serves for building set of Medicine objects
+ * {@link MedicinesAbstractParser}, serves for building set of Medicine objects
  * based on XML-document by parser it using SAX-parser for XML
  *
  *
  * @author AlesyaHlushakova
  */
-public class MedicinesSAXParser extends MedicinsAbstractParser {
+public class MedicinesSAXParser extends MedicinesAbstractParser {
     
 
     private SAXHandler handler;

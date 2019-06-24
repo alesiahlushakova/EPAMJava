@@ -69,7 +69,7 @@ public class Version {
         return tradeName;
     }
 
-    public void setTradeName(String tradeName) {
+    public void setAnalog(String tradeName) {
         this.tradeName = tradeName;
     }
     

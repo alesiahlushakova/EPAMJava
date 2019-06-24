@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Medicins xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://www.example.com/Medicins"
+              xsi:schemaLocation="http://www.example.com/Medicins Medicins.xsd">
+
+    <Antibiotic name="Amoxicillin" CAS="26787-78-0" drug_bank="DB01060" recipe="false">
+        <Pharm>Beecham</Pharm>
+        <Version analog="Amoxisar">
+            <Producer>ОАО «Биохимик»</Producer>
+            <Form>powder</Form>
+            <Certificate>
+                <Registered_by>Министерство</Registered_by>
+                <Registration_date>2015-11-15</Registration_date>
+                <Expiration_date>2020-11-14</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>60</Quantity>
+                <Price>3.05</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 vial</Amount>
+                <Frequency>3/day</Frequency>
+            </Dosage>
+        </Version>
+        <Version analog="Moxatag">
+            <Producer>Vernalis terapeutic</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>Specialty Pharmacy Certification Board</Registered_by>
+                <Registration_date>2010-03-18</Registration_date>
+                <Expiration_date>2021-04-17</Expiration_date>
+            </Certificate>
+            <Package size="small">
+                <Quantity>10</Quantity>
+                <Price>172.46</Price>
+            </Package>
+            <Package size="medium">
+                <Quantity>30</Quantity>
+                <Price>501.25</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 tablet</Amount>
+                <Frequency>1/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Antibiotic name="Doxycycline" CAS="564-25-0" drug_bank="DB00254" recipe="true">
+        <Pharm>American Cyanamid</Pharm>
+        <Version analog="Doryx">
+            <Producer>Mayne Pharma</Producer>
+            <Form>pills</Form>
+            <Certificate>
+                <Registered_by>FDA</Registered_by>
+                <Registration_date>2017-05-05</Registration_date>
+                <Expiration_date>2027-05-04</Expiration_date>
+            </Certificate>
+            <Package size="small">
+                <Quantity>120</Quantity>
+                <Price>1492.42</Price>
+            </Package>
+            <Package size="medium">
+                <Quantity>60</Quantity>
+                <Price>2756.09</Price>
+            </Package>
+            <Dosage>
+                <Amount>100 mg</Amount>
+                <Frequency>2/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Antibiotic name="Cefalexin" CAS="15686-71-2" drug_bank="DB00567" recipe="true">
+        <Pharm>Ajanta Pharma</Pharm>
+        <Version analog="Ceporex">
+            <Producer>GlaxoSmithKline</Producer>
+            <Form>pills</Form>
+            <Certificate>
+                <Registered_by>EDQM</Registered_by>
+                <Registration_date>2013-08-06</Registration_date>
+                <Expiration_date>2020-08-05</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>12</Quantity>
+                <Price>2.64</Price>
+            </Package>
+            <Dosage>
+                <Amount>250-500 mg</Amount>
+                <Frequency>2-3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Antibiotic name="Ciprofloxacin" CAS="85721-33-1" drug_bank="DB00537" recipe="false">
+        <Pharm>Kyorin Seiyaku Kabushiki Kaisha</Pharm>
+        <Version analog="Neofloxin">
+            <Producer>BEXIMCO PHARMACEUTICALS LTD.</Producer>
+            <Form>liquid</Form>
+            <Certificate>
+                <Registered_by>Therapeutic Goods Administration (TGA)</Registered_by>
+                <Registration_date>2011-08-27</Registration_date>
+                <Expiration_date>2022-08-26</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>250</Quantity>
+                <Price>178.35</Price>
+            </Package>
+            <Dosage>
+                <Amount>5 ml</Amount>
+                <Frequency>6/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Antibiotic name="Metronidazole" CAS="443-48-1" drug_bank="DB00916" recipe="false">
+        <Pharm>Rhone-Poulenc</Pharm>
+        <Version analog="Flagyl">
+            <Producer>FAMAR LYON</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>CLSI </Registered_by>
+                <Registration_date>2015-11-01</Registration_date>
+                <Expiration_date>2021-10-30</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>20</Quantity>
+                <Price>78.89</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 tablet</Amount>
+                <Frequency>2-3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Vitamin name="Riboflavin" CAS="83-88-5" drug_bank="DB00140" solution="water">
+        <Pharm>Alexander Wynter Blyth</Pharm>
+        <Version analog="RIBOFLAVIN">
+            <Producer>Skylab Pharmaceuticals Ltd.</Producer>
+            <Form>pills</Form>
+            <Certificate>
+                <Registered_by>Special Committee of Experts of the General Secretariat of Research and Technology</Registered_by>
+                <Registration_date>2001-02-13</Registration_date>
+                <Expiration_date>2031-02-12</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>500</Quantity>
+                <Price>5.99</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 pill</Amount>
+                <Frequency>2-4/day</Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Vitamin name="Retinol" CAS="68-26-8" drug_bank="DB00162" solution="fat">
+        <Pharm>various scientists</Pharm>
+        <Version analog="Retinol Serum">
+            <Producer>Eva Naturals</Producer>
+            <Form>liquid</Form>
+            <Certificate>
+                <Registered_by>Special Committee of Experts of the General Secretariat of Research and Technology</Registered_by>
+                <Registration_date>2009-07-12</Registration_date>
+                <Expiration_date>2020-09-20</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>60</Quantity>
+                <Price>14.95</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 ml</Amount>
+                <Frequency>2/day</Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Vitamin name="Thiamine" CAS="70-16-6" drug_bank="DB00152" solution="water">
+        <Pharm>Takaki Kanehiro</Pharm>
+        <Version analog="NEUROVIT">
+            <Producer>Medimet Pharmaceuticals Ltd</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>GMP</Registered_by>
+                <Registration_date>2015-12-01</Registration_date>
+                <Expiration_date>2025-12-02</Expiration_date>
+            </Certificate>
+            <Package size="medium">
+                <Quantity>100</Quantity>
+                <Price>15.78</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 tablet</Amount>
+                <Frequency>1/day</Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Vitamin name="Choline" CAS="62-49-7" drug_bank="DB00122" solution="water">
+        <Pharm>Adolph Strecker</Pharm>
+        <Version analog="B-Colen DPS">
+            <Producer>Galpha Laboratories Ltd</Producer>
+            <Form>liquid</Form>
+            <Certificate>
+                <Registered_by>FDA</Registered_by>
+                <Registration_date>2014-04-12</Registration_date>
+                <Expiration_date>2029-05-12</Expiration_date>
+            </Certificate>
+            <Package size="small">
+                <Quantity>60</Quantity>
+                <Price>24.11</Price>
+            </Package>
+            <Dosage>
+                <Amount>5 ml</Amount>
+                <Frequency>2-3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Vitamin name="Pantothenic acid" CAS="599-54-2" drug_bank="DB01783" solution="water">
+        <Pharm>Rojer J. Williams</Pharm>
+        <Version analog="Theragran Stress">
+            <Producer>GlaxoSmithKline</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>DIS</Registered_by>
+                <Registration_date>2010-01-01</Registration_date>
+                <Expiration_date>2020-01-01</Expiration_date>
+            </Certificate>
+            <Package size="small">
+                <Quantity>20</Quantity>
+                <Price>72.93</Price>
+            </Package>
+            <Package size="medium">
+                <Quantity>30</Quantity>
+                <Price>129.20</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 tablet</Amount>
+                <Frequency>3-4/day</Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Analgetic name="Paracetamol" CAS="103-90-2" drug_bank="DB00316" narcotic="false">
+        <Pharm>Johns Hopkins University</Pharm>
+        <Version analog="Panadol">
+            <Producer>GlaxoSmithKline</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>EDQM</Registered_by>
+                <Registration_date>2005-05-05</Registration_date>
+                <Expiration_date>2030-01-15</Expiration_date>
+            </Certificate>
+            <Package size="small">
+                <Quantity>6</Quantity>
+                <Price>17.35</Price>
+            </Package>
+            <Package size="medium">
+                <Quantity>12</Quantity>
+                <Price>21.12</Price>
+            </Package>
+            <Dosage>
+                <Amount>1-2 tablet</Amount>
+                <Frequency>4/day</Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="Aspirin" CAS="50-78-2" drug_bank="DB00945" narcotic="false">
+        <Pharm>Charles Frederic Gerhardt</Pharm>
+        <Version analog="Bayer ASpirin">
+            <Producer>Bayer</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>EDQM</Registered_by>
+                <Registration_date>2001-11-11</Registration_date>
+                <Expiration_date>2024-03-04</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>15</Quantity>
+                <Price>9.99</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 tablet</Amount>
+                <Frequency>2-3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="Tramadol" CAS="27203-92-5" drug_bank="DB00193" narcotic="true">
+        <Pharm>GRUNENTHAL Gmbh</Pharm>
+        <Version analog="Ultram">
+            <Producer>Janssen Pharmaceuticals Inc</Producer>
+            <Form>powder</Form>
+            <Certificate>
+                <Registered_by>FDA</Registered_by>
+                <Registration_date>2013-05-08</Registration_date>
+                <Expiration_date>2023-06-11</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>60</Quantity>
+                <Price>1899.99</Price>
+            </Package>
+            <Dosage>
+                <Amount>5 mg</Amount>
+                <Frequency>2-3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="Ibuprofen" CAS="15687-27-1" drug_bank="DB01050" narcotic="false">
+        <Pharm>Stewart Adams</Pharm>
+        <Version analog="Neurofen">
+            <Producer>Reckitt Benckiser</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>FDA</Registered_by>
+                <Registration_date>2015-09-10</Registration_date>
+                <Expiration_date>2030-10-10</Expiration_date>
+            </Certificate>
+            <Package size="small">
+                <Quantity>6</Quantity>
+                <Price>7.99</Price>
+            </Package>
+            <Package size="medium">
+                <Quantity>8</Quantity>
+                <Price>9.11</Price>
+            </Package>
+            <Package size="large">
+                <Quantity>12</Quantity>
+                <Price>11.12</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 tablet</Amount>
+                <Frequency>3-4/day</Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="Dihydrocodeine" CAS="125-28-0" drug_bank="DB01551" narcotic="true">
+        <Pharm>William S. Burroughs</Pharm>
+        <Version analog="Aspalgin">
+            <Producer>NPS Medicinewise</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <Registered_by>AGDH</Registered_by>
+                <Registration_date>2011-11-04</Registration_date>
+                <Expiration_date>2021-12-05</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>20</Quantity>
+                <Price>117.99</Price>
+            </Package>
+            <Dosage>
+                <Amount>1-2 tablet</Amount>
+                <Frequency>3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="Fentanyl" CAS="437-38-7" drug_bank="DB00813" narcotic="true">
+        <Pharm>Paul Janssen</Pharm>
+        <Version analog="DURAGESIC">
+            <Producer>Janssen Pharmaceuticals Inc</Producer>
+            <Form>pills</Form>
+            <Certificate>
+                <Registered_by>FDA</Registered_by>
+                <Registration_date>2010-07-27</Registration_date>
+                <Expiration_date>2022-11-22</Expiration_date>
+            </Certificate>
+            <Package>
+                <Quantity>6</Quantity>
+                <Price>150.13</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 pill</Amount>
+                <Frequency>1/1-2 day</Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+</Medicins>

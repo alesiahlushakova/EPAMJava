@@ -3,8 +3,8 @@ package by.training.task4.controller;
 import by.training.task4.model.Medicine;
 import by.training.task4.model.Package;
 import by.training.task4.model.Version;
+import by.training.task4.service.factory.MedicinesAbstractParser;
 import by.training.task4.service.factory.MedicinesParserFactory;
-import by.training.task4.service.factory.MedicinsAbstractParser;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,7 +35,7 @@ public class ControllerServlet extends HttpServlet {
         String parser = request.getParameter("parser");
 
         MedicinesParserFactory factory;
-        MedicinsAbstractParser builder;
+        MedicinesAbstractParser builder;
         Set<Medicine> validMedicinsSet;
 
         String path = this.getServletContext().getRealPath("/");

@@ -30,20 +30,20 @@ import by.training.task4.model.Package;
 import by.training.task4.model.Version;
 import by.training.task4.model.Vitamin;
 import by.training.task4.service.factory.MedicineFactory;
+import by.training.task4.service.factory.MedicinesAbstractParser;
 import by.training.task4.service.parser.Attributes;
 import by.training.task4.service.parser.Elements;
-import by.training.task4.service.factory.MedicinsAbstractParser;
 import by.training.task4.service.validator.XMLValidator;
 
 /**
  * Class MedicinesSTAXParser extends abstract class
- * {@link MedicinsAbstractParser}, serves for building set of Medicine objects
+ * {@link MedicinesAbstractParser}, serves for building set of Medicine objects
  * based on XML-document by parser it using StAX-parser for XML
  *
  *
  * @author AlesyaHlushakova
  */
-public class MedicinesSTAXParser extends MedicinsAbstractParser {
+public class MedicinesSTAXParser extends MedicinesAbstractParser {
     
 
     
@@ -170,7 +170,7 @@ public class MedicinesSTAXParser extends MedicinsAbstractParser {
                 break;
             case VERSION:
                 currentVersion = new Version();
-                currentVersion.setTradeName(
+                currentVersion.setAnalog(
                         reader.getAttributeValue(
                                 null, Attributes.ANALOG.getValue()));
                 break;

@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Maxim Burishinets
-  Date: 08.09.2018
+  User: Admin
+  Date: 23.06.2019
   Time: 3:48
   To change this template use File | Settings | File Templates.
 --%>
