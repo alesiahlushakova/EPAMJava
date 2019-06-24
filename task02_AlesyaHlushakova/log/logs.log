@@ -79,3 +79,9 @@ Lorem sit
 10:49:40.477 [main] INFO  by.training.task02.parser.SentenceParser - Sentence was parsed
 10:50:07.861 [main] INFO  by.training.task02.parser.TextParser - Text was parsed[[[There, are, many]], [[But, the, majority]]]
 10:50:50.067 [main] INFO  by.training.task02.parser.SentenceParser - Sentence was parsed
+20:54:07.640 [main] INFO  by.training.task02.parser.LexemeParser - Lexeme was parsedapple
+20:54:34.447 [main] WARN  by.training.task02.reader.FileReader - Error while reading from file
+20:54:58.765 [main] INFO  by.training.task02.restorer.TextRestorer - Lexeme was restored successfully:
+word
+20:56:04.307 [main] INFO  by.training.task02.restorer.TextRestorer - Text was restored successfully:
+%s

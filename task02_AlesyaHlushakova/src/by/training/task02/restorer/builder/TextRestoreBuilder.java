@@ -1,4 +1,4 @@
-package by.training.task02.builder;
+package by.training.task02.restorer.builder;
 
 import by.training.task02.restorer.AbstractRestorer;
 import by.training.task02.restorer.ParagraphRestorer;

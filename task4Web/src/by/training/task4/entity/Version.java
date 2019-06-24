@@ -1,14 +1,8 @@
 
 package by.training.task4.entity;
 
-import java.util.ArrayList;
+import javax.xml.bind.annotation.*;
 import java.util.HashSet;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -69,11 +63,11 @@ public class Version {
 
     /**
      * Gets the value of the producer property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getProducer() {
         return producer;
@@ -81,11 +75,11 @@ public class Version {
 
     /**
      * Sets the value of the producer property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setProducer(String value) {
         this.producer = value;
@@ -93,11 +87,11 @@ public class Version {
 
     /**
      * Gets the value of the form property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getForm() {
         return form;
@@ -105,11 +99,11 @@ public class Version {
 
     /**
      * Sets the value of the form property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setForm(String value) {
         this.form = value;
@@ -117,11 +111,11 @@ public class Version {
 
     /**
      * Gets the value of the certificate property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Certificate }
-     *     
+     *
      */
     public Certificate getCertificate() {
         return certificate;
@@ -129,11 +123,11 @@ public class Version {
 
     /**
      * Sets the value of the certificate property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Certificate }
-     *     
+     *
      */
     public void setCertificate(Certificate value) {
         this.certificate = value;
@@ -141,25 +135,25 @@ public class Version {
 
     /**
      * Gets the value of the package property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the package property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPackage().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Package }
-     * 
-     * 
+     *
+     *
      */
     public HashSet<Package> getPackage() {
         if (_package == null) {

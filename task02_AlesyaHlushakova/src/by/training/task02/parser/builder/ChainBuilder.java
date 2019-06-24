@@ -1,4 +1,4 @@
-package by.training.task02.builder;
+package by.training.task02.parser.builder;
 
 import by.training.task02.parser.SentenceParser;
 import by.training.task02.parser.LexemeParser;

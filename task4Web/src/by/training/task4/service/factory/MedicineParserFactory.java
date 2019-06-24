@@ -2,6 +2,8 @@ package by.training.task4.service.factory;
 
 import by.training.task4.exception.ParserException;
 import by.training.task4.service.parser.dom.DOMParser;
+import by.training.task4.service.parser.sax.MedicinesSAX;
+import by.training.task4.service.parser.stax.MedicinesSTAX;
 
 /**
  * Factory class which serves for creation concrete medicines builder depending
@@ -28,13 +30,13 @@ public class MedicineParserFactory {
         MedicinesAbstractBuilder builder = null;
         switch (name.toUpperCase()) {
             case SAX:
-             //   builder = new MedicinesSAXBuilder();
+                builder = new MedicinesSAX();
                 break;
             case DOM:
                 builder = new DOMParser();
                 break;
             case STAX:
-               // builder = new MedicinesStAXBuilder();
+                builder = new MedicinesSTAX();
                 break;
             default:
                 throw new ParserException(
