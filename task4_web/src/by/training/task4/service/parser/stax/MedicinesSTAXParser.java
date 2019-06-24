@@ -34,6 +34,8 @@ import by.training.task4.service.factory.MedicinesAbstractParser;
 import by.training.task4.service.parser.Attributes;
 import by.training.task4.service.parser.Elements;
 import by.training.task4.service.validator.XMLValidator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Class MedicinesSTAXParser extends abstract class
@@ -44,7 +46,7 @@ import by.training.task4.service.validator.XMLValidator;
  * @author AlesyaHlushakova
  */
 public class MedicinesSTAXParser extends MedicinesAbstractParser {
-    
+
 
     
     private XMLInputFactory inputFactory;
@@ -100,18 +102,18 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
                 }
                 return true;
             } catch (FileNotFoundException e) {
-              //  LOG.fatal(xml + " file not found", e);
+
                 throw new RuntimeException();
             } catch (XMLStreamException e) {
-             //   LOG.error("StAX parser exception", e);
+
             } catch (MedicineException e) {
-             //   LOG.error("An error occured within building Medicine object", e);
+
             } finally {
                 if (reader != null) {
                     try {
                         reader.close();
                     } catch (XMLStreamException e) {
-                    //    LOG.error("XML stream exception", e);
+
                     }
                 }
             }
@@ -133,7 +135,7 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
         try {
             medicine = mFactory.getMedicine(currentMedicine);
         } catch (MedicineNotFoundException e) {
-         //   LOG.error("Medicine not presented exception", e);
+
             throw new MedicineException("Medicine not presented", e);
         }
         setMedAttributes(medicine, reader);
@@ -191,7 +193,7 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
                     Date regDate = dateFormat.parse(getTextContent(reader));
                     currentCertificate.setRegistrationDate(regDate);
                 } catch (ParseException e) {
-                  //  LOG.error("Date parser exception", e);
+
                 }
                 break;
             case EXPIRATION_DATE:
@@ -199,7 +201,7 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
                     Date expDate = dateFormat.parse(getTextContent(reader));
                     currentCertificate.setExpireDate(expDate);
                 } catch (ParseException e) {
-                  //  LOG.error("Date parser exception", e);
+
                 }
                 break;
             case PACKAGE:

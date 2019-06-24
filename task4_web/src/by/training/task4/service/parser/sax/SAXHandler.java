@@ -17,6 +17,8 @@ import by.training.task4.model.*;
 import by.training.task4.model.Package;
 import by.training.task4.service.parser.Attributes;
 import by.training.task4.service.parser.Elements;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -31,7 +33,7 @@ import by.training.task4.service.factory.MedicineFactory;
  */
 public class SAXHandler extends DefaultHandler {
 
-    
+
     private Set<Medicine> medicins;
     
     private Elements currentElement;
@@ -161,7 +163,7 @@ public class SAXHandler extends DefaultHandler {
                         Date date = dateFormat.parse(content);
                         currentCertificate.setRegistrationDate(date);
                     } catch (ParseException e) {
-                      //  LOG.error("Date parser exception: ", e);
+
                     }
                     break;
                 case EXPIRATION_DATE:
@@ -169,7 +171,7 @@ public class SAXHandler extends DefaultHandler {
                         Date date = dateFormat.parse(content);
                         currentCertificate.setExpireDate(date);
                     } catch (ParseException e) {
-                      //  LOG.error("Date parser exception: ", e);
+
                     }
                     break;
                 case QUANTITY:
@@ -190,20 +192,7 @@ public class SAXHandler extends DefaultHandler {
         }
     }
     
-    @Override
-    public void warning(SAXParseException e) {
 
-    }
-    
-    @Override
-    public void error(SAXParseException e) {
-
-    }
-    
-    @Override
-    public void fatalError(SAXParseException e) {
-
-    }
     
     public String getLineAddress(SAXParseException e) {
         return e.getLineNumber() + ":" + e.getColumnNumber();

@@ -5,6 +5,8 @@ import by.training.task4.model.Package;
 import by.training.task4.model.Version;
 import by.training.task4.service.factory.MedicinesAbstractParser;
 import by.training.task4.service.factory.MedicinesParserFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -133,7 +135,7 @@ public class ControllerServlet extends HttpServlet {
                 }
             }
         } catch (Exception e) {
-
+         //   LOG.error("Exception occurred", e);
         }
         request.setAttribute("parserType", parser);
         request.setAttribute("resultSet", sb);

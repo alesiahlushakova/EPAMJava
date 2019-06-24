@@ -9,6 +9,8 @@ import java.io.*;
 
 import by.training.task4.service.factory.MedicinesAbstractParser;
 import by.training.task4.service.validator.XMLValidator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -23,7 +25,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
  * @author AlesyaHlushakova
  */
 public class MedicinesSAXParser extends MedicinesAbstractParser {
-    
+
 
     private SAXHandler handler;
     private XMLReader reader;
@@ -34,7 +36,7 @@ public class MedicinesSAXParser extends MedicinesAbstractParser {
             reader = XMLReaderFactory.createXMLReader();
             reader.setContentHandler(handler);
         } catch (SAXException e) {
-         //   LOG.error("SAX parser error: ", e);
+
         }
     }
 

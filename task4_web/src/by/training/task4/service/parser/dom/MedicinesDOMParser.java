@@ -25,6 +25,8 @@ import by.training.task4.service.parser.Elements;
 import by.training.task4.service.validator.XMLValidator;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.*;
 
 import org.xml.sax.SAXException;
@@ -42,7 +44,6 @@ import by.training.task4.service.factory.MedicineFactory;
  * @author AlesyaHlushakova
  */
 public class MedicinesDOMParser extends MedicinesAbstractParser {
-    
 
 
     private DocumentBuilder docBuilder;
@@ -57,7 +58,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
-//            LOG.error("Parser configuration exception: ", e);
+
         }
     }
 
@@ -87,11 +88,11 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                 }
                 return true;
             } catch (IOException e) {
-               // LOG.error("I/O exception", e);
+
             } catch (SAXException e) {
-            //    LOG.error("SAX pasring exception", e);
+
             } catch (MedicineException e) {
-             //   LOG.error("An error occurred within building Medicine object", e);
+
             }
         }
         return false;
@@ -122,7 +123,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                 | MedicineAttributeException
                 | VersionException e) {
             String errorMessage = "Build medicine exception";
-        //    LOG.error(errorMessage);
+
             throw new MedicineException(errorMessage, e);
         }
     }
@@ -169,7 +170,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                     String errorMessage = "attribute <" 
                             + currentAttribute
                             + "> is not valid";
-//                    LOG.error(errorMessage);
+
                     throw new MedicineAttributeException(errorMessage);
             }
         }
@@ -227,7 +228,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                 | PackageException
                 | DosageException e) {
             String errorMessage = "Building version exception";
-       //     LOG.error(errorMessage);
+
             throw new VersionException(errorMessage, e);
         }
         
@@ -264,7 +265,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                                     certField.getTextContent());
                             currentCertificate.setRegistrationDate(date);
                         } catch (ParseException e) {
-                          //  LOG.error("Date parser exception: ", e);
+
                         }
                         break;
                     case EXPIRATION_DATE:
@@ -273,14 +274,14 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                                     certField.getTextContent());
                             currentCertificate.setExpireDate(date);
                         } catch (ParseException e) {
-                           // LOG.error("Date parser exception: ", e);
+
                         }
                         break;
                     default:
                         String errorMessage = "element <" 
                                 + currentField
                                 + "> is not supposed to be here";
-                      //  LOG.error(errorMessage);
+
                         throw new CertificateException(errorMessage);
                 }
             }
@@ -344,7 +345,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                         String errorMessage = "element <" 
                                 + currentField
                                 + "> is not supposed to be here";
-//                        LOG.error(errorMessage);
+
                         throw new PackageException(errorMessage);
                 }
             }
@@ -383,7 +384,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                         String errorMessage = "element <" 
                                 + currentField
                                 + "> is not supposed to be here";
-                       // LOG.error(errorMessage);
+
                         throw new DosageException(errorMessage);
                 }
             }
