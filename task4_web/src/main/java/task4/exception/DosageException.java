@@ -11,15 +11,28 @@ public class DosageException extends Exception {
 
     private static final long serialVersionUID = 3731630959386551415L;
 
+    /**
+     * constructor.
+     */
     public DosageException() {
         super();
     }
 
-    public DosageException(String message) {
+    /**
+     * constructor.
+     * @param message message
+     */
+    public DosageException(final String message) {
         super(message);
     }
 
-    public DosageException(String message, Throwable cause) {
+    /**
+     * constructor.
+     * @param message message
+     * @param cause cause
+     */
+    public DosageException(final String message, final Throwable cause) {
         super(message, cause);
     }
 }
+

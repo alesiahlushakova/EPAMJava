@@ -4,12 +4,23 @@
 
 package main.java.task4.service.parser.dom;
 
-import main.java.task4.exception.*;
+import main.java.task4.exception.MedicineException;
+import main.java.task4.exception.MedicineNotFoundException;
+import main.java.task4.exception.DosageException;
+import main.java.task4.exception.MedicineAttributeException;
+import main.java.task4.exception.PackageException;
+import main.java.task4.exception.VersionException;
+import main.java.task4.exception.CertificateException;
 import main.java.task4.model.Package;
-import main.java.task4.model.*;
+import main.java.task4.model.Medicine;
+import main.java.task4.model.Version;
+import main.java.task4.model.Dosage;
+import main.java.task4.model.Certificate;
+import main.java.task4.model.Analgetic;
+import main.java.task4.model.Antibiotic;
+import main.java.task4.model.Vitamin;
 import main.java.task4.service.factory.MedicineFactory;
 import main.java.task4.service.factory.MedicinesAbstractParser;
-import main.java.task4.service.factory.MedicinesParserFactory;
 import main.java.task4.service.parser.Attributes;
 import main.java.task4.service.parser.Elements;
 import main.java.task4.service.validator.XMLValidator;
@@ -30,21 +41,33 @@ import java.util.Date;
 import java.util.HashSet;
 
 /**
- * Class MedicinesDOMParser extends abstract class
- * {@link MedicinesAbstractParser}, serves for building set of Medicine objects
- * based on XML-document by parser it using DOM-parser for XML
- *
- *
+ * Class MedicinesDOMParser extends abstract class.
+ * {@link MedicinesAbstractParser}, serves for building set of Medicine objects.
+ * based on XML-document by parser it using DOM-parser for XML.
  * @author AlesyaHlushakova
  */
 public class MedicinesDOMParser extends MedicinesAbstractParser {
-
+    /**
+     * logger intro.
+     */
     private static final Logger LOG = LogManager.
             getLogger(MedicinesDOMParser.class);
+    /**
+     * document builder.
+     */
     private DocumentBuilder docBuilder;
+    /**
+     * medicine factory.
+     */
     private MedicineFactory mFactory;
+    /**
+     * date format.
+     */
     private DateFormat dateFormat;
-    
+
+    /**
+     * constructor.
+     */
     public MedicinesDOMParser() {
         medicins = new HashSet<Medicine>();
         mFactory = new MedicineFactory();
@@ -53,20 +76,18 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
-            LOG.error("Parser exception: "+ e.getMessage());
+            LOG.error("Parser exception: " + e.getMessage());
         }
     }
 
     /**
-     * Parses XML-document using DOM-parser, gets root-element of current 
-     * document
-     * 
+     * Parses XML-document using DOM-parser, gets root-element of current doc.
      * @param xml - path to XML-document to parse
      * @return true - if parser was successful; false - if there occurred any
-     * kind of exception during XML-document parser
+     * kind of exception during XML-document parser.
      */
     @Override
-    public boolean buildSetMedicines(String xml, String xsd) {
+    public boolean buildSetMedicines(final String xml, final String xsd) {
         if (XMLValidator.validate(xml, xsd)) {
             Document document = null;
             try {
@@ -83,7 +104,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                 }
                 return true;
             } catch (IOException e) {
-                LOG.error("Input/Output exception: "+ e.getMessage());
+                LOG.error("Input/Output exception: " + e.getMessage());
             } catch (SAXException e) {
                 LOG.error("SAX parser exception", e.getMessage());
             } catch (MedicineException e) {
@@ -92,15 +113,13 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         }
         return false;
     }
-    
     /**
-     * Runs through all child-nodes
-     * 
+     * Runs through all child-nodes.
      * @param medicineElement concrete medicine
      * @return {@link Medicine} object
-     * @throws MedicineException
+     * @throws MedicineException exception
      */
-    private Medicine buildMedicine(Element medicineElement)
+    private Medicine buildMedicine(final Element medicineElement)
             throws MedicineException {
         Medicine currentMedicine;
         try {
@@ -121,19 +140,18 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
             throw new MedicineException(errorMessage, e);
         }
     }
-    
     /**
-     * Initializes Medicine object's fields depending on attribute-nodes of 
-     * passed DOM-element
-     * 
+     * Initializes Medicine object's fields depending on attribute-nodes of.
+     * passed DOM-element.
      * @param medicine - Medicine object with fields supposed to initialize
      * @param medElement - DOM-element which contains relevant attributes
-     * @throws MedicineAttributeException 
+     * @throws MedicineAttributeException exception
      */
-    private void setMedicineAttributes(Medicine medicine, Element medElement)
+    private void setMedicineAttributes(final Medicine medicine,
+                                       final Element medElement)
             throws MedicineAttributeException {
         NamedNodeMap attributes = medElement.getAttributes();
-        for (int i = 0; i < attributes.getLength() ; i++) {
+        for (int i = 0; i < attributes.getLength(); i++) {
             Attr attribute = (Attr) attributes.item(i);
             String name = attribute.getName();
             String value = attribute.getValue();
@@ -151,17 +169,17 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                     break;
                 case RECIPE:
                     boolean recipe = Boolean.parseBoolean(value);
-                    ((Antibiotic)medicine).setRecipe(recipe);
+                    ((Antibiotic) medicine).setRecipe(recipe);
                     break;
                 case SOLUTION:
-                    ((Vitamin)medicine).setSolution(value);
+                    ((Vitamin) medicine).setSolution(value);
                     break;
                 case NARCOTIC:
                     boolean narcotic = Boolean.parseBoolean(value);
-                    ((Analgetic)medicine).setNarcotic(narcotic);
+                    ((Analgetic) medicine).setNarcotic(narcotic);
                     break;
                 default:
-                    String errorMessage = "attribute <" 
+                    String errorMessage = "attribute <"
                             + currentAttribute
                             + "> is not valid";
                         LOG.error(errorMessage);
@@ -169,16 +187,14 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
             }
         }
     }
-    
     /**
-     * Runs through all version-nodes of passed DOM-element and builds set of 
-     * Version objects
-     * 
+     * Runs through all version-nodes of passed DOM-element and builds.
+     * set of version.
      * @param medicineElement - DOM-element that represents concrete medicine
      * @return set of {@link Version} objects
-     * @throws VersionException
+     * @throws VersionException exception
      */
-    private HashSet<Version> buildVersions(Element medicineElement)
+    private HashSet<Version> buildVersions(final Element medicineElement)
             throws VersionException {
         HashSet<Version> versions = new HashSet<>();
         NodeList versionElements = medicineElement.getElementsByTagName(
@@ -189,17 +205,15 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         }
         return versions;
     }
-    
     /**
-     * Runs through all child-nodes of passed DOM-element and builds Version 
-     * object depending on it
-     * 
-     * @param versionElement - DOM-element that represents version of 
-     * concrete medicine
+     * Runs through all child-nodes of passed DOM-element and builds Version.
+     * object depending on it.
+     * @param versionElement - DOM-element that represents version of
+     * concrete medicine.
      * @return {@link Version} object
-     * @throws VersionException
+     * @throws VersionException exception
      */
-    private Version buildVersion(Element versionElement)
+    private Version buildVersion(final Element versionElement)
             throws VersionException {
         Version currentVersion = new Version();
         currentVersion.setAnalog(versionElement.getAttribute(
@@ -208,10 +222,10 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                 Elements.PRODUCER.getValue()).item(0).getTextContent());
         currentVersion.setForm(versionElement.getElementsByTagName(
                 Elements.FORM.getValue()).item(0).getTextContent());
-        Element certificateElement = 
+        Element certificateElement =
                 (Element) versionElement.getElementsByTagName(
                         Elements.CERTIFICATE.getValue()).item(0);
-        Element dosageElement =    
+        Element dosageElement =
                 (Element) versionElement.getElementsByTagName(
                         Elements.DOSAGE.getValue()).item(0);
         try {
@@ -225,32 +239,29 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                 LOG.error(errorMessage);
             throw new VersionException(errorMessage, e);
         }
-        
         return currentVersion;
     }
-    
     /**
-     * Runs through all child-nodes of passed DOM-element and builds 
-     * Certificate object depending on it
-     * 
-     * @param certificateElement - DOM-element that represents certificate of 
-     * concrete medicine version
+     * Runs through all child-nodes of passed DOM-element and builds.
+     * Certificate object depending on i.
+     * @param certificateElement - DOM-element that represents certificate of
+     * concrete medicine version.
      * @return {@link Certificate} object
-     * @throws CertificateException
+     * @throws CertificateException exception
      */
-    private Certificate buildCertificate(Element certificateElement)
+    private Certificate buildCertificate(final Element certificateElement)
             throws CertificateException {
         Certificate currentCertificate = new Certificate();
         NodeList certificateFields = certificateElement.getChildNodes();
         for (int j = 0; j < certificateFields.getLength(); j++) {
             Node certField = certificateFields.item(j);
             if (certField.getNodeType() == Node.ELEMENT_NODE) {
-                String tagName = 
-                        ((Element)certField).getTagName().toUpperCase();
+                String tagName =
+                        ((Element) certField).getTagName().toUpperCase();
                 Elements currentField = Elements.valueOf(tagName);
                 switch (currentField) {
                     case REGISTERED_BY:
-                        currentCertificate.setRegistredBy(
+                        currentCertificate.setRegisteredBy(
                                 certField.getTextContent());
                         break;
                     case REGISTRATION_DATE:
@@ -272,7 +283,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                         }
                         break;
                     default:
-                        String errorMessage = "element <" 
+                        String errorMessage = "element <"
                                 + currentField
                                 + "> is not supposed to be here";
                         LOG.error(errorMessage);
@@ -282,19 +293,20 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         }
         return currentCertificate;
     }
-    
     /**
-     * Runs through all pack-nodes of passed DOM-element and builds set of 
-     * Package objects
-     * 
-     * @param versionElement - DOM-element that represents version of 
+     * Runs through all pack-nodes of passed DOM-element and builds set of
+     * Package objects.
+     *
+     * @param versionElement - DOM-element that represents version of
      * concrete medicine
      * @return set of {@link main.java.task4.model.Package} objects
-     * @throws PackageException
+     * @throws PackageException exception
      */
-    private HashSet<main.java.task4.model.Package> buildPacks(Element versionElement)
+    private HashSet<main.java.task4.model.Package> buildPacks(
+            final Element versionElement)
             throws PackageException {
-        HashSet<main.java.task4.model.Package> packs = new HashSet<main.java.task4.model.Package>();
+        HashSet<main.java.task4.model.Package> packs
+                = new HashSet<main.java.task4.model.Package>();
         NodeList packElements = versionElement.getElementsByTagName(
                 Elements.PACKAGE.getValue());
         for (int k = 0; k < packElements.getLength(); k++) {
@@ -303,18 +315,18 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         }
         return packs;
     }
-    
     /**
-     * Runs through all child-nodes of passed DOM-element and builds 
-     * Package object depending on it
-     * 
-     * @param packElement - DOM-element that represents package form for 
+     * Runs through all child-nodes of passed DOM-element and builds
+     * Package object depending on it.
+     * @param packElement - DOM-element that represents package form for
      * version of concrete medicine
      * @return {@link main.java.task4.model.Package} object
-     * @throws PackageException
+     * @throws PackageException exception
      */
-    private main.java.task4.model.Package buildPack(Element packElement) throws PackageException {
-        main.java.task4.model.Package currentPackage = new Package();
+    private main.java.task4.model.Package buildPack(final Element packElement)
+            throws PackageException {
+        main.java.task4.model.Package currentPackage
+                = new Package();
         if (packElement.hasAttributes()) {
             Attr size = packElement.getAttributeNode(
                     Attributes.SIZE.getValue());
@@ -325,7 +337,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
             Node packField = packFields.item(n);
             if (packField.getNodeType() == Node.ELEMENT_NODE) {
                 Elements currentField = Elements.valueOf(
-                        ((Element)packField).getTagName().toUpperCase());
+                        ((Element) packField).getTagName().toUpperCase());
                 switch (currentField) {
                     case QUANTITY:
                         currentPackage.setQuantity(Integer.parseInt(
@@ -336,7 +348,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                                 packField.getTextContent()));
                         break;
                     default:
-                        String errorMessage = "element <" 
+                        String errorMessage = "element <"
                                 + currentField
                                 + "> is not supposed to be here";
 
@@ -346,17 +358,15 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         }
         return currentPackage;
     }
-
     /**
-     * Runs through all child-nodes of passed DOM-element and builds 
-     * Dosage object depending on it
-     * 
-     * @param dosageElement - DOM-element that represents dosage for version 
+     * Runs through all child-nodes of passed DOM-element and builds
+     * Dosage object depending on it.
+     * @param dosageElement - DOM-element that represents dosage for version
      * of concrete medicine
      * @return {@link Dosage} object
-     * @throws DosageException
+     * @throws DosageException exception
      */
-    private Dosage buildDosage(Element dosageElement)
+    private Dosage buildDosage(final Element dosageElement)
             throws DosageException {
         Dosage currentDosage = new Dosage();
         NodeList dosageFields = dosageElement.getChildNodes();
@@ -364,7 +374,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
             Node dosageField = dosageFields.item(k);
             if (dosageField.getNodeType() == Node.ELEMENT_NODE) {
                 Elements currentField = Elements.valueOf(
-                        ((Element)dosageField).getTagName().toUpperCase());
+                        ((Element) dosageField).getTagName().toUpperCase());
                 switch (currentField) {
                     case AMOUNT:
                         currentDosage.setAmount(
@@ -375,7 +385,7 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
                                 dosageField.getTextContent());
                         break;
                     default:
-                        String errorMessage = "element <" 
+                        String errorMessage = "element <"
                                 + currentField
                                 + "> is not supposed to be here";
 
@@ -386,3 +396,4 @@ public class MedicinesDOMParser extends MedicinesAbstractParser {
         return currentDosage;
     }
 }
+

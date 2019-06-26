@@ -23,38 +23,77 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Handles SAX parser of XML document
- *
- *
+ * Handles SAX parser of XML document.
  * @author AlesyaHlushakova
  */
 public class SAXHandler extends DefaultHandler {
-
+    /**
+     * logger intro.
+     */
     private static final Logger LOG = LogManager.
             getLogger(SAXHandler.class);
-
+    /**
+     * medicines.
+     */
     private Set<Medicine> medicines;
-    
+    /**
+     * current element.
+     */
     private Elements currentElement;
+    /**
+     * current attribute.
+     */
     private Attributes currentAttr;
+    /**
+     * medicine factory.
+     */
     private MedicineFactory mFactory;
+    /**
+     * date format.
+     */
     private DateFormat dateFormat;
-    
+    /**
+     * current medicine.
+     */
     private Medicine currentMedicine;
+    /**
+     * current version.
+     */
     private Version currentVersion;
+    /**
+     * certificate.
+     */
     private Certificate currentCertificate;
+    /**
+     * package.
+     */
     private main.java.task4.model.Package currentPackage;
+    /**
+     * dosage.
+     */
     private Dosage currentDosage;
-    
+
+    /**
+     * constructor.
+     */
     public SAXHandler() {
         medicines = new HashSet<Medicine>();
         mFactory = new MedicineFactory();
         dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     }
-    
+
+    /**
+     * overrides start element.
+     * @param uri uri
+     * @param localName local name
+     * @param qName name
+     * @param attrs attributes
+     */
     @Override
     public void startElement(
-            String uri, String localName, String qName, org.xml.sax.Attributes attrs) {
+            final String uri, final String localName,
+            final String qName,
+            final org.xml.sax.Attributes attrs) {
         currentElement = Elements.valueOf(localName.toUpperCase());
         switch (currentElement) {
             case ANTIBIOTIC:
@@ -81,14 +120,14 @@ public class SAXHandler extends DefaultHandler {
                             break;
                         case RECIPE:
                             boolean recipe = Boolean.parseBoolean(value);
-                            ((Antibiotic)currentMedicine).setRecipe(recipe);
+                            ((Antibiotic) currentMedicine).setRecipe(recipe);
                             break;
                         case SOLUTION:
-                            ((Vitamin)currentMedicine).setSolution(value);
+                            ((Vitamin) currentMedicine).setSolution(value);
                             break;
                         case NARCOTIC:
                             boolean narcotic = Boolean.parseBoolean(value);
-                            ((Analgetic)currentMedicine).setNarcotic(narcotic);
+                            ((Analgetic) currentMedicine).setNarcotic(narcotic);
                         default:
                             break;
                     }
@@ -114,9 +153,16 @@ public class SAXHandler extends DefaultHandler {
                 break;
         }
     }
-    
+
+    /**
+     * overrides end element.
+     * @param uri uri
+     * @param localName local name
+     * @param qName name
+     */
     @Override
-    public void endElement(String uri, String localName, String qName) {
+    public void endElement(final String uri,
+                           final String localName, final String qName) {
         currentElement = Elements.valueOf(localName.toUpperCase());
         switch (currentElement) {
             case ANTIBIOTIC:
@@ -137,11 +183,18 @@ public class SAXHandler extends DefaultHandler {
                 currentVersion.setDosage(currentDosage);
             default:
                 break;
-        }        
+        }
     }
-    
+
+    /**
+     * overrides method.
+     * @param ch char.
+     * @param start start
+     * @param length length
+     */
     @Override
-    public void characters(char[] ch, int start, int length) {
+    public void characters(final char[] ch, final int start,
+                           final int length) {
         String content = new String(ch, start, length).trim();
         if (currentElement != null && !content.isEmpty()) {
             switch (currentElement) {
@@ -155,7 +208,7 @@ public class SAXHandler extends DefaultHandler {
                     currentVersion.setForm(content);
                     break;
                 case REGISTERED_BY:
-                    currentCertificate.setRegistredBy(content);
+                    currentCertificate.setRegisteredBy(content);
                     break;
                 case REGISTRATION_DATE:
                     try {
@@ -191,27 +244,49 @@ public class SAXHandler extends DefaultHandler {
         }
     }
 
+    /**
+     * warning.
+     * @param e exception
+     */
     @Override
-    public void warning(SAXParseException e) {
+    public void warning(final SAXParseException e) {
         LOG.warn(getLineAddress(e), e);
     }
 
+    /**
+     * error.
+     * @param e exception
+     */
     @Override
-    public void error(SAXParseException e) {
+    public void error(final SAXParseException e) {
         LOG.error(getLineAddress(e), e);
     }
 
+    /**
+     * fatal error.
+     * @param e exception
+     */
     @Override
-    public void fatalError(SAXParseException e) {
+    public void fatalError(final SAXParseException e) {
         LOG.fatal(getLineAddress(e), e);
     }
 
-
-    public String getLineAddress(SAXParseException e) {
+    /**
+     * gets line address.
+     * @param e exception
+     * @return ex
+     */
+    public String getLineAddress(final SAXParseException e) {
         return e.getLineNumber() + ":" + e.getColumnNumber();
     }
 
+    /**
+     * getter for medicines.
+     * @return medicines
+     */
     public Set<Medicine> getMedicines() {
         return medicines;
     }
 }
+
+

@@ -11,15 +11,30 @@ public class PackageException extends Exception {
 
     private static final long serialVersionUID = -6596694279024538896L;
 
+    /**
+     * constructor.
+     */
     public PackageException() {
         super();
     }
 
-    public PackageException(String message) {
+    /**
+     * constructor.
+     * @param message message
+     */
+    public PackageException(final String message) {
         super(message);
     }
 
-    public PackageException(String message, Throwable cause) {
+    /**
+     * constructor.
+     * @param message message
+     * @param cause cause
+     */
+    public PackageException(final String message,
+                            final Throwable cause) {
         super(message, cause);
     }
 }
+
+

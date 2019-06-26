@@ -7,72 +7,147 @@ package main.java.task4.model;
 import java.util.HashSet;
 
 /**
- * Represents abstract medicine wich has it's own name, CAS-number, unique 
- * DrugBank ID etc.
- * 
- *
- *
+ * Represents abstract medicine.
  * @author AlesyaHlushakova
  */
 public abstract class Medicine {
-
+    /**
+     * name.
+     */
     private String name;
+    /**
+     * CAS.
+     */
     private String cas;
+    /**
+     * drug bank.
+     */
     private String drugBank;
+    /**
+     * pharm.
+     */
     private String pharm;
+    /**
+     * versions.
+     */
     private HashSet<Version> versions;
-    
-    
+
+    /**
+     * constructor.
+     */
     public Medicine() {
         versions = new HashSet<Version>();
     }
-    
+
+    /**
+     * getter for pharm.
+     * @return pharmacy
+     */
     public String getPharm() {
         return pharm;
     }
-    
-    public void setPharm(String pharm) {
-        this.pharm = pharm;
+
+    /**
+     * setter for pharm.
+     * @param newPharm pharm
+     */
+    public void setPharm(final String newPharm) {
+        this.pharm = newPharm;
     }
+
+    /**
+     * getter for versions.
+     * @return version list.
+     */
     public HashSet<Version> getVersions() {
         return versions;
     }
-    public void setVersions(HashSet<Version> versions) {
-        this.versions = versions;
+
+    /**
+     * setter for versions.
+     * @param newVersions versions
+     */
+    public void setVersions(final HashSet<Version> newVersions) {
+        this.versions = newVersions;
     }
+
+    /**
+     * getter for name.
+     * @return name
+     */
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    /**
+     * setter for name.
+     * @param newName name
+     */
+    public void setName(final String newName) {
+        this.name = newName;
     }
+
+    /**
+     * getter for cas.
+     * @return cas
+     */
     public String getCas() {
         return cas;
     }
-    public void setCas(String cas) {
-        this.cas = cas;
+
+    /**
+     * getter for cas.
+     * @param newCas  cas
+     */
+    public void setCas(final String newCas) {
+        this.cas = newCas;
     }
+
+    /**
+     * getter for drug bank.
+     * @return drug bank.
+     */
     public String getDrugBank() {
         return drugBank;
     }
-    public void setDrugBank(String drugBank) {
-        this.drugBank = drugBank;
+
+    /**
+     * setter for drug bank.
+     * @param newDrugBank drug bank
+     */
+    public void setDrugBank(final String newDrugBank) {
+        this.drugBank = newDrugBank;
     }
-    
-    public void addVersion(Version version) {
+
+    /**
+     * method adds version.
+     * @param version version
+     */
+    public void addVersion(final Version version) {
         versions.add(version);
     }
-    
+
+    /**
+     * overrides equals.
+     * @param obj comparable object
+     * @return is equal
+     */
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this) { return true; }
-        if (obj == null) { return false; }
-        if (obj.getClass() != getClass()) { return false; }
+    public boolean equals(final Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
         Medicine medicine = (Medicine) obj;
         if (name == null) {
             if (medicine.name != null) {
                 return false;
-            }            
+            }
         } else if (!name.equals(medicine.name)) {
             return false;
         }
@@ -99,7 +174,11 @@ public abstract class Medicine {
         }
         return true;
     }
-    
+
+    /**
+     * overrides hash.
+      * @return hash
+     */
     @Override
     public int hashCode() {
         int hashCode = 0;
@@ -112,7 +191,11 @@ public abstract class Medicine {
         }
         return hashCode;
     }
-    
+
+    /**
+     * overrides to string.
+     * @return string
+     */
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder(
@@ -127,3 +210,5 @@ public abstract class Medicine {
         return output.toString();
     }
 }
+
+

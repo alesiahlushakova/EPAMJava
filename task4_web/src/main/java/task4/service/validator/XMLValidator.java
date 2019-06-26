@@ -12,31 +12,29 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 
 
-import main.java.task4.service.parser.sax.MedicinesSAXParser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
 /**
- * Provides easy way to validate XML document by XSD schema
- *
- *
+ * Provides easy way to validate XML document by XSD schema.
  * @author AlesyaHlushakova
  */
 public class XMLValidator {
-
-
+/**
+ * constructor.
+ */
     private static final Logger LOG = LogManager.
             getLogger(XMLValidator.class);
 
     /**
-     * Tries to validate XML document located on the specified path using XSD
-     * schema
-     * 
+     * Tries to validate XML document located on the specified path using XSD.
      * @param xml - path to XML document
+     * @param xsd schema
      * @return true - if validator was successful, else - returns false;
      */
-    public static boolean validate(String xml, String xsd) {
+    public static boolean validate(final String xml,
+                                   final String xsd) {
         Schema schema = null;
         try {
             schema = SchemaReader.getSchema(xsd);
@@ -54,3 +52,4 @@ public class XMLValidator {
         return false;
     }
 }
+

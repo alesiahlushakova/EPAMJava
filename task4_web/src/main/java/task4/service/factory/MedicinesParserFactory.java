@@ -16,29 +16,39 @@ import  org.apache.logging.log4j.Logger;
 
 /**
  * Factory class which serves for creation concrete medicines builder depending
- * on passed value
+ * on passed value.
  *
  *
  * @author AlesyaHlushakova
  */
 public class MedicinesParserFactory {
-
+    /**
+     * Logger.
+     */
     private static final Logger LOG = LogManager.
             getLogger(MedicinesParserFactory.class);
 
+    /**
+     * SAX.
+     */
     private static final String SAX = "SAX";
+    /**
+     * DOM.
+     */
     private static final String DOM = "DOM";
+    /**
+     * STAX.
+     */
     private static final String STAX = "STAX";
 
     /**
-     * Factory method for creation concrete medicines builder
-     * 
+     * Factory method for creation concrete medicines builder.
      * @param name - name of parser type which will be used to parse XML
      * document and build set of Medicine objects
      * @return concrete medicines builder
-     * @throws ParserNotFoundException
+     * @throws ParserNotFoundException exception
      */
-    public MedicinesAbstractParser getParser(String name)
+    public MedicinesAbstractParser getParser(final String name)
             throws ParserNotFoundException {
         MedicinesAbstractParser parser = null;
         switch (name.toUpperCase()) {
@@ -60,3 +70,4 @@ public class MedicinesParserFactory {
         return parser;
     }
 }
+

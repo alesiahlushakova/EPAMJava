@@ -8,86 +8,167 @@ import java.util.HashSet;
 
 /**
  * Represents concrete version of medicine, it's producer, certificate etc.
- *
- *
  * @author AlesyaHlushakova
  */
 public class Version {
-
+    /**
+     * analog.
+     */
     private String analog;
+    /**
+     * producer.
+     */
     private String producer;
+    /**
+     * form.
+     */
     private String form;
+    /**
+     * certificate.
+     */
     private Certificate certificate;
+    /**
+     * packages.
+     */
     private HashSet<Package> aPackages;
+    /**
+     * dosage.
+     */
     private Dosage dosage;
-    
+
+    /**
+     * constructor.
+     */
     public Version() {
         aPackages = new HashSet<Package>();
     }
 
+    /**
+     * getter for production.
+     * @return producer
+     */
     public String getProducer() {
         return producer;
     }
 
-    public void setProducer(String producer) {
-        this.producer = producer;
+    /**
+     * setter.
+     * @param newProducer producer
+     */
+    public void setProducer(final String newProducer) {
+        this.producer = newProducer;
     }
 
+    /**
+     * getter for form.
+     * @return form
+     */
     public String getForm() {
         return form;
     }
 
-    public void setForm(String form) {
-        this.form = form;
+    /**
+     * setter for form.
+     * @param newForm form
+     */
+    public void setForm(final String newForm) {
+        this.form = newForm;
     }
 
+    /**
+     * getter for certificate.
+     * @return cert
+     */
     public Certificate getCertificate() {
         return certificate;
     }
 
-    public void setCertificate(Certificate certificate) {
-        this.certificate = certificate;
+    /**
+     * setter.
+     * @param newCertificate certificate
+     */
+    public void setCertificate(final Certificate newCertificate) {
+        this.certificate = newCertificate;
     }
 
+    /**
+     * getter for packages.
+     * @return package
+     */
     public HashSet<Package> getaPackages() {
         return aPackages;
     }
 
-    public void setaPackages(HashSet<Package> aPackages) {
-        this.aPackages = aPackages;
+    /**
+     * setter for packages.
+     * @param newPackages packages
+     */
+    public void setaPackages(final HashSet<Package> newPackages) {
+        this.aPackages = newPackages;
     }
 
+    /**
+     * getter for dosage.
+     * @return dosage
+     */
     public Dosage getDosage() {
         return dosage;
     }
 
-    public void setDosage(Dosage dosage) {
-        this.dosage = dosage;
+    /**
+     * setter for dosage.
+     * @param newDosage dosage
+     */
+    public void setDosage(final Dosage newDosage) {
+        this.dosage = newDosage;
     }
 
+    /**
+     * getter for analog.
+     * @return analog
+     */
     public String getAnalog() {
         return analog;
     }
 
-    public void setAnalog(String tradeName) {
-        this.analog = tradeName;
+    /**
+     * setter for analog.
+     * @param newTradeName analog
+     */
+    public void setAnalog(final String newTradeName) {
+        this.analog = newTradeName;
     }
-    
-    public void addPack(Package pack) {
+
+    /**
+     * adds package.
+     * @param pack package.
+     */
+    public void addPack(final Package pack) {
         aPackages.add(pack);
     }
-    
+
+    /**
+     * overrides equals.
+     * @param obj comparable object
+     * @return is equal
+     */
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this) { return true; }
-        if (obj == null) { return false; }
-        if (obj.getClass() != getClass()) { return false; }
+    public boolean equals(final Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
         Version version = (Version) obj;
         if (analog == null) {
             if (version.analog != null) {
                 return false;
             }
-        } else if(!analog.equals(version.analog)) {
+        } else if (!analog.equals(version.analog)) {
             return false;
         }
         if (producer == null) {
@@ -127,12 +208,16 @@ public class Version {
         }
         return true;
     }
-    
+
+    /**
+     * hash code.
+     * @return hash
+     */
     @Override
     public int hashCode() {
         int hashCode = 0;
         hashCode += analog == null ? 0 : analog.hashCode();
-        hashCode += producer == null? 0 : producer.hashCode();
+        hashCode += producer == null ? 0 : producer.hashCode();
         hashCode += form == null ? 0 : form.hashCode();
         hashCode += certificate == null ? 0 : certificate.hashCode();
         hashCode += dosage == null ? 0 : dosage.hashCode();
@@ -141,7 +226,11 @@ public class Version {
         }
         return hashCode;
     }
-    
+
+    /**
+     * to string.
+     * @return string
+     */
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder(
@@ -157,3 +246,5 @@ public class Version {
         return output.toString();
     }
 }
+
+

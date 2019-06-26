@@ -39,7 +39,7 @@ public class MedicinsAbstractParserTest {
             throws ParserNotFoundException, IOException, SAXException, MedicineException {
         builder = factory.getParser(jaxp);
         builder.buildSetMedicines(VALID_XML, "data//Medicins.xsd");
-        Set<Medicine> actualMedicinsSet = builder.getMedicins();
+        Set<Medicine> actualMedicinsSet = builder.getMedicines();
         Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
     }
     
@@ -77,7 +77,7 @@ public class MedicinsAbstractParserTest {
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Certificate certificate = new Certificate();
-        certificate.setRegistredBy("Test registration");
+        certificate.setRegisteredBy("Test registration");
         certificate.setRegistrationDate(dateFormat.parse("2010-01-01"));
         certificate.setExpireDate(dateFormat.parse("2020-01-01"));
 

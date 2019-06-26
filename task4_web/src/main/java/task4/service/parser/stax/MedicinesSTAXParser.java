@@ -38,26 +38,52 @@ import main.java.task4.service.validator.XMLValidator;
 /**
  * Class MedicinesSTAXParser extends abstract class
  * {@link MedicinesAbstractParser}, serves for building set of Medicine objects
- * based on XML-document by parser it using StAX-parser for XML
+ * based on XML-document by parser it using StAX-parser for XML.
  *
  *
  * @author AlesyaHlushakova
  */
 public class MedicinesSTAXParser extends MedicinesAbstractParser {
-
-
-    
+    /**
+     * xml input factory.
+     */
     private XMLInputFactory inputFactory;
+    /**
+     * medidcine factory.
+     */
     private MedicineFactory mFactory;
+    /**
+     * fate format.
+     */
     private DateFormat dateFormat;
-    
+    /**
+     * current elements.
+     */
     private Elements currentElement;
+    /**
+     * current medicine.
+     */
     private Elements currentMedicine;
+    /**
+     * current version.
+     */
     private Version currentVersion;
+    /**
+     * certificate.
+     */
     private Certificate currentCertificate;
+    /**
+     * package.
+     */
     private Package currentPackage;
+    /**
+     * dosage.
+     */
     private Dosage currentDosage;
-    
+
+    /**
+     * constructor.
+     */
     public MedicinesSTAXParser() {
         super();
         mFactory = new MedicineFactory();
@@ -67,15 +93,14 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
     }
 
     /**
-     * Parses XML-document using StAX-parser, gets XML stream reader of current 
-     * document runs through it and builds set of Medicine objects
-     * 
+     * Parses XML-document using StAX-parser, gets XML stream reader of current.
+     * document runs through it and builds set of Medicine objects.
      * @param xml - path to XML-document to parse
      * @return true - if parser was successful; false - if there occurred any
      * kind of exception during XML-document parser
      */
     @Override
-    public boolean buildSetMedicines(String xml, String xsd) {
+    public boolean buildSetMedicines(final String xml, final String xsd) {
         if (XMLValidator.validate(xml, xsd)) {
             XMLStreamReader reader = null;
             FileInputStream fis = null;
@@ -118,16 +143,14 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
         }
         return false;
     }
-
     /**
-     * Builds medicine object by parser XML document using XML stream reader
-     * 
+     * Builds medicine object by parser XML document using XML stream reader.
      * @param reader - XMLStreamReader for current XML document
      * @return {@link Medicine} object
-     * @throws XMLStreamException
-     * @throws MedicineException
+     * @throws XMLStreamException exception
+     * @throws MedicineException exception
      */
-    private Medicine buildMedicine(XMLStreamReader reader)
+    private Medicine buildMedicine(final XMLStreamReader reader)
             throws XMLStreamException, MedicineException {
         Medicine medicine;
         try {
@@ -154,15 +177,14 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
         }
         return medicine;
     }
-    
     /**
-     * Handles XML opening tag
-     * 
+     * Handles XML opening tag.
      * @param medicine - current medicine object
      * @param reader - XMLStreamReader for current XML document
-     * @throws XMLStreamException
+     * @throws XMLStreamException exception
      */
-    private void openingTag(Medicine medicine, XMLStreamReader reader)
+    private void openingTag(final Medicine medicine,
+                            final XMLStreamReader reader)
             throws XMLStreamException {
         switch (currentElement) {
             case PHARM:
@@ -184,7 +206,7 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
                 currentCertificate = new Certificate();
                 break;
             case REGISTERED_BY:
-                currentCertificate.setRegistredBy(getTextContent(reader));
+                currentCertificate.setRegisteredBy(getTextContent(reader));
                 break;
             case REGISTRATION_DATE:
                 try {
@@ -228,14 +250,13 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
                 break;
         }
     }
-    
     /**
-     * Handles closing XML tag
-     * 
+     * Handles closing XML tag.
      * @param medicine - current medicine object
      * @param reader - XMLStreamReader for current XML document
      */
-    private void closingTag(Medicine medicine, XMLStreamReader reader) {
+    private void closingTag(final Medicine medicine,
+                            final XMLStreamReader reader) {
         switch (currentElement) {
             case VERSION:
                 medicine.addVersion(currentVersion);
@@ -257,14 +278,13 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
                 break;
         }
     }
-    
     /**
-     * Sets attributes for current medicine object
-     * 
+     * Sets attributes for current medicine object.
      * @param medicine - medicine which attributes have to be setted
      * @param reader - XMLStreamReader for current XML document
      */
-    private void setMedAttributes(Medicine medicine, XMLStreamReader reader) {
+    private void setMedAttributes(final Medicine medicine,
+                                  final XMLStreamReader reader) {
         medicine.setName(
                 reader.getAttributeValue(null, Attributes.NAME.getValue()));
         medicine.setCas(
@@ -293,16 +313,14 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
                 break;
         }
     }
-    
     /**
-     * Gets text content of the current XML element
-     * 
+     * Gets text content of the current XML element.
      * @param reader - XMLStreamReader refers to XML element that contains text
      * content
      * @return String that represents text content of current element
-     * @throws XMLStreamException
+     * @throws XMLStreamException exception
      */
-    private String getTextContent(XMLStreamReader reader)
+    private String getTextContent(final XMLStreamReader reader)
             throws XMLStreamException {
         String content = null;
         if (reader.hasNext()) {
@@ -312,3 +330,4 @@ public class MedicinesSTAXParser extends MedicinesAbstractParser {
         return content;
     }
 }
+

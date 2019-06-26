@@ -18,21 +18,29 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 /**
- * Class MedicinesDOMParser extends abstract class
- * {@link MedicinesAbstractParser}, serves for building set of Medicine objects
- * based on XML-document by parser it using SAX-parser for XML
- *
- *
+ * Class MedicinesDOMParser extends abstract class.
+ * {@link MedicinesAbstractParser}, serves for building set of Medicine objects.
+ * based on XML-document by parser it using SAX-parser for XML.
  * @author AlesyaHlushakova
  */
 public class MedicinesSAXParser extends MedicinesAbstractParser {
-
+    /**
+     * logger intro.
+     */
     private static final Logger LOG = LogManager.
             getLogger(MedicinesSAXParser.class);
-
+    /**
+     * handler.
+     */
     private SAXHandler handler;
+    /**
+     * reader.
+     */
     private XMLReader reader;
-    
+
+    /**
+     * constructor.
+     */
     public MedicinesSAXParser() {
         handler = new SAXHandler();
         try {
@@ -44,18 +52,17 @@ public class MedicinesSAXParser extends MedicinesAbstractParser {
     }
 
     /**
-     * Parses XML-document using SAX-parser, gets set of Medicine objects built
-     * by {@link SAXHandler}
-     * 
+     * Parses XML-document using SAX-parser, gets set of Medicine objects built.
      * @param xml - path to XML-document to parse
      * @return true - if parser was successful; false - if there occurred any
-     * kind of exception during XML-document parser
+     * kind of exception during XML-document parser.
      */
     @Override
-    public boolean buildSetMedicines(String xml, String xsd)
+    public boolean buildSetMedicines(final String xml, final String xsd)
             throws IOException, SAXException {
         if (XMLValidator.validate(xml, xsd)) {
-            InputSource source = new InputSource(new InputStreamReader(new FileInputStream(xml), "UTF-8"));
+            InputSource source = new InputSource(
+                    new InputStreamReader(new FileInputStream(xml), "UTF-8"));
             reader.parse(source);
             medicins = handler.getMedicines();
             return true;
@@ -63,3 +70,5 @@ public class MedicinesSAXParser extends MedicinesAbstractParser {
         return false;
     }
 }
+
+

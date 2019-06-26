@@ -14,25 +14,25 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Factory class which creates concrete medicine objects depending on passed
- * value
- *
- *
+ * Factory class which creates concrete medicine objects depending on passed.
+ * value.
  * @author AlesyaHlushakova
  */
 public class MedicineFactory {
+    /**
+     * logger intro.
+     */
     private static final Logger LOG = LogManager.
             getLogger(MedicinesParserFactory.class);
     /**
-     * Factory method for creation concrete medicine objects
-     * 
+     * Factory method for creation concrete medicine objects.
      * @param element - {@link Elements} object which represents concrete
-     * type of medicine to create
-     * @return {@link Medicine} object ({@link Antibiotic} , {@link Analgetic} 
+     * type of medicine to create.
+     * @return {@link Medicine} object ({@link Antibiotic} , {@link Analgetic}
      * or {@link Vitamin})
-     * @throws MedicineNotFoundException
+     * @throws MedicineNotFoundException exception
      */
-    public Medicine getMedicine(Elements element)
+    public Medicine getMedicine(final Elements element)
             throws MedicineNotFoundException {
         Medicine medicine = null;
         switch (element) {
@@ -52,3 +52,5 @@ public class MedicineFactory {
         return medicine;
     }
 }
+
+

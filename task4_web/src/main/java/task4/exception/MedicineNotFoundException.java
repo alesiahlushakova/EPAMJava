@@ -11,15 +11,30 @@ public class MedicineNotFoundException extends Exception {
 
     private static final long serialVersionUID = -1364027759215712943L;
 
+    /**
+     * constructor.
+     */
     public MedicineNotFoundException() {
         super();
     }
-    
-    public MedicineNotFoundException(String message) {
+
+    /**
+     * constructor.
+     * @param message message.
+     */
+    public MedicineNotFoundException(final String message) {
         super(message);
     }
-    
-    public MedicineNotFoundException(String message, Throwable cause) {
+
+    /**
+     * constructor.
+     * @param message message
+     * @param cause cause
+     */
+    public MedicineNotFoundException(final String message,
+                                     final Throwable cause) {
         super(message, cause);
     }
 }
+
+

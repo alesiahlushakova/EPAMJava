@@ -19,20 +19,39 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Set;
 
+/**
+ * controller class.
+ */
 @WebServlet(name = "ControllerServlet")
 public class ControllerServlet extends HttpServlet {
-
+    /**
+     * logger intro.
+     */
     private static final Logger LOG = LogManager.
             getLogger(MedicinesParserFactory.class);
 
-    protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response)
+    /**
+     * post method.
+     * @param request request
+     * @param response responce
+     * @throws ServletException exception
+     * @throws IOException exception
+     */
+    protected void doPost(final HttpServletRequest request,
+                          final HttpServletResponse response)
             throws ServletException, IOException {
 
     }
 
-    protected void doGet(HttpServletRequest request,
-                         HttpServletResponse response)
+    /**
+     * get method.
+     * @param request request
+     * @param response response
+     * @throws ServletException exception
+     * @throws IOException exception
+     */
+    protected void doGet(final HttpServletRequest request,
+                         final HttpServletResponse response)
             throws ServletException, IOException {
 
         String parser = request.getParameter("parser");
@@ -52,8 +71,8 @@ public class ControllerServlet extends HttpServlet {
 
         try {
             builder = factory.getParser(parser);
-            if(builder.buildSetMedicines(xmlPath, xsdPath)) {
-                validMedicinsSet = builder.getMedicins();
+            if (builder.buildSetMedicines(xmlPath, xsdPath)) {
+                validMedicinsSet = builder.getMedicines();
                 for (Medicine medicine : validMedicinsSet) {
                     int primaRSpan = 0;
                     for (Version version : medicine.getVersions()) {
@@ -98,7 +117,7 @@ public class ControllerServlet extends HttpServlet {
                                 + version.getForm()
                                 + "</td>");
                         sb.append("<td rowspan=\"" + secRSpan + "\">"
-                                + version.getCertificate().getRegistredBy()
+                                + version.getCertificate().getRegisteredBy()
                                 + "</td>");
                         sb.append("<td rowspan=\"" + secRSpan + "\" nowrap>"
                                 + regDate
