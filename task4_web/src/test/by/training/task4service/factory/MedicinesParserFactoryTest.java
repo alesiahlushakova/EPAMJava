@@ -1,9 +1,9 @@
 package test.by.training.task4service.factory;
 
 
-import by.training.task4.exception.ParserNotFoundException;
-import by.training.task4.service.factory.MedicinesAbstractParser;
-import by.training.task4.service.factory.MedicinesParserFactory;
+import main.java.task4.exception.ParserNotFoundException;
+import main.java.task4.service.factory.MedicinesAbstractParser;
+import main.java.task4.service.factory.MedicinesParserFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

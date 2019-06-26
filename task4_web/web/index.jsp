@@ -7,7 +7,7 @@
 --%>
 <html>
 <head>
-
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
   <title>XML parsers</title>
 </head>
 <body>

@@ -6,7 +6,7 @@
          version="3.0">
     <servlet>
         <servlet-name>controllerServlet</servlet-name>
-        <servlet-class>by.training.task4.controller.ControllerServlet</servlet-class>
+        <servlet-class>main.java.task4.controller.ControllerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>controllerServlet</servlet-name>

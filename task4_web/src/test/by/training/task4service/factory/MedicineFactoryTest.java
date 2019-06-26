@@ -1,10 +1,9 @@
 package test.by.training.task4service.factory;
 
 
-import by.training.task4.exception.MedicineException;
-import by.training.task4.exception.MedicineNotFoundException;
-import by.training.task4.service.factory.MedicineFactory;
-import by.training.task4.service.parser.Elements;
+import main.java.task4.exception.MedicineNotFoundException;
+import main.java.task4.service.factory.MedicineFactory;
+import main.java.task4.service.parser.Elements;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

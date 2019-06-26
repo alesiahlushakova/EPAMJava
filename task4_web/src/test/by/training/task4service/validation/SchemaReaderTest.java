@@ -1,7 +1,7 @@
 package test.by.training.task4service.validation;
 
 
-import by.training.task4.service.validator.SchemaReader;
+import main.java.task4.service.validator.SchemaReader;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 

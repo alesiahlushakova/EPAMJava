@@ -1,12 +1,16 @@
 package test.by.training.task4service.parsing;
 
 
-import by.training.task4.exception.MedicineException;
-import by.training.task4.exception.ParserNotFoundException;
+import main.java.task4.exception.MedicineException;
+import main.java.task4.exception.ParserNotFoundException;
 import by.training.task4.model.*;
-import by.training.task4.model.Package;
-import by.training.task4.service.factory.MedicinesAbstractParser;
-import by.training.task4.service.factory.MedicinesParserFactory;
+
+import java.task4.model.*;
+
+import main.java.task4.model.*;
+import main.java.task4.model.Package;
+import main.java.task4.service.factory.MedicinesAbstractParser;
+import main.java.task4.service.factory.MedicinesParserFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -34,7 +38,7 @@ public class MedicinsAbstractParserTest {
     public void buildSetMedicinsPositiveTest(String jaxp)
             throws ParserNotFoundException, IOException, SAXException, MedicineException {
         builder = factory.getParser(jaxp);
-        builder.buildSetMedicins(VALID_XML, "data//Medicins.xsd");
+        builder.buildSetMedicines(VALID_XML, "data//Medicins.xsd");
         Set<Medicine> actualMedicinsSet = builder.getMedicins();
         Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
     }
@@ -43,7 +47,7 @@ public class MedicinsAbstractParserTest {
     public void buildSetMedicinsNegativeTest(String jaxp)
             throws ParserNotFoundException, IOException, SAXException, MedicineException {
         builder = factory.getParser(jaxp);
-        Assert.assertFalse(builder.buildSetMedicins(INVALID_XML, "data//Medicins.xsd"));
+        Assert.assertFalse(builder.buildSetMedicines(INVALID_XML, "data//Medicins.xsd"));
     }
 
     @DataProvider(name = "medicinsBuilders")

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>XML parsers</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
             <tr>
                 <th>Registered by</th>
                 <th>Registration date</th>
-                <th>Expire date</th>
+                <th>Expiration date</th>
                 <th>Amount</th>
                 <th>Frequency</th>
                 <th>Size</th>
