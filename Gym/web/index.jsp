@@ -11,6 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <form action="ControllerServlet" method="get">
+    <input type="submit" value="GET"/>
+  </form>
   </body>
 </html>
