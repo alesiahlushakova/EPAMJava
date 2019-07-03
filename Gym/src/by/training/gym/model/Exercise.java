@@ -7,7 +7,7 @@ package by.training.gym.model;
 public class Exercise extends Entity{
     private String name;
     private String restrictions;
-    private String caloriesLost;
+    private int caloriesLost;
     private ExerciseLevel level;
     private String description;
     private int weightLoss;
@@ -47,6 +47,22 @@ public class Exercise extends Entity{
     }
 
     /**
+     * setter for exercise's restrictions.
+     * @param restrictions the exercise's restrictions.
+     */
+    public void setRestrictions(String restrictions) {
+        this.restrictions = restrictions;
+    }
+
+    /**
+     * getter for exercise's restrictions.
+     * @return the exercise's restrictions.
+     */
+    public String getRestrictions() {
+        return restrictions;
+    }
+
+    /**
      * setter for exercise's difficulty level.
      * @param level the exercise's difficulty level.
      */
@@ -57,7 +73,7 @@ public class Exercise extends Entity{
      * getter for calories lost.
      * @return the calories lost.
      */
-    public String getCaloriesLost() {
+    public int getCaloriesLost() {
         return caloriesLost;
     }
 
@@ -65,7 +81,7 @@ public class Exercise extends Entity{
      * setter for calories lost.
      * @param calories the calories lost.
      */
-    public void setCaloriesLost(String calories) {
+    public void setCaloriesLost(int calories) {
         this.caloriesLost = calories;
     }
     /**
@@ -96,7 +112,7 @@ public class Exercise extends Entity{
      * setter for count of exercise's sets.
      * @param setsCount the exercise's sets count.
      */
-    public void setSetsCount(int setsCount) {
+    public void setSets(int setsCount) {
         this.setsCount = setsCount;
     }
 
@@ -128,7 +144,7 @@ public class Exercise extends Entity{
      * setter for repeats count of exercise.
      * @param repeatsCount the repeats count of exercise.
      */
-    public void setRepeatsCount(int repeatsCount) {
+    public void setRepeats(int repeatsCount) {
         this.repeatsCount = repeatsCount;
     }
 
@@ -144,7 +160,7 @@ public class Exercise extends Entity{
      * setter for the day number.
      * @param dayNumber the day number.
      */
-    public void setDayNumber(int dayNumber) {
+    public void setDays(int dayNumber) {
         this.dayNumber = dayNumber;
     }
 

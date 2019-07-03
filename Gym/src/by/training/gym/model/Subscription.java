@@ -101,7 +101,7 @@ public class Subscription extends Entity{
      *
      * @return the int value.
      */
-    public int getIsPersonalTrainerNeed() {
+    public int getIsCoachNeeded() {
         return isPersonalTrainerNeed;
     }
 
@@ -223,8 +223,8 @@ public class Subscription extends Entity{
         if (!(o instanceof Subscription)) return false;
         Subscription that = (Subscription) o;
         return getClientId() == that.getClientId() &&
-                getIsPersonalTrainerNeed() == that.
-                        getIsPersonalTrainerNeed() &&
+                getIsCoachNeeded() == that.
+                        getIsCoachNeeded() &&
                 getIbm() == that.getIbm() &&
                 getIsPayed() == that.getIsPayed() &&
                 getPurchaseDate().equals(that.getPurchaseDate()) &&
