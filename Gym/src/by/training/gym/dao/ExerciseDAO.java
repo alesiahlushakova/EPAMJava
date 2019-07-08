@@ -26,7 +26,7 @@ public class ExerciseDAO extends AbstractDAO<Exercise> {
 
     private static final String INSERT_EXERCISE_INTO_PROGRAM = "INSERT INTO Complex " +
             "(ProgramID, ExerciseID, Days, WeightLoss, Sets, Repeats) VALUES (?,?,?,?,?,?)";
-
+    public static final String ID_COLUMN_LABEL = "ExerciseID";
     private static final String NAME_COLUMN_LABEL = "Name";
     private static final String LEVEL_COLUMN_LABEL = "FitnessLevel";
     private static final String RESTRICTIONS_COLUMN_LABEL = "Restrictions";

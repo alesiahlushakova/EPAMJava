@@ -35,6 +35,8 @@ public class UserDAO extends AbstractDAO<User>{
 
     private static final String SELECT_CLIENT_ID_AND_NAME_FOR_PROGRAM_CREATION_QUERY = "call SELECT_ACTUAL_CLIENT()";
 
+
+    public static final String ID_COLUMN_LABEL = "UserID";
     private static final String LOGIN_COLUMN_LABEL = "Login";
     private static final String PASSWORD_COLUMN_LABEL = "Password";
     private static final String ROLE_COLUMN_LABEL = "Role";

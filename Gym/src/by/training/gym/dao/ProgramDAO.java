@@ -23,7 +23,7 @@ public class ProgramDAO extends AbstractDAO<Program> {
     private static final String SELECT_LAST_INSERT_ID_QUERY = "SELECT LAST_INSERT_ID()";
     private static final String DELETE_EXERCISES_FROM_PROGRAM_QUERY = "DELETE FROM Complex WHERE ProgramID=?";
 
-
+    public static final String ID_COLUMN_LABEL = "ProgramID";
     private static final String COACH_ID_COLUMN_LABEL = "CoachID";
     private static final String CLIENT_ID_COLUMN_LABEL = "ClientID";
     private static final String START_DATE_COLUMN_LABEL = "StartDate";

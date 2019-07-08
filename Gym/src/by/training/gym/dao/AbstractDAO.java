@@ -15,7 +15,7 @@ import java.util.Map;
 public abstract class AbstractDAO<T extends Entity>
         implements DAO<T>{
 
-    public static final String ID_COLUMN_LABEL = "id";
+ //   public static final String ID_COLUMN_LABEL = "UserID";
 
     public static final int EMPTY_RESULT = 0;
     public static final String NULL_PARAMETER = "null";
@@ -30,8 +30,7 @@ public abstract class AbstractDAO<T extends Entity>
     protected Connection connection;
 
     /**
-     * Instantiates a new AbstractDAOImpl.
-     *
+     * constructor for a new AbstractDAO.
      * @param connection the connection to database.
      */
     protected AbstractDAO(Connection connection) {

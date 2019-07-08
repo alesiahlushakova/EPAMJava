@@ -30,6 +30,7 @@ public class SubscriptionDAO extends AbstractDAO<Subscription> {
     private static final String SELECT_PRICE_FOR_ORDER_QUERY = "SELECT Price FROM Pricing WHERE SubscriptionType=?";
     private static final String UPDATE_FEEDBACK_QUERY = "UPDATE Subscription SET Feedback=? WHERE SubscriptionID=?";
 
+    public static final String ID_COLUMN_LABEL = "SubscriptionID";
     private static final String CLIENT_ID_COLUMN_LABEL = "ClientID";
     private static final String PURCHASE_DATE_COLUMN_LABEL = "PurchaseDate";
     private static final String EXPIRATION_DATE_COLUMN_LABEL = "ExpirationDate";
