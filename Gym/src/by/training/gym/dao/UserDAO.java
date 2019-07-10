@@ -216,7 +216,7 @@ public class UserDAO extends AbstractDAO<User>{
      * @return the name of author.
      * @throws DAOException object if execution of query is failed.
      */
-    public String selectTrainingProgramAuthorName(int ProgramId) throws DAOException {
+    public String selectTrainingProgramAuthor(int ProgramId) throws DAOException {
         try (PreparedStatement preparedStatement
                      = prepareStatementForQuery(SELECT_PROGRAM_AUTHOR_NAME_QUERY,
                 ProgramId)) {

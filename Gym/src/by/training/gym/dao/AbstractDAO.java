@@ -13,10 +13,7 @@ import java.util.Map;
  * @param <T> The entity.
  */
 public abstract class AbstractDAO<T extends Entity>
-        implements DAO<T>{
-
- //   public static final String ID_COLUMN_LABEL = "UserID";
-
+        implements DAO<T> {
     public static final int EMPTY_RESULT = 0;
     public static final String NULL_PARAMETER = "null";
 
@@ -31,10 +28,10 @@ public abstract class AbstractDAO<T extends Entity>
 
     /**
      * constructor for a new AbstractDAO.
-     * @param connection the connection to database.
+     * @param newConnection the connection to database.
      */
-    protected AbstractDAO(Connection connection) {
-        this.connection = connection;
+    protected AbstractDAO(final Connection newConnection) {
+        this.connection = newConnection;
         this.commonQueries = initializeCommonQueries();
     }
 
@@ -72,12 +69,12 @@ public abstract class AbstractDAO<T extends Entity>
      * @throws DAOException object if execution of query is failed.
      */
     @Override
-    public T selectEntityById(int id) throws DAOException {
+    public T selectEntityById(final int id) throws DAOException {
         String sqlQuery = commonQueries.get(SELECT_BY_ID_QUERY_KEY);
 
-        try (PreparedStatement preparedStatement = prepareStatementForQuery(sqlQuery, id)) {
+        try (PreparedStatement preparedStatement
+                     = prepareStatementForQuery(sqlQuery, id)) {
             T entity = null;
-
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 entity = buildEntity(resultSet);
@@ -111,7 +108,7 @@ public abstract class AbstractDAO<T extends Entity>
      * @throws DAOException object if execution of query is failed.
      */
     @Override
-    public boolean insert(T entity) throws DAOException {
+    public boolean insert(final T entity) throws DAOException {
         String sqlQuery = commonQueries.get(INSERT_ENTITY_QUERY_KEY);
         List<String> parameters = getEntityParameters(entity);
 
@@ -126,7 +123,7 @@ public abstract class AbstractDAO<T extends Entity>
      * @throws DAOException object if execution of query is failed.
      */
     @Override
-    public boolean update(T entity) throws DAOException {
+    public boolean update(final T entity) throws DAOException {
         String sqlQuery = commonQueries.get(UPDATE_ENTITY_QUERY_KEY);
         List<String> parameters = getEntityParameters(entity);
 
