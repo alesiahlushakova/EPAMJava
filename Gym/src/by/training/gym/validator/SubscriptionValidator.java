@@ -75,9 +75,7 @@ public class SubscriptionValidator {
             return true;
         }
 
-        if (String.valueOf(ETERNITY).equals(durationValue)) {
-            return true;
-        }
+
 
         return false;
     }

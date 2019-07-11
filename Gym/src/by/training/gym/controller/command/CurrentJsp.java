@@ -1,5 +1,7 @@
 package by.training.gym.controller.command;
 
+import static by.training.gym.util.MessageManager.NONE_MESSAGE_KEY;
+
 /**
  * class describes page url.
  * @author Eugene Makarenko
@@ -28,10 +30,7 @@ public class CurrentJsp {
     public CurrentJsp(String pageUrl, boolean isRedirect) {
         this.pageUrl = pageUrl;
         this.isRedirect = isRedirect;
-        /**
-         * todo add messages.
-         */
-      //  this.messageKey = NONE_MESSAGE_KEY;
+        this.messageKey = NONE_MESSAGE_KEY;
     }
 
     /**

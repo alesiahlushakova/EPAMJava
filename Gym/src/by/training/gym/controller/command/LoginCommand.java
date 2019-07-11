@@ -9,6 +9,8 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import static by.training.gym.util.MessageManager.LOGIN_ERROR_MESSAGE_KEY;
+
 /**
  * log in command class.
  * @author AlesyaHlushakova
@@ -33,7 +35,7 @@ public class LoginCommand implements CommandAction {
 
             if (user == null) {
                 return new CurrentJsp(CurrentJsp.LOGIN_PAGE_PATH,
-                        false);
+                        false,  LOGIN_ERROR_MESSAGE_KEY);
             }
 
             HttpSession currentSession = request.getSession();

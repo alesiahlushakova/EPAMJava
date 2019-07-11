@@ -17,8 +17,5 @@ public enum SubscriptionType {
      * year sub.
      */
     YEAR,
-    /**
-     * golden enter.
-     */
-    ETERNITY;
+
 }

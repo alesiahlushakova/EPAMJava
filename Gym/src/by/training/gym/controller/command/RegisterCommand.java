@@ -10,6 +10,8 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import static by.training.gym.util.MessageManager.*;
+
 public class RegisterCommand implements CommandAction {
 
     private static final Logger LOGGER = LogManager.getLogger(RegisterCommand.class);
@@ -33,7 +35,7 @@ public class RegisterCommand implements CommandAction {
             boolean isLoginNotUnique = userService.checkUserLoginForUniqueness(login);
             if (isLoginNotUnique) {
                 return new CurrentJsp(CurrentJsp.REGISTER_PAGE_PATH,
-                        false);
+                        false, LOGIN_NOT_AVAILABLE_MESSAGE_KEY);
             }
 
             UserValidator userDataValidator = new UserValidator();
@@ -41,7 +43,7 @@ public class RegisterCommand implements CommandAction {
                     firstName, lastName, telephone);
             if (!isUserDataValid) {
                 return new CurrentJsp(CurrentJsp.REGISTER_PAGE_PATH,
-                        false);
+                        false, INVALID_INPUT_DATA_MESSAGE_KEY);
             }
 
             password = DigestUtils.shaHex(password);
@@ -49,13 +51,14 @@ public class RegisterCommand implements CommandAction {
                     firstName, lastName, telephone);
             if (!isOperationSuccessful) {
                 return new CurrentJsp(CurrentJsp.REGISTER_PAGE_PATH,
-                        false);
+                        false, REGISTRATION_FAILED_MESSAGE_KEY);
             }
 
             HttpSession session = request.getSession();
             session.setAttribute(IS_RECORD_INSERTED, true);
 
-            return new CurrentJsp(CurrentJsp.LOGIN_PAGE_PATH, false);
+            return new CurrentJsp(CurrentJsp.LOGIN_PAGE_PATH, false,
+                    REGISTRATION_SUCCESSFUL_MESSAGE_KEY);
 
         } catch (ServiceException exception) {
             LOGGER.error(exception.getMessage(), exception);

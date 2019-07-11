@@ -1,5 +1,6 @@
 package by.training.gym.controller.command;
 
+import by.training.gym.util.MessageManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -7,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import static by.training.gym.controller.command.CommandAction.COMMAND_PARAMETER;
 import static by.training.gym.controller.command.CommandAction.MESSAGE_ATTRIBUTE;
+import static by.training.gym.util.MessageManager.COMMAND_ERROR_MESSAGE_KEY;
 
 /**
  * class for creation of the commands.
@@ -36,11 +38,9 @@ public class CommandFactory {
             currentCommand = currentType.getCurrentCommand();
         } catch (IllegalArgumentException exception) {
             LOGGER.warn(String.format("Command - %s, caused the exception.", action) + exception);
-            /**
-             * todo write message class.
-             */
-           // String message = String.format("%s %s", action, MessageManager.getProperty(COMMAND_ERROR_MESSAGE_KEY));
-            //request.setAttribute(MESSAGE_ATTRIBUTE, message);
+
+            String message = String.format("%s %s", action, MessageManager.getProperty(COMMAND_ERROR_MESSAGE_KEY));
+            request.setAttribute(MESSAGE_ATTRIBUTE, message);
         }
         return currentCommand;
     }

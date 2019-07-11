@@ -68,7 +68,7 @@ public class SubscriptionService {
      * @return true if operation was successful and false otherwise.
      * @throws ServiceException object if execution of method is failed.
      */
-    public boolean payOrder(Subscription subscription) throws ServiceException {
+    public boolean paySubscription(Subscription subscription) throws ServiceException {
         ConnectionController connectionManager = new ConnectionController();
         try {
             connectionManager.startTransaction();
