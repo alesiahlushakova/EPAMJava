@@ -12,11 +12,11 @@ public interface CommandAction {
      * Parameters.
      */
     String COMMAND_PARAMETER = "command";
-    String LOGIN_PARAMETER = "Login";
-    String PASSWORD_PARAMETER = "Password";
-    String FIRST_NAME_PARAMETER = "Firstname";
-    String LAST_NAME_PARAMETER = "Lastname";
-    String TELEPHONE_PARAMETER = "Telephone";
+    String LOGIN_PARAMETER = "login";
+    String PASSWORD_PARAMETER = "password";
+    String FIRST_NAME_PARAMETER = "first_name";
+    String LAST_NAME_PARAMETER = "last_name";
+    String TELEPHONE_PARAMETER = "telephone";
     String PAGE_PARAMETER = "page";
     String CLIENT_ID_PARAMETER = "client_id";
     String FEEDBACK_PARAMETER = "feedback";

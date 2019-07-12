@@ -19,7 +19,7 @@ public class CommandFactory {
     private static final Logger LOGGER = LogManager.getLogger(CommandFactory.class);
 
     /**
-     * This method define commands and return it's instance.
+     * This method defines commands and return it's instance.
      *
      * @param request the HttpServletRequest request.
      * @return the defined commands.

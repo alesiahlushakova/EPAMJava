@@ -3,6 +3,7 @@ package by.training.gym.controller;
 import by.training.gym.controller.command.CommandAction;
 import by.training.gym.controller.command.CommandFactory;
 import by.training.gym.controller.command.CurrentJsp;
+import by.training.gym.util.MessageManager;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import java.io.PrintWriter;
 import java.sql.*;
 
 import static by.training.gym.controller.command.CommandAction.MESSAGE_ATTRIBUTE;
+import static by.training.gym.util.MessageManager.NONE_MESSAGE_KEY;
 
 @WebServlet("/ControllerServlet")
 public class ControllerServlet extends javax.servlet.http.HttpServlet {
@@ -76,10 +78,10 @@ public class ControllerServlet extends javax.servlet.http.HttpServlet {
             throws ServletException, IOException {
         String url = page.getPageUrl();
         String messageKey = page.getMessageKey();
-//        if (!NONE_MESSAGE_KEY.equals(messageKey)) {
-//            String message = MessageManager.getProperty(messageKey);
-//            request.setAttribute(MESSAGE_ATTRIBUTE, message);
-//        }
+        if (!NONE_MESSAGE_KEY.equals(messageKey)) {
+            String message = MessageManager.getProperty(messageKey);
+            request.setAttribute(MESSAGE_ATTRIBUTE, message);
+        }
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(url);
         requestDispatcher.forward(request, response);
     }

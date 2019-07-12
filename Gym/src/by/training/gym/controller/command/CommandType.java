@@ -23,6 +23,11 @@ public enum CommandType {
         {
             this.command = new RegisterCommand();
         }
+    },
+    COMMON_CHANGE_LANGUAGE {
+        {
+            this.command = new ChangeLanguageCommand();
+        }
     };
 /**
  * todo add commands.
