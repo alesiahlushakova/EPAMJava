@@ -3,9 +3,7 @@ package test.by.training.task4service.parsing;
 
 import main.java.task4.exception.MedicineException;
 import main.java.task4.exception.ParserNotFoundException;
-import by.training.task4.model.*;
 
-import java.task4.model.*;
 
 import main.java.task4.model.*;
 import main.java.task4.model.Package;
