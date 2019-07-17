@@ -88,7 +88,7 @@ public class Subscription extends Entity{
     }
 
     /**
-     * setter for order's sub type.
+     * setter for sub's sub type.
      *
      * @param subType the sub type.
      */

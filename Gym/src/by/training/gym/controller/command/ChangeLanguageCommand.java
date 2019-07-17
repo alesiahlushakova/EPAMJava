@@ -1,12 +1,12 @@
 package by.training.gym.controller.command;
 
-import by.training.gym.util.MessageManager;
+import by.training.gym.view.MessageManager;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.jstl.core.Config;
 import java.util.Locale;
 
-import static by.training.gym.util.MessageManager.DEFAULT_LOCALE;
+import static by.training.gym.view.MessageManager.DEFAULT_LOCALE;
 
 /**
  * command that changes language.

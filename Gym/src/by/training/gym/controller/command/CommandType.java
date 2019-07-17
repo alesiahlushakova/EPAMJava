@@ -36,7 +36,7 @@ public enum CommandType {
     /**
      * client commands.
      */
-    SHOW_CLIENT_SUBSCRIPTION {
+    SHOW_CLIENT_SUBSCRIPTIONS {
         {
             this.command = new ShowClientSubscriptionCommand();
         }

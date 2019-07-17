@@ -3,7 +3,7 @@ package by.training.gym.service;
 import by.training.gym.dao.*;
 import by.training.gym.model.Exercise;
 import by.training.gym.model.Program;
-import by.training.gym.validator.ProgramValidator;
+import by.training.gym.service.validator.ProgramValidator;
 
 import java.sql.Date;
 import java.util.*;

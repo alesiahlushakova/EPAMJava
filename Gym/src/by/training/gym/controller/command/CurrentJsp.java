@@ -1,6 +1,6 @@
 package by.training.gym.controller.command;
 
-import static by.training.gym.util.MessageManager.NONE_MESSAGE_KEY;
+import static by.training.gym.view.MessageManager.NONE_MESSAGE_KEY;
 
 /**
  * class describes page url.

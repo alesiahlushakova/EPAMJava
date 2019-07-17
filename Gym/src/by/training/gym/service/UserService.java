@@ -5,7 +5,7 @@ import by.training.gym.dao.DAOException;
 import by.training.gym.dao.UserDAO;
 import by.training.gym.model.User;
 import by.training.gym.model.UserRole;
-import by.training.gym.validator.UserValidator;
+import by.training.gym.service.validator.UserValidator;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.util.HashMap;

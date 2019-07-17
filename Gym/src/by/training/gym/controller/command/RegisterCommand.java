@@ -2,7 +2,7 @@ package by.training.gym.controller.command;
 
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.UserService;
-import by.training.gym.validator.UserValidator;
+import by.training.gym.service.validator.UserValidator;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import static by.training.gym.util.MessageManager.*;
+import static by.training.gym.view.MessageManager.*;
 
 public class RegisterCommand implements CommandAction {
 

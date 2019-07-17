@@ -6,7 +6,7 @@ import by.training.gym.dao.ExerciseDAO;
 import by.training.gym.dao.ProgramDAO;
 import by.training.gym.model.Exercise;
 import by.training.gym.model.ExerciseLevel;
-import by.training.gym.validator.ExerciseValidator;
+import by.training.gym.service.validator.ExerciseValidator;
 
 import java.util.*;
 

@@ -5,7 +5,7 @@ import by.training.gym.dao.DAOException;
 import by.training.gym.dao.SubscriptionDAO;
 import by.training.gym.model.Subscription;
 import by.training.gym.model.SubscriptionType;
-import by.training.gym.validator.SubscriptionValidator;
+import by.training.gym.service.validator.SubscriptionValidator;
 
 import java.math.BigDecimal;
 import java.sql.Date;

@@ -1,6 +1,6 @@
 package by.training.gym.controller.command;
 
-import by.training.gym.util.MessageManager;
+import by.training.gym.view.MessageManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import static by.training.gym.controller.command.CommandAction.COMMAND_PARAMETER;
 import static by.training.gym.controller.command.CommandAction.MESSAGE_ATTRIBUTE;
-import static by.training.gym.util.MessageManager.COMMAND_ERROR_MESSAGE_KEY;
+import static by.training.gym.view.MessageManager.COMMAND_ERROR_MESSAGE_KEY;
 
 /**
  * class for creation of the commands.
