@@ -22,8 +22,7 @@
 
 <html>
 <head>
-    <meta charset="UTF-8">
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
     <title>${pageScope.title}</title>
 </head>
 <body class="page">
@@ -33,7 +32,7 @@
 </div>
 <p class="error">${requestScope.message}</p>
 <div class="wrapper_form">
-    <form name="loginForm" method="POST" action="${pageContext.request.contextPath}/ControllerServlet">
+    <form name="loginForm" method="POST" action="${pageContext.request.contextPath}/controller">
         <input type="hidden" name="command" value="common_login"/>
         <p><label>${pageScope.enter_login}<input class="log_input" type="text" name="login" value=""/></label></p>
         <p><label>${pageScope.enter_password}<input class="log_input" type="password" name="password" value=""/></label></p>

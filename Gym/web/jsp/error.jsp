@@ -9,7 +9,7 @@
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isErrorPage="true" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <fmt:bundle basename="page_content">
     <fmt:message key="error.title" var="title"/>
     <fmt:message key="error.request" var="request_message"/>
@@ -20,11 +20,11 @@
 
 <html>
 <head>
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
     <title>${pageScope.title}</title>
 </head>
 <body class="page">
-
+<tag:userMenu/>
 <div class="error_wrapper">
     <p>${pageScope.request_message} ${pageContext.errorData.requestURI} is failed</p>
     <p>${pageScope.servlet_message} ${pageContext.errorData.servletName}</p>

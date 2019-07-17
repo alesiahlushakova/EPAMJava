@@ -19,7 +19,7 @@
 
 <html>
 <head>
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
     <title>${pageScope.title}</title>
 </head>
 <body class="page">
@@ -27,18 +27,18 @@
 <p class="error">${requestScope.message}</p>
 <div class="wrapper_content">
     <div class="wrapper_content-item  clearfix">
-
+        <img src="${pageContext.request.contextPath}/images/girl.jpg" alt="" width="300px" height="200px">
         <p>
             ${pageScope.info}
         </p>
     </div>
     <div class="wrapper_content-item clearfix">
-
+        <img src="${pageContext.request.contextPath}/images/workout-tips.jpg" alt="" width="300px" height="200px">
         <p>${pageScope.news}
         </p>
     </div>
     <div class="wrapper_content-item  clearfix">
-
+        <img src="${pageContext.request.contextPath}/images/images.jpg" alt="" width="300px" height="200px">
         <p>
             ${pageScope.promotion}
         </p>

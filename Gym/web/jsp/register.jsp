@@ -28,14 +28,14 @@
 
 <html>
 <head>
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
     <title>${pageScope.title}</title>
 </head>
 <body class="page">
 <tag:userMenu/>
 <span class="error">${requestScope.message}</span>
 <div class="reg_form">
-    <form id="reg" name="RegisterForm" method="POST" action="${pageContext.request.contextPath}/ControllerServlet">
+    <form id="reg" name="RegisterForm" method="POST" action="${pageContext.request.contextPath}/controller">
         <input type="hidden" name="command" value="common_register"/>
         <p><span>${pageScope.login}</span>
             <input id="login" title="${pageScope.title_login}" type="text" name="login" value="" onkeyup="checkLogin();"/>

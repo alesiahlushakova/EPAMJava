@@ -4,7 +4,7 @@ import static by.training.gym.util.MessageManager.NONE_MESSAGE_KEY;
 
 /**
  * class describes page url.
- * @author Eugene Makarenko
+
  */
 public class CurrentJsp {
 
@@ -16,7 +16,13 @@ public class CurrentJsp {
     public static final String ERROR_PAGE_PATH = "/jsp/error.jsp";
     public static final String REGISTER_PAGE_PATH = "/jsp/register.jsp";
 
+    /**
+     * Client's pages.
+     */
 
+    public static final String PREPARE_ORDER_PAGE_PATH = "/jsp/client/prepare_subscription.jsp";
+    public static final String SHOW_CLIENT_ORDERS_PAGE_PATH = "/jsp/client/show_client_subscriptions.jsp";
+    public static final String DESCRIBE_TRAINING_PROGRAM_PAGE_PATH = "/jsp/client/describe_program.jsp";
 
     private String pageUrl;
     private boolean isRedirect;

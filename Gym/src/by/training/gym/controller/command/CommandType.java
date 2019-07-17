@@ -1,5 +1,9 @@
 package by.training.gym.controller.command;
 
+import by.training.gym.controller.command.client.CheckActualSubscriptionCommand;
+import by.training.gym.controller.command.client.ShowClientProgramCommand;
+import by.training.gym.controller.command.client.ShowClientSubscriptionCommand;
+
 /**
  * class for command types.
  * @author AlesyaHlushakova
@@ -27,6 +31,24 @@ public enum CommandType {
     COMMON_CHANGE_LANGUAGE {
         {
             this.command = new ChangeLanguageCommand();
+        }
+    },
+    /**
+     * client commands.
+     */
+    SHOW_CLIENT_SUBSCRIPTION {
+        {
+            this.command = new ShowClientSubscriptionCommand();
+        }
+    },
+    SHOW_CLIENT_PROGRAM {
+        {
+            this.command = new ShowClientProgramCommand();
+        }
+    },
+    CHECK_ACTUAL_SUBSCRIPTION {
+        {
+            this.command = new CheckActualSubscriptionCommand();
         }
     };
 /**

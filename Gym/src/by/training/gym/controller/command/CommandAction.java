@@ -47,7 +47,7 @@ public interface CommandAction {
     String CURRENT_PAGE_INDEX_ATTRIBUTE = "pageIndex";
     String SUBSCRIPTION_ID_ATTRIBUTE = "SubscriptionId";
     String SUBSCRIPTION_ATTRIBUTE = "Subscription";
-    String PROGRAM_ATTRIBUTE = "Program";
+    String PROGRAM_ATTRIBUTE = "program";
     String DAYS_AND_EXERCISES_ATTRIBUTE = "daysAndExercises";
     String NAME_ATTRIBUTE = "name";
     String EXERCISES_ATTRIBUTE = "exercises";

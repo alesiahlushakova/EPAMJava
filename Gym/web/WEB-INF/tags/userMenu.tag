@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 
 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/header.css">
 
 <fmt:bundle basename="page_content">
     <fmt:message key="menu.title" var="title"/>
@@ -29,13 +30,13 @@
         <ul>
             <li>${pageScope.language} </li>
             <li>
-                <a href="${pageContext.request.contextPath}/ControllerServlet?command=common_change_language&locale=ru">RU</a>
+                <a href="${pageContext.request.contextPath}/controller?command=common_change_language&locale=ru">RU</a>
             </li>
             <li>
-                <a href="${pageContext.request.contextPath}/ControllerServlet?command=common_change_language&locale=by">BY</a>
+                <a href="${pageContext.request.contextPath}/controller?command=common_change_language&locale=by">BY</a>
             </li>
             <li>
-                <a href="${pageContext.request.contextPath}/ControllerServlet?command=common_change_language&locale=en">EN</a>
+                <a href="${pageContext.request.contextPath}/controller?command=common_change_language&locale=en">EN</a>
             </li>
         </ul>
     </div>
@@ -51,9 +52,54 @@
             <c:otherwise>
                 <span class="hello_text">${pageScope.hello} ${sessionScope.user.firstName} ${sessionScope.user.lastName}</span>
                 <a class="register_login_a"
-                   href="${pageContext.request.contextPath}/ControllerServlet?command=common_logout">${pageScope.logout}</a>
+                   href="${pageContext.request.contextPath}/controller?command=common_logout">${pageScope.logout}</a>
             </c:otherwise>
         </c:choose>
     </div>
 </header>
 
+<div class="user_menu">
+    <ul>
+        <c:if test="${sessionScope.user != null}">
+            <li><a href="${pageContext.request.contextPath}/jsp/main.jsp"><i class="fa fa-home"
+                                                                                    aria-hidden="true"></i></a></li>
+            <c:choose>
+                <c:when test="${sessionScope.user.userRole == 'COACH'}">
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=trainer_prepare_training_program_creation">${pageScope.create_training_program}</a>
+                    </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/jsp/coach/create_exercise.jsp">${pageScope.create_exercise}</a>
+                    </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=trainer_show_personal_clients">${pageScope.show_personal_clients}</a>
+                    </li>
+                </c:when>
+                <c:when test="${sessionScope.user.userRole == 'ADMIN'}">
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=admin_show_all_clients">${pageScope.show_clients}</a>
+                    </li>
+                    <li>
+                        <form id="find" name="FindForm" method="POST"
+                              action="${pageContext.request.contextPath}/controller">
+                            <input type="hidden" name="command" value="admin_find_client_by_name"/>
+                            <label>${pageScope.find_client} <input type="text" name="name" value=""/></label>
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                    </li>
+                </c:when>
+                <c:otherwise>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
+                    </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=show_client_program&client_id=${sessionScope.user.id}">${pageScope.my_training_program}</a>
+                    </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=check_actual_subscription&client_id=${sessionScope.user.id}">${pageScope.make_order}</a>
+                    </li>
+                </c:otherwise>
+            </c:choose>
+        </c:if>
+    </ul>
+</div>
