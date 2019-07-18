@@ -12,7 +12,7 @@ public class Subscription extends Entity{
     private Date purchaseDate;
     private Date expirationDate;
     private SubscriptionType subscriptionType;
-    private int isPersonalTrainerNeed;
+    private int isCoachNeeded;
     private int ibm;
     private BigDecimal price;
     private int isPayed;
@@ -97,21 +97,21 @@ public class Subscription extends Entity{
     }
 
     /**
-     * getter for int value of variable isPersonalTrainerNeed.
+     * getter for int value of variable isCoachNeeded.
      *
      * @return the int value.
      */
     public int getIsCoachNeeded() {
-        return isPersonalTrainerNeed;
+        return isCoachNeeded;
     }
 
     /**
-     * setter for int value of variable isPersonalTrainerNeed.
+     * setter for int value of variable isCoachNeeded.
      *
      * @param isPersonalTrainerNeed the int value.
      */
-    public void setIsPersonalTrainerNeed(int isPersonalTrainerNeed) {
-        this.isPersonalTrainerNeed = isPersonalTrainerNeed;
+    public void setCoachNeeded(int isPersonalTrainerNeed) {
+        this.isCoachNeeded = isPersonalTrainerNeed;
     }
 
     /**
@@ -202,7 +202,7 @@ public class Subscription extends Entity{
                 ? expirationDate.hashCode() : 0);
         result = 31 * result + (subscriptionType != null
                 ? subscriptionType.hashCode() : 0);
-        result = 31 * result + isPersonalTrainerNeed;
+        result = 31 * result + isCoachNeeded;
         result = 31 * result + (price != null
                 ? price.hashCode() : 0);
         result = 31 * result + isPayed;
@@ -246,7 +246,7 @@ public class Subscription extends Entity{
                 ", purchaseDate=" + purchaseDate +
                 ", endDate=" + expirationDate +
                 ", duration=" + subscriptionType +
-                ", isPersonalTrainerNeed=" + isPersonalTrainerNeed +
+                ", isCoachNeeded=" + isCoachNeeded +
                 ", price=" + price +
                 ", ibm=" + ibm +
                 ", isPayed=" + isPayed +

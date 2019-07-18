@@ -1,8 +1,6 @@
 package by.training.gym.controller.command;
 
-import by.training.gym.controller.command.client.CheckActualSubscriptionCommand;
-import by.training.gym.controller.command.client.ShowClientProgramCommand;
-import by.training.gym.controller.command.client.ShowClientSubscriptionCommand;
+import by.training.gym.controller.command.client.*;
 
 /**
  * class for command types.
@@ -49,6 +47,16 @@ public enum CommandType {
     CHECK_ACTUAL_SUBSCRIPTION {
         {
             this.command = new CheckActualSubscriptionCommand();
+        }
+    },
+    CLIENT_ADD_FEEDBACK {
+        {
+            this.command = new AddFeedbackCommand();
+        }
+    },
+    CLIENT_PREPARE_SUBSCRIPTION {
+        {
+            this.command = new PrepareSubscriptionCommand();
         }
     };
 /**

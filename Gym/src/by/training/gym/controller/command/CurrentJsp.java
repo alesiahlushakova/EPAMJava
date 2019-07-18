@@ -23,6 +23,8 @@ public class CurrentJsp {
     public static final String PREPARE_ORDER_PAGE_PATH = "/jsp/client/prepare_subscription.jsp";
     public static final String SHOW_CLIENT_ORDERS_PAGE_PATH = "/jsp/client/show_client_subscriptions.jsp";
     public static final String DESCRIBE_TRAINING_PROGRAM_PAGE_PATH = "/jsp/client/describe_program.jsp";
+    public static final String ADD_FEEDBACK_PAGE_PATH = "/jsp/client/add_feedback.jsp";
+    public static final String PAY_SUBSCRIPTION_PAGE_PATH = "/jsp/client/pay_subscription.jsp";
 
     private String pageUrl;
     private boolean isRedirect;

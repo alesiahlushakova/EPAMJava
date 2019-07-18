@@ -21,6 +21,7 @@ public interface CommandAction {
     String CLIENT_ID_PARAMETER = "client_id";
     String FEEDBACK_PARAMETER = "feedback";
     String PURCHASE_DATE_PARAMETER = "start_date";
+    String IBM_PARAMETER = "ibm";
     String DURATION_PARAMETER = "duration";
     String IS_PERSONAL_TRAINER_NEED_PARAMETER = "is_personal_trainer_need";
     String EXERCISE_ID_PARAMETER = "exercise_id";
@@ -45,8 +46,8 @@ public interface CommandAction {
     String LIST_ATTRIBUTE = "list";
     String NUMBER_OF_PAGE_ATTRIBUTE = "numberOfPages";
     String CURRENT_PAGE_INDEX_ATTRIBUTE = "pageIndex";
-    String SUBSCRIPTION_ID_ATTRIBUTE = "SubscriptionId";
-    String SUBSCRIPTION_ATTRIBUTE = "Subscription";
+    String SUBSCRIPTION_ID_ATTRIBUTE = "subscriptionId";
+    String SUBSCRIPTION_ATTRIBUTE = "subscription";
     String PROGRAM_ATTRIBUTE = "program";
     String DAYS_AND_EXERCISES_ATTRIBUTE = "daysAndExercises";
     String NAME_ATTRIBUTE = "name";

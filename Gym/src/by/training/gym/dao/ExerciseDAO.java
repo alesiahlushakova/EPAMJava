@@ -20,9 +20,9 @@ public class ExerciseDAO extends AbstractDAO<Exercise> {
     private static final String INSERT_ENTITY_QUERY = "INSERT INTO Exercises (Name, Restrictions, CaloriesLost, FitnessLevel, Description) VALUES(?,?,?,?,?)";
     private static final String UPDATE_ENTITY_QUERY = "UPDATE Exercises SET Name=?, Restrictions=?, CaloriesLost=?, FitnessLevel=?, Description=? WHERE ExerciseID=?";
 
-    private static final String SELECT_EXERCISE_FROM_PROGRAM_QUERY = "SELECT ExerciseID, Name,  Restrictions, CaloriesLost, FitnessLevel, Description, Days, WeightLoss, Sets, Repeats" +
-            " FROM Exercises LEFT OUTER JOIN Complex  " +
-            "ON Exercises.ExerciseID = Complex.ExerciseID WHERE ProgramID=? ORDER BY Days ASC";
+    private static final String SELECT_EXERCISE_FROM_PROGRAM_QUERY = "SELECT ex.ExerciseID, Name,  Restrictions, CaloriesLost, FitnessLevel, Description, Days, WeightLoss, Sets, Repeats" +
+            " FROM Exercises AS ex LEFT OUTER JOIN Complex  " +
+            "ON ex.ExerciseID = Complex.ExerciseID WHERE ProgramID=? ORDER BY Days ASC";
 
     private static final String INSERT_EXERCISE_INTO_PROGRAM = "INSERT INTO Complex " +
             "(ProgramID, ExerciseID, Days, WeightLoss, Sets, Repeats) VALUES (?,?,?,?,?,?)";

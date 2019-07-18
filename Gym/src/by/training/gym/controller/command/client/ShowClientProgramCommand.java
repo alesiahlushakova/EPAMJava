@@ -17,7 +17,13 @@ import java.util.TreeMap;
 import static by.training.gym.controller.command.CurrentJsp.DESCRIBE_TRAINING_PROGRAM_PAGE_PATH;
 import static by.training.gym.view.MessageManager.INFORMATION_NOT_FOUND_MESSAGE_KEY;
 
+/**
+ * command shows client program.
+ * @author AlesyaHlushakova
+ */
+
 public class ShowClientProgramCommand implements CommandAction {
+
     private static final Logger LOGGER = LogManager.getLogger(ShowClientProgramCommand.class);
     /**
      * overrides commands to show client'sprogram.

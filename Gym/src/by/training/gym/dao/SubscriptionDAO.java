@@ -107,7 +107,7 @@ public class SubscriptionDAO extends AbstractDAO<Subscription> {
             ResultSet resultSet = preparedStatement.executeQuery();
             BigDecimal price = null;
             if (resultSet.next()) {
-                price = resultSet.getBigDecimal(IBM_COLUMN_LABEL);
+                price = resultSet.getBigDecimal(PRICE_COLUMN_LABEL);
             }
 
             return price;
@@ -218,7 +218,7 @@ public class SubscriptionDAO extends AbstractDAO<Subscription> {
             order.setIbm(ibm);
 
             int isPersonalTrainerNeed = resultSet.getInt(IS_COACH_NEEDED);
-            order.setIsPersonalTrainerNeed(isPersonalTrainerNeed);
+            order.setCoachNeeded(isPersonalTrainerNeed);
 
 
 

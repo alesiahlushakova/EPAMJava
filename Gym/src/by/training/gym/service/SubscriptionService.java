@@ -100,7 +100,7 @@ public class SubscriptionService {
      * @param purchaseDateValue          the purchase date.
      * @param durationValue              the duration.
      * @param isPersonalTrainerNeedValue is personal trainer need int value.
-     * @return Order object.
+     * @return Subscription object.
      * @throws ServiceException object if execution of method is failed.
      */
     public Subscription prepareSubscription(int clientId, String purchaseDateValue, String durationValue, String ibmValue, String isPersonalTrainerNeedValue) throws ServiceException {
@@ -129,14 +129,14 @@ public class SubscriptionService {
             subscription.setEndDate(expirationDate);
             subscription.setIbm(ibm);
             subscription.setSubscriptionType(duration);
-            subscription.setIsPersonalTrainerNeed(isPersonalTrainerNeed);
+            subscription.setCoachNeeded(isPersonalTrainerNeed);
             subscription.setPrice(price);
             subscription.setIsPayed(NOT_PAYED_ORDER_STATUS);
             subscription.setFeedback(null);
 
             return subscription;
         } catch (DAOException exception) {
-            throw new ServiceException("Exception during prepare order operation.", exception);
+            throw new ServiceException("Exception during prepare subscription operation.", exception);
         }
     }
 
