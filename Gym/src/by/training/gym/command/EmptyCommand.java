@@ -1,4 +1,4 @@
-package by.training.gym.controller.command;
+package by.training.gym.command;
 
 import javax.servlet.http.HttpServletRequest;
 

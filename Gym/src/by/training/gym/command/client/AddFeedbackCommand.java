@@ -1,8 +1,7 @@
-package by.training.gym.controller.command.client;
+package by.training.gym.command.client;
 
-import by.training.gym.controller.command.CommandAction;
-import by.training.gym.controller.command.CurrentJsp;
-import by.training.gym.model.Subscription;
+import by.training.gym.command.CommandAction;
+import by.training.gym.command.CurrentJsp;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
 import org.apache.logging.log4j.LogManager;
@@ -11,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import static by.training.gym.controller.command.CurrentJsp.ADD_FEEDBACK_PAGE_PATH;
+import static by.training.gym.command.CurrentJsp.ADD_FEEDBACK_PAGE_PATH;
 import static by.training.gym.view.MessageManager.FEEDBACK_WAS_ADDED_MESSAGE_KEY;
 import static by.training.gym.view.MessageManager.FEEDBACK_WAS_NOT_ADDED_MESSAGE_KEY;
 

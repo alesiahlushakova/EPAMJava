@@ -1,7 +1,7 @@
-package by.training.gym.controller.command.client;
+package by.training.gym.command.client;
 
-import by.training.gym.controller.command.CommandAction;
-import by.training.gym.controller.command.CurrentJsp;
+import by.training.gym.command.CommandAction;
+import by.training.gym.command.CurrentJsp;
 import by.training.gym.model.Subscription;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-import static by.training.gym.controller.command.CurrentJsp.SHOW_CLIENT_ORDERS_PAGE_PATH;
+import static by.training.gym.command.CurrentJsp.SHOW_CLIENT_ORDERS_PAGE_PATH;
 import static by.training.gym.view.MessageManager.INFORMATION_NOT_FOUND_MESSAGE_KEY;
 
 /**

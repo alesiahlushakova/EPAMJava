@@ -1,4 +1,4 @@
-package by.training.gym.controller.command;
+package by.training.gym.command;
 
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.UserService;

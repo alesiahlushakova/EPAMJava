@@ -1,6 +1,6 @@
-package by.training.gym.controller.command;
+package by.training.gym.command;
 
-import by.training.gym.controller.command.client.*;
+import by.training.gym.command.client.*;
 
 /**
  * class for command types.
@@ -34,7 +34,7 @@ public enum CommandType {
     /**
      * client commands.
      */
-    SHOW_CLIENT_SUBSCRIPTIONS {
+    CLIENT_SHOW_CLIENT_SUBSCRIPTIONS {
         {
             this.command = new ShowClientSubscriptionCommand();
         }
@@ -57,6 +57,11 @@ public enum CommandType {
     CLIENT_PREPARE_SUBSCRIPTION {
         {
             this.command = new PrepareSubscriptionCommand();
+        }
+    },
+    CLIENT_PAY_SUBSCRIPTION {
+        {
+            this.command = new PaySubscriptionCommand();
         }
     };
 /**

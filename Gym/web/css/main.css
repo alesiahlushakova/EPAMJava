@@ -460,7 +460,11 @@
 
 .training_program_description {
     font-family: 'Caviar', serif;
-    font-size: 15px;
+    font-size: 20px;
+    background-color: rgba(240, 23, 192, 0.44);
+    text-align: center;
+    border-radius: 8px;
+    margin: 0 auto;
 }
 
 .training_program_description_top {

@@ -1,7 +1,7 @@
-package by.training.gym.controller.command.client;
+package by.training.gym.command.client;
 
-import by.training.gym.controller.command.CommandAction;
-import by.training.gym.controller.command.CurrentJsp;
+import by.training.gym.command.CommandAction;
+import by.training.gym.command.CurrentJsp;
 import by.training.gym.model.Subscription;
 import by.training.gym.model.User;
 import by.training.gym.service.ServiceException;
@@ -13,8 +13,8 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import static by.training.gym.controller.command.CurrentJsp.PAY_SUBSCRIPTION_PAGE_PATH;
-import static by.training.gym.controller.command.CurrentJsp.PREPARE_ORDER_PAGE_PATH;
+import static by.training.gym.command.CurrentJsp.PAY_SUBSCRIPTION_PAGE_PATH;
+import static by.training.gym.command.CurrentJsp.PREPARE_ORDER_PAGE_PATH;
 import static by.training.gym.view.MessageManager.INVALID_INPUT_DATA_MESSAGE_KEY;
 
 public class PrepareSubscriptionCommand implements CommandAction {

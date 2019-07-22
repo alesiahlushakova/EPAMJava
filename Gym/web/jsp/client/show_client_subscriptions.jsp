@@ -92,7 +92,7 @@
                     <c:choose>
                         <c:when test="${currentRole eq client}">
                             <c:choose>
-                                <c:when test="${order.feedback == null && order.endDate < now}">
+                                <c:when test="${order.feedback == null && order.expirationDate < now}">
                                     <c:set var="orderId" scope="session" value="${order.id}"/>
                                     <a href="${pageContext.request.contextPath}/jsp/client/add_feedback.jsp">${pageScope.leave_feedback}
                                         <i class="fa fa-plus-circle" aria-hidden="true"></i></a>

@@ -1,7 +1,7 @@
-package by.training.gym.controller.command.client;
+package by.training.gym.command.client;
 
-import by.training.gym.controller.command.CommandAction;
-import by.training.gym.controller.command.CurrentJsp;
+import by.training.gym.command.CommandAction;
+import by.training.gym.command.CurrentJsp;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
 import org.apache.logging.log4j.LogManager;

@@ -16,5 +16,5 @@ public enum ExerciseLevel {
     /**
      * pro level.
      */
-    EXPERT;
+    EXPERT
 }

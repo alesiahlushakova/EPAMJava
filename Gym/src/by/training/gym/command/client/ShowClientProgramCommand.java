@@ -1,7 +1,7 @@
-package by.training.gym.controller.command.client;
+package by.training.gym.command.client;
 
-import by.training.gym.controller.command.CommandAction;
-import by.training.gym.controller.command.CurrentJsp;
+import by.training.gym.command.CommandAction;
+import by.training.gym.command.CurrentJsp;
 import by.training.gym.model.Exercise;
 import by.training.gym.model.Program;
 import by.training.gym.service.ProgramService;
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.TreeMap;
 
-import static by.training.gym.controller.command.CurrentJsp.DESCRIBE_TRAINING_PROGRAM_PAGE_PATH;
+import static by.training.gym.command.CurrentJsp.DESCRIBE_TRAINING_PROGRAM_PAGE_PATH;
 import static by.training.gym.view.MessageManager.INFORMATION_NOT_FOUND_MESSAGE_KEY;
 
 /**

@@ -1,8 +1,8 @@
 package by.training.gym.controller;
 
-import by.training.gym.controller.command.CommandAction;
-import by.training.gym.controller.command.CommandFactory;
-import by.training.gym.controller.command.CurrentJsp;
+import by.training.gym.command.CommandAction;
+import by.training.gym.command.CommandFactory;
+import by.training.gym.command.CurrentJsp;
 import by.training.gym.view.MessageManager;
 
 import javax.servlet.RequestDispatcher;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static by.training.gym.controller.command.CommandAction.MESSAGE_ATTRIBUTE;
+import static by.training.gym.command.CommandAction.MESSAGE_ATTRIBUTE;
 import static by.training.gym.view.MessageManager.NONE_MESSAGE_KEY;
 
 

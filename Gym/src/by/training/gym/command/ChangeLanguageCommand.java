@@ -1,4 +1,4 @@
-package by.training.gym.controller.command;
+package by.training.gym.command;
 
 import by.training.gym.view.MessageManager;
 
