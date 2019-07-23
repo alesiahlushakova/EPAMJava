@@ -1,4 +1,4 @@
-package by.training.gym.filter;
+package by.training.gym.controller.filter;
 
 import by.training.gym.domain.User;
 import by.training.gym.domain.UserRole;
@@ -10,31 +10,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import static by.training.gym.command.Command.COMMAND_PARAMETER;
 import static by.training.gym.command.Command.USER_ATTRIBUTE;
 
 /**
- * Filter to follow user's role command.
- *
- * @author AlesyaHlushakova
- */
-public class CommandSecurityFilter implements Filter {
+        * Filter to follow user's role and pages.
+        *
+        * @author AlesyaHlushakova
+        */
+public class PageSecurityFilter implements Filter {
 
-    private static final Logger LOGGER = LogManager.getLogger(CommandSecurityFilter.class);
+    private static final Logger LOGGER = LogManager.getLogger(PageSecurityFilter.class);
 
     private static final String MAIN_PAGE_PARAMETER = "MAIN_PAGE";
 
-    private static final String TRAINER_COMMAND_PATTERN = "trainer_";
-    private static final String ADMIN_COMMAND_PATTERN = "admin_";
-    private static final String CLIENT_COMMAND_PATTERN = "client_";
-    private static final String COMMON_COMMAND_PATTERN = "common_";
-    private static final String SPECIAL_COMMAND_PATTERN = "special_";
+    private static final String TRAINER_PAGE_PATH_PATTERN = ".*/jsp/coach/.*.jsp";
+    private static final String ADMIN_PAGE_PATH_PATTERN = ".*/jsp/admin/.*.jsp";
+    private static final String CLIENT_PAGE_PATH_PATTERN = ".*/jsp/client/.*.jsp";
+    private static final String COMMON_PAGE_PATH_PATTERN = ".*/jsp/.*.jsp*";
+    private static final String SPECIAL_PAGE_PATH_PATTERN = ".*/jsp/special/.*.jsp*";
 
     private String redirectPage;
 
     /**
-     * This method initialize filters object.
+     * This method initializes filter object.
      *
      * @param filterConfig the filters config.
      * @throws ServletException object if execution of method is failed.
@@ -56,25 +57,26 @@ public class CommandSecurityFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-        String currentCommand = httpServletRequest.getParameter(COMMAND_PARAMETER);
-
-        HttpSession session = httpServletRequest.getSession();
-        User user = (User) session.getAttribute(USER_ATTRIBUTE);
-
         HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
-        if (currentCommand.startsWith(COMMON_COMMAND_PATTERN)) {
+
+        String currentPage = httpServletRequest.getServletPath();
+        boolean isCommonJsp = checkPath(currentPage, COMMON_PAGE_PATH_PATTERN);
+        if (isCommonJsp) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
+            HttpSession session = httpServletRequest.getSession();
+            User user = (User) session.getAttribute(USER_ATTRIBUTE);
             if (user == null) {
-                LOGGER.warn(String.format("Unexpected action from guest, command=%s.", currentCommand));
+                LOGGER.warn(String.format("Unexpected action from guest, page=%s.", currentPage));
 
                 httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + redirectPage);
             } else {
-                UserRole userRole = user.getUserRole();
-                boolean isAccessTrue = checkRole(userRole, currentCommand);
+                UserRole currentRole = user.getUserRole();
+                boolean isUserRightRole = checkRole(currentRole, currentPage);
+                boolean isSpecialJsp = checkPath(currentPage, SPECIAL_PAGE_PATH_PATTERN);
 
-                if (!isAccessTrue) {
-                    LOGGER.warn(String.format("Unexpected action from user id=%d, command=%s.", user.getId(), currentCommand));
+                if (!isUserRightRole && !isSpecialJsp) {
+                    LOGGER.warn(String.format("Unexpected action from user id=%d, page=%s.", user.getId(), currentPage));
 
                     httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + redirectPage);
                 } else {
@@ -84,30 +86,21 @@ public class CommandSecurityFilter implements Filter {
         }
     }
 
-
-    /**
-     * This method cleans filter resources.
-     */
     @Override
     public void destroy() {
 
     }
 
-    private boolean checkRole(UserRole userRole, String command) {
-
-        if (command.startsWith(SPECIAL_COMMAND_PATTERN)) {
-            return true;
-        }
-
+    private boolean checkRole(UserRole userRole, String pagePath) {
         switch (userRole) {
             case COACH: {
-                return command.startsWith(TRAINER_COMMAND_PATTERN);
+                return checkPath(pagePath, TRAINER_PAGE_PATH_PATTERN);
             }
             case CLIENT: {
-                return command.startsWith(CLIENT_COMMAND_PATTERN);
+                return checkPath(pagePath, CLIENT_PAGE_PATH_PATTERN);
             }
             case ADMIN: {
-                return command.startsWith(ADMIN_COMMAND_PATTERN);
+                return checkPath(pagePath, ADMIN_PAGE_PATH_PATTERN);
             }
             default: {
                 return false;
@@ -115,4 +108,11 @@ public class CommandSecurityFilter implements Filter {
         }
     }
 
+    private boolean checkPath(String path, String pagePattern) {
+        Pattern pattern = Pattern.compile(pagePattern);
+        Matcher matcher = pattern.matcher(path);
+
+        return matcher.matches();
+    }
 }
+

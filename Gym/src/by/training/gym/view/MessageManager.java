@@ -23,8 +23,8 @@ public class MessageManager {
     public static final String FEEDBACK_WAS_NOT_ADDED_MESSAGE_KEY = "message.feedback_was_not_added";
     public static final String SUBSCRIPTION_WAS_PAYED_MESSAGE_KEY = "message.order_was_payed";
     public static final String SUBSCRIPTION_WAS_NOT_PAYED_MESSAGE_KEY = "message.order_was_not_payed";
-    public static final String REFUSE_TRAINING_PROGRAM_SUCCESS_MESSAGE_KEY = "message.refuse_success";
-    public static final String REFUSE_TRAINING_PROGRAM_FAILED_MESSAGE_KEY = "message.refuse_error";
+    public static final String DISCARD_PROGRAM_SUCCESS_MESSAGE_KEY = "message.refuse_success";
+    public static final String DISCARD_PROGRAM_FAILED_MESSAGE_KEY = "message.refuse_error";
     public static final String INFORMATION_NOT_FOUND_MESSAGE_KEY = "message.information_not_found";
     public static final String TRAINING_PROGRAM_SAVED_SUCCESSFUL_MESSAGE_KEY = "message.training_program_saved";
     public static final String TRAINING_PROGRAM_NOT_SAVED_MESSAGE_KEY = "message.training_program_not_saved";

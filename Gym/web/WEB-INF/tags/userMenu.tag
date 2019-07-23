@@ -93,10 +93,10 @@
                         <a href="${pageContext.request.contextPath}/controller?command=client_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=show_client_program&client_id=${sessionScope.user.id}">${pageScope.my_training_program}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=client_show_client_program&client_id=${sessionScope.user.id}">${pageScope.my_training_program}</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=check_actual_subscription&client_id=${sessionScope.user.id}">${pageScope.make_order}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=client_check_actual_subscription&client_id=${sessionScope.user.id}">${pageScope.make_order}</a>
                     </li>
                 </c:otherwise>
             </c:choose>

@@ -1,8 +1,4 @@
-package by.training.gym.filter;
-
-import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
-import java.io.IOException;
+package by.training.gym.controller.filter;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -12,7 +8,7 @@ import java.io.IOException;
  *
  * @author AlesyaHlushakova
  */
-public class CharsetFilter implements Filter {
+public class EncodingFilter implements Filter {
 
     private static final String ENCODING_TYPE_PARAMETER = "encodingType";
 

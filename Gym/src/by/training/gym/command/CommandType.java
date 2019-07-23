@@ -1,5 +1,7 @@
 package by.training.gym.command;
 
+import by.training.gym.command.admin.FindClientByNameCommand;
+import by.training.gym.command.admin.ShowAllClientsCommand;
 import by.training.gym.command.client.*;
 import by.training.gym.command.coach.*;
 
@@ -33,6 +35,19 @@ public enum CommandType {
         }
     },
     /**
+     * Admin commands.
+     */
+    ADMIN_FIND_CLIENT_BY_NAME {
+        {
+            this.command = new FindClientByNameCommand();
+        }
+    },
+    ADMIN_SHOW_ALL_CLIENTS {
+        {
+            this.command = new ShowAllClientsCommand();
+        }
+    },
+    /**
      * client commands.
      */
     CLIENT_SHOW_CLIENT_SUBSCRIPTIONS {
@@ -40,12 +55,12 @@ public enum CommandType {
             this.command = new ShowClientSubscriptionCommand();
         }
     },
-    SHOW_CLIENT_PROGRAM {
+    CLIENT_SHOW_CLIENT_PROGRAM {
         {
             this.command = new ShowClientProgramCommand();
         }
     },
-    CHECK_ACTUAL_SUBSCRIPTION {
+    CLIENT_CHECK_ACTUAL_SUBSCRIPTION {
         {
             this.command = new CheckActualSubscriptionCommand();
         }
@@ -63,6 +78,11 @@ public enum CommandType {
     CLIENT_PAY_SUBSCRIPTION {
         {
             this.command = new PaySubscriptionCommand();
+        }
+    },
+    CLIENT_DISCARD_PROGRAM {
+        {
+            this.command = new DiscardProgramCommand();
         }
     },
     /**

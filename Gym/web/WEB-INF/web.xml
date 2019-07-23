@@ -33,7 +33,7 @@
     <filter>
         <description>Encoding parameter to UTF-8</description>
         <filter-name>UTF</filter-name>
-        <filter-class>by.training.gym.filter.CharsetFilter</filter-class>
+        <filter-class>by.training.gym.controller.filter.EncodingFilter</filter-class>
         <init-param>
             <param-name>encodingType</param-name>
             <param-value>UTF-8</param-value>
@@ -46,7 +46,7 @@
 
     <filter>
         <filter-name>SecurityPageRedirect</filter-name>
-        <filter-class>by.training.gym.filter.PageSecurityFilter</filter-class>
+        <filter-class>by.training.gym.controller.filter.PageSecurityFilter</filter-class>
         <init-param>
             <param-name>MAIN_PAGE</param-name>
             <param-value>/jsp/main.jsp</param-value>
@@ -59,29 +59,29 @@
 
     <filter>
         <filter-name>PageDatabaseRecord</filter-name>
-        <filter-class>by.training.gym.filter.CleanRecordFlagFilter</filter-class>
+        <filter-class>by.training.gym.controller.filter.CleanRecordFlagFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>PageDatabaseRecord</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-<!--    <filter>-->
-<!--        <filter-name>SecurityCommand</filter-name>-->
-<!--        <filter-class>by.training.gym.filter.CommandSecurityFilter</filter-class>-->
-<!--        <init-param>-->
-<!--            <param-name>MAIN_PAGE</param-name>-->
-<!--            <param-value>/jsp/main.jsp</param-value>-->
-<!--        </init-param>-->
-<!--    </filter>-->
-<!--    <filter-mapping>-->
-<!--        <filter-name>SecurityCommand</filter-name>-->
-<!--        <url-pattern>/controller</url-pattern>-->
-<!--    </filter-mapping>-->
+    <filter>
+        <filter-name>SecurityCommand</filter-name>
+        <filter-class>by.training.gym.controller.filter.CommandSecurityFilter</filter-class>
+        <init-param>
+            <param-name>MAIN_PAGE</param-name>
+            <param-value>/jsp/main.jsp</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityCommand</filter-name>
+        <url-pattern>/controller</url-pattern>
+    </filter-mapping>
 
     <filter>
         <filter-name>DataBaseRecord</filter-name>
-        <filter-class>by.training.gym.filter.DbRecordFilter</filter-class>
+        <filter-class>by.training.gym.controller.filter.DbRecordFilter</filter-class>
         <init-param>
             <param-name>REDIRECT_PAGE</param-name>
             <param-value>/jsp/main.jsp</param-value>

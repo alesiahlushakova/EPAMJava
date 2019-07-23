@@ -40,11 +40,11 @@
                 <td>
                     <c:choose>
                         <c:when test="${role.equals('COACH')}">
-                            <a href="controller?command=special_show_client_training_program&client_id=${client.id}">${pageScope.describe}
+                            <a href="controller?command=client_show_client_program&client_id=${client.id}">${pageScope.describe}
                                 <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                         </c:when>
                         <c:otherwise>
-                            <a href="controller?command=special_show_client_orders&client_id=${client.id}">${pageScope.describe}
+                            <a href="controller?command=client_show_client_subscriptions&client_id=${client.id}">${pageScope.describe}
                                 <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                         </c:otherwise>
                     </c:choose>

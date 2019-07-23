@@ -81,7 +81,7 @@
     <ul>
         <li>
             <form method="GET" action="${pageContext.request.contextPath}/controller">
-                <input type="hidden" name="command" value="special_edit_training_program"/>
+                <input type="hidden" name="command" value="coach_edit_program"/>
                 <button type="submit">${pageScope.edit} <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
             </form>
@@ -89,7 +89,7 @@
         <c:if test="${sessionScope.user.userRole == 'CLIENT'}">
             <li>
                 <form method="POST" action="${pageContext.request.contextPath}/controller">
-                    <input type="hidden" name="command" value="client_refuse_training_program"/>
+                    <input type="hidden" name="command" value="client_discard_program"/>
                     <input type="hidden" name="training_program_id" value="${sessionScope.trainingProgram.id}"/>
                     <button type="submit">${pageScope.refuse} <i class="fa fa-trash-o" aria-hidden="true"></i></button>
                 </form>
