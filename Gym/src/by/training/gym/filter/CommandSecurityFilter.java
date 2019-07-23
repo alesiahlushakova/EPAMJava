@@ -1,7 +1,7 @@
 package by.training.gym.filter;
 
-import by.training.gym.model.User;
-import by.training.gym.model.UserRole;
+import by.training.gym.domain.User;
+import by.training.gym.domain.UserRole;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static by.training.gym.command.CommandAction.COMMAND_PARAMETER;
-import static by.training.gym.command.CommandAction.USER_ATTRIBUTE;
+import static by.training.gym.command.Command.COMMAND_PARAMETER;
+import static by.training.gym.command.Command.USER_ATTRIBUTE;
 
 /**
  * Filter to follow user's role command.

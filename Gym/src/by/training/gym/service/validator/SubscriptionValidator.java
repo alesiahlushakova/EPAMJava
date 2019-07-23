@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static by.training.gym.model.SubscriptionType.*;
+import static by.training.gym.domain.SubscriptionType.*;
 
 /**
  * class that validates sub's data.

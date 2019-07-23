@@ -3,8 +3,8 @@ package by.training.gym.service;
 import by.training.gym.dao.ConnectionController;
 import by.training.gym.dao.DAOException;
 import by.training.gym.dao.UserDAO;
-import by.training.gym.model.User;
-import by.training.gym.model.UserRole;
+import by.training.gym.domain.User;
+import by.training.gym.domain.UserRole;
 import by.training.gym.service.validator.UserValidator;
 import org.apache.commons.codec.digest.DigestUtils;
 

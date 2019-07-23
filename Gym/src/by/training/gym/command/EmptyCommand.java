@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
  * empty command class.
  * @author AlesyaHlushakova
  */
-public class EmptyCommand implements CommandAction {
+public class EmptyCommand implements Command {
 
     /**
      * redirects to main page.

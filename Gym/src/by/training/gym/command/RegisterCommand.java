@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import static by.training.gym.view.MessageManager.*;
 
-public class RegisterCommand implements CommandAction {
+public class RegisterCommand implements Command {
 
     private static final Logger LOGGER = LogManager.getLogger(RegisterCommand.class);
 

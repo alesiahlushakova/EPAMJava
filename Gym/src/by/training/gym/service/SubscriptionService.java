@@ -3,8 +3,8 @@ package by.training.gym.service;
 import by.training.gym.dao.ConnectionController;
 import by.training.gym.dao.DAOException;
 import by.training.gym.dao.SubscriptionDAO;
-import by.training.gym.model.Subscription;
-import by.training.gym.model.SubscriptionType;
+import by.training.gym.domain.Subscription;
+import by.training.gym.domain.SubscriptionType;
 import by.training.gym.service.validator.SubscriptionValidator;
 
 import java.math.BigDecimal;

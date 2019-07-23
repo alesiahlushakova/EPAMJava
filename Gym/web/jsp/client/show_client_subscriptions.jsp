@@ -1,4 +1,4 @@
-<%@ page import="by.training.gym.model.UserRole" %>
+<%@ page import="by.training.gym.domain.UserRole" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>

@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
  * realization of pattern Command.
  * @author AlesyaHlushakova
  */
-public interface CommandAction {
+public interface Command {
 
     /**
      * Parameters.
@@ -28,10 +28,13 @@ public interface CommandAction {
     String DAY_NUMBER_PARAMETER = "day_number";
     String SETS_COUNT_PARAMETER = "sets_count";
     String REPEATS_COUNT_PARAMETER = "repeats_count";
+    String WEIGHT_LOSS_PARAMETER = "weight_loss";
     String NAME_PARAMETER = "name";
+    String RESTRICTIONS_PARAMETER = "restrictions";
+    String CALORIES_LOST_PARAMETER = "calories_lost";
     String LEVEL_PARAMETER = "level";
     String DESCRIPTION_PARAMETER = "description";
-    String DAYS_COUNT_PARAMETER = "days_count";
+    String DAYS_COUNT_PARAMETER = "days";
     String START_DATE_PARAMETER = "start_date";
     String END_DATE_PARAMETER = "end_date";
     String DIET_PARAMETER = "diet";

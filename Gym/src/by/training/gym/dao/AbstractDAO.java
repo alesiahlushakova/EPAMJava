@@ -1,6 +1,6 @@
 package by.training.gym.dao;
 
-import by.training.gym.model.Entity;
+import by.training.gym.domain.Entity;
 
 import java.sql.*;
 import java.util.ArrayList;

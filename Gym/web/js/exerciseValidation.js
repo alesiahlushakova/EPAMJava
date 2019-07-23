@@ -1,11 +1,16 @@
 var nameInput = document.getElementById("name_id");
 var description = document.getElementById("description_id");
 var submit = document.getElementById("create_exercise_id");
+var caloriesLost = document.getElementById("calories_lost_id");
+var restrictions = document.getElementById("restrictions_id");
 
 var isNameValid = false;
 var isDescriptionValid = false;
+var isCaloriesLOstValid =false;
+var isRestrictionValid = false;
 
 var jsRegEx = /[<>]+/;
+var numberRegEx=/^[1-9][0-9]{0,2}$/;
 var notFoundIndex = -1;
 var validNameLength = 4;
 
@@ -36,6 +41,28 @@ var checkName = function () {
     } else {
         validColor(nameInput);
         isNameValid = true;
+    }
+    submitChange();
+};
+
+var checkRestrictions = function () {
+    if (restrictions.value.search(jsRegEx) > notFoundIndex || restrictions.value.length < validNameLength) {
+        notValidColor(restrictions);
+        isRestrictionValid= false;
+    } else {
+        validColor(restrictions);
+        isRestrictionValid = true;
+    }
+    submitChange();
+};
+
+var checkCaloriesLost = function () {
+    if (caloriesLost.value.search(numberRegEx) > notFoundIndex) {
+        notValidColor(caloriesLost);
+        isCaloriesLOstValid = false;
+    } else {
+        validColor(caloriesLost);
+        isCaloriesLOstValid = true;
     }
     submitChange();
 };

@@ -1,7 +1,7 @@
 package by.training.gym.dao;
 
-import by.training.gym.model.User;
-import by.training.gym.model.UserRole;
+import by.training.gym.domain.User;
+import by.training.gym.domain.UserRole;
 
 import java.sql.*;
 import java.util.ArrayList;

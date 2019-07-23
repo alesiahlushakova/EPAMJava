@@ -25,6 +25,14 @@ public class CurrentJsp {
     public static final String DESCRIBE_TRAINING_PROGRAM_PAGE_PATH = "/jsp/client/describe_program.jsp";
     public static final String ADD_FEEDBACK_PAGE_PATH = "/jsp/client/add_feedback.jsp";
     public static final String PAY_SUBSCRIPTION_PAGE_PATH = "/jsp/client/pay_subscription.jsp";
+    /**
+     * Coach's pages.
+     */
+    public static final String CREATE_EXERCISE_PAGE_PATH = "/jsp/coach/create_exercise.jsp";
+    public static final String SHOW_EXERCISE = "/jsp/coach/show_exercise.jsp";
+    public static final String PERSONAL_CLIENTS_PAGE_PATH = "/jsp/coach/personal_clients.jsp";
+    public static final String CREATE_TRAINING_PROGRAM_PAGE_PATH = "/jsp/coach/create_program.jsp";
+    public static final String EDIT_PROGRAM_PAGE_PATH = "/jsp/coach/edit_program.jsp";
 
     private String pageUrl;
     private boolean isRedirect;

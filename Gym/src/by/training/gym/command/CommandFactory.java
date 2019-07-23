@@ -6,8 +6,8 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static by.training.gym.command.CommandAction.COMMAND_PARAMETER;
-import static by.training.gym.command.CommandAction.MESSAGE_ATTRIBUTE;
+import static by.training.gym.command.Command.COMMAND_PARAMETER;
+import static by.training.gym.command.Command.MESSAGE_ATTRIBUTE;
 import static by.training.gym.view.MessageManager.COMMAND_ERROR_MESSAGE_KEY;
 
 /**
@@ -24,8 +24,8 @@ public class CommandFactory {
      * @param request the HttpServletRequest request.
      * @return the defined commands.
      */
-    public CommandAction defineCommand(HttpServletRequest request) {
-        CommandAction currentCommand = new EmptyCommand();
+    public Command defineCommand(HttpServletRequest request) {
+        Command currentCommand = new EmptyCommand();
 
         String action = request.getParameter(COMMAND_PARAMETER);
         if (action == null || action.isEmpty()) {

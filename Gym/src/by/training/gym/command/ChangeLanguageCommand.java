@@ -12,7 +12,7 @@ import static by.training.gym.view.MessageManager.DEFAULT_LOCALE;
  * command that changes language.
  * @author AlesyaHlushakova
  */
-public class ChangeLanguageCommand implements CommandAction {
+public class ChangeLanguageCommand implements Command {
 
     private static final String RU_LANGUAGE = "ru";
     private static final String US_LANGUAGE = "en";

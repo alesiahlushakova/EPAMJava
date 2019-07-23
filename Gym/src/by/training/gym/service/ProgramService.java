@@ -1,8 +1,8 @@
 package by.training.gym.service;
 
 import by.training.gym.dao.*;
-import by.training.gym.model.Exercise;
-import by.training.gym.model.Program;
+import by.training.gym.domain.Exercise;
+import by.training.gym.domain.Program;
 import by.training.gym.service.validator.ProgramValidator;
 
 import java.sql.Date;

@@ -1,6 +1,6 @@
 package by.training.gym.dao;
 
-import by.training.gym.model.Program;
+import by.training.gym.domain.Program;
 
 import java.sql.*;
 import java.util.ArrayList;

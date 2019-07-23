@@ -1,4 +1,4 @@
-package by.training.gym.model;
+package by.training.gym.domain;
 
 /**
  * enum for difficulty levels of exercises.

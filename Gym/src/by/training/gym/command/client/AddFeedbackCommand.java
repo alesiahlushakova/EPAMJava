@@ -1,6 +1,6 @@
 package by.training.gym.command.client;
 
-import by.training.gym.command.CommandAction;
+import by.training.gym.command.Command;
 import by.training.gym.command.CurrentJsp;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
@@ -18,7 +18,7 @@ import static by.training.gym.view.MessageManager.FEEDBACK_WAS_NOT_ADDED_MESSAGE
  * @author AlesyaHlushakova
  * command that add feedback.
  */
-public class AddFeedbackCommand implements CommandAction {
+public class AddFeedbackCommand implements Command {
 
     private static final Logger LOGGER = LogManager.getLogger(AddFeedbackCommand.class);
 

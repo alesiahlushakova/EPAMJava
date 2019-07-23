@@ -1,7 +1,7 @@
 package by.training.gym.dao;
 
-import by.training.gym.model.Exercise;
-import by.training.gym.model.ExerciseLevel;
+import by.training.gym.domain.Exercise;
+import by.training.gym.domain.ExerciseLevel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -115,6 +115,12 @@ public class ExerciseDAO extends AbstractDAO<Exercise> {
 
         String name = entity.getName();
         parameters.add(name);
+
+        String restrictions = entity.getRestrictions();
+        parameters.add(restrictions);
+
+        int caloriesLost = entity.getCaloriesLost();
+        parameters.add(String.valueOf(caloriesLost));
 
         ExerciseLevel level = entity.getLevel();
         String levelValue = String.valueOf(level);

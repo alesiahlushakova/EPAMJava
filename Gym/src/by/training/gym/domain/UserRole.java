@@ -1,4 +1,4 @@
-package by.training.gym.model;
+package by.training.gym.domain;
 
 /**
  * class for user roles.

@@ -1,6 +1,6 @@
 package by.training.gym.service.validator;
 
-import by.training.gym.model.Exercise;
+import by.training.gym.domain.Exercise;
 
 import java.sql.Date;
 import java.time.LocalDate;

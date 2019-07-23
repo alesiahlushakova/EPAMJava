@@ -1,6 +1,6 @@
 package by.training.gym.command.client;
 
-import by.training.gym.command.CommandAction;
+import by.training.gym.command.Command;
 import by.training.gym.command.CurrentJsp;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import static by.training.gym.view.MessageManager.CLIENT_HAS_ALREADY_ORDER_MESSAGE_KEY;
 
-public class CheckActualSubscriptionCommand implements CommandAction {
+public class CheckActualSubscriptionCommand implements Command {
 
     private static final Logger LOGGER = LogManager.
             getLogger(CheckActualSubscriptionCommand.class);

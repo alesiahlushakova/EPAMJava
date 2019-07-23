@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static by.training.gym.command.CommandAction.COMMAND_PARAMETER;
-import static by.training.gym.command.CommandAction.IS_RECORD_INSERTED;
+import static by.training.gym.command.Command.COMMAND_PARAMETER;
+import static by.training.gym.command.Command.IS_RECORD_INSERTED;
 
 /**
  * Filter to follow database records.

@@ -1,6 +1,6 @@
 package by.training.gym.service;
 
-import by.training.gym.model.SubscriptionType;
+import by.training.gym.domain.SubscriptionType;
 
 import java.math.BigDecimal;
 import java.sql.Date;

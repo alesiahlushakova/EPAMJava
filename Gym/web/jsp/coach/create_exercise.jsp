@@ -15,17 +15,21 @@
     <fmt:message key="exercise.beginner" var="beginner"/>
     <fmt:message key="exercise.expert" var="expert"/>
     <fmt:message key="exercise.pro" var="pro"/>
+    <fmt:message key="exercise.restrictions" var="restrictions"/>
+    <fmt:message key="exercise.calories_lost" var="calories_lost"/>
     <fmt:message key="exercise.description" var="description"/>
     <fmt:message key="exercise.create_exercise" var="create"/>
     <fmt:message key="exercise.name" var="name"/>
     <fmt:message key="title.exercise_name" var="title_name"/>
     <fmt:message key="title.exercise_level" var="title_level"/>
     <fmt:message key="title.exercise_description" var="title_description"/>
+    <fmt:message key="title.exercise_restrictions" var="title_restrictions"/>
+    <fmt:message key="title.exercise_calories_lost" var="title_calories_lost"/>
 </fmt:bundle>
 
 <html>
 <head>
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
     <title>${pageScope.title}</title>
 </head>
 <body class="page">
@@ -34,14 +38,20 @@
 <div class="create_exercise">
     <form id="createExercise" name="createExercise" method="POST"
           action="${pageContext.request.contextPath}/controller">
-        <input type="hidden" name="command" value="trainer_create_exercise"/>
+        <input type="hidden" name="command" value="coach_create_exercise"/>
         <p><label>${pageScope.name} <input id="name_id" class="create_exercise_name" title="${pageScope.title_name}"
                                            type="text" name="name" value="" onkeyup="checkName()"/></label></p>
         <p><label>${pageScope.level} <select name="level" title="${pageScope.title_level}">
-            <option value="BEGINNER">${pageScope.beginner}</option>
-            <option value="EXPERT">${pageScope.expert}</option>
-            <option value="PRO">${pageScope.pro}</option>
+            <option value="STARTER">${pageScope.beginner}</option>
+            <option value="CASUAL">${pageScope.expert}</option>
+            <option value="EXPERT">${pageScope.pro}</option>
         </select></label></p>
+        <p><label>${pageScope.calories_lost} <input id="calories_lost_id" class="create_exercise_name" title="${pageScope.title_calories_lost}"
+                                                    type="text" name="calories_lost" value="" onkeyup="checkCaloriesLost()"/></label></p>
+
+        <p>${pageScope.restrictions}</p>
+        <p><textarea title="${pageScope.title_restrictions}" id="restrictions_id" name="restrictions"
+                     onkeyup="checkRestrictions()"></textarea></p>
         <p>${pageScope.description}</p>
         <p><textarea title="${pageScope.title_description}" id="description_id" name="description"
                      onkeyup="checkDescription()"></textarea></p>

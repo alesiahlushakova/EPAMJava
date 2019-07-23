@@ -1,9 +1,9 @@
 package by.training.gym.command.client;
 
-import by.training.gym.command.CommandAction;
+import by.training.gym.command.Command;
 import by.training.gym.command.CurrentJsp;
-import by.training.gym.model.Subscription;
-import by.training.gym.model.User;
+import by.training.gym.domain.Subscription;
+import by.training.gym.domain.User;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
 import by.training.gym.service.validator.SubscriptionValidator;
@@ -17,7 +17,7 @@ import static by.training.gym.command.CurrentJsp.PAY_SUBSCRIPTION_PAGE_PATH;
 import static by.training.gym.command.CurrentJsp.PREPARE_ORDER_PAGE_PATH;
 import static by.training.gym.view.MessageManager.INVALID_INPUT_DATA_MESSAGE_KEY;
 
-public class PrepareSubscriptionCommand implements CommandAction {
+public class PrepareSubscriptionCommand implements Command {
 
     private static final Logger LOGGER = LogManager.getLogger(PrepareSubscriptionCommand.class);
 

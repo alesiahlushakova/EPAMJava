@@ -28,7 +28,7 @@ public class MessageManager {
     public static final String INFORMATION_NOT_FOUND_MESSAGE_KEY = "message.information_not_found";
     public static final String TRAINING_PROGRAM_SAVED_SUCCESSFUL_MESSAGE_KEY = "message.training_program_saved";
     public static final String TRAINING_PROGRAM_NOT_SAVED_MESSAGE_KEY = "message.training_program_not_saved";
-    public static final String TRAINING_PROGRAM_DAYS_AND_EXERCISES_NOT_VALID_MESSAGE_KEY = "message.day_and_exercises_not_valid";
+    public static final String PROGRAM_DAYS_AND_EXERCISES_NOT_VALID_MESSAGE_KEY = "message.day_and_exercises_not_valid";
     public static final String EXERCISE_CREATION_FAILED_MESSAGE_KEY = "message.exercise_creating_failed";
     public static final String DAY_CAN_NOT_BE_DELETED_MESSAGE_KEY = "message.day_delete_failed";
     public static final String DAY_ADD_FAILED_MESSAGE_KEY = "message.day_add_failed";

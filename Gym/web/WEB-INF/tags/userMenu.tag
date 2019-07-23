@@ -66,13 +66,13 @@
             <c:choose>
                 <c:when test="${sessionScope.user.userRole == 'COACH'}">
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=trainer_prepare_training_program_creation">${pageScope.create_training_program}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=coach_prepare_program_creation">${pageScope.create_training_program}</a>
                     </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/jsp/coach/create_exercise.jsp">${pageScope.create_exercise}</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=trainer_show_personal_clients">${pageScope.show_personal_clients}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=coach_show_personal_clients">${pageScope.show_personal_clients}</a>
                     </li>
                 </c:when>
                 <c:when test="${sessionScope.user.userRole == 'ADMIN'}">

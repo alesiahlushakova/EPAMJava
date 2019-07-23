@@ -1,8 +1,8 @@
 package by.training.gym.command.client;
 
-import by.training.gym.command.CommandAction;
+import by.training.gym.command.Command;
 import by.training.gym.command.CurrentJsp;
-import by.training.gym.model.Subscription;
+import by.training.gym.domain.Subscription;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
 import org.apache.logging.log4j.LogManager;
@@ -18,7 +18,7 @@ import static by.training.gym.view.MessageManager.INFORMATION_NOT_FOUND_MESSAGE_
  * Command to show subs.
  * @author AlesyaHlushakova
  */
-public class ShowClientSubscriptionCommand implements CommandAction {
+public class ShowClientSubscriptionCommand implements Command {
 
     private static final Logger LOGGER = LogManager.getLogger(ShowClientSubscriptionCommand.class);
 

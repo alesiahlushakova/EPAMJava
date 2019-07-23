@@ -1,11 +1,11 @@
 package by.training.gym.command;
 
-import by.training.gym.model.User;
+import by.training.gym.domain.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-public class LogoutCommand implements CommandAction {
+public class LogoutCommand implements Command {
 
     /**
      * current jsp.

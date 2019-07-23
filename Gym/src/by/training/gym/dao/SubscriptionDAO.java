@@ -1,7 +1,7 @@
 package by.training.gym.dao;
 
-import by.training.gym.model.Subscription;
-import by.training.gym.model.SubscriptionType;
+import by.training.gym.domain.Subscription;
+import by.training.gym.domain.SubscriptionType;
 
 import java.math.BigDecimal;
 import java.sql.Connection;

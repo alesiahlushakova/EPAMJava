@@ -1,6 +1,6 @@
 package by.training.gym.command;
 
-import by.training.gym.model.User;
+import by.training.gym.domain.User;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +15,7 @@ import static by.training.gym.view.MessageManager.LOGIN_ERROR_MESSAGE_KEY;
  * log in command class.
  * @author AlesyaHlushakova
  */
-public class LoginCommand implements CommandAction {
+public class LoginCommand implements Command {
 
     private final static Logger LOGGER = LogManager.getLogger(LoginCommand.class);
 

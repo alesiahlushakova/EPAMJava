@@ -1,12 +1,12 @@
 package by.training.gym.service.validator;
 
-import by.training.gym.model.Exercise;
+import by.training.gym.domain.Exercise;
 
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static by.training.gym.model.ExerciseLevel.*;
+import static by.training.gym.domain.ExerciseLevel.*;
 
 /**
  * class that validates exercise's data.
