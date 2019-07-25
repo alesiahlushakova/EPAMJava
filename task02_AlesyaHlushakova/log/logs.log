@@ -85,3 +85,5 @@ Lorem sit
 word
 20:56:04.307 [main] INFO  by.training.task02.restorer.TextRestorer - Text was restored successfully:
 %s
+13:11:32.289 [main] INFO  by.training.task02.restorer.ParagraphRestorer - Paragraph was restored successfully:
+Nam gam. Sed li.

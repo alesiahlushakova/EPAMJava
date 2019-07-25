@@ -22,6 +22,14 @@
         <url-pattern>/controller</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>imageServlet</servlet-name>
+        <servlet-class>by.training.gym.controller.ImageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>imageServlet</servlet-name>
+        <url-pattern>/imageServlet</url-pattern>
+    </servlet-mapping>
 
     <jsp-config>
         <taglib>

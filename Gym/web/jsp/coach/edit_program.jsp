@@ -75,7 +75,7 @@
                                 <li>
                                     <form method="POST" action="${pageContext.request.contextPath}/controller">
                                         <input type="hidden" name="command"
-                                               value="coach_edit_exercise_in_program"/>
+                                               value="special_edit_exercise_in_program"/>
                                         <input type="hidden" name="day_number" value="${day.key}"/>
                                         <input type="hidden" name="exercise_id" value="${exercise.id}"/>
                                         <label>${pageScope.sets_count} <input title="${pageScope.title_sets}"
@@ -95,7 +95,7 @@
                                 <li>
                                     <form method="POST" action="${pageContext.request.contextPath}/controller">
                                         <input type="hidden" name="command"
-                                               value="coach_delete_exercise_from_program"/>
+                                               value="special_delete_exercise_from_program"/>
                                         <input type="hidden" name="day_number" value="${day.key}"/>
                                         <input type="hidden" name="exercise_id" value="${exercise.id}"/>
                                         <button class="edit_training_program_wrapper_button"
@@ -111,7 +111,7 @@
             </ol>
             <div class="add_exercise_wrapper">
                 <form method="POST" action="${pageContext.request.contextPath}/controller">
-                    <input type="hidden" name="command" value="coach_add_exercise_to_program"/>
+                    <input type="hidden" name="command" value="special_add_exercise_to_program"/>
                     <input type="hidden" name="day_number" value="${day.key}"/>
                     <label>${pageScope.name} <select name="exercise_id">
                         <c:forEach var="chooseExercise" items="${sessionScope.exercises}">
@@ -131,7 +131,7 @@
                 </form>
             </div>
             <form method="POST" action="${pageContext.request.contextPath}/controller">
-                <input type="hidden" name="command" value="coach_delete_day_from_program"/>
+                <input type="hidden" name="command" value="special_delete_day_from_program"/>
                 <input type="hidden" name="day_number" value="${day.key}"/>
                 <button class="edit_training_program_wrapper_button" type="submit">${pageScope.delete_day} <i
                         class="fa fa-trash" aria-hidden="true"></i></button>
@@ -140,7 +140,7 @@
     </c:forEach>
     <div class="diet_wrapper">
         <form method="POST" action="${pageContext.request.contextPath}/controller">
-            <input type="hidden" name="command" value="coach_edit_diet_in_program"/>
+            <input type="hidden" name="command" value="special_edit_diet_in_program"/>
             <p>${pageScope.diet}</p>
             <p><textarea title="${pageScope.title_diet}" id='diet_area' name="diet"
                          onkeyup="checkDiet()">${sessionScope.trainingProgram.diet}</textarea></p>
@@ -152,7 +152,7 @@
         <ul>
             <li>
                 <form method="POST" action="${pageContext.request.contextPath}/controller">
-                    <input type="hidden" name="command" value="coach_add_day_to_program"/>
+                    <input type="hidden" name="command" value="special_add_day_to_program"/>
                     <button class="edit_training_program_wrapper_button" type="submit">${pageScope.add_day} <i
                             class="fa fa-plus-square" aria-hidden="true"></i>
                     </button>
@@ -165,7 +165,7 @@
                             <input type="hidden" name="command" value="coach_finish_program_creation"/>
                         </c:when>
                         <c:otherwise>
-                            <input type="hidden" name="command" value="coach_save_program_edit"/>
+                            <input type="hidden" name="command" value="special_save_program_edit"/>
                         </c:otherwise>
                     </c:choose>
                     <button id="save_training_program" class="save_button" type="submit"

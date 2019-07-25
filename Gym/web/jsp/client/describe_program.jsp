@@ -81,7 +81,7 @@
     <ul>
         <li>
             <form method="GET" action="${pageContext.request.contextPath}/controller">
-                <input type="hidden" name="command" value="coach_edit_program"/>
+                <input type="hidden" name="command" value="special_edit_program"/>
                 <button type="submit">${pageScope.edit} <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
             </form>

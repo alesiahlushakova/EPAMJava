@@ -22,6 +22,7 @@
     <fmt:message key="menu.make_order" var="make_order"/>
     <fmt:message key="menu.change" var="change"/>
     <fmt:message key="menu.language" var="language"/>
+    <fmt:message key="menu.edit" var="edit"/>
 </fmt:bundle>
 
 <header class="header">
@@ -50,7 +51,9 @@
                    href="${pageContext.request.contextPath}/jsp/register.jsp">${pageScope.register}</a>
             </c:when>
             <c:otherwise>
+                <img width="30" height="30" src="imageServlet">
                 <span class="hello_text">${pageScope.hello} ${sessionScope.user.firstName} ${sessionScope.user.lastName}</span>
+                <span class="hello_text"><a class="logout_a" href="${pageContext.request.contextPath}/jsp/edit_user.jsp">${pageScope.edit}</a> </span>
                 <a class="register_login_a"
                    href="${pageContext.request.contextPath}/controller?command=common_logout">${pageScope.logout}</a>
             </c:otherwise>
@@ -90,10 +93,10 @@
                 </c:when>
                 <c:otherwise>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=client_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=client_show_client_program&client_id=${sessionScope.user.id}">${pageScope.my_training_program}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=special_show_client_program&client_id=${sessionScope.user.id}">${pageScope.my_training_program}</a>
                     </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/controller?command=client_check_actual_subscription&client_id=${sessionScope.user.id}">${pageScope.make_order}</a>

@@ -38,7 +38,7 @@
         </p>
     </div>
     <div class="wrapper_content-item  clearfix">
-        <img src="${pageContext.request.contextPath}/images/images.jpg" alt="" width="300px" height="200px">
+        <img src="${pageContext.request.contextPath}/images/images.jpg" alt="" width="300px" height="120px">
         <p>
             ${pageScope.promotion}
         </p>

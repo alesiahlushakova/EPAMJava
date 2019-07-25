@@ -3,6 +3,8 @@ package by.training.gym.dao;
 import by.training.gym.domain.User;
 import by.training.gym.domain.UserRole;
 
+import java.io.BufferedInputStream;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,10 +21,11 @@ public class UserDAO extends AbstractDAO<User>{
     private static final String INSERT_ENTITY_QUERY = "INSERT INTO Users (Login, Password, Role, "
            + "Firstname, Lastname, Telephone) VALUES(?,?,?,?,?,?)";
     private static final String UPDATE_ENTITY_QUERY = "UPDATE Users SET Login=?, Password=?,"
-            + " Role=?, Firstname=?, Lastname=? telephone=? WHERE UserID=?";
+            + "  Firstname=?, Lastname=?, Telephone=?, Photo=? WHERE UserID=?";
 
     private static final String SELECT_USER_BY_LOGIN_AND_PASSWORD_QUERY = "SELECT * FROM Users WHERE Login=? AND Password=?";
     private static final String SELECT_USERS_BY_LOGIN_QUERY = "SELECT * FROM Users WHERE Login=?";
+    private static final String SELECT_IMAGE_BY_USER_ID_QUERY = "SELECT Photo FROM Users WHERE UserID=?";
     private static final String SELECT_CLIENTS_BY_FULL_NAME_QUERY = "SELECT * FROM Users WHERE Firstname=? AND Lastname=? AND Role='CLIENT'";
     private static final String SELECT_CLIENTS_BY_NAME_PART_QUERY = "SELECT * FROM Users WHERE Role='CLIENT' AND Firstname LIKE ? OR Lastname LIKE ?";
     private static final String SELECT_USERS_BY_FOUND_ROWS_QUERY = "SELECT SQL_CALC_FOUND_ROWS * FROM Users WHERE Role='CLIENT' LIMIT %d, %d";
@@ -88,6 +91,22 @@ public class UserDAO extends AbstractDAO<User>{
         }
     }
 
+    public int update(int clientID, String login, String password,
+                      String firstname, String lastname,
+                      String telephone, InputStream inputStream)
+            throws DAOException {
+        try (PreparedStatement preparedStatement = prepareStatementForQuery(
+                UPDATE_ENTITY_QUERY, login, password, firstname, lastname, telephone, inputStream, clientID)) {
+            int resultSet = preparedStatement.executeUpdate();
+
+
+
+            return resultSet;
+        } catch (SQLException exception) {
+            throw new DAOException(exception.getMessage(), exception);
+        }
+    }
+
     /**
      * method checks user's login for uniqueness.
      * @param login the user's login.
@@ -105,6 +124,18 @@ public class UserDAO extends AbstractDAO<User>{
         }
     }
 
+    public ResultSet selectImageById (int userId)
+            throws DAOException {
+        try (PreparedStatement preparedStatement
+                     = prepareStatementForQuery(SELECT_IMAGE_BY_USER_ID_QUERY,
+                userId)) {
+            return preparedStatement.executeQuery();
+
+        } catch (SQLException exception) {
+            throw new DAOException(exception.getMessage(), exception);
+        }
+    }
+
     /**
      * method selects users by full name.
      * @param firstName the user's name.
@@ -113,7 +144,8 @@ public class UserDAO extends AbstractDAO<User>{
      * @throws DAOException object if execution of query is failed.
      */
     public List<User> selectClientByFullName(String firstName,
-                                             String lastName) throws DAOException {
+                                             String lastName)
+            throws DAOException {
         try (PreparedStatement preparedStatement
                      = prepareStatementForQuery(SELECT_CLIENTS_BY_FULL_NAME_QUERY,
                 firstName, lastName)) {

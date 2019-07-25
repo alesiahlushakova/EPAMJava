@@ -15,6 +15,7 @@ public class CurrentJsp {
     public static final String MAIN_PAGE_PATH = "/jsp/main.jsp";
     public static final String ERROR_PAGE_PATH = "/jsp/error.jsp";
     public static final String REGISTER_PAGE_PATH = "/jsp/register.jsp";
+    public static final String EDIT_PAGE_PATH = "/jsp/edit_user.jsp";
     /**
     * admin pages.
     */

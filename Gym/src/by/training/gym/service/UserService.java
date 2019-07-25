@@ -8,6 +8,13 @@ import by.training.gym.domain.UserRole;
 import by.training.gym.service.validator.UserValidator;
 import org.apache.commons.codec.digest.DigestUtils;
 
+import javax.servlet.ServletOutputStream;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -69,6 +76,46 @@ public class UserService {
             return userDAO.insert(user);
         } catch (DAOException exception) {
             throw new ServiceException("Exception during register operation.", exception);
+        }
+    }
+
+    /**
+     * The method updates user into data base.
+     *
+     * @param login     the user's login.
+     * @param password  the user's password.
+     * @param firstName the user's first name.
+     * @param lastName  the user's last name.
+     * @param clientID user id.
+     * @return true if operation was made successful and false otherwise.
+     * @throws ServiceException object if execution of method is failed.
+     */
+    public boolean update(int clientID, String login, String password, String firstName,
+                          String lastName, String telephone, InputStream inputStream) throws ServiceException {
+        try (ConnectionController connectionController = new ConnectionController()) {
+            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+            password = DigestUtils.shaHex(password);
+        int res = userDAO.update(clientID, login, password, firstName, lastName, telephone, inputStream);
+        if (res>0) {
+            return true;
+        }
+
+            return false ;
+        } catch (DAOException exception) {
+            throw new ServiceException("Exception during update operation.", exception);
+        }
+    }
+
+    public InputStream retrieveImage (int userId, InputStream in) throws ServiceException {
+        try (ConnectionController connectionController = new ConnectionController()) {
+            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+            ResultSet resultSet = userDAO.selectImageById(userId);
+            if(resultSet.next()) {
+                in = resultSet.getBinaryStream(1);
+            }
+          return in;
+        } catch (DAOException | SQLException exception) {
+            throw new ServiceException("Exception during image retrieval operation.", exception);
         }
     }
 

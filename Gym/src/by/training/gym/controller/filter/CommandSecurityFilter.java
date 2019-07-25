@@ -25,7 +25,7 @@ public class CommandSecurityFilter implements Filter {
 
     private static final String MAIN_PAGE_PARAMETER = "MAIN_PAGE";
 
-    private static final String TRAINER_COMMAND_PATTERN = "coach_";
+    private static final String COACH_COMMAND_PATTERN = "coach_";
     private static final String ADMIN_COMMAND_PATTERN = "admin_";
     private static final String CLIENT_COMMAND_PATTERN = "client_";
     private static final String COMMON_COMMAND_PATTERN = "common_";
@@ -101,7 +101,7 @@ public class CommandSecurityFilter implements Filter {
 
         switch (userRole) {
             case COACH: {
-                return command.startsWith(TRAINER_COMMAND_PATTERN);
+                return command.startsWith(COACH_COMMAND_PATTERN);
             }
             case CLIENT: {
                 return command.startsWith(CLIENT_COMMAND_PATTERN);

@@ -34,6 +34,11 @@ public enum CommandType {
             this.command = new ChangeLanguageCommand();
         }
     },
+    COMMON_EDIT_PROFILE {
+        {
+            this.command = new EditProfileCommand();
+        }
+    },
     /**
      * Admin commands.
      */
@@ -50,12 +55,12 @@ public enum CommandType {
     /**
      * client commands.
      */
-    CLIENT_SHOW_CLIENT_SUBSCRIPTIONS {
+    SPECIAL_SHOW_CLIENT_SUBSCRIPTIONS {
         {
             this.command = new ShowClientSubscriptionCommand();
         }
     },
-    CLIENT_SHOW_CLIENT_PROGRAM {
+    SPECIAL_SHOW_CLIENT_PROGRAM {
         {
             this.command = new ShowClientProgramCommand();
         }
@@ -103,7 +108,7 @@ public enum CommandType {
             this.command = new PrepareProgramCreationCommand();
         }
     },
-    COACH_EDIT_PROGRAM {
+    SPECIAL_EDIT_PROGRAM {
         {
             this.command = new EditProgramCommand();
         }
@@ -118,37 +123,37 @@ public enum CommandType {
             this.command = new FinishProgramCreationCommand();
         }
     },
-    COACH_EDIT_EXERCISE_IN_PROGRAM {
+    SPECIAL_EDIT_EXERCISE_IN_PROGRAM {
         {
             this.command = new EditExerciseInProgramCommand();
         }
     },
-    COACH_DELETE_EXERCISE_FROM_PROGRAM {
+    SPECIAL_DELETE_EXERCISE_FROM_PROGRAM {
         {
             this.command = new DeleteExerciseFromProgramCommand();
         }
     },
-    COACH_ADD_EXERCISE_TO_PROGRAM {
+    SPECIAL_ADD_EXERCISE_TO_PROGRAM {
         {
             this.command = new AddExerciseToProgramCommand();
         }
     },
-    COACH_DELETE_DAY_FROM_PROGRAM {
+    SPECIAL_DELETE_DAY_FROM_PROGRAM {
         {
             this.command = new DeleteDayFromProgramCommand();
         }
     },
-    COACH_EDIT_DIET_IN_PROGRAM {
+    SPECIAL_DIET_IN_PROGRAM {
         {
             this.command = new EditDietInProgramCommand();
         }
     },
-    COACH_ADD_DAY_TO_PROGRAM {
+    SPECIAL_ADD_DAY_TO_PROGRAM {
         {
             this.command = new AddDayToProgramCommand();
         }
     },
-    COACH_SAVE_PROGRAM_EDIT {
+    SPECIAL_SAVE_PROGRAM_EDIT {
         {
             this.command = new SaveProgramCommand();
         }

@@ -18,7 +18,9 @@ public class MessageManager {
     public static final String LOGIN_NOT_AVAILABLE_MESSAGE_KEY = "message.login_not_available";
     public static final String INVALID_INPUT_DATA_MESSAGE_KEY = "message.invalid_input_data";
     public static final String REGISTRATION_FAILED_MESSAGE_KEY = "message.registration_failed";
-    public static final String REGISTRATION_SUCCESSFUL_MESSAGE_KEY = "message.registration_success";
+    public static final String REGISTRATION_SUCCESSFUL_MESSAGE_KEY = "message.edit_success";
+    public static final String EDITING_FAILED_MESSAGE_KEY = "message.edit_failed";
+    public static final String EDIT_SUCCESSFUL_MESSAGE_KEY = "message.registration_success";
     public static final String FEEDBACK_WAS_ADDED_MESSAGE_KEY = "message.feedback_was_added";
     public static final String FEEDBACK_WAS_NOT_ADDED_MESSAGE_KEY = "message.feedback_was_not_added";
     public static final String SUBSCRIPTION_WAS_PAYED_MESSAGE_KEY = "message.order_was_payed";

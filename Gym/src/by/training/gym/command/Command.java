@@ -19,6 +19,7 @@ public interface Command {
     String TELEPHONE_PARAMETER = "telephone";
     String PAGE_PARAMETER = "page";
     String CLIENT_ID_PARAMETER = "client_id";
+    String USER_ID_PARAMETER = "user_id";
     String FEEDBACK_PARAMETER = "feedback";
     String PURCHASE_DATE_PARAMETER = "start_date";
     String IBM_PARAMETER = "ibm";
