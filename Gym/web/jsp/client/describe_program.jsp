@@ -90,7 +90,7 @@
             <li>
                 <form method="POST" action="${pageContext.request.contextPath}/controller">
                     <input type="hidden" name="command" value="client_discard_program"/>
-                    <input type="hidden" name="training_program_id" value="${sessionScope.trainingProgram.id}"/>
+                    <input type="hidden" name="program_id" value="${sessionScope.program.id}"/>
                     <button type="submit">${pageScope.refuse} <i class="fa fa-trash-o" aria-hidden="true"></i></button>
                 </form>
             </li>

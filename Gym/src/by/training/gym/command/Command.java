@@ -39,7 +39,7 @@ public interface Command {
     String START_DATE_PARAMETER = "start_date";
     String END_DATE_PARAMETER = "end_date";
     String DIET_PARAMETER = "diet";
-    String TRAINING_PROGRAM_ID_PARAMETER = "training_program_id";
+    String TRAINING_PROGRAM_ID_PARAMETER = "program_id";
     String LOCALE_PARAMETER = "locale";
 
     /**

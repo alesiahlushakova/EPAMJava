@@ -12,63 +12,77 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.*;
+import java.sql.*;
 import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static by.training.gym.command.Command.USER_ATTRIBUTE;
 
-
+/**
+ * servlet that shows the image on jsp page.
+ * @author AlesyaHlushakova
+ */
 public class ImageServlet extends HttpServlet {
+    /**
+     * Post method.
+     *
+     * @param request  the HTTP request.
+     * @param response the HTTP response.
+     * @throws ServletException object if execution of method is failed.
+     * @throws IOException      object if execution of method is failed.
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-
+    /**
+     * Get method.
+     *
+     * @param request  the HTTP request.
+     * @param response the HTTP response.
+     * @throws ServletException object if execution of method is failed.
+     * @throws IOException      object if execution of method is failed.
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       processRequest(request, response);
+    }
 
+    /**
+     * method processes request.
+     * @param request the HTTP request.
+     * @param response the HTTP response.
+     */
+    private void processRequest(HttpServletRequest request, HttpServletResponse response) {
+        OutputStream oImage;
+        ResultSet rs = null;
 
-        BufferedInputStream bin=null;
-        BufferedOutputStream bout=null;
-        InputStream in =null;
-
-        response.setContentType("image/jpeg");
-        ServletOutputStream out;
-        out = response.getOutputStream();
+        PreparedStatement pstmt = null;
         HttpSession currentSession = request.getSession();
+
         User user = (User)currentSession.getAttribute(USER_ATTRIBUTE);
-        int id = user.getId();
-               UserService userService = new UserService();
+        int userId = user.getId();
+        UserService userService = new UserService();
+
         try {
 
-            in = userService.retrieveImage(id, in);
-            bin = new BufferedInputStream(in);
-            bout = new BufferedOutputStream(out);
-            int ch=0;
-            while((ch=bin.read())!=-1)
-            {
-                bout.write(ch);
-            }
+           byte barray[] = userService.retrieveImage(userId);
+                response.setContentType("image/gif");
+                oImage=response.getOutputStream();
+                oImage.write(barray);
+                oImage.flush();
+                oImage.close();
 
-        } catch (ServiceException ex) {
-        //   LOGGER.error("Error occurred during processing photo");
-        }finally{
+        }
+        catch(Exception ex){
+
+        }finally {
             try{
-                if(bin!=null)bin.close();
-                if(in!=null)in.close();
-                if(bout!=null)bout.close();
-                if(out!=null)out.close();
-            }catch(IOException ex){
+
+
+            }catch(Exception ex){
 
             }
         }
-
     }
 }

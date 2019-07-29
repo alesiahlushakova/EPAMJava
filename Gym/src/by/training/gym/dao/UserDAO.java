@@ -4,7 +4,9 @@ import by.training.gym.domain.User;
 import by.training.gym.domain.UserRole;
 
 import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -124,16 +126,25 @@ public class UserDAO extends AbstractDAO<User>{
         }
     }
 
-    public ResultSet selectImageById (int userId)
+    public byte[] selectImageById (int userId)
             throws DAOException {
+
         try (PreparedStatement preparedStatement
                      = prepareStatementForQuery(SELECT_IMAGE_BY_USER_ID_QUERY,
                 userId)) {
-            return preparedStatement.executeQuery();
+            ResultSet rs = preparedStatement.executeQuery();
+            if (rs.next()) {
+                byte barray[] = rs.getBytes(1);
+
+                return barray;
+
+            }
+        return null;
 
         } catch (SQLException exception) {
             throw new DAOException(exception.getMessage(), exception);
         }
+
     }
 
     /**

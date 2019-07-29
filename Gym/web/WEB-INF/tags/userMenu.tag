@@ -51,7 +51,7 @@
                    href="${pageContext.request.contextPath}/jsp/register.jsp">${pageScope.register}</a>
             </c:when>
             <c:otherwise>
-                <img width="30" height="30" src="imageServlet">
+                <img id="foo" width="30" height="30" src="${pageContext.request.contextPath}/imageServlet" onerror="this.src='${pageContext.request.contextPath}/images/avatar.jpg';" >
                 <span class="hello_text">${pageScope.hello} ${sessionScope.user.firstName} ${sessionScope.user.lastName}</span>
                 <span class="hello_text"><a class="logout_a" href="${pageContext.request.contextPath}/jsp/edit_user.jsp">${pageScope.edit}</a> </span>
                 <a class="register_login_a"

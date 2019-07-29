@@ -5,7 +5,7 @@
     width: 98%;
     color: white;
     box-sizing: border-box;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
     padding: 5px;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .hello_message {
-    margin-top: -20px;
+
     float: right;
 }
 
@@ -43,7 +43,7 @@
     width: 98%;
     border-radius: 8px;
     background-color: rgba(120, 120, 120, 0.7);
-    margin: 0 auto 50px;
+    margin: 0 auto 60px;
 }
 
 .user_menu ul {

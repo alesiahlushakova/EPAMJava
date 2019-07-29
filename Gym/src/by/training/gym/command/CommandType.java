@@ -143,7 +143,7 @@ public enum CommandType {
             this.command = new DeleteDayFromProgramCommand();
         }
     },
-    SPECIAL_DIET_IN_PROGRAM {
+    SPECIAL_EDIT_DIET_IN_PROGRAM {
         {
             this.command = new EditDietInProgramCommand();
         }

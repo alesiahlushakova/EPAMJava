@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  */
 public class ProgramValidator {
 
-    private static final int MINIMAL_EXERCISES_COUNT_PER_DAY = 3;
+    private static final int MINIMAL_EXERCISES_COUNT_PER_DAY = 1;
 
     private static final int MINIMAL_DAYS_COUNT_IN_TRAINING_PROGRAM = 2;
 

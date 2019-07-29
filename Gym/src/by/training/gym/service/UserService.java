@@ -9,10 +9,7 @@ import by.training.gym.service.validator.UserValidator;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.servlet.ServletOutputStream;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -106,15 +103,11 @@ public class UserService {
         }
     }
 
-    public InputStream retrieveImage (int userId, InputStream in) throws ServiceException {
+    public byte[] retrieveImage (int userId) throws ServiceException {
         try (ConnectionController connectionController = new ConnectionController()) {
             UserDAO userDAO = new UserDAO(connectionController.getConnection());
-            ResultSet resultSet = userDAO.selectImageById(userId);
-            if(resultSet.next()) {
-                in = resultSet.getBinaryStream(1);
-            }
-          return in;
-        } catch (DAOException | SQLException exception) {
+         return userDAO.selectImageById(userId);
+        } catch (DAOException  exception) {
             throw new ServiceException("Exception during image retrieval operation.", exception);
         }
     }
