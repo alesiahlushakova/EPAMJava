@@ -27,6 +27,8 @@ public class SubscriptionServiceTest {
     Subscription subscription2;
     Subscription subscription3;
     Subscription subscription4;
+    Subscription subscription5;
+    Subscription subscription6;
     List<List<Subscription>> subList = new ArrayList<>();
     List<Subscription> emptyList = new ArrayList<>();
     @BeforeMethod
@@ -68,8 +70,30 @@ public class SubscriptionServiceTest {
         subscription4.setPrice(BigDecimal.valueOf(220));
         subscription4.setCoachNeeded(1);
 
-        subList.add(Arrays.asList(subscription3));
-        subList.add(Arrays.asList(subscription4));
+        subscription5 = new Subscription();
+        subscription5.setClientId(3);
+        subscription5.setPurchaseDate(Date.valueOf("2019-07-15"));
+        subscription5.setEndDate(Date.valueOf("2019-07-22"));
+        subscription5.setSubscriptionType(SubscriptionType.WEEK);
+        subscription5.setIbm(20);
+        subscription5.setPrice(BigDecimal.valueOf(80));
+        subscription5.setCoachNeeded(1);
+        subscription5.setIsPayed(1);
+        subscription5.setFeedback("I am glad to find that amazing place");
+
+        subscription6 = new Subscription();
+        subscription6.setClientId(4);
+        subscription6.setPurchaseDate(Date.valueOf("2019-07-27"));
+        subscription6.setEndDate(Date.valueOf("2019-08-26"));
+        subscription6.setSubscriptionType(SubscriptionType.MONTH);
+        subscription6.setIbm(22);
+        subscription6.setIsPayed(1);
+        subscription6.setPrice(BigDecimal.valueOf(220));
+        subscription6.setCoachNeeded(1);
+
+        subList.add(Arrays.asList(subscription5));
+        subList.add(Arrays.asList(subscription6));
+        subList.add(emptyList);
 
 
     }
@@ -112,12 +136,13 @@ public class SubscriptionServiceTest {
 
 
 
-
+    @Test
     public void testFindAllClientSubscriptions()
             throws ServiceException {
         List<List<Subscription>> expected = new ArrayList<>();
         expected.add(subscriptionService.findAllClientSubscriptions(3));
         expected.add(subscriptionService.findAllClientSubscriptions(4));
+        expected.add(subscriptionService.findAllClientSubscriptions(1));
         Assert.assertEquals(subList, expected);
     }
 }

@@ -227,8 +227,6 @@ public class Subscription extends Entity{
                         getIsCoachNeeded() &&
                 getIbm() == that.getIbm() &&
                 getIsPayed() == that.getIsPayed() &&
-                getPurchaseDate().equals(that.getPurchaseDate()) &&
-                getExpirationDate().equals(that.getExpirationDate()) &&
                 getSubscriptionType() == that.getSubscriptionType() &&
                 getPrice().equals(that.getPrice()) ;
     }
