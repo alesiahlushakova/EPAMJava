@@ -16,6 +16,5 @@ public enum SubscriptionType {
     /**
      * year sub.
      */
-    YEAR,
-
+    YEAR
 }

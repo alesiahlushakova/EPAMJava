@@ -115,7 +115,7 @@ public class Subscription extends Entity{
     }
 
     /**
-     * getter for order's price.
+     * getter for sub's price.
      *
      * @return the price.
      */
@@ -124,7 +124,7 @@ public class Subscription extends Entity{
     }
 
     /**
-     * setter for order's price.
+     * setter for sub's price.
      *
      * @param price the price.
      */
@@ -230,8 +230,7 @@ public class Subscription extends Entity{
                 getPurchaseDate().equals(that.getPurchaseDate()) &&
                 getExpirationDate().equals(that.getExpirationDate()) &&
                 getSubscriptionType() == that.getSubscriptionType() &&
-                getPrice().equals(that.getPrice()) &&
-                getFeedback().equals(that.getFeedback());
+                getPrice().equals(that.getPrice()) ;
     }
 
     /**
@@ -241,7 +240,7 @@ public class Subscription extends Entity{
      */
     @Override
     public String toString() {
-        return "Order{" +
+        return "Subscription{" +
                 "clientId=" + clientId +
                 ", purchaseDate=" + purchaseDate +
                 ", endDate=" + expirationDate +

@@ -193,42 +193,42 @@ public class SubscriptionDAO extends AbstractDAO<Subscription> {
     @Override
     protected Subscription buildEntity(ResultSet resultSet) throws DAOException {
         try {
-            Subscription order = new Subscription();
+            Subscription subscription = new Subscription();
 
             int id = resultSet.getInt(ID_COLUMN_LABEL);
-            order.setId(id);
+            subscription.setId(id);
 
             int clientId = resultSet.getInt(CLIENT_ID_COLUMN_LABEL);
-            order.setClientId(clientId);
+            subscription.setClientId(clientId);
 
             Date purchaseDate = resultSet.getDate(PURCHASE_DATE_COLUMN_LABEL);
-            order.setPurchaseDate(purchaseDate);
+            subscription.setPurchaseDate(purchaseDate);
 
             Date endDate = resultSet.getDate(EXPIRATION_DATE_COLUMN_LABEL);
-            order.setEndDate(endDate);
+            subscription.setEndDate(endDate);
 
             String durationValue = resultSet.getString(TRIAL_COLUMN_LABEL);
             SubscriptionType duration = SubscriptionType.valueOf(durationValue);
-            order.setSubscriptionType(duration);
+            subscription.setSubscriptionType(duration);
 
             BigDecimal price = resultSet.getBigDecimal(PRICE_COLUMN_LABEL);
-            order.setPrice(price);
+            subscription.setPrice(price);
 
             int ibm = resultSet.getInt(IBM_COLUMN_LABEL);
-            order.setIbm(ibm);
+            subscription.setIbm(ibm);
 
             int isPersonalTrainerNeed = resultSet.getInt(IS_COACH_NEEDED);
-            order.setCoachNeeded(isPersonalTrainerNeed);
+            subscription.setCoachNeeded(isPersonalTrainerNeed);
 
 
 
             int isPayed = resultSet.getInt(IS_PAYED_COLUMN_LABEL);
-            order.setIsPayed(isPayed);
+            subscription.setIsPayed(isPayed);
 
             String feedback = resultSet.getString(FEEDBACK_COLUMN_LABEL);
-            order.setFeedback(feedback);
+            subscription.setFeedback(feedback);
 
-            return order;
+            return subscription;
         } catch (SQLException exception) {
             throw new DAOException(exception.getMessage(), exception);
         }

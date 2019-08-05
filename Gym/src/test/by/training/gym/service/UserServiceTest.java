@@ -16,7 +16,6 @@ import static org.testng.Assert.*;
 public class UserServiceTest {
     UserService userService;
     ArrayList<User> emptyList = new ArrayList<>();
-    List<User> userList;
     Map<Integer, String> expectedMap;
     User user1;
     User user2;
@@ -95,7 +94,7 @@ public class UserServiceTest {
     @DataProvider(name = "findPersonalClientsProvider")
     public Object[][] dataProviderFindPersonalClients() {
         return new Object[][]{{2, emptyList},
-                {6, Arrays.asList(user3)},
+
                 {7, emptyList}};
     }
 
