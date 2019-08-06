@@ -450,7 +450,7 @@
 }
 
 .active, .collapsible:hover {
-    color: #de81df;
+    color: white;
 }
 
 .content {
@@ -461,7 +461,7 @@
 .training_program_description {
     font-family: 'Caviar', serif;
     font-size: 20px;
-    background-color: rgba(240, 23, 192, 0.44);
+    background-color: rgba(120, 120, 120, 0.7);
     text-align: center;
     border-radius: 8px;
     margin: 0 auto;
@@ -477,7 +477,7 @@
 }
 
 .training_program_description_day {
-    background-color: rgba(240, 23, 192, 0.44);
+    background-color: rgba(120, 120, 120, 0.7);
     padding: 1%;
     margin: 1%;
     border-radius: 10px;
