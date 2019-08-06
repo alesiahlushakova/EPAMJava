@@ -80,7 +80,9 @@ public class ProgramService {
      * @return TrainingProgram object.
      * @throws ServiceException object if execution of query is failed.
      */
-    public Program createProgram(int authorId, String clientIdValue, String diet, String startDateValue, String endDateValue) throws ServiceException {
+    public Program createProgram(int authorId, String clientIdValue, String diet,
+                                 String startDateValue, String endDateValue)
+            throws ServiceException {
         try (ConnectionController connectionManager = new ConnectionController()) {
             Program program = new Program();
 
