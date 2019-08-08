@@ -108,7 +108,6 @@ public class ExerciseServiceTest {
        expected.add(exerciseTwo);
        expected.add(exerciseThree);
        expected.add(exerciseFour);
-       boolean loh = expected.equals(exerciselist);
        Assert.assertEquals(expected, exerciselist);
     }
 

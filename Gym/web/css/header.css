@@ -5,7 +5,7 @@
     width: 98%;
     color: white;
     box-sizing: border-box;
-    margin: 0 auto 30px;
+    margin: 0 auto 20px;
     padding: 5px;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .hello_message {
-    margin-top: -10px;
+    margin-top: -45px;
     float: right;
 }
 
@@ -43,9 +43,9 @@
     width: 98%;
     border-radius: 8px;
     background-color: rgba(120, 120, 120, 0.7);
-    margin: 0 auto 60px;
+    margin: 0 auto 50px;
+    height: 26px;
 }
-
 .user_menu ul {
     display: flex;
     justify-content: space-around;
@@ -59,7 +59,7 @@
 }
 
 .user_menu a:hover {
-    color: #de81df;
+    color: #df22d9;
 }
 
 .user_menu a .fa {

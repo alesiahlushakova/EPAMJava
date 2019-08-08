@@ -32,7 +32,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/css/font-awesome.min.css">
     <title>${pageScope.title}</title>
 </head>
 <body class="page">
