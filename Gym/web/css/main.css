@@ -392,6 +392,7 @@
 }
 
 .create_exercise {
+    background-color: rgba(120, 120, 120, 0.7);
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
@@ -519,6 +520,7 @@
 }
 
 .create_training_program {
+    background-color: rgba(120, 120, 120, 0.7);
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
@@ -584,7 +586,7 @@
 
 .wrapper_content {
     margin: 0 auto;
-    width: 1000px;
+    width: 65%;
 }
 
 .wrapper_content img {

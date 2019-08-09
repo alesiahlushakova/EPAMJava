@@ -27,18 +27,20 @@
 <p class="error">${requestScope.message}</p>
 <div class="wrapper_content">
     <div class="wrapper_content-item  clearfix">
-        <img src="${pageContext.request.contextPath}/images/girl.jpg" alt="" width="300px" height="200px">
+
+        <img src="${pageContext.request.contextPath}/images/images.jpg" alt="" width="300px" height="200px">
+
         <p>
             ${pageScope.info}
         </p>
     </div>
     <div class="wrapper_content-item clearfix">
-        <img src="${pageContext.request.contextPath}/images/workout-tips.jpg" alt="" width="300px" height="200px">
+        <img src="${pageContext.request.contextPath}/images/workout-tips.jpg" alt="" width="300px" height="190px">
         <p>${pageScope.news}
         </p>
     </div>
-    <div class="wrapper_content-item  clearfix">
-        <img src="${pageContext.request.contextPath}/images/images.jpg" alt="" width="300px" height="120px">
+    <div class="wrapper_content-item clearfix">
+        <img src="${pageContext.request.contextPath}/images/girl.jpg" alt="" width="300px" height="160px">
         <p>
             ${pageScope.promotion}
         </p>
@@ -46,7 +48,8 @@
 </div>
 <footer class="footer">
     <p>
-        <span><i class="fa fa-mobile" aria-hidden="true"></i> +375 (33)<strong>6340558</strong></span>
+        <span><i class="fa fa-mobile" aria-hidden="true"></i> +375 (33)6340558</span>
+
 
     </p>
 </footer>

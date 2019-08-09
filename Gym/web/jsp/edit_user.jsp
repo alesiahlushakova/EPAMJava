@@ -70,7 +70,7 @@
     </form>
 </div>
 <script>
-<%--    <jsp:directive.include file="/js/registerValidation.js"/>--%>
+   <jsp:directive.include file="/js/registerValidation.js"/>
 </script>
 </body>
 </html>
