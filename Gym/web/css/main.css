@@ -356,6 +356,7 @@
     font-family: 'Caviar', serif;
     font-size: 20px;
     border-radius: 5px;
+    color: white;
     border-color: rgba(120, 120, 120, 0.7);
     background-color: rgba(120, 120, 120, 0.7);
 }
@@ -403,6 +404,7 @@
     font-family: 'Caviar', serif;
     font-size: 20px;
     border-radius: 5px;
+    color: white;
     border-color: rgba(240, 23, 192, 0.44);
     background-color: rgba(240, 23, 192, 0.44);
 }
@@ -534,6 +536,7 @@
     font-family: 'Caviar', serif;
     font-size: 20px;
     border-radius: 5px;
+    color: white;
     border-color: rgba(240, 23, 192, 0.44);
     background-color: rgba(240, 23, 192, 0.44);
 }
