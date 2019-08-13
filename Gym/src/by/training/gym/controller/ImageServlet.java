@@ -1,22 +1,14 @@
 package by.training.gym.controller;
 
-import by.training.gym.dao.ConnectionController;
-import by.training.gym.dao.UserDAO;
+
 import by.training.gym.domain.User;
-import by.training.gym.service.ServiceException;
+
 import by.training.gym.service.UserService;
 
-import javax.resource.spi.ConnectionManager;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
-import java.util.Enumeration;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import static by.training.gym.command.Command.USER_ATTRIBUTE;
 

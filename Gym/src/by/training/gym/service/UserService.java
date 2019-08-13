@@ -149,7 +149,7 @@ public class UserService {
                 return userDAO.selectClientByNamePart(name);
             }
         } catch (DAOException exception) {
-            throw new ServiceException("Exception during find client by name operation.", exception);
+            throw new ServiceException("Exception during finding client by name operation.", exception);
         }
     }
 
@@ -171,7 +171,7 @@ public class UserService {
 
             return clients;
         } catch (DAOException exception) {
-            throw new ServiceException("Exception during find all clients by pages operation.", exception);
+            throw new ServiceException("Exception during finding all clients by pages operation.", exception);
         }
     }
 
@@ -187,7 +187,7 @@ public class UserService {
 
             return userDAO.selectPersonalClients(trainerId);
         } catch (DAOException exception) {
-            throw new ServiceException("Exception during find personal clients operation.", exception);
+            throw new ServiceException("Exception during search for personal clients operation.", exception);
         }
     }
 

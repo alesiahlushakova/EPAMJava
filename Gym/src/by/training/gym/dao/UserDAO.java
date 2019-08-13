@@ -376,7 +376,7 @@ public class UserDAO extends AbstractDAO<User>{
     }
 
     /**
-     * This method initialize queries for common operations.
+     * method initializes queries for common operations.
      *
      * @return Map object with queries.
      */
