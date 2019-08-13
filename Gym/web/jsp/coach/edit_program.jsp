@@ -27,7 +27,6 @@
     <fmt:message key="training_program.exercise_title" var="exercise_title"/>
     <fmt:message key="exercise.description" var="exercise_description"/>
     <fmt:message key="exercise.restrictions" var="restrictions"/>
-    <fmt:message key="exercise.calories_lost"/>
     <fmt:message key="exercise.level_message" var="level"/>
     <fmt:message key="exercise.beginner" var="beginner"/>
     <fmt:message key="exercise.expert" var="expert"/>

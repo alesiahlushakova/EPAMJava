@@ -15,8 +15,9 @@
 }
 
 .hello_message {
-    margin-top: -45px;
     float: right;
+    font-size: 22px;
+    padding-top: 7px;
 }
 
 .register_login_a {
@@ -43,8 +44,7 @@
     width: 98%;
     border-radius: 8px;
     background-color: rgba(120, 120, 120, 0.7);
-    margin: 0 auto 50px;
-
+    margin: 0 auto 20px;
 }
 .user_menu ul {
     display: flex;
@@ -93,9 +93,10 @@
     color: #de81df;
 }
 
-.change_level {
+.change_level{
     float: left;
-    margin-top: -3%;
+    font-size: 22px;
+    padding-top: 7px;
 }
 
 .change_level ul {

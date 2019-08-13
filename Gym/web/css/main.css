@@ -10,10 +10,18 @@
     background-size: cover;
     color: white;
     font-family: 'Caviar', serif;
+    height:100%;
 }
 
 .title {
+    width: 300px;
+    background-color: #ff7ad3;
     text-align: center;
+    border-radius: 8px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    margin: 20px auto 20px;
+
 }
 
 .title h1 {
@@ -30,14 +38,15 @@
 }
 
 .wrapper_form {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 336px;
     background-color: rgba(240, 23, 192, 0.44);
     text-align: center;
     border-radius: 8px;
     padding-top: 30px;
     box-sizing: border-box;
     margin: 0 auto 20px;
+    font-size:25px;
 }
 
 .log_input {
@@ -61,6 +70,7 @@
     font-weight: bold;
     color: #fff;
     font-family: 'Caviar', serif;
+    font-size: 18px;
 }
 
 .log_button:hover {
@@ -71,7 +81,7 @@
     width: 300px;
     height: 50px;
     margin: 0 auto;
-    background-color: #dfd9dd;
+    background-color: #ff7ad3;
     text-align: center;
     border-radius: 8px;
     padding-top: 15px;
@@ -145,10 +155,11 @@
 
 .reg_form {
     background-color: rgba(240, 23, 192, 0.44);
-    width: 250px;
+    width: 350px;
     border-radius: 8px;
     margin: 0 auto;
     padding: 10px;
+    font-size:25px;
 }
 
 .reg_form input {
@@ -397,6 +408,8 @@
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
+    max-width:600px;
+    min-width:550px;
 }
 
 .create_exercise_confirm {
@@ -426,7 +439,6 @@
 }
 
 .create_exercise_name {
-    width: 25%;
     font-family: 'Caviar', serif;
     border-radius: 10px;
     font-size: 15px;
@@ -468,6 +480,7 @@
     text-align: center;
     border-radius: 8px;
     margin: 0 auto;
+    width:60%;
 }
 
 .training_program_description_top {
@@ -476,7 +489,10 @@
 }
 
 .training_program_description ul {
-    list-style-type: none;
+    list-style-type: none  ;
+}
+.training_program_description li {
+    list-style-type: none  ;
 }
 
 .training_program_description_day {
@@ -489,17 +505,20 @@
 .training_program_client_buttons {
     box-sizing: border-box;
     margin: 0 auto;
+    padding: 3px;
 }
 
 .training_program_client_buttons ul {
     list-style-type: none;
     margin: 0 auto;
-    padding: 0;
+    padding: 0px;
     text-align: center;
+
 }
 
 .training_program_client_buttons li {
     display: inline-block;
+
 }
 
 .training_program_client_buttons button {
@@ -509,6 +528,7 @@
     border-radius: 5px;
     border-color: rgba(240, 23, 192, 0.44);
     background-color: rgba(240, 23, 192, 0.44);
+    padding: 3px;
 }
 
 .training_program_client_buttons button:hover {
@@ -526,6 +546,8 @@
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
+    max-width:600px;
+    min-width:550px;
 }
 
 .create_training_program input {
@@ -534,11 +556,12 @@
 
 .create_training_program button {
     font-family: 'Caviar', serif;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 5px;
     color: white;
     border-color: rgba(240, 23, 192, 0.44);
     background-color: rgba(240, 23, 192, 0.44);
+    padding: 3px;
 }
 
 .not_active_button {
@@ -585,23 +608,6 @@
 .create_training_program_number {
     width: 30px;
     border-radius: 3px;
-}
-
-.wrapper_content {
-    margin: 0 auto;
-    width: 65%;
-}
-
-.wrapper_content img {
-    margin-right: 20px;
-    float: left;
-}
-
-.wrapper_content p {
-    font-size: 22px;
-    background-color: rgba(120, 120, 120, 0.7);
-    border-radius: 10px;
-    padding: 5px 0 5px 0;
 }
 
 .error {
@@ -654,6 +660,7 @@
     border-radius: 5px;
     border-color: rgba(240, 23, 192, 0.44);
     background-color:rgba(240, 23, 192, 0.44);
+    padding: 3px;
 }
 
 .edit_training_program_wrapper_button:hover {
@@ -668,10 +675,11 @@
 
 .save_button {
     font-family: 'Caviar', serif;
-    font-size: 15px;
+    font-size: 25px;
     border-radius: 5px;
     border-color: rgba(240, 23, 192, 0.44);
     background-color: rgba(240, 23, 192, 0.44);
+    padding: 3px;
 }
 
 .day_wrapper {
@@ -726,6 +734,8 @@
     color: white;
     border-radius: 10px;
     bottom: 0;
+    top:0;
+    position:relative;
     margin-left: 1%;
     text-align: right;
 }
@@ -733,4 +743,30 @@
 .footer p {
     margin-right: 1%;
     padding: 1%;
+}
+
+.text-theme{
+    background-color: rgba(120, 120, 120, 0.7);
+    float:right;
+    font-size:22px;
+    width:33%;
+}
+
+.carousel {
+    max-width: 1400px;
+    margin-bottom:170px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.row{
+    margin:0;
+}
+.col{
+    margin:0;
+}
+.main_img{
+    width:800px;
+    height:600px;
+    border-radius:8px 0 0 8px;
 }

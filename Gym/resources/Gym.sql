@@ -6,7 +6,6 @@ drop table if exists Subscription;
 drop table if exists Pricing;
 drop table if exists Program;
 drop table if exists Complex;
-drop table Users;
 create table Users (
                        UserID int auto_increment primary key,
                        Login nvarchar(50) not null,
