@@ -1,2 +1,2 @@
 # EPAMJava
-This repository contains task 1 for EPAM
+This repository contains tasks for EPAM course 'Java Web development'
