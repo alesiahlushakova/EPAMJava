@@ -9,17 +9,6 @@
     padding: 5px;
 }
 
-.top {
-    display: block;
-    margin-top: 0;
-}
-
-.hello_message {
-    float: right;
-    font-size: 22px;
-    padding-top: 7px;
-}
-
 .register_login_a {
     color: #de81df;
     text-decoration: none;
@@ -92,11 +81,31 @@
 .user_menu button .fa:hover {
     color: #de81df;
 }
-
-.change_level{
-    float: left;
-    font-size: 22px;
-    padding-top: 7px;
+@media screen and (min-width:800px){
+    .change_level{
+        float: left;
+        font-size: 22px;
+        padding-top: 7px;
+    }
+    .hello_message {
+        float: right;
+        font-size: 22px;
+        padding-top: 7px;
+    }
+    .top {
+        display: block;
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:800px){
+    .change_level{
+        display:none;
+        margin:0;
+    }
+    .top {
+        display:none;
+        margin:0;
+    }
 }
 
 .change_level ul {

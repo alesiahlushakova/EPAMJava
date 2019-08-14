@@ -37,11 +37,11 @@
 <div id="carouselControls" class="carousel slide clearfix" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active" data-interval="5000">
-            <div class="row">
-                <div class="col">
+            <div class="row no-gutters">
+                <div class="col-lg col-md-12 col-sm-12">
                     <img class="main_img" src="${pageContext.request.contextPath}/images/images.jpg" alt="">
                 </div>
-                <div class="col text-theme">
+                <div class="col-lg col-md-12 col-sm-12 text-theme">
                     <p>
                         ${pageScope.info}
                     </p>
@@ -49,11 +49,11 @@
             </div>
         </div>
         <div class="carousel-item" data-interval="5000">
-            <div class="row">
-                <div class="col">
+            <div class="row no-gutters">
+                <div class="col-lg col-md-12 col-sm-12">
                     <img class="main_img" src="${pageContext.request.contextPath}/images/workout-tips.jpg" alt="">
                 </div>
-                <div class="col text-theme">
+                <div class="col-lg col-md-12 col-sm-12 text-theme">
                     <p>
                         ${pageScope.news}
                     </p>
@@ -61,11 +61,11 @@
             </div>
         </div>
         <div class="carousel-item wrapper_content-item clearfix" data-interval="5000">
-            <div class="row">
-                <div class="col">
+            <div class="row no-gutters">
+                <div class="col-lg col-md-12 col-sm-12">
                     <img class="main_img" src="${pageContext.request.contextPath}/images/girl.jpg" alt="">
                 </div>
-                <div class="col text-theme">
+                <div class="col-lg col-md-12 col-sm-12 text-theme">
                     <p>
                         ${pageScope.promotion}
                     </p>
