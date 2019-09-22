@@ -11,11 +11,11 @@ public class CurrentJsp {
     /**
      * Common pages.
      */
-    public static final String LOGIN_PAGE_PATH = "/jsp/login.jsp";
-    public static final String MAIN_PAGE_PATH = "/jsp/main.jsp";
-    public static final String ERROR_PAGE_PATH = "/jsp/error.jsp";
-    public static final String REGISTER_PAGE_PATH = "/jsp/register.jsp";
-    public static final String EDIT_PAGE_PATH = "/jsp/edit_user.jsp";
+    public static final String LOGIN_PAGE_PATH = "/jsp/common/login.jsp";
+    public static final String MAIN_PAGE_PATH = "/jsp/common/main.jsp";
+    public static final String ERROR_PAGE_PATH = "/jsp/common/error.jsp";
+    public static final String REGISTER_PAGE_PATH = "/jsp/common/register.jsp";
+    public static final String EDIT_PAGE_PATH = "/jsp/common/edit_user.jsp";
     /**
     * admin pages.
     */

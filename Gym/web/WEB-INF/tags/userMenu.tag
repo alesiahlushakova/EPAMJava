@@ -22,6 +22,7 @@
     <fmt:message key="menu.show_clients" var="show_clients"/>
     <fmt:message key="menu.find_client" var="find_client"/>
     <fmt:message key="menu.orders_history" var="orders_history"/>
+    <fmt:message key="menu.orders_discard" var="orders_discard"/>
     <fmt:message key="menu.my_training_program" var="my_training_program"/>
     <fmt:message key="menu.make_order" var="make_order"/>
     <fmt:message key="menu.change" var="change"/>
@@ -56,14 +57,14 @@
                     <c:when test="${sessionScope.user == null}">
                         <span class="hello_text">${pageScope.hello_guest}</span>
                         <a class="logout_a"
-                           href="${pageContext.request.contextPath}/jsp/login.jsp">${pageScope.login}</a>
+                           href="${pageContext.request.contextPath}/jsp/common/login.jsp">${pageScope.login}</a>
                         <a class="register_login_a"
-                           href="${pageContext.request.contextPath}/jsp/register.jsp">${pageScope.register}</a>
+                           href="${pageContext.request.contextPath}/jsp/common/register.jsp">${pageScope.register}</a>
                     </c:when>
                     <c:otherwise>
                         <img id="foo" width="30" height="30" src="${pageContext.request.contextPath}/imageServlet" onerror="this.src='${pageContext.request.contextPath}/images/avatar.jpg';" >
                         <span class="hello_text">${pageScope.hello} ${sessionScope.user.firstName} ${sessionScope.user.lastName}</span>
-                        <span class="hello_text"><a class="logout_a" href="${pageContext.request.contextPath}/jsp/edit_user.jsp">${pageScope.edit}</a> </span>
+                        <span class="hello_text"><a class="logout_a" href="${pageContext.request.contextPath}/jsp/common/edit_user.jsp">${pageScope.edit}</a> </span>
                         <a class="register_login_a"
                            href="${pageContext.request.contextPath}/controller?command=common_logout">${pageScope.logout}</a>
                     </c:otherwise>
@@ -76,8 +77,8 @@
 <div class="user_menu">
     <ul>
         <c:if test="${sessionScope.user != null}">
-            <li><a href="${pageContext.request.contextPath}/jsp/main.jsp"><i class="fa fa-home"
-                                                                             aria-hidden="true"></i></a></li>
+            <li><a href="${pageContext.request.contextPath}/jsp/common/main.jsp"><i class="fa fa-home"
+                                                                                    aria-hidden="true"></i></a></li>
             <c:choose>
                 <c:when test="${sessionScope.user.userRole == 'COACH'}">
                     <li>
@@ -104,6 +105,9 @@
                     </li>
                 </c:when>
                 <c:otherwise>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_discard}</a>
+                    </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
                     </li>

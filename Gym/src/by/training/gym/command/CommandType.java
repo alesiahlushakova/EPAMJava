@@ -90,6 +90,11 @@ public enum CommandType {
             this.command = new DiscardProgramCommand();
         }
     },
+    SPECIAL_DISCARD_CLIENT_SUBSCRIPTIONS {
+        {
+            this.command = new DiscardSubscriptionCommand();
+        }
+    },
     /**
      * coach commands.
      */

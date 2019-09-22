@@ -27,7 +27,7 @@
 </head>
 <body class="page">
 <div class="title">
-    <a href="${pageContext.request.contextPath}/jsp/main.jsp"><i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="${pageContext.request.contextPath}/jsp/common/main.jsp"><i class="fa fa-home" aria-hidden="true"></i></a>
     <h1>${pageScope.log_in}</h1>
 </div>
 <p class="error">${requestScope.message}</p>
@@ -41,7 +41,7 @@
 </div>
 <div class="reg_link">
     <span>${pageScope.register_span}</span>
-    <a class="reg_button" href="${pageContext.request.contextPath}/jsp/register.jsp">${pageScope.register_link}</a>
+    <a class="reg_button" href="${pageContext.request.contextPath}/jsp/common/register.jsp">${pageScope.register_link}</a>
 </div>
 </body>
 </html>

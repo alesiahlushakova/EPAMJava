@@ -29,7 +29,7 @@ public class PageSecurityFilter implements Filter {
     private static final String TRAINER_PAGE_PATH_PATTERN = ".*/jsp/coach/.*.jsp";
     private static final String ADMIN_PAGE_PATH_PATTERN = ".*/jsp/admin/.*.jsp";
     private static final String CLIENT_PAGE_PATH_PATTERN = ".*/jsp/client/.*.jsp";
-    private static final String COMMON_PAGE_PATH_PATTERN = ".*/jsp/.*.jsp*";
+    private static final String COMMON_PAGE_PATH_PATTERN = ".*/jsp/common/.*.jsp*";
     private static final String SPECIAL_PAGE_PATH_PATTERN = ".*/jsp/special/.*.jsp*";
 
     private String redirectPage;

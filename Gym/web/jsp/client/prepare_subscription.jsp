@@ -9,9 +9,9 @@
     <fmt:message key="order.duration" var="duration"/>
     <fmt:message key="order.yes_message" var="yes"/>
     <fmt:message key="order.no_message" var="no"/>
-    <fmt:message key="order.month_duration" var="month"/>
-    <fmt:message key="order.week_duration" var="week"/>
-    <fmt:message key="order.year_duration" var="year"/>
+    <fmt:message key="order.month_duration_price" var="month"/>
+    <fmt:message key="order.week_duration_price" var="week"/>
+    <fmt:message key="order.year_duration_price" var="year"/>
     <fmt:message key="order.need_personal_trainer" var="need_trainer"/>
     <fmt:message key="order.confirm" var="confirm"/>
     <fmt:message key="title.order_purchase_date" var="title_purchase_date"/>
@@ -41,6 +41,7 @@
             </select>
         </label>
         </p>
+
         <p><label>${pageScope.ibm}</label></p>
         <p><input type="text" name="ibm"  onchange="checkIbm()"></p>
         <ul>

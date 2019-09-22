@@ -12,7 +12,7 @@ public class UserValidator {
     private static final String LOGIN_PATTERN = "([a-zA-Z0-9_]+){6,}";
     private static final String PASSWORD_PATTERN = "([a-zA-Z0-9_]+){4,}";
     private static final String NAME_PATTERN = "[A-Za-zА-Яа-я]+";
-  //  private static final String PHONE_PATTERN = "^\\+375 \\((17|29|33|44)\\) [0-9]{3}-[0-9]{2}-[0-9]{2}$";
+
     private static final String SPACE_PATTERN = "\\s";
 
     /**

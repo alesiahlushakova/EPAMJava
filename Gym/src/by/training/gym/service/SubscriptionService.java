@@ -39,6 +39,39 @@ public class SubscriptionService {
                     + "client has client actual order operation.", exception);
         }
     }
+    /**
+     * method discards subs.
+     * @param subId the sub id.
+     * @return true if operation was successful and false otherwise.
+     * @throws ServiceException object if execution of query is failed.
+     */
+    public boolean discardSubscription(int subId) throws ServiceException {
+
+        ConnectionController connectionController = new ConnectionController();
+        try {
+            connectionController.startTransaction();
+
+            SubscriptionDAO programDAO = new SubscriptionDAO(connectionController.getConnection());
+
+
+
+            boolean isSubDeleted = programDAO.deleteById(subId);
+            if (!isSubDeleted) {
+                connectionController.rollbackTransaction();
+                return false;
+            }
+
+            connectionController.commitTransaction();
+            return true;
+        } catch (DAOException exception) {
+            connectionController.rollbackTransaction();
+
+            throw new ServiceException("Exception during discard of sub.", exception);
+        } finally {
+            connectionController.endTransaction();
+            connectionController.close();
+        }
+    }
 
     /**
      * method adds feedback about order.

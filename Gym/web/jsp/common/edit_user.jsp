@@ -39,7 +39,7 @@
     <form id="reg" name="EditingForm" method="POST" action="${pageContext.request.contextPath}/controller" enctype="multipart/form-data">
         <input type="hidden" name="command" value="common_edit_profile"/>
         <p><span>${pageScope.login}</span>
-            <input id="login" title="${pageScope.title_login}" type="text" name="login" value="" onkeyup="checkLogin();"/>
+            <input id="login" title="${pageScope.title_login}" type="text" name="login" value="${sessionScope.user.login}" onkeyup="checkLogin();"/>
         </p>
         <p><span>${pageScope.password}</span>
             <input id="password" title="${pageScope.title_password}" type="password" name="password" value=""
@@ -50,15 +50,15 @@
                    onkeyup="checkPassword();"/>
         </p>
         <p><span>${pageScope.first_name}</span>
-            <input id="first_name" title="${pageScope.title_first_name}" type="text" name="first_name" value=""
+            <input id="first_name" title="${pageScope.title_first_name}" type="text" name="first_name" value="${sessionScope.user.firstName}"
                    onkeyup="checkName();"/>
         </p>
         <p><span>${pageScope.last_name}</span>
-            <input id="last_name" title="${pageScope.title_last_name}" type="text" name="last_name" value=""
+            <input id="last_name" title="${pageScope.title_last_name}" type="text" name="last_name" value="${sessionScope.user.lastName}"
                    onkeyup="checkName();"/>
         </p>
         <p><span>${pageScope.telephone}</span>
-            <input id="telephone" title="${pageScope.title_telephone}" type="text" name="telephone" value=""
+            <input id="telephone" title="${pageScope.title_telephone}" type="text" name="telephone" value="${sessionScope.user.telephone}"
             />
         </p>
         <p>

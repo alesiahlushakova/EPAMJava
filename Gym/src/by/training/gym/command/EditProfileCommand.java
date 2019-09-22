@@ -4,7 +4,6 @@ import by.training.gym.domain.User;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.UserService;
 import by.training.gym.service.validator.UserValidator;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,7 +16,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import static by.training.gym.view.MessageManager.*;
-import static by.training.gym.view.MessageManager.REGISTRATION_SUCCESSFUL_MESSAGE_KEY;
+
 
 public class EditProfileCommand implements Command {
 

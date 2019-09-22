@@ -23,7 +23,7 @@ public class ShowAllClientsCommand implements Command {
 
     private static final Logger LOGGER = LogManager.getLogger(ShowAllClientsCommand.class);
 
-    private static final int MAX_RECORDS_PER_PAGE_COUNT = 10;
+    private static final int MAX_RECORDS_PER_PAGE_COUNT = 2;
     private static final int FIRST_PAGE_INDEX = 1;
 
     /**

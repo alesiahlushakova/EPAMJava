@@ -8,10 +8,8 @@ import by.training.gym.domain.UserRole;
 import by.training.gym.service.validator.UserValidator;
 import org.apache.commons.codec.digest.DigestUtils;
 
-import javax.servlet.ServletOutputStream;
+
 import java.io.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
