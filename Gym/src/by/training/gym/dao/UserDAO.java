@@ -3,10 +3,7 @@ package by.training.gym.dao;
 import by.training.gym.domain.User;
 import by.training.gym.domain.UserRole;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;

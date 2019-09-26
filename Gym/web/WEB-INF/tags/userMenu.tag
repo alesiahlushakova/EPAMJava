@@ -22,7 +22,6 @@
     <fmt:message key="menu.show_clients" var="show_clients"/>
     <fmt:message key="menu.find_client" var="find_client"/>
     <fmt:message key="menu.orders_history" var="orders_history"/>
-    <fmt:message key="menu.orders_discard" var="orders_discard"/>
     <fmt:message key="menu.my_training_program" var="my_training_program"/>
     <fmt:message key="menu.make_order" var="make_order"/>
     <fmt:message key="menu.change" var="change"/>
@@ -105,9 +104,6 @@
                     </li>
                 </c:when>
                 <c:otherwise>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_discard}</a>
-                    </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
                     </li>

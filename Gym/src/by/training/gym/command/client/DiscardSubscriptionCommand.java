@@ -2,6 +2,7 @@ package by.training.gym.command.client;
 
 import by.training.gym.command.Command;
 import by.training.gym.command.CurrentJsp;
+import by.training.gym.domain.Subscription;
 import by.training.gym.service.ServiceException;
 import by.training.gym.service.SubscriptionService;
 import org.apache.logging.log4j.LogManager;
@@ -9,6 +10,8 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import java.util.List;
 
 import static by.training.gym.command.CurrentJsp.MAIN_PAGE_PATH;
 import static by.training.gym.view.MessageManager.*;
@@ -31,6 +34,7 @@ public class DiscardSubscriptionCommand implements Command {
     public CurrentJsp execute(HttpServletRequest request) {
 
         try {
+
             String parameter = request.getParameter(SUBSCRIPTION_ID_ATTRIBUTE);
             int subId = Integer.parseInt(parameter);
             SubscriptionService subscriptionService = new SubscriptionService();

@@ -27,6 +27,7 @@
     <fmt:message key="order.year_duration" var="year"/>
     <fmt:message key="order.show_feedback" var="show_feedback"/>
     <fmt:message key="order.ibm" var="ibm"/>
+    <fmt:message key="menu.orders_discard" var="orders_discard"/>
 </fmt:bundle>
 
 <html>
@@ -48,6 +49,7 @@
             <th>${pageScope.price}</th>
             <th>${pageScope.status}</th>
             <th>${pageScope.ibm}</th>
+            <th>${pageScope.feedback}</th>
             <th>${pageScope.feedback}</th>
         </tr>
         <c:forEach var="order" items="${requestScope.list}">
@@ -122,6 +124,9 @@
                             </c:choose>
                         </c:otherwise>
                     </c:choose>
+                </td>
+                <td>
+                    <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions&subscriptionId=${orderId}">${pageScope.orders_discard}</a>
                 </td>
             </tr>
         </c:forEach>
