@@ -1,6 +1,7 @@
 package by.training.gym.command;
 
 import by.training.gym.command.admin.FindClientByNameCommand;
+import by.training.gym.command.admin.RegisterCoachCommand;
 import by.training.gym.command.admin.ShowAllClientsCommand;
 import by.training.gym.command.client.*;
 import by.training.gym.command.coach.*;
@@ -50,6 +51,11 @@ public enum CommandType {
     ADMIN_SHOW_ALL_CLIENTS {
         {
             this.command = new ShowAllClientsCommand();
+        }
+    },
+    ADMIN_REGISTER_COACH {
+        {
+            this.command = new RegisterCoachCommand();
         }
     },
     /**

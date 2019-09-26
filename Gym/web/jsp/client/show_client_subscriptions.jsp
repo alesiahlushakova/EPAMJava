@@ -50,7 +50,7 @@
             <th>${pageScope.status}</th>
             <th>${pageScope.ibm}</th>
             <th>${pageScope.feedback}</th>
-            <th>${pageScope.feedback}</th>
+            <th></th>
         </tr>
         <c:forEach var="order" items="${requestScope.list}">
             <c:set var="count" value="${pageScope.count+1}"/>

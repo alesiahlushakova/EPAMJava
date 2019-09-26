@@ -12,6 +12,7 @@
     <fmt:message key="client.telephone" var="telephone"/>
     <fmt:message key="client.training_program" var="training_program"/>
     <fmt:message key="client.describe" var="describe"/>
+    <fmt:message key="client.delete_client" var="delete_client"/>
 </fmt:bundle>
 
 <div class="table_user">
@@ -29,6 +30,7 @@
                     ${pageScope.order}
                 </c:otherwise>
             </c:choose></th>
+            <th></th>
         </tr>
         <c:forEach var="client" items="${clients}">
             <c:set var="count" value="${pageScope.count+1}"/>
@@ -48,6 +50,9 @@
                                 <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                         </c:otherwise>
                     </c:choose>
+                </td>
+                <td>
+                    <a href="controller?command=admin_delete_client&client_id=${client.id}">${pageScope.delete_client}
                 </td>
             </tr>
         </c:forEach>

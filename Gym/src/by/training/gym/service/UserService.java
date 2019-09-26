@@ -1,6 +1,6 @@
 package by.training.gym.service;
 
-import by.training.gym.dao.ConnectionController;
+import by.training.gym.dao.ConnectionWrapper;
 import by.training.gym.dao.DAOException;
 import by.training.gym.dao.UserDAO;
 import by.training.gym.domain.User;
@@ -34,8 +34,8 @@ public class UserService {
      * @throws ServiceException object if execution of method is failed.
      */
     public User login(String login, String password) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
             password = DigestUtils.shaHex(password);
 
             return userDAO.selectUserByLoginAndPassword(login, password);
@@ -56,13 +56,75 @@ public class UserService {
      */
     public boolean register(String login, String password, String firstName,
                             String lastName, String telephone) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
 
             User user = new User();
             user.setLogin(login);
             user.setPassword(password);
             UserRole userRole = UserRole.CLIENT;
+            user.setUserRole(userRole);
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user.setTelephone(telephone);
+
+            return userDAO.insert(user);
+        } catch (DAOException exception) {
+            throw new ServiceException("Exception during register operation.", exception);
+        }
+    }
+    /**
+     * method discards user.
+     * @param subId the sub id.
+     * @return true if operation was successful and false otherwise.
+     * @throws ServiceException object if execution of query is failed.
+     */
+    public boolean deleteUser(int subId) throws ServiceException {
+
+        ConnectionWrapper connectionWrapper = new ConnectionWrapper();
+        try {
+            connectionWrapper.startTransaction();
+
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
+
+
+
+            boolean isSubDeleted = userDAO.deleteById(subId);
+            if (!isSubDeleted) {
+                connectionWrapper.rollbackTransaction();
+                return false;
+            }
+
+            connectionWrapper.commitTransaction();
+            return true;
+        } catch (DAOException exception) {
+            connectionWrapper.rollbackTransaction();
+
+            throw new ServiceException("Exception during discard of client.", exception);
+        } finally {
+            connectionWrapper.endTransaction();
+            connectionWrapper.close();
+        }
+    }
+    /**
+     * The method registers coach into data base.
+     *
+     * @param login     the user's login.
+     * @param password  the user's password.
+     * @param firstName the user's first name.
+     * @param lastName  the user's last name.
+     * @return true if operation was made successful and false otherwise.
+     * @throws ServiceException object if execution of method is failed.
+     */
+    public boolean registerCoach(String login, String password, String firstName,
+                            String lastName, String telephone) throws ServiceException {
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
+
+            User user = new User();
+            user.setLogin(login);
+            user.setPassword(password);
+            UserRole userRole = UserRole.COACH;
             user.setUserRole(userRole);
             user.setFirstName(firstName);
             user.setLastName(lastName);
@@ -87,8 +149,8 @@ public class UserService {
      */
     public boolean update(int clientID, String login, String password, String firstName,
                           String lastName, String telephone, InputStream inputStream) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
             password = DigestUtils.shaHex(password);
         int res = userDAO.update(clientID, login, password, firstName, lastName, telephone, inputStream);
         if (res>0) {
@@ -102,8 +164,8 @@ public class UserService {
     }
 
     public byte[] retrieveImage (int userId) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
          return userDAO.selectImageById(userId);
         } catch (DAOException  exception) {
             throw new ServiceException("Exception during image retrieval operation.", exception);
@@ -117,8 +179,8 @@ public class UserService {
      * @throws ServiceException object if execution of method is failed.
      */
     public boolean checkUserLoginForUniqueness(String login) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
 
             return userDAO.checkLoginForUniqueness(login);
         } catch (DAOException exception) {
@@ -133,9 +195,9 @@ public class UserService {
      * @throws ServiceException object if execution of method is failed.
      */
     public List<User> findClientByName(String name) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
             UserValidator userDataValidator = new UserValidator();
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
             boolean isNameFull = userDataValidator.isNameFull(name);
             if (isNameFull) {
                 String[] names = name.split(SPLIT_SYMBOL);
@@ -157,8 +219,8 @@ public class UserService {
      * @throws ServiceException object if execution of method is failed.
      */
     public Map<List<User>, Integer> findAllClientsByPages(int offSet, int numberOfRecords) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
             ;
             Map<List<User>, Integer> clients = new HashMap<>();
 
@@ -180,8 +242,8 @@ public class UserService {
      * @throws ServiceException object if execution of method is failed.
      */
     public List<User> findPersonalClients(int trainerId) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
 
             return userDAO.selectPersonalClients(trainerId);
         } catch (DAOException exception) {
@@ -195,8 +257,8 @@ public class UserService {
      * @throws ServiceException object if execution of method is failed.
      */
     public Map<Integer, String> findClientsForProgramCreation() throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            UserDAO userDAO = new UserDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
 
             return userDAO.selectClientIdAndNameForProgramCreation();
         } catch (DAOException exception) {

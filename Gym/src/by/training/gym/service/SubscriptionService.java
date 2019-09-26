@@ -1,6 +1,6 @@
 package by.training.gym.service;
 
-import by.training.gym.dao.ConnectionController;
+import by.training.gym.dao.ConnectionWrapper;
 import by.training.gym.dao.DAOException;
 import by.training.gym.dao.SubscriptionDAO;
 import by.training.gym.domain.Subscription;
@@ -29,7 +29,7 @@ public class SubscriptionService {
      * @throws ServiceException object if execution of method is failed.
      */
     public boolean hasClientActualSubscription(String clientIdValue) throws ServiceException {
-        try (ConnectionController connectionManager = new ConnectionController()) {
+        try (ConnectionWrapper connectionManager = new ConnectionWrapper()) {
             SubscriptionDAO subscriptionDAO = new SubscriptionDAO(connectionManager.getConnection());
             int clientId = Integer.parseInt(clientIdValue);
 
@@ -47,29 +47,29 @@ public class SubscriptionService {
      */
     public boolean discardSubscription(int subId) throws ServiceException {
 
-        ConnectionController connectionController = new ConnectionController();
+        ConnectionWrapper connectionWrapper = new ConnectionWrapper();
         try {
-            connectionController.startTransaction();
+            connectionWrapper.startTransaction();
 
-            SubscriptionDAO programDAO = new SubscriptionDAO(connectionController.getConnection());
+            SubscriptionDAO programDAO = new SubscriptionDAO(connectionWrapper.getConnection());
 
 
 
             boolean isSubDeleted = programDAO.deleteById(subId);
             if (!isSubDeleted) {
-                connectionController.rollbackTransaction();
+                connectionWrapper.rollbackTransaction();
                 return false;
             }
 
-            connectionController.commitTransaction();
+            connectionWrapper.commitTransaction();
             return true;
         } catch (DAOException exception) {
-            connectionController.rollbackTransaction();
+            connectionWrapper.rollbackTransaction();
 
             throw new ServiceException("Exception during discard of sub.", exception);
         } finally {
-            connectionController.endTransaction();
-            connectionController.close();
+            connectionWrapper.endTransaction();
+            connectionWrapper.close();
         }
     }
 
@@ -81,7 +81,7 @@ public class SubscriptionService {
      * @throws ServiceException object if execution of method is failed.
      */
     public boolean addFeedback(String feedback, int orderId) throws ServiceException {
-        try (ConnectionController connectionManager = new ConnectionController()) {
+        try (ConnectionWrapper connectionManager = new ConnectionWrapper()) {
             SubscriptionValidator orderDataValidator = new SubscriptionValidator();
             boolean isDataValid = orderDataValidator.checkFeedback(feedback);
             if (!isDataValid) {
@@ -102,7 +102,7 @@ public class SubscriptionService {
      * @throws ServiceException object if execution of method is failed.
      */
     public boolean paySubscription(Subscription subscription) throws ServiceException {
-        ConnectionController connectionManager = new ConnectionController();
+        ConnectionWrapper connectionManager = new ConnectionWrapper();
         try {
             connectionManager.startTransaction();
 
@@ -137,7 +137,7 @@ public class SubscriptionService {
      * @throws ServiceException object if execution of method is failed.
      */
     public Subscription prepareSubscription(int clientId, String purchaseDateValue, String durationValue, String ibmValue, String isPersonalTrainerNeedValue) throws ServiceException {
-        try (ConnectionController connectionManager = new ConnectionController()) {
+        try (ConnectionWrapper connectionManager = new ConnectionWrapper()) {
 
             Date purchaseDate = Date.valueOf(purchaseDateValue);
             SubscriptionType duration = SubscriptionType.valueOf(durationValue);
@@ -180,7 +180,7 @@ public class SubscriptionService {
      * @throws ServiceException object if execution of method is failed.
      */
     public List<Subscription> findAllClientSubscriptions(int clientId) throws ServiceException {
-        try (ConnectionController connectionManager = new ConnectionController()) {
+        try (ConnectionWrapper connectionManager = new ConnectionWrapper()) {
             SubscriptionDAO subscriptionDAO = new SubscriptionDAO(connectionManager.getConnection());
 
             return subscriptionDAO.selectClientSubscriptions(clientId);

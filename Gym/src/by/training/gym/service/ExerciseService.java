@@ -1,6 +1,6 @@
 package by.training.gym.service;
 
-import by.training.gym.dao.ConnectionController;
+import by.training.gym.dao.ConnectionWrapper;
 import by.training.gym.dao.DAOException;
 import by.training.gym.dao.ExerciseDAO;
 import by.training.gym.dao.ProgramDAO;
@@ -29,12 +29,13 @@ public class ExerciseService {
                                                  Map<Integer, List<Exercise>> daysAndExercises,
                                                  boolean isCleanNeed) throws ServiceException {
 
-        ConnectionController connectionController = new ConnectionController();
+        ConnectionWrapper connectionWrapper = new ConnectionWrapper();
         try {
-            connectionController.startTransaction();
+            connectionWrapper.startTransaction();
 
             if (isCleanNeed) {
-                ProgramDAO trainingProgramDAO = new ProgramDAO(connectionController.getConnection());
+                ProgramDAO trainingProgramDAO = new ProgramDAO(connectionWrapper.getConnection());
+
                 boolean isCleanOperationSuccessful = trainingProgramDAO.deleteExercisesFromProgram(trainingProgramId);
 
                 if (!isCleanOperationSuccessful) {
@@ -42,7 +43,7 @@ public class ExerciseService {
                 }
             }
 
-            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionController.getConnection());
+            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionWrapper.getConnection());
 
             Set<Map.Entry<Integer, List<Exercise>>> entrySet = daysAndExercises.entrySet();
             for (Map.Entry<Integer, List<Exercise>> entry : entrySet) {
@@ -57,21 +58,21 @@ public class ExerciseService {
                     boolean isResultSuccessful = exerciseDAO.insertExerciseIntoProgram(trainingProgramId, exerciseId, dayNumber,
                             weightLoss, setsCount, repeatsCount);
                     if (!isResultSuccessful) {
-                        connectionController.rollbackTransaction();
+                        connectionWrapper.rollbackTransaction();
                         return false;
                     }
                 }
             }
 
-            connectionController.commitTransaction();
+            connectionWrapper.commitTransaction();
             return true;
         } catch (DAOException exception) {
-            connectionController.rollbackTransaction();
+            connectionWrapper.rollbackTransaction();
             throw new ServiceException("Exception during adding "
                     + "exercises to program.", exception);
         } finally {
-            connectionController.endTransaction();
-            connectionController.close();
+            connectionWrapper.endTransaction();
+            connectionWrapper.close();
         }
     }
 
@@ -81,8 +82,8 @@ public class ExerciseService {
      * @throws ServiceException object if execution of method is failed.
      */
     public List<Exercise> findAllExercisesIdAndName() throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionWrapper.getConnection());
             List<Exercise> exercises = exerciseDAO.selectAll();
 
             return exercises;
@@ -99,8 +100,8 @@ public class ExerciseService {
      * @throws ServiceException object if execution of method is failed.
      */
     public boolean saveExercise(Exercise exercise) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionWrapper.getConnection());
 
             return exerciseDAO.insert(exercise);
         } catch (DAOException exception) {
@@ -216,7 +217,7 @@ public class ExerciseService {
                                                 String repeatsCountValue,
                                                 TreeMap<Integer, List<Exercise>> daysAndExercises)
             throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
             int dayNumber = Integer.parseInt(dayNumberValue);
             List<Exercise> exercises = daysAndExercises.get(dayNumber);
             int exerciseId = Integer.parseInt(exerciseIdValue);
@@ -234,7 +235,7 @@ public class ExerciseService {
                 return false;
             }
 
-            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionController.getConnection());
+            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionWrapper.getConnection());
             Exercise exercise = exerciseDAO.selectEntityById(exerciseId);
             exercise.setWeightLoss(weightLoss);
             exercise.setSets(setsCount);

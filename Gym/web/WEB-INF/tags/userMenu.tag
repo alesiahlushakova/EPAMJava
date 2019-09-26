@@ -25,6 +25,7 @@
     <fmt:message key="menu.my_training_program" var="my_training_program"/>
     <fmt:message key="menu.make_order" var="make_order"/>
     <fmt:message key="menu.change" var="change"/>
+    <fmt:message key="menu.register_coach" var="register_coach"/>
     <fmt:message key="menu.language" var="language"/>
     <fmt:message key="menu.edit" var="edit"/>
 </fmt:bundle>
@@ -93,6 +94,9 @@
                 <c:when test="${sessionScope.user.userRole == 'ADMIN'}">
                     <li>
                         <a href="${pageContext.request.contextPath}/controller?command=admin_show_all_clients">${pageScope.show_clients}</a>
+                    </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/controller?command=admin_register_coach">${pageScope.register_coach}</a>
                     </li>
                     <li>
                         <form id="find" name="FindForm" method="POST"

@@ -1,6 +1,6 @@
 package by.training.gym.service;
 
-import by.training.gym.dao.ConnectionController;
+import by.training.gym.dao.ConnectionWrapper;
 import by.training.gym.dao.DAOException;
 import by.training.gym.dao.SubscriptionDAO;
 import by.training.gym.domain.Subscription;
@@ -29,8 +29,8 @@ public class DiscountService {
      * @return the discount.
      */
     public int getDiscount(int clientId) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            SubscriptionDAO orderDAO = new SubscriptionDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            SubscriptionDAO orderDAO = new SubscriptionDAO(connectionWrapper.getConnection());
             List<Subscription> clientOrders = orderDAO.selectClientSubscriptions(clientId);
             int ordersCount = clientOrders.size();
 

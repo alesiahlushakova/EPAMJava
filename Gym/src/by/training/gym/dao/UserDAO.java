@@ -90,6 +90,30 @@ public class UserDAO extends AbstractDAO<User>{
         }
     }
 
+    public int deleteUserbyId( int clientId) throws DAOException {
+        try (PreparedStatement preparedStatement = prepareStatementForQuery(
+                DELETE_BY_ID_QUERY, clientId)) {
+            int resultSet = preparedStatement.executeUpdate();
+
+
+            return resultSet;
+        } catch (SQLException exception) {
+            throw new DAOException(exception.getMessage(), exception);
+        }
+    }
+
+    /**
+     * method updates values.
+     * @param clientID client id
+     * @param login login
+     * @param password password
+     * @param firstname first name
+     * @param lastname last name
+     * @param telephone phone number
+     * @param inputStream photo
+     * @return is succeeded
+     * @throws DAOException exception
+     */
     public int update(int clientID, String login, String password,
                       String firstname, String lastname,
                       String telephone, InputStream inputStream)

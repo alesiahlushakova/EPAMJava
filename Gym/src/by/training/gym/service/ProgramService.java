@@ -24,33 +24,33 @@ public class ProgramService {
      */
     public boolean discardProgram(int programId) throws ServiceException {
 
-        ConnectionController connectionController = new ConnectionController();
+        ConnectionWrapper connectionWrapper = new ConnectionWrapper();
         try {
-            connectionController.startTransaction();
+            connectionWrapper.startTransaction();
 
-            ProgramDAO programDAO = new ProgramDAO(connectionController.getConnection());
+            ProgramDAO programDAO = new ProgramDAO(connectionWrapper.getConnection());
 
             boolean isExercisesCleaned = programDAO.deleteExercisesFromProgram(programId);
             if (!isExercisesCleaned) {
-                connectionController.rollbackTransaction();
+                connectionWrapper.rollbackTransaction();
                 return false;
             }
 
             boolean isTrainingProgramDeleted = programDAO.deleteById(programId);
             if (!isTrainingProgramDeleted) {
-                connectionController.rollbackTransaction();
+                connectionWrapper.rollbackTransaction();
                 return false;
             }
 
-            connectionController.commitTransaction();
+            connectionWrapper.commitTransaction();
             return true;
         } catch (DAOException exception) {
-            connectionController.rollbackTransaction();
+            connectionWrapper.rollbackTransaction();
 
             throw new ServiceException("Exception during discard of program.", exception);
         } finally {
-            connectionController.endTransaction();
-            connectionController.close();
+            connectionWrapper.endTransaction();
+            connectionWrapper.close();
         }
     }
 
@@ -61,8 +61,8 @@ public class ProgramService {
      * @throws ServiceException object if execution of query is failed.
      */
     public int saveProgram(Program program) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-           ProgramDAO programDAO = new ProgramDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+           ProgramDAO programDAO = new ProgramDAO(connectionWrapper.getConnection());
 
             return programDAO.insertProgram(program);
         } catch (DAOException exception) {
@@ -83,7 +83,7 @@ public class ProgramService {
     public Program createProgram(int authorId, String clientIdValue, String diet,
                                  String startDateValue, String endDateValue)
             throws ServiceException {
-        try (ConnectionController connectionManager = new ConnectionController()) {
+        try (ConnectionWrapper connectionManager = new ConnectionWrapper()) {
             Program program = new Program();
 
             int clientId = Integer.parseInt(clientIdValue);
@@ -135,8 +135,8 @@ public class ProgramService {
      * @throws ServiceException object if execution of query is failed.
      */
     public boolean updateProgram(Program program) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            ProgramDAO programDAO = new ProgramDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            ProgramDAO programDAO = new ProgramDAO(connectionWrapper.getConnection());
 
             return programDAO.update(program);
         } catch (DAOException exception) {
@@ -151,8 +151,8 @@ public class ProgramService {
      * @throws ServiceException object if execution of query is failed.
      */
     public Program findTrainingProgramById(int clientId) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            ProgramDAO trainingProgramDAO = new ProgramDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            ProgramDAO trainingProgramDAO = new ProgramDAO(connectionWrapper.getConnection());
 
             return trainingProgramDAO.selectClientProgram(clientId);
         } catch (DAOException exception) {
@@ -167,7 +167,7 @@ public class ProgramService {
      * @throws ServiceException object if execution of method is failed.
      */
     public String findTrainingProgramAuthor(int trainingProgramId) throws ServiceException {
-        try (ConnectionController connectionManager = new ConnectionController()) {
+        try (ConnectionWrapper connectionManager = new ConnectionWrapper()) {
             UserDAO userDAO = new UserDAO(connectionManager.getConnection());
 
             return userDAO.selectTrainingProgramAuthor(trainingProgramId);
@@ -183,8 +183,8 @@ public class ProgramService {
      * @throws ServiceException object if execution of method is failed.
      */
     public TreeMap<Integer, List<Exercise>> showExercisesFromProgram(int programId) throws ServiceException {
-        try (ConnectionController connectionController = new ConnectionController()) {
-            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionController.getConnection());
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            ExerciseDAO exerciseDAO = new ExerciseDAO(connectionWrapper.getConnection());
 
             return exerciseDAO.selectExerciseFromProgram(programId);
         } catch (DAOException exception) {

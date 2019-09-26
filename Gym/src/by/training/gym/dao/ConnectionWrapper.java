@@ -7,17 +7,17 @@ import org.apache.logging.log4j.Logger;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ConnectionController implements AutoCloseable{
-    private static final Logger LOGGER = LogManager.getLogger(ConnectionController.class);
+public class ConnectionWrapper implements AutoCloseable{
+    private static final Logger LOGGER = LogManager.getLogger(ConnectionWrapper.class);
     private final Connection connection;
     private ConnectionPool connectionPool;
 
     /**
      * constructor.
      */
-    public ConnectionController() {
+    public ConnectionWrapper() {
         connectionPool = ConnectionPool.getInstance();
-        connection = connectionPool.getConnection();
+        connection = ConnectionPool.getInstance().getConnection();
     }
 
     /**
