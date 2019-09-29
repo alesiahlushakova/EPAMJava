@@ -22,6 +22,7 @@
     <fmt:message key="menu.show_clients" var="show_clients"/>
     <fmt:message key="menu.find_client" var="find_client"/>
     <fmt:message key="menu.orders_history" var="orders_history"/>
+    <fmt:message key="menu.coaches_history" var="coaches_history"/>
     <fmt:message key="menu.my_training_program" var="my_training_program"/>
     <fmt:message key="menu.make_order" var="make_order"/>
     <fmt:message key="menu.change" var="change"/>
@@ -96,7 +97,10 @@
                         <a href="${pageContext.request.contextPath}/controller?command=admin_show_all_clients">${pageScope.show_clients}</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=admin_register_coach">${pageScope.register_coach}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=admin_show_coaches">${pageScope.coaches_history}</a>
+                    </li>
+                    <li>
+                        <a href="${pageContext.request.contextPath}/jsp/admin/register_coach.jsp">${pageScope.register_coach}</a>
                     </li>
                     <li>
                         <form id="find" name="FindForm" method="POST"
@@ -108,6 +112,7 @@
                     </li>
                 </c:when>
                 <c:otherwise>
+
                     <li>
                         <a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
                     </li>

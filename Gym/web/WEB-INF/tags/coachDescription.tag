@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@attribute name="clients" required="true" type="java.util.List" %>
+<%@attribute name="coaches" required="true" type="java.util.List" %>
 <%@attribute name="role" required="true" rtexprvalue="true" type="java.lang.String" %>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&amp;subset=cyrillic"
@@ -22,17 +22,12 @@
             <th>ID</th>
             <th>${pageScope.name}</th>
             <th>${pageScope.telephone}</th>
-            <th><c:choose>
-                <c:when test="${role.equals('COACH')}">
+            <th>
                     ${pageScope.training_program}
-                </c:when>
-                <c:otherwise>
-                    ${pageScope.order}
-                </c:otherwise>
-            </c:choose></th>
+              </th>
             <th></th>
         </tr>
-        <c:forEach var="coach" items="${clients}">
+        <c:forEach var="coach" items="${coaches}">
             <c:set var="count" value="${pageScope.count+1}"/>
             <tr>
                 <td>${count}</td>
@@ -52,7 +47,7 @@
                     </c:choose>
                 </td>
                 <td>
-                    <a href="controller?command=admin_delete_client&client_id=${coach.id}">${pageScope.delete_client}
+                    <a href="controller?command=admin_delete_coach&coach_id=${coach.id}">${pageScope.delete_client}
                 </td>
             </tr>
         </c:forEach>

@@ -31,6 +31,8 @@ public class MessageManager {
     public static final String DISCARD_SUB_FAILED_MESSAGE_KEY = "message.refuse_sub_error";
     public static final String DISCARD_CLIENT_SUCCESS_MESSAGE_KEY = "message.refuse_user_success";
     public static final String DISCARD_CLIENT_FAILED_MESSAGE_KEY = "message.refuse_user_error";
+    public static final String DISCARD_COACH_SUCCESS_MESSAGE_KEY = "message.refuse_coach_success";
+    public static final String DISCARD_COACH_FAILED_MESSAGE_KEY = "message.refuse_coach_error";
     public static final String INFORMATION_NOT_FOUND_MESSAGE_KEY = "message.information_not_found";
     public static final String TRAINING_PROGRAM_SAVED_SUCCESSFUL_MESSAGE_KEY = "message.training_program_saved";
     public static final String TRAINING_PROGRAM_NOT_SAVED_MESSAGE_KEY = "message.training_program_not_saved";

@@ -10,13 +10,13 @@ import java.sql.SQLException;
 public class ConnectionWrapper implements AutoCloseable{
     private static final Logger LOGGER = LogManager.getLogger(ConnectionWrapper.class);
     private final Connection connection;
-    private ConnectionPool connectionPool;
+
 
     /**
      * constructor.
      */
     public ConnectionWrapper() {
-        connectionPool = ConnectionPool.getInstance();
+
         connection = ConnectionPool.getInstance().getConnection();
     }
 
@@ -78,6 +78,6 @@ public class ConnectionWrapper implements AutoCloseable{
      */
     @Override
     public void close() {
-        connectionPool.returnConnection(connection);
+        ConnectionPool.getInstance().returnConnection(connection);
     }
 }

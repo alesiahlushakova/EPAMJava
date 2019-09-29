@@ -21,6 +21,7 @@ public class CurrentJsp {
     */
     public static final String DESCRIBE_CLIENT_PAGE_PATH = "/jsp/admin/describe_client.jsp";
     public static final String SHOW_ALL_CLIENTS_PAGE_PATH = "/jsp/admin/show_all_clients.jsp";
+    public static final String SHOW_ALL_COACHES_PAGE_PATH = "/jsp/admin/show_all_coaches.jsp";
     public static final String REGISTER_COACH_PAGE_PATH = "/jsp/admin/register_coach.jsp";
     /**
      * Client's pages.

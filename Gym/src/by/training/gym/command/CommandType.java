@@ -1,8 +1,6 @@
 package by.training.gym.command;
 
-import by.training.gym.command.admin.FindClientByNameCommand;
-import by.training.gym.command.admin.RegisterCoachCommand;
-import by.training.gym.command.admin.ShowAllClientsCommand;
+import by.training.gym.command.admin.*;
 import by.training.gym.command.client.*;
 import by.training.gym.command.coach.*;
 
@@ -56,6 +54,21 @@ public enum CommandType {
     ADMIN_REGISTER_COACH {
         {
             this.command = new RegisterCoachCommand();
+        }
+    },
+    ADMIN_DELETE_CLIENT {
+        {
+             this.command = new DeleteClientCommand();
+        }
+    },
+    ADMIN_SHOW_COACHES {
+        {
+            this.command = new ShowCoachesCommand();
+        }
+    },
+    ADMIN_DELETE_COACH {
+        {
+            this.command = new DeleteCoachCommand();
         }
     },
     /**

@@ -28,6 +28,7 @@ public class UserDAO extends AbstractDAO<User>{
     private static final String SELECT_CLIENTS_BY_FULL_NAME_QUERY = "SELECT * FROM Users WHERE Firstname=? AND Lastname=? AND Role='CLIENT'";
     private static final String SELECT_CLIENTS_BY_NAME_PART_QUERY = "SELECT * FROM Users WHERE Role='CLIENT' AND Firstname LIKE ? OR Lastname LIKE ?";
     private static final String SELECT_USERS_BY_FOUND_ROWS_QUERY = "SELECT SQL_CALC_FOUND_ROWS * FROM Users WHERE Role='CLIENT' LIMIT %d, %d";
+    private static final String SELECT_COACHES_BY_FOUND_ROWS_QUERY = "SELECT SQL_CALC_FOUND_ROWS * FROM Users WHERE Role='COACH' LIMIT %d, %d";
     private static final String SELECT_FOUND_ROWS_QUERY = "SELECT FOUND_ROWS()";
     private static final String SELECT_PERSONAL_CLIENTS = "SELECT * FROM Users WHERE UserID IN " +
             "(SELECT ClientID FROM Program WHERE CoachID=? AND EndDate > CURDATE())";
@@ -245,6 +246,35 @@ public class UserDAO extends AbstractDAO<User>{
             }
 
             return findUsers;
+        } catch (SQLException exception) {
+            throw new DAOException(exception.getMessage(), exception);
+        }
+    }
+
+    /**
+     * method selects all coaches in database.
+     * @return List of clients.
+     * @throws DAOException object if execution of query is failed.
+     */
+    public List<User> selectAllCoaches(int offSet, int numberOfRecords) throws DAOException {
+        try (Statement statement = connection.createStatement()) {
+            String sqlQuery = String.format(SELECT_COACHES_BY_FOUND_ROWS_QUERY,
+                    offSet, numberOfRecords);
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
+
+            List<User> findClients = new ArrayList<>();
+            while (resultSet.next()) {
+                User user = buildEntity(resultSet);
+
+                findClients.add(user);
+            }
+
+            resultSet = statement.executeQuery(SELECT_FOUND_ROWS_QUERY);
+            if (resultSet.next()) {
+                this.numberOfRecords = resultSet.getInt(FIRST_COLUMN_INDEX);
+            }
+
+            return findClients;
         } catch (SQLException exception) {
             throw new DAOException(exception.getMessage(), exception);
         }

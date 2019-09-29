@@ -236,6 +236,28 @@ public class UserService {
     }
 
     /**
+     * method finds all coaches.
+     * @return Map of coaches and number of records.
+     * @throws ServiceException object if execution of method is failed.
+     */
+    public Map<List<User>, Integer> findAllCoachesByPages(int offSet, int numberOfRecords) throws ServiceException {
+        try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
+            UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
+            ;
+            Map<List<User>, Integer> coaches = new HashMap<>();
+
+            List<User> findCoach = userDAO.selectAllCoaches(offSet, numberOfRecords);
+            Integer countOfRecords = userDAO.getNumberOfRecords();
+
+            coaches.put(findCoach, countOfRecords);
+
+            return coaches;
+        } catch (DAOException exception) {
+            throw new ServiceException("Exception during finding all clients by pages operation.", exception);
+        }
+    }
+
+    /**
      * method finds all clients of the coach and programs id .
      * @param trainerId the trainer id.
      * @return List with results.

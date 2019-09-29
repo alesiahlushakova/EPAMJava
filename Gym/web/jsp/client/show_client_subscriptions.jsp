@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <c:set var="now" value="<%=new java.util.Date()%>"/>
-<c:set var="client" value="<%=UserRole.CLIENT%>"/>
+<c:set var="coach" value="<%=UserRole.CLIENT%>"/>
 <c:set var="currentRole" value="${sessionScope.user.userRole}"/>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
@@ -92,7 +92,7 @@
                 </td>
                 <td>
                     <c:choose>
-                        <c:when test="${currentRole eq client}">
+                        <c:when test="${currentRole eq coach}">
                             <c:choose>
                                 <c:when test="${order.feedback == null && order.expirationDate < now}">
                                     <c:set var="orderId" scope="session" value="${order.id}"/>
