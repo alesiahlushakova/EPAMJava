@@ -126,7 +126,7 @@
                     </c:choose>
                 </td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions&subscriptionId=${orderId}">${pageScope.orders_discard}</a>
+                    <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions&subscriptionId=${order.id}">${pageScope.orders_discard}</a>
                 </td>
             </tr>
         </c:forEach>

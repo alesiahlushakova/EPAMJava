@@ -38,6 +38,7 @@ public class DiscardSubscriptionCommand implements Command {
             String parameter = request.getParameter(SUBSCRIPTION_ID_ATTRIBUTE);
             int subId = Integer.parseInt(parameter);
             SubscriptionService subscriptionService = new SubscriptionService();
+            subscriptionService.findAllClientSubscriptions(subId);
             boolean isOperationSuccessful = subscriptionService.discardSubscription(subId);
             if (!isOperationSuccessful) {
                 return new CurrentJsp(MAIN_PAGE_PATH,
