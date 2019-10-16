@@ -25,17 +25,19 @@ public class DbRecordFilter implements Filter {
 
     private static final String REDIRECT_PAGE_PATH = "REDIRECT_PAGE";
 
+    private static final String REGISTER_COACH_COMMAND = "admin_register_coach";
     private static final String REGISTER_COMMAND = "common_register";
     private static final String ADD_FEEDBACK_COMMAND = "client_add_feedback";
-    private static final String PAY_ORDER_COMMAND = "client_pay_order";
-    private static final String REFUSE_TRAINING_PROGRAM_COMMAND = "client_refuse_training_program";
-    private static final String SAVE_TRAINING_PROGRAM_EDIT_COMMAND = "special_save_training_program_edit";
-    private static final String FINISH_TRAINING_PROGRAM_CREATION_COMMAND = "trainer_finish_training_program_creation";
-    private static final String CREATE_EXERCISE_COMMAND = "trainer_create_exercise";
+    private static final String PAY_ORDER_COMMAND = "client_pay_subscription";
+    private static final String REFUSE_TRAINING_PROGRAM_COMMAND = "client_discard_program";
+    private static final String SAVE_TRAINING_PROGRAM_EDIT_COMMAND = "special_save_program_edit";
+    private static final String FINISH_TRAINING_PROGRAM_CREATION_COMMAND = "coach_finish_program_creation";
+    private static final String CREATE_EXERCISE_COMMAND = "coach_create_exercise";
 
     private static final List<String> commands = new ArrayList<>();
 
     static {
+        commands.add(REGISTER_COACH_COMMAND);
         commands.add(REGISTER_COMMAND);
         commands.add(ADD_FEEDBACK_COMMAND);
         commands.add(PAY_ORDER_COMMAND);

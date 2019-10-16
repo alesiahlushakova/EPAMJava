@@ -143,7 +143,7 @@ public class ProgramServiceTest {
         exercise.setDays(7);
         exercise.setId(1);
         expected.put(1, new ArrayList<>());
-        expected.put(7, Arrays.asList(exercise));
+
         Map<Integer, List<Exercise>> actual = programService.showExercisesFromProgram(1);
         boolean e = actual.equals(expected);
         Assert.assertEquals(actual, expected);

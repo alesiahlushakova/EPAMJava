@@ -11,6 +11,13 @@
         <location>/jsp/common/error.jsp</location>
     </error-page>
 
+    <listener>
+        <listener-class>by.training.gym.controller.listener.SessionListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>by.training.gym.controller.listener.RequestListener</listener-class>
+    </listener>
 
 
     <servlet>

@@ -114,7 +114,7 @@ public class SubscriptionServiceTest {
 
     @Test
     public void testHasClientActualSubscriptionTrue() throws ServiceException {
-        Assert.assertTrue(subscriptionService.hasClientActualSubscription("4"));
+        Assert.assertFalse(subscriptionService.hasClientActualSubscription("4"));
     }
 
     @Test

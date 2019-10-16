@@ -3,7 +3,6 @@ package test.by.training.gym.validator;
 
 
 
-import by.training.gym.domain.Subscription;
 import by.training.gym.domain.SubscriptionType;
 import by.training.gym.service.SubscriptionCalculator;
 import org.testng.Assert;

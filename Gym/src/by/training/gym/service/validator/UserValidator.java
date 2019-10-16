@@ -45,9 +45,9 @@ public class UserValidator {
         boolean isPasswordValid = matchPattern(password, PASSWORD_PATTERN);
         boolean isFirstNameValid = matchPattern(firstName, NAME_PATTERN);
         boolean isLastNameValid = matchPattern(lastName, NAME_PATTERN);
-    //    boolean isTelephoneValid = matchPattern(telephone,PHONE_PATTERN);
+
         return isLoginValid && isFirstNameValid && isPasswordValid
-                && isLastNameValid /*&& isTelephoneValid*/;
+                && isLastNameValid ;
     }
 
     /**

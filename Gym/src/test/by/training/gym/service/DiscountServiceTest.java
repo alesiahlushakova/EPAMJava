@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class DiscountServiceTest {
-    int clientid1;
 
     @DataProvider (name = "shouldReturnValidDiscount")
         public Object[][] dataProviderShouldReturnValidDiscount() {

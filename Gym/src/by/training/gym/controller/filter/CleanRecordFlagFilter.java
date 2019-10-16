@@ -25,10 +25,11 @@ public class CleanRecordFlagFilter implements Filter {
     private static final String ADD_FEEDBACK_PAGE = "add_feedback.jsp";
     private static final String PREPARE_ORDER_PAGE = "prepare_subscription.jsp";
     private static final String REGISTER_PAGE = "register.jsp";
+    private static final String REGISTER_COACH_PAGE = "register_coach.jsp";
     private static final String CREATE_EXERCISE_PAGE = "create_exercise.jsp";
 
-    private static final String EDIT_TRAINING_PROGRAM_COMMAND = "special_edit_training_program";
-    private static final String CREATE_TRAINING_PROGRAM_COMMAND = "trainer_create_training_program";
+    private static final String EDIT_TRAINING_PROGRAM_COMMAND = "special_edit_program";
+    private static final String CREATE_TRAINING_PROGRAM_COMMAND = "coach_create_program";
     private static final String LOGIN_COMMAND = "common_login";
 
     private static final List<String> pages = new ArrayList<>();
@@ -38,6 +39,7 @@ public class CleanRecordFlagFilter implements Filter {
         pages.add(ADD_FEEDBACK_PAGE);
         pages.add(PREPARE_ORDER_PAGE);
         pages.add(REGISTER_PAGE);
+        pages.add(REGISTER_COACH_PAGE);
         pages.add(CREATE_EXERCISE_PAGE);
 
         commands.add(EDIT_TRAINING_PROGRAM_COMMAND);

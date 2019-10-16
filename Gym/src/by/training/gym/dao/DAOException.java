@@ -1,6 +1,6 @@
 package by.training.gym.dao;
 
-import java.sql.SQLException;
+
 
 /**
  * exceptions thrown from dao level.

@@ -29,10 +29,12 @@
     <form method="POST" action="${pageContext.request.contextPath}/controller">
         <input type="hidden" name="command" value="client_add_feedback"/>
         <p>${pageScope.input}</p>
+        <input type="hidden" name="subscription_id" value="${sessionScope.order}"/>
         <p><textarea id="feedback_id" title="${pageScope.add_feedback_title}" name="feedback" onkeyup="checkFeedback()"></textarea></p>
         <p><button id="feedback_submit" class="add_feedback_confirm" type="submit" disabled>${pageScope.confirm} <i class="fa fa-check-circle-o" aria-hidden="true"></i></button></p>
     </form>
-    <label><a href="controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.back}</a></label>
+
+    <label><a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.back}</a></label>
 </div>
 <script>
     <jsp:directive.include file="/js/feedbackValidation.js"/>

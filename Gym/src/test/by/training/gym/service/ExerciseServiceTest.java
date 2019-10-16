@@ -26,11 +26,11 @@ public class ExerciseServiceTest {
         exerciseService = new ExerciseService();
         exerciselist = new ArrayList<Exercise>();
         exercise1 = new Exercise();
-        exercise1.setName("pressups");
-        exercise1.setLevel(ExerciseLevel.STARTER);
-        exercise1.setRestrictions("heart deseases");
+        exercise1.setName("running");
+        exercise1.setLevel(ExerciseLevel.EXPERT);
+        exercise1.setRestrictions("bones problems");
         exercise1.setCaloriesLost(400);
-        exercise1.setDescription("Press ups wil improve your stomach muscles");
+        exercise1.setDescription("Running will elongate your stamina");
         exercise1.setId(1);
 
 
@@ -78,19 +78,15 @@ public class ExerciseServiceTest {
         Assert.assertEquals(exerciseList, exerciselist);
     }
 
-    @Test
-    public void testSaveValidExercise() throws ServiceException {
-        Assert.assertTrue(exerciseService.saveExercise(exercise1));
-    }
 
 
 
     @Test
     public void testCreateExercise() {
         List<Exercise> expected  = new ArrayList<>();
-       Exercise exerciseOne = exerciseService.createExercise("pressups","heart deseases",
-               400, ExerciseLevel.STARTER.name(),
-               "Press ups wil improve your stomach muscles" );
+       Exercise exerciseOne = exerciseService.createExercise("running","bones problems",
+               350, ExerciseLevel.EXPERT.name(),
+               "Running will elongate your stamina" );
        exerciseOne.setId(1);
        Exercise exerciseTwo = exerciseService.createExercise("push ups", "heart dystony",
                200, ExerciseLevel.CASUAL.name(),

@@ -43,8 +43,8 @@ public class UserServiceTest {
         user2.setId(2);
 
         user3 = new User();
-        user3.setFirstName("Alex");
-        user3.setLastName("Goncharov");
+        user3.setFirstName("Goncharov");
+        user3.setLastName("Alexandr");
         user3.setLogin("mmf2018");
         user3.setPassword("49049515566fa38e1b8e268723a3730dcf527f36");
         user3.setTelephone("375443765489");
@@ -52,18 +52,18 @@ public class UserServiceTest {
         user3.setId(3);
 
         user4 = new User();
-        user4.setFirstName("alesia");
-        user4.setLastName("hlushakova");
+        user4.setFirstName("hlushakova");
+        user4.setLastName("alesia");
         user4.setLogin("alesya");
         user4.setPassword("09ccbd0ba216106cc143c32fa7d9db6a8e6ef42d");
-        user4.setTelephone("375336340558");
+        user4.setTelephone("375294987609");
         user4.setUserRole(UserRole.CLIENT);
         user4.setId(4);
 
         expectedMap = new HashMap<>();
-        expectedMap.put(3, "Alex Goncharov");
-        expectedMap.put(4, "alesia hlushakova");
-        expectedMap.put(5, "Andrew Dokurno");
+        expectedMap.put(3, "Goncharov Alexandr");
+        expectedMap.put(4, "hlushakova alesia");
+
     }
 
     @DataProvider(name = "loginTest")
@@ -87,7 +87,7 @@ public class UserServiceTest {
     public Object[][] dataProviderFindClientsByName() {
         return new Object[][]{{"Alesya", Arrays.asList(user2)},
                 {"Polina", Arrays.asList(user1)},
-                {"alesia hlushakova", Arrays.asList(user4)},
+                {"alesia", Arrays.asList(user4)},
                 {"esya", emptyList}};
     }
 

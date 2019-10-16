@@ -9,7 +9,7 @@ import by.training.gym.service.validator.SubscriptionValidator;
 
 import java.math.BigDecimal;
 import java.sql.Date;
-import java.util.Calendar;
+
 import java.util.List;
 
 import static by.training.gym.service.DiscountService.NONE_DISCOUNT;
@@ -54,11 +54,9 @@ public class SubscriptionService {
 
             SubscriptionDAO programDAO = new SubscriptionDAO(connectionWrapper.getConnection());
 
-          Subscription subscription = programDAO.selectEntityById(subId);
-            boolean isSubDeleted = false;
-         if(Calendar.getInstance().getTime().compareTo(subscription.getExpirationDate())>0) {
-             isSubDeleted = programDAO.deleteById(subId);
-         }
+
+            boolean isSubDeleted = programDAO.deleteById(subId);
+
 
 
             if (!isSubDeleted) {

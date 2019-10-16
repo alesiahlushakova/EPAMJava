@@ -243,7 +243,7 @@ public class UserService {
     public Map<List<User>, Integer> findAllCoachesByPages(int offSet, int numberOfRecords) throws ServiceException {
         try (ConnectionWrapper connectionWrapper = new ConnectionWrapper()) {
             UserDAO userDAO = new UserDAO(connectionWrapper.getConnection());
-            ;
+
             Map<List<User>, Integer> coaches = new HashMap<>();
 
             List<User> findCoach = userDAO.selectAllCoaches(offSet, numberOfRecords);

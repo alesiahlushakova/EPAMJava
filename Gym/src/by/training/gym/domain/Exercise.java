@@ -164,21 +164,6 @@ public class Exercise extends Entity{
         this.dayNumber = dayNumber;
     }
 
-    /**
-     * getter for execution number.
-     * @return the execution number.
-     */
-    public int getExecutionNumber() {
-        return executionNumber;
-    }
-
-    /**
-     * setter for the execution number.
-     * @param executionNumber the execution number.
-     */
-    public void setExecutionNumber(int executionNumber) {
-        this.executionNumber = executionNumber;
-    }
 
     /**
      * method overrides equals.

@@ -16,7 +16,6 @@ import java.util.*;
  */
 public class ExerciseService {
 
-    private static final int INCREMENT_INDEX = 1;
 
     /**
      * method adds exercise to training program.

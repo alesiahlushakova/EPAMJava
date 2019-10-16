@@ -95,7 +95,7 @@
                         <c:when test="${currentRole eq coach}">
                             <c:choose>
                                 <c:when test="${order.feedback == null && order.expirationDate < now}">
-                                    <c:set var="orderId" scope="session" value="${order.id}"/>
+                                    <c:set var="subscriptionId" scope="session" value="${order.id}"/>
                                     <a href="${pageContext.request.contextPath}/jsp/client/add_feedback.jsp">${pageScope.leave_feedback}
                                         <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                 </c:when>
@@ -125,9 +125,19 @@
                         </c:otherwise>
                     </c:choose>
                 </td>
+                <jsp:useBean id="now" class="java.util.Date"/>
+                <c:if test="${order.expirationDate gt now}">
                 <td>
+
                     <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions&subscriptionId=${order.id}">${pageScope.orders_discard}</a>
+
                 </td>
+                </c:if>
+                <c:if test="${order.expirationDate lt now}">
+                    <td>
+
+                    </td>
+                </c:if>
             </tr>
         </c:forEach>
     </table>

@@ -78,15 +78,20 @@
     </ul>
 </div>
 <div class="training_program_client_buttons">
+    <jsp:useBean id="now" class="java.util.Date"/>
     <ul>
         <li>
-            <form method="GET" action="${pageContext.request.contextPath}/controller">
-                <input type="hidden" name="command" value="special_edit_program"/>
-                <button type="submit">${pageScope.edit} <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                </button>
-            </form>
+
+            <c:if test="${sessionScope.program.endDate gt now}">
+                <form method="GET" action="${pageContext.request.contextPath}/controller">
+                    <input type="hidden" name="command" value="special_edit_program"/>
+                    <button type="submit">${pageScope.edit} <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </c:if>
+
         </li>
-        <c:if test="${sessionScope.user.userRole == 'CLIENT'}">
+        <c:if test="${sessionScope.user.userRole == 'CLIENT' && sessionScope.program.endDate gt now }">
             <li>
                 <form method="POST" action="${pageContext.request.contextPath}/controller">
                     <input type="hidden" name="command" value="client_discard_program"/>

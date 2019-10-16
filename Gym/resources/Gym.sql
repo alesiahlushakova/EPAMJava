@@ -1,11 +1,13 @@
 create database Gym;
 use Gym;
-drop table if exists Users;
-drop table if exists Exercises;
-drop table if exists Subscription;
-drop table if exists Pricing;
-drop table if exists Program;
 drop table if exists Complex;
+drop table if exists Program;
+drop table if exists Pricing;
+drop table if exists Subscription;
+drop table if exists Exercises;
+drop table if exists Users;
+
+
 create table Users (
                        UserID int auto_increment primary key,
                        Login nvarchar(50) not null,
@@ -29,8 +31,7 @@ insert into Users values
 (6,'coach2', '1f9e03a7e14322e674bf511268660dd1469eb573','COACH','sazonov','yauhen','375294007609',null),
 (7,'coach3', '1f9e03a7e14322e674bf511268660dd1469eb573','COACH','popovich','sasha','375294980139',null);
 use gym;
-select Photo from Users where UserID=4;
-update Users set Password='49049515566fa38e1b8e268723a3730dcf527f36' where UserID=3;
+
 
 create table Exercises (
                            ExerciseID int auto_increment primary key,
@@ -41,7 +42,7 @@ create table Exercises (
                            Description text not null);
 use Gym;
 insert into Exercises values
-(1,'running', 'bones problems', 350,'PRO','Running will elongate your stamina'),
+(1,'running', 'bones problems', 350,'EXPERT','Running will elongate your stamina'),
 (3, 'pressups', 'heart deseases', 400, 'STARTER', 'Press ups wil improve your stomach muscles'),
 (2, 'push ups', 'heart dystony', 200,'CASUAL','Push ups improve muscles and male you fit'),
 (4,'cycling', 'heart and lung deseases', 200,'CASUAL','This exercise will improve your feet.') ;

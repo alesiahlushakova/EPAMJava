@@ -2,7 +2,6 @@ package test.by.training.gym.validator;
 
 
 
-import by.training.gym.domain.Subscription;
 import by.training.gym.service.validator.SubscriptionValidator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;

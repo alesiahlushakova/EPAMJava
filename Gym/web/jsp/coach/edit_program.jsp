@@ -158,9 +158,10 @@
                 </form>
             </li>
             <li>
+
                 <form method="POST" action="${pageContext.request.contextPath}/controller">
                     <c:choose>
-                        <c:when test="${sessionScope.trainingProgram.id == 0}">
+                        <c:when test="${sessionScope.program.id == 0}">
                             <input type="hidden" name="command" value="coach_finish_program_creation"/>
                         </c:when>
                         <c:otherwise>

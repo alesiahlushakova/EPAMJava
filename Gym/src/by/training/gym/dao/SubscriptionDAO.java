@@ -10,6 +10,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
+/**
+ * @author Alesyahlushakova
+ * subscription dao.
+ */
 public class SubscriptionDAO extends AbstractDAO<Subscription> {
 
     /**
@@ -25,6 +29,9 @@ public class SubscriptionDAO extends AbstractDAO<Subscription> {
             + "  IsPayed=?, Feedback=? WHERE SubscriptionID=?";
 
     private static final String SELECT_CLIENT_ORDERS_QUERY = "SELECT * FROM Subscription WHERE ClientID=?";
+    private static final String SELECT_CLIENT_BY_ORDERS_QUERY = "select ProgramId from Subscription inner join Program on " +
+            "subscription.ClientID=program.ClientID " +
+            "where subscription.SubscriptionID=?";
     private static final String SELECT_CLIENT_ACTUAL_ORDER_QUERY = "SELECT * FROM Subscription"
             + " WHERE ClientID=? AND ExpirationDate>=CURDATE()";
     private static final String SELECT_PRICE_FOR_ORDER_QUERY = "SELECT Price FROM Pricing WHERE SubscriptionType=?";
@@ -90,6 +97,7 @@ public class SubscriptionDAO extends AbstractDAO<Subscription> {
             throw new DAOException(exception.getMessage(), exception);
         }
     }
+
 
     /**
      * method select price from database.

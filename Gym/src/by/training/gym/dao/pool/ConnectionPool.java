@@ -90,16 +90,5 @@ public class ConnectionPool {
         }
     }
 
-    /**
-     * Close all connections in pool.
-     */
-    public void closePool() {
-        for (Connection connection : pool) {
-            try {
-                connection.close();
-            } catch (SQLException exception) {
-                LOGGER.error("Exception was detected during pool closing.", exception);
-            }
-        }
-    }
+
 }

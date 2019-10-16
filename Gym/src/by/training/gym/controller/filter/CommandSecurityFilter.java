@@ -40,7 +40,7 @@ public class CommandSecurityFilter implements Filter {
      * @throws ServletException object if execution of method is failed.
      */
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         redirectPage = filterConfig.getInitParameter(MAIN_PAGE_PARAMETER);
     }
 
