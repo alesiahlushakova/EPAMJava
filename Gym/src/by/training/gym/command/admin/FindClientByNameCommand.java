@@ -45,6 +45,7 @@ public class FindClientByNameCommand implements Command {
 
             request.setAttribute(LIST_ATTRIBUTE, findUsers);
 
+
             return new CurrentJsp(DESCRIBE_CLIENT_PAGE_PATH, false);
         } catch (ServiceException exception) {
             LOGGER.error(exception.getMessage(), exception);

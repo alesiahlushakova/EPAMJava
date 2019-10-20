@@ -16,6 +16,8 @@
 </fmt:bundle>
 
 <div class="table_user">
+    <div>${role}</div>
+
     <table>
         <tr>
             <th><span>&#8470;</span></th>
@@ -41,7 +43,7 @@
                 <td>${coach.telephone}</td>
                 <td>
                     <c:choose>
-                        <c:when test="${role.equals('COACH')}">
+                        <c:when test="${coach.userRole.toString().equals('COACH')}">
                             <a href="controller?command=special_show_client_program&client_id=${coach.id}">${pageScope.describe}
                                 <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                         </c:when>
@@ -52,7 +54,16 @@
                     </c:choose>
                 </td>
                 <td>
-                    <a href="controller?command=admin_delete_client&client_id=${coach.id}">${pageScope.delete_client}
+                    <c:choose>
+                        <c:when test="${coach.userRole.toString().equals('COACH')}">
+
+                        </c:when>
+                        <c:otherwise>
+                            <a href="controller?command=admin_delete_client&client_id=${coach.id}">${pageScope.delete_client}
+                                <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                        </c:otherwise>
+                    </c:choose>
+
                 </td>
             </tr>
         </c:forEach>

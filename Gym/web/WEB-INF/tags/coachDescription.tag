@@ -36,7 +36,7 @@
                 <td>${coach.telephone}</td>
                 <td>
                     <c:choose>
-                        <c:when test="${role.equals('COACH')}">
+                        <c:when test="${coach.userRole.toString().equals('COACH')}">
                             <a href="controller?command=special_show_client_program&client_id=${coach.id}">${pageScope.describe}
                                 <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                         </c:when>
