@@ -7,8 +7,9 @@
 --%>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
-
+<c:set var="login" value="${sessionScope.user.login}" scope="session"/>
 <fmt:bundle basename="page_content">
     <fmt:message key="menu.edit" var="title"/>
     <fmt:message key="register.login" var="login"/>
@@ -38,9 +39,7 @@
 <div class="reg_form">
     <form id="reg" name="EditingForm" method="POST" action="${pageContext.request.contextPath}/controller" enctype="multipart/form-data">
         <input type="hidden" name="command" value="common_edit_profile"/>
-        <p><span>${pageScope.login}</span>
-            <input id="login" title="${pageScope.title_login}" type="text" name="login" value="${sessionScope.user.login}" onkeyup="checkLogin();"/>
-        </p>
+
         <p><span>${pageScope.password}</span>
             <input id="password" title="${pageScope.title_password}" type="password" name="password" value=""
                    onkeyup="checkPassword();"/>
@@ -70,7 +69,7 @@
     </form>
 </div>
 <script>
-   <jsp:directive.include file="/js/registerValidation.js"/>
+   <jsp:directive.include file="/js/editingValidation.js"/>
 </script>
 </body>
 </html>

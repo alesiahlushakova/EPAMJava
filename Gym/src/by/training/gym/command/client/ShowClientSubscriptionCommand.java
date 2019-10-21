@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import static by.training.gym.command.CurrentJsp.SHOW_CLIENT_ORDERS_PAGE_PATH;
@@ -30,8 +31,8 @@ public class ShowClientSubscriptionCommand implements Command {
     @Override
     public CurrentJsp execute(HttpServletRequest request) {
         try {
-            String clientIdValue = request.getParameter(CLIENT_ID_PARAMETER);
-            int clientId = Integer.parseInt(clientIdValue);
+            HttpSession session = request.getSession();
+            int clientId = (int) session.getAttribute(CLIENT_ID_PARAMETER);
             SubscriptionService orderService = new SubscriptionService();
             List<Subscription> orderList = orderService.findAllClientSubscriptions(clientId);
 

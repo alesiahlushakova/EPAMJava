@@ -35,8 +35,8 @@ public class ShowClientProgramCommand implements Command {
     public CurrentJsp execute(HttpServletRequest request) {
 
         try {
-            String clientIdValue = request.getParameter(CLIENT_ID_PARAMETER);
-            int clientId = Integer.parseInt(clientIdValue);
+            HttpSession session = request.getSession();
+            int clientId = (int) session.getAttribute(CLIENT_ID_PARAMETER);
             ProgramService trainingProgramService = new ProgramService();
             Program trainingProgram = trainingProgramService.findTrainingProgramById(clientId);
 
@@ -44,7 +44,6 @@ public class ShowClientProgramCommand implements Command {
                 return new CurrentJsp(CurrentJsp.MAIN_PAGE_PATH, false, INFORMATION_NOT_FOUND_MESSAGE_KEY);
             }
 
-            HttpSession session = request.getSession();
             session.setAttribute(PROGRAM_ATTRIBUTE, trainingProgram);
 
             int trainingProgramId = trainingProgram.getId();

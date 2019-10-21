@@ -31,7 +31,8 @@ public class EditProfileCommand implements Command {
     public CurrentJsp execute(HttpServletRequest request) {
 
         try {
-            String login = request.getParameter(LOGIN_PARAMETER);
+            HttpSession session = request.getSession();
+            String login = (String) session.getAttribute(LOGIN_PARAMETER);
             String password = request.getParameter(PASSWORD_PARAMETER);
             String firstName = request.getParameter(FIRST_NAME_PARAMETER);
             String lastName = request.getParameter(LAST_NAME_PARAMETER);

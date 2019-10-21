@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import static by.training.gym.view.MessageManager.CLIENT_HAS_ALREADY_ORDER_MESSAGE_KEY;
 
@@ -25,9 +26,10 @@ public class CheckActualSubscriptionCommand implements Command {
     @Override
     public CurrentJsp execute(HttpServletRequest request) {
         try {
-            String clientIdValue = request.getParameter(CLIENT_ID_PARAMETER);
+            HttpSession session = request.getSession();
+            int clientId = (int) session.getAttribute(CLIENT_ID_PARAMETER);
             SubscriptionService orderService = new SubscriptionService();
-            boolean hasClientActualOrder = orderService.hasClientActualSubscription(clientIdValue);
+            boolean hasClientActualOrder = orderService.hasClientActualSubscription(String.valueOf(clientId));
 
             if (hasClientActualOrder) {
                 return new CurrentJsp(CurrentJsp.MAIN_PAGE_PATH,

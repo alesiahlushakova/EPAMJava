@@ -1,7 +1,7 @@
 <%@tag pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
-
+<c:set var="client_id" value="${sessionScope.user.id}" scope="session"/>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/header.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -36,6 +36,7 @@
         <div class="col-2">
             <div class="change_level">
                 <ul>
+                    <div></div>
                     <li>${pageScope.language} </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/controller?command=common_change_language&locale=ru">RU</a>
@@ -114,13 +115,13 @@
                 <c:otherwise>
 
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.orders_history}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions">${pageScope.orders_history}</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=special_show_client_program&client_id=${sessionScope.user.id}">${pageScope.my_training_program}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=special_show_client_program">${pageScope.my_training_program}</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/controller?command=client_check_actual_subscription&client_id=${sessionScope.user.id}">${pageScope.make_order}</a>
+                        <a href="${pageContext.request.contextPath}/controller?command=client_check_actual_subscription">${pageScope.make_order}</a>
                     </li>
                 </c:otherwise>
             </c:choose>

@@ -39,6 +39,7 @@
 <body class="page">
 <tag:userMenu/>
 <div class="table_order">
+    <div>${sessionScope.user.id}</div>
     <table>
         <tr>
             <th><span>&#8470;</span></th>
