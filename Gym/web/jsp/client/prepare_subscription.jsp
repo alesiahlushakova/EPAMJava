@@ -43,7 +43,7 @@
         </p>
 
         <p><label>${pageScope.ibm}</label></p>
-        <p><input type="text" name="ibm"  onchange="checkIbm()"></p>
+        <p><input type="text" name="ibm"  id="ibm" onchange="checkIbm()"></p>
         <ul>
             <li> ${pageScope.need_trainer}</li>
             <li><input type="radio" name="is_personal_trainer_need" value="1">${pageScope.yes}</li>

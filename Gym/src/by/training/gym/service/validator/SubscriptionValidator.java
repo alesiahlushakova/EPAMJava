@@ -16,7 +16,8 @@ public class SubscriptionValidator {
 
     private static final String NOT_NEEDED_COACH_VALUE = "0";
     private static final String NEED_IN_COACH_VALUE = "1";
-
+    private static final int MIN_IBM_VALUE = 10;
+    private static final int MAX_IBM_VALUE = 50;
     private static final String FEEDBACK_PATTERN = ".*<.*>+.*";
 
     /**
@@ -26,9 +27,11 @@ public class SubscriptionValidator {
      * @param isPersonalTrainerNeedValue the isPersonalTrainerNeed string value.
      * @return true if data is valid otherwise false.
      */
-    public boolean checkSubcriptionData(String dateValue, String durationValue, String isPersonalTrainerNeedValue) {
+    public boolean checkSubcriptionData(String dateValue, String durationValue, String isPersonalTrainerNeedValue, String ibmValue) {
 
-        return checkOrderPurchaseDate(dateValue) && checkOrderDurationValue(durationValue) && checkIsPersonalTrainerNeedValue(isPersonalTrainerNeedValue);
+        return checkOrderPurchaseDate(dateValue) && checkOrderDurationValue(durationValue)
+                && checkIsPersonalTrainerNeedValue(isPersonalTrainerNeedValue)
+                && checkibmValue(ibmValue);
 
     }
 
@@ -50,6 +53,24 @@ public class SubscriptionValidator {
         return !matcher.matches();
     }
 
+    /**
+     * method checks ibm.
+     * @param ibmValue the ibm
+     * @return true if ibm is valid and false otherwise.
+     */
+    public boolean checkibmValue(String ibmValue) {
+        if (ibmValue == null) {
+            return false;
+        }
+        if (ibmValue.isEmpty()) {
+            return false;
+        }
+        int ibm = Integer.parseInt(ibmValue);
+
+
+        return ibm > MIN_IBM_VALUE && ibm < MAX_IBM_VALUE;
+    }
+
     private boolean checkOrderPurchaseDate(String dateValue) {
         if (dateValue == null || dateValue.isEmpty()) {
             return false;
@@ -58,7 +79,7 @@ public class SubscriptionValidator {
         Date currentDate = Date.valueOf(LocalDate.now());
         Date purchaseDate = Date.valueOf(dateValue);
 
-        return purchaseDate.getTime() >= currentDate.getTime();
+        return purchaseDate.getTime() >= currentDate.getTime() && purchaseDate.getTime() < (currentDate.getTime()+ 31_536_000_000L);
     }
 
     private boolean checkOrderDurationValue(String durationValue) {

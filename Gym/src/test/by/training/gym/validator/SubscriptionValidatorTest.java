@@ -28,24 +28,24 @@ public class SubscriptionValidatorTest {
 
 
         return new Object[][]{
-                {currentDateValue, "MONTH", "1"},
-                {currentDateValue, "MONTH", "0"},
-                {currentDateValue, "WEEK", "1"},
-                {currentDateValue, "YEAR", "1"}
+                {currentDateValue, "MONTH", "1","18"},
+                {currentDateValue, "MONTH", "0","22"},
+                {currentDateValue, "WEEK", "1","21"},
+                {currentDateValue, "YEAR", "1","30"}
         };
     }
 
     @DataProvider
     public static Object[][] notValidData() {
         return new Object[][]{
-                {"", "MONTH", "1"},
-                {null, "MONTH", "0"},
-                {currentDateValue, "", "1"},
-                {currentDateValue, null, "1"},
-                {currentDateValue, "ALL_LIFE", "1"},
-                {currentDateValue, "MONTH", "2"},
-                {currentDateValue, "WEEK", ""},
-                {currentDateValue, "YEAR", null}
+                {"", "MONTH", "1","0"},
+                {null, "MONTH", "0","11"},
+                {currentDateValue, "", "1","14"},
+                {currentDateValue, null, "1", "55"},
+                {currentDateValue, "ALL_LIFE", "1","10"},
+                {currentDateValue, "MONTH", "2","15"},
+                {currentDateValue, "WEEK", "","18"},
+                {currentDateValue, "YEAR", null,"12"}
         };
     }
 
@@ -85,16 +85,16 @@ public class SubscriptionValidatorTest {
 
     @Test
     (dataProvider = "validData")
-    public void shouldOrderDataValidationBeSuccessful(String purchaseDateValue, String durationValue, String isPersonalTrainerNeedValue) {
-        boolean actualResult = ORDER_DATA_VALIDATOR.checkSubcriptionData(purchaseDateValue, durationValue, isPersonalTrainerNeedValue);
+    public void shouldOrderDataValidationBeSuccessful(String purchaseDateValue, String durationValue, String isPersonalTrainerNeedValue, String ibmValue) {
+        boolean actualResult = ORDER_DATA_VALIDATOR.checkSubcriptionData(purchaseDateValue, durationValue, isPersonalTrainerNeedValue, ibmValue);
 
         Assert.assertTrue(actualResult);
     }
 
     @Test
     (dataProvider = "notValidData")
-    public void shouldOrderDataValidationFail(String purchaseDateValue, String durationValue, String isPersonalTrainerNeedValue) {
-        boolean actualResult = ORDER_DATA_VALIDATOR.checkSubcriptionData(purchaseDateValue, durationValue, isPersonalTrainerNeedValue);
+    public void shouldOrderDataValidationFail(String purchaseDateValue, String durationValue, String isPersonalTrainerNeedValue, String ibmValue) {
+        boolean actualResult = ORDER_DATA_VALIDATOR.checkSubcriptionData(purchaseDateValue, durationValue, isPersonalTrainerNeedValue, ibmValue);
 
         Assert.assertFalse(actualResult);
     }

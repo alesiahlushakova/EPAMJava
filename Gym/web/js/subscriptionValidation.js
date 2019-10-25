@@ -17,7 +17,7 @@ var checkDate = function () {
     var currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
 
-    if (orderDate.getTime() >= currentDate.getTime()) {
+    if (orderDate.getTime() >= currentDate.getTime() && orderDate.getFullYear()<= orderDate.getFullYear()+2) {
         validColor(document.getElementById("purchase_date"));
         document.getElementById("button_confirm").disabled = false;
         document.getElementById("button_confirm").classList.add("active_button");

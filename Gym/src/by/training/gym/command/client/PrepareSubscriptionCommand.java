@@ -40,9 +40,10 @@ public class PrepareSubscriptionCommand implements Command {
             String isPersonalTrainerNeedValue = request.getParameter(IS_PERSONAL_TRAINER_NEED_PARAMETER);
             String ibmValue = request.getParameter(IBM_PARAMETER);
             SubscriptionValidator orderDataValidator = new SubscriptionValidator();
-            boolean isDataValid = orderDataValidator.checkSubcriptionData(purchaseDateValue, durationValue, isPersonalTrainerNeedValue);
+            boolean isDataValid = orderDataValidator.checkSubcriptionData(purchaseDateValue, durationValue, isPersonalTrainerNeedValue, ibmValue);
             if (!isDataValid) {
-                LOGGER.info(String.format("Data: %s, %s, %s is not valid", purchaseDateValue, durationValue, isPersonalTrainerNeedValue));
+                LOGGER.info(String.format("Data:" +
+                        " %s, %s, %s is not valid", purchaseDateValue, durationValue, isPersonalTrainerNeedValue));
                 return new CurrentJsp(PREPARE_ORDER_PAGE_PATH, false, INVALID_INPUT_DATA_MESSAGE_KEY);
             }
 
