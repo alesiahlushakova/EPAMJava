@@ -36,7 +36,7 @@
         <div class="col-2">
             <div class="change_level">
                 <ul>
-                    <div></div>
+
                     <li>${pageScope.language} </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/controller?command=common_change_language&locale=ru">RU</a>

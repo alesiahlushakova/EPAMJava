@@ -34,7 +34,7 @@
         <p><button id="feedback_submit" class="add_feedback_confirm" type="submit" disabled>${pageScope.confirm} <i class="fa fa-check-circle-o" aria-hidden="true"></i></button></p>
     </form>
 
-    <label><a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions&client_id=${sessionScope.user.id}">${pageScope.back}</a></label>
+    <label><a href="${pageContext.request.contextPath}/controller?command=special_show_client_subscriptions">${pageScope.back}</a></label>
 </div>
 <script>
     <jsp:directive.include file="/js/feedbackValidation.js"/>

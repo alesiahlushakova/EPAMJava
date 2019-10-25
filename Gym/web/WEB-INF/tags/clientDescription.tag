@@ -16,7 +16,7 @@
 </fmt:bundle>
 
 <div class="table_user">
-    <div>${role}</div>
+
 
     <table>
         <tr>

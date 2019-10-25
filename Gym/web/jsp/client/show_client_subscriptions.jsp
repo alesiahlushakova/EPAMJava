@@ -4,6 +4,7 @@
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 <c:set var="now" value="<%=new java.util.Date()%>"/>
 <c:set var="coach" value="<%=UserRole.CLIENT%>"/>
+
 <c:set var="currentRole" value="${sessionScope.user.userRole}"/>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
@@ -55,6 +56,7 @@
         </tr>
         <c:forEach var="order" items="${requestScope.list}">
             <c:set var="count" value="${pageScope.count+1}"/>
+            <c:set var="subscriptionId" scope="session" value="${order.id}"/>
             <tr>
                 <td>${count}</td>
                 <td>${order.purchaseDate}</td>
@@ -96,7 +98,7 @@
                         <c:when test="${currentRole eq coach}">
                             <c:choose>
                                 <c:when test="${order.feedback == null && order.expirationDate < now}">
-                                    <c:set var="subscriptionId" scope="session" value="${order.id}"/>
+
                                     <a href="${pageContext.request.contextPath}/jsp/client/add_feedback.jsp">${pageScope.leave_feedback}
                                         <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
                                 </c:when>
@@ -130,7 +132,7 @@
                 <c:if test="${order.expirationDate gt now}">
                 <td>
 
-                    <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions&subscriptionId=${order.id}">${pageScope.orders_discard}</a>
+                    <a href="${pageContext.request.contextPath}/controller?command=special_discard_client_subscriptions">${pageScope.orders_discard}</a>
 
                 </td>
                 </c:if>

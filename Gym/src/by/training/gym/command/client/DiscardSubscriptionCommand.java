@@ -34,9 +34,8 @@ public class DiscardSubscriptionCommand implements Command {
     public CurrentJsp execute(HttpServletRequest request) {
 
         try {
-
-            String parameter = request.getParameter(SUBSCRIPTION_ID_ATTRIBUTE);
-            int subId = Integer.parseInt(parameter);
+            HttpSession session = request.getSession();
+            int subId = (int) session.getAttribute(SUBSCRIPTION_ID_ATTRIBUTE);
             SubscriptionService subscriptionService = new SubscriptionService();
             subscriptionService.findAllClientSubscriptions(subId);
             boolean isOperationSuccessful = subscriptionService.discardSubscription(subId);
@@ -45,7 +44,6 @@ public class DiscardSubscriptionCommand implements Command {
                         false, DISCARD_SUB_FAILED_MESSAGE_KEY);
             }
 
-            HttpSession session = request.getSession();
             session.setAttribute(IS_RECORD_INSERTED, true);
             session.removeAttribute(PROGRAM_ATTRIBUTE);
 
