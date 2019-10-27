@@ -30,8 +30,9 @@ public class DeleteCoachCommand implements Command {
     @Override
     public CurrentJsp execute(HttpServletRequest request) {
         try {
-            String coachIdValue = request.getParameter(COACH_ID_PARAMETER);
-            int coachId = Integer.parseInt(coachIdValue);
+            HttpSession session = request.getSession();
+            int coachId = (int) session.getAttribute(CLIENT_ID_PARAMETER);
+
             UserService userService = new UserService();
             boolean isOperationSuccessful = userService.deleteUser(coachId);
             if (!isOperationSuccessful) {
@@ -39,7 +40,7 @@ public class DeleteCoachCommand implements Command {
                         false, DISCARD_COACH_FAILED_MESSAGE_KEY);
             }
 
-            HttpSession session = request.getSession();
+
             session.setAttribute(IS_RECORD_INSERTED, true);
             session.removeAttribute(PROGRAM_ATTRIBUTE);
 
@@ -47,7 +48,8 @@ public class DeleteCoachCommand implements Command {
                     false, DISCARD_COACH_SUCCESS_MESSAGE_KEY);
         } catch (ServiceException exception) {
             LOGGER.error(exception.getMessage(), exception);
-            return new CurrentJsp(CurrentJsp.ERROR_PAGE_PATH, true);
+            return new CurrentJsp(MAIN_PAGE_PATH,
+                    false, DISCARD_COACH_SUCCESS_MESSAGE_KEY);
         }
     }
 }

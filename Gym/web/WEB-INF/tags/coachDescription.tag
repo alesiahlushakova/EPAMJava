@@ -29,6 +29,7 @@
         </tr>
         <c:forEach var="coach" items="${coaches}">
             <c:set var="count" value="${pageScope.count+1}"/>
+            <c:set var="client_id" value="${coach.id}" scope="session"/>
             <tr>
                 <td>${count}</td>
                 <td>${coach.id}</td>
@@ -37,11 +38,11 @@
                 <td>
                     <c:choose>
                         <c:when test="${coach.userRole.toString().equals('COACH')}">
-                            <a href="controller?command=special_show_client_program&client_id=${coach.id}">${pageScope.describe}
+                            <a href="controller?command=special_show_client_program">${pageScope.describe}
                                 <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                         </c:when>
                         <c:otherwise>
-                            <a href="controller?command=special_show_client_subscriptions&client_id=${coach.id}">${pageScope.describe}
+                            <a href="controller?command=special_show_client_subscriptions">${pageScope.describe}
                                 <i class="fa fa-info-circle" aria-hidden="true"></i></a>
                         </c:otherwise>
                     </c:choose>

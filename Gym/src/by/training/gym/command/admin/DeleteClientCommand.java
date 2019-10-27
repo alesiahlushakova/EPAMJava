@@ -30,16 +30,18 @@ public class DeleteClientCommand implements Command {
     @Override
     public CurrentJsp execute(HttpServletRequest request) {
         try {
-            String clientIdValue = request.getParameter(CLIENT_ID_PARAMETER);
-            int clientId = Integer.parseInt(clientIdValue);
+            HttpSession session = request.getSession();
+            int clientId = (int) session.getAttribute(CLIENT_ID_PARAMETER);
+
             UserService userService = new UserService();
+
             boolean isOperationSuccessful = userService.deleteUser(clientId);
             if (!isOperationSuccessful) {
                 return new CurrentJsp(MAIN_PAGE_PATH,
                         false, DISCARD_CLIENT_FAILED_MESSAGE_KEY);
             }
 
-            HttpSession session = request.getSession();
+
             session.setAttribute(IS_RECORD_INSERTED, true);
             session.removeAttribute(PROGRAM_ATTRIBUTE);
 
@@ -47,7 +49,8 @@ public class DeleteClientCommand implements Command {
                     false, DISCARD_CLIENT_SUCCESS_MESSAGE_KEY);
         } catch (ServiceException exception) {
             LOGGER.error(exception.getMessage(), exception);
-            return new CurrentJsp(CurrentJsp.ERROR_PAGE_PATH, true);
+            return new CurrentJsp(MAIN_PAGE_PATH,
+                    false, DISCARD_CLIENT_SUCCESS_MESSAGE_KEY);
         }
     }
 }
